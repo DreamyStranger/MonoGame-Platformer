@@ -9,7 +9,7 @@ namespace MyGame
     public class MovementSystem : System
     {
         // A list of EntityData instances, which store references to the associated Entity, StateComponent, and MovementComponent.
-        List<EntityData> entitiesData;
+        private List<EntityData> entitiesData;
 
         /// <summary>
         /// Initializes a new instance of the MovementSystem class and creates an empty list of EntityData.

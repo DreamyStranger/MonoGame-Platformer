@@ -48,8 +48,8 @@ namespace MyGame
                 data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.Movement.HorizontalDirection);
                 Rectangle box = data.CollisionBox.GetRectangle();
 
-                //Debug Message
-                Console.WriteLine($"StateID: {data.State.stateID}");
+                //Console.WriteLine($"StateID: {data.State.stateID}"); //Debug message
+
                 float positionX = data.Movement.Position.X;
                 float positionY = data.Movement.Position.Y;
                 bool touchingRight = false;
@@ -57,6 +57,8 @@ namespace MyGame
 
                 foreach (string key in obstacles.Keys)
                 {
+                    //Console.WriteLine($"Layer Name: {key}");  //Debug message
+
                     foreach (Rectangle rect in obstacles[key])
                     {
                         Rectangle intersection = Rectangle.Intersect(box, rect);
@@ -101,7 +103,10 @@ namespace MyGame
 
                             case SuperState.isJumping:
                             case SuperState.isDoubleJumping:
-                                if (collidesWithBottomSide && key != "float")
+
+                                Console.WriteLine($"Layer Name: {key}");  //Debug message
+                                if(key == "float") goto default;
+                                if (collidesWithBottomSide)
                                 {
                                     positionY = rect.Bottom - data.CollisionBox.vertTopOffset;
                                 }
@@ -120,7 +125,7 @@ namespace MyGame
                                     touchingLeft = true;
                                 }
 
-                                data.Movement.Velocity = Vector2.Zero;
+                                if(key != "float") data.Movement.Velocity = Vector2.Zero;
                                 break;
                         }
 

@@ -47,8 +47,9 @@ namespace MyGame
             //Load TiledMaps
             tiledHandler = new TileHandler(content);
             tiledHandler.Load(
+                //Makes sure correct path for both Ubuntu and Windows systmes
                 Path.Combine(content.RootDirectory, "TiledMap", "Level1.tmx"),
-                Path.Combine(content.RootDirectory, "TiledMap//"),
+                Path.Combine(content.RootDirectory, "TiledMap", " "),
                 "Level 1",
                 "Terrain"
             );

@@ -13,7 +13,7 @@ namespace MyGame
 
         // Other game constants
         public const int SCREEN_WIDTH = 640;
-        public const int SCREEN_HEIGHT = 360;
+        public const int SCREEN_HEIGHT = 368;
         public const float AnimationFPS = 20f;
         public const float FPS = 60f;
 

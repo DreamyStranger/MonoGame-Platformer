@@ -55,10 +55,11 @@ namespace MyGame
                 inputs.RemoveAt(index);
             }
         }
+        
         /// <summary>
         /// Updates all entities' InputComponents based on their current StateComponents.
         /// </summary>
-        /// <param name="gameTime">The current game time</param>
+        /// <param name="gameTime">The current game time, used to control the timing of updates</param>
         public override void Update(GameTime gameTime)
         {
             for (int i = 0; i < inputs.Count; i++)

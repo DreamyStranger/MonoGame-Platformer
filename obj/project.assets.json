@@ -2,24 +2,23 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "MonoGame.Content.Builder.Task/3.8.0.1641": {
+      "MonoGame.Content.Builder.Task/3.8.1.263": {
         "type": "package",
         "build": {
           "build/MonoGame.Content.Builder.Task.props": {},
           "build/MonoGame.Content.Builder.Task.targets": {}
         }
       },
-      "MonoGame.Framework.DesktopGL/3.8.0.1641": {
+      "MonoGame.Framework.DesktopGL/3.8.1.263": {
         "type": "package",
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
         "compile": {
-          "lib/netstandard2.0/MonoGame.Framework.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/MonoGame.Framework.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/MonoGame.Framework.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/MonoGame.Framework.dll": {}
         },
         "build": {
           "build/MonoGame.Framework.DesktopGL.targets": {}
@@ -33,7 +32,7 @@
             "assetType": "native",
             "rid": "linux-x64"
           },
-          "runtimes/osx/native/libSDL2-2.0.0.dylib": {
+          "runtimes/osx/native/libSDL2.dylib": {
             "assetType": "native",
             "rid": "osx"
           },
@@ -59,128 +58,108 @@
           }
         }
       },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
       "TiledCS/3.3.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/TiledCS.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/TiledCS.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/TiledCS.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/TiledCS.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "MonoGame.Content.Builder.Task/3.8.0.1641": {
-      "sha512": "oHA60q9MhkqGnSiJlXosdynD400sQ/j1Ef+0XkJYIQT4Io9RQ6Zk8i0vjpnIbQ0PgsoaQN3IRYjNzkhqq3uUGA==",
+    "MonoGame.Content.Builder.Task/3.8.1.263": {
+      "sha512": "4Fha/WOFtr1KMb/4AdN7dFmavjCQ1ouLXvWJTN9vxTkpkMQ6SkB/RkfJ4wbL7TC7ITybUTY2Rl+K9T+lwzPP9A==",
       "type": "package",
-      "path": "monogame.content.builder.task/3.8.0.1641",
-      "hasTools": true,
+      "path": "monogame.content.builder.task/3.8.1.263",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "build/MonoGame.Content.Builder.Task.props",
         "build/MonoGame.Content.Builder.Task.targets",
-        "monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
-        "monogame.content.builder.task.nuspec",
-        "tools/netcoreapp3.1/any/ATI.TextureConverter.dll",
-        "tools/netcoreapp3.1/any/ATI.TextureConverter.dll.config",
-        "tools/netcoreapp3.1/any/AssimpNet.dll",
-        "tools/netcoreapp3.1/any/CppNet.dll",
-        "tools/netcoreapp3.1/any/FreeImage.dll",
-        "tools/netcoreapp3.1/any/MonoGame.Framework.Content.Pipeline.dll",
-        "tools/netcoreapp3.1/any/MonoGame.Framework.Content.Pipeline.pdb",
-        "tools/netcoreapp3.1/any/MonoGame.Framework.dll",
-        "tools/netcoreapp3.1/any/MonoGame.Framework.pdb",
-        "tools/netcoreapp3.1/any/MonoGame.Framework.xml",
-        "tools/netcoreapp3.1/any/Nvidia.TextureTools.dll",
-        "tools/netcoreapp3.1/any/Nvidia.TextureTools.dll.config",
-        "tools/netcoreapp3.1/any/PVRTexLibNET.dll",
-        "tools/netcoreapp3.1/any/PVRTexLibNET.dll.config",
-        "tools/netcoreapp3.1/any/PVRTexLibWrapper.dll",
-        "tools/netcoreapp3.1/any/SharpDX.D3DCompiler.dll",
-        "tools/netcoreapp3.1/any/SharpDX.D3DCompiler.xml",
-        "tools/netcoreapp3.1/any/SharpDX.dll",
-        "tools/netcoreapp3.1/any/SharpDX.xml",
-        "tools/netcoreapp3.1/any/SharpFont.dll",
-        "tools/netcoreapp3.1/any/SharpFont.dll.config",
-        "tools/netcoreapp3.1/any/ffmpeg.exe",
-        "tools/netcoreapp3.1/any/ffprobe.exe",
-        "tools/netcoreapp3.1/any/freetype6.dll",
-        "tools/netcoreapp3.1/any/libFreeImage.dylib",
-        "tools/netcoreapp3.1/any/libFreeImage.so",
-        "tools/netcoreapp3.1/any/libPVRTexLibWrapper.dylib",
-        "tools/netcoreapp3.1/any/libPVRTexLibWrapper.so",
-        "tools/netcoreapp3.1/any/libSDL2-2.0.0.dylib",
-        "tools/netcoreapp3.1/any/libfreetype6.dylib",
-        "tools/netcoreapp3.1/any/libfreetype6.so",
-        "tools/netcoreapp3.1/any/libmojoshader_64.dll",
-        "tools/netcoreapp3.1/any/libnvcore.dylib",
-        "tools/netcoreapp3.1/any/libnvcore.so",
-        "tools/netcoreapp3.1/any/libnvimage.dylib",
-        "tools/netcoreapp3.1/any/libnvimage.so",
-        "tools/netcoreapp3.1/any/libnvmath.dylib",
-        "tools/netcoreapp3.1/any/libnvmath.so",
-        "tools/netcoreapp3.1/any/libnvtt.dylib",
-        "tools/netcoreapp3.1/any/libnvtt.so",
-        "tools/netcoreapp3.1/any/libopenal.1.dylib",
-        "tools/netcoreapp3.1/any/libpng16.16.dylib",
-        "tools/netcoreapp3.1/any/libpng16.so.16",
-        "tools/netcoreapp3.1/any/linux/ffmpeg",
-        "tools/netcoreapp3.1/any/linux/ffprobe",
-        "tools/netcoreapp3.1/any/mgcb.deps.json",
-        "tools/netcoreapp3.1/any/mgcb.dll",
-        "tools/netcoreapp3.1/any/mgcb.exe",
-        "tools/netcoreapp3.1/any/mgcb.pdb",
-        "tools/netcoreapp3.1/any/mgcb.runtimeconfig.json",
-        "tools/netcoreapp3.1/any/mgfxc.deps.json",
-        "tools/netcoreapp3.1/any/mgfxc.dll",
-        "tools/netcoreapp3.1/any/mgfxc.exe",
-        "tools/netcoreapp3.1/any/mgfxc.pdb",
-        "tools/netcoreapp3.1/any/mgfxc.runtimeconfig.json",
-        "tools/netcoreapp3.1/any/nvtt.dll",
-        "tools/netcoreapp3.1/any/osx/ffmpeg",
-        "tools/netcoreapp3.1/any/osx/ffprobe",
-        "tools/netcoreapp3.1/any/runtimes/linux-x64/native/libassimp.so",
-        "tools/netcoreapp3.1/any/runtimes/osx-x64/native/libassimp.dylib",
-        "tools/netcoreapp3.1/any/runtimes/win-x64/native/assimp.dll",
-        "tools/netcoreapp3.1/any/runtimes/win-x86/native/assimp.dll",
-        "tools/netcoreapp3.1/any/x64/SDL2.dll",
-        "tools/netcoreapp3.1/any/x64/libSDL2-2.0.so.0",
-        "tools/netcoreapp3.1/any/x64/libopenal.so.1",
-        "tools/netcoreapp3.1/any/x64/soft_oal.dll",
-        "tools/netcoreapp3.1/any/x86/SDL2.dll",
-        "tools/netcoreapp3.1/any/x86/soft_oal.dll"
+        "monogame.content.builder.task.3.8.1.263.nupkg.sha512",
+        "monogame.content.builder.task.nuspec"
       ]
     },
-    "MonoGame.Framework.DesktopGL/3.8.0.1641": {
-      "sha512": "rJQlrlHQbnOECYV6EcQ8GlGRQ2lzPTroXQcyyOZ0ki+BQRSJEN2zVBm9skqLiXya348aGAfTSSGTaSKjAy9NaA==",
+    "MonoGame.Framework.DesktopGL/3.8.1.263": {
+      "sha512": "77iT5JGVLbYiFfG3G7JqiDqguOeCPNVriRx8V+d0U2m6f+Q2qHTiOvjqtoGIOpRMGSbyl6j7JIIozV58c4FBBA==",
       "type": "package",
-      "path": "monogame.framework.desktopgl/3.8.0.1641",
+      "path": "monogame.framework.desktopgl/3.8.1.263",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "build/MonoGame.Framework.DesktopGL.targets",
-        "lib/net452/MonoGame.Framework.dll",
-        "lib/net452/MonoGame.Framework.xml",
-        "lib/netstandard2.0/MonoGame.Framework.dll",
-        "lib/netstandard2.0/MonoGame.Framework.xml",
-        "monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512",
+        "lib/net6.0/MonoGame.Framework.dll",
+        "monogame.framework.desktopgl.3.8.1.263.nupkg.sha512",
         "monogame.framework.desktopgl.nuspec",
         "runtimes/linux-x64/native/libSDL2-2.0.so.0",
         "runtimes/linux-x64/native/libopenal.so.1",
-        "runtimes/osx/native/libSDL2-2.0.0.dylib",
+        "runtimes/osx/native/libSDL2.dylib",
         "runtimes/osx/native/libopenal.1.dylib",
         "runtimes/win-x64/native/SDL2.dll",
         "runtimes/win-x64/native/soft_oal.dll",
         "runtimes/win-x86/native/SDL2.dll",
         "runtimes/win-x86/native/soft_oal.dll"
+      ]
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.Numerics.Vectors.dll",
+        "ref/net45/System.Numerics.Vectors.xml",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.5.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "TiledCS/3.3.3": {
@@ -199,37 +178,30 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "MonoGame.Content.Builder.Task >= 3.8.0.1641",
-      "MonoGame.Framework.DesktopGL >= 3.8.0.1641",
+      "MonoGame.Content.Builder.Task >= 3.8.1.263",
+      "MonoGame.Framework.DesktopGL >= 3.8.1.263",
       "TiledCS >= 3.3.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RD\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/m/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\RD\\Desktop\\MyGame\\MyGame\\MyGame.csproj",
+      "projectUniqueName": "/home/m/Documents/GitHub/ECS-MonoGame/MyGame.csproj",
       "projectName": "MyGame",
-      "projectPath": "C:\\Users\\RD\\Desktop\\MyGame\\MyGame\\MyGame.csproj",
-      "packagesPath": "C:\\Users\\RD\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RD\\Desktop\\MyGame\\MyGame\\obj\\",
+      "projectPath": "/home/m/Documents/GitHub/ECS-MonoGame/MyGame.csproj",
+      "packagesPath": "/home/m/.nuget/packages/",
+      "outputPath": "/home/m/Documents/GitHub/ECS-MonoGame/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\RD\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/m/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -250,11 +222,11 @@
         "dependencies": {
           "MonoGame.Content.Builder.Task": {
             "target": "Package",
-            "version": "[3.8.0.1641, )"
+            "version": "[3.8.1.263, )"
           },
           "MonoGame.Framework.DesktopGL": {
             "target": "Package",
-            "version": "[3.8.0.1641, )"
+            "version": "[3.8.1.263, )"
           },
           "TiledCS": {
             "target": "Package",
@@ -267,8 +239,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -277,7 +248,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.116/RuntimeIdentifierGraph.json"
       }
     }
   }

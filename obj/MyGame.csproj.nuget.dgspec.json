@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RD\\Desktop\\MyGame\\MyGame\\MyGame.csproj": {}
+    "/home/m/Documents/GitHub/ECS-MonoGame/MyGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RD\\Desktop\\MyGame\\MyGame\\MyGame.csproj": {
+    "/home/m/Documents/GitHub/ECS-MonoGame/MyGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RD\\Desktop\\MyGame\\MyGame\\MyGame.csproj",
+        "projectUniqueName": "/home/m/Documents/GitHub/ECS-MonoGame/MyGame.csproj",
         "projectName": "MyGame",
-        "projectPath": "C:\\Users\\RD\\Desktop\\MyGame\\MyGame\\MyGame.csproj",
-        "packagesPath": "C:\\Users\\RD\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RD\\Desktop\\MyGame\\MyGame\\obj\\",
+        "projectPath": "/home/m/Documents/GitHub/ECS-MonoGame/MyGame.csproj",
+        "packagesPath": "/home/m/.nuget/packages/",
+        "outputPath": "/home/m/Documents/GitHub/ECS-MonoGame/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\RD\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/m/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -46,11 +40,11 @@
           "dependencies": {
             "MonoGame.Content.Builder.Task": {
               "target": "Package",
-              "version": "[3.8.0.1641, )"
+              "version": "[3.8.1.263, )"
             },
             "MonoGame.Framework.DesktopGL": {
               "target": "Package",
-              "version": "[3.8.0.1641, )"
+              "version": "[3.8.1.263, )"
             },
             "TiledCS": {
               "target": "Package",
@@ -63,8 +57,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -73,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.116/RuntimeIdentifierGraph.json"
         }
       }
     }

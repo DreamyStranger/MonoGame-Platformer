@@ -4,21 +4,21 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Background/Blue.png</File>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Background/Brown.png</File>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Background/Gray.png</File>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Background/Green.png</File>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Background/Pink.png</File>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Background/Purple.png</File>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Obstacles/Ground.png</File>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Player/Frog/Double Jump.png</File>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Player/Frog/Fall.png</File>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Player/Frog/Hit.png</File>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Player/Frog/Idle.png</File>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Player/Frog/Jump.png</File>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Player/Frog/Left.png</File>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Player/Frog/Right.png</File>
-    <File>C:/Users/RD/Desktop/MyGame/MyGame/Content/Player/Frog/Wall Jump.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/Blue.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/Brown.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/Gray.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/Green.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/Pink.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/Purple.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Obstacles/Ground.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Double Jump.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Fall.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Hit.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Idle.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Jump.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Walking.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Wall Jump.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/TiledMap/Terrain.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using System.IO;
 
 namespace MyGame
 {
@@ -45,7 +46,12 @@ namespace MyGame
 
             //Load TiledMaps
             tiledHandler = new TileHandler(content);
-            tiledHandler.Load("Content\\TiledMap\\Level1.tmx", "Content\\TiledMap\\", "Level 1", "Terrain");
+            tiledHandler.Load(
+                Path.Combine(content.RootDirectory, "TiledMap", "Level1.tmx"),
+                Path.Combine(content.RootDirectory, "TiledMap//"),
+                "Level 1",
+                "Terrain"
+            );
 
             //Save collisionBoxes 
             tiledHandler.GetLayersBoundsInMap();

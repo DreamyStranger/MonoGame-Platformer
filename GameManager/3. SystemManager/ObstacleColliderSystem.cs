@@ -5,17 +5,30 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MyGame
 {
+    /// The ObstacleColliderSystem class manages collision detection and response for game entities
+    /// with obstacles in the game environment.
+    /// </summary>
     public class ObstacleColliderSystem : System
     {
         private List<EntityData> entitiesData;
+        /// <summary>
+        /// Dictionary containing the obstacle data for each layer in the game environment.
+        /// </summary>
         private Dictionary<string, List<Rectangle>> obstacles;
 
+        /// <summary>
+        /// Initializes a new instance of the ObstacleColliderSystem class.
+        /// </summary>
+        /// <param name="LevelID">The identifier for the level's obstacle data.</param>
         public ObstacleColliderSystem(string LevelID)
         {
             entitiesData = new List<EntityData>();
             obstacles = Loader.tiledHandler.obstacles[LevelID];
         }
-
+        /// <summary>
+        /// Adds an entity to the system.
+        /// </summary>
+        /// <param name="entity">The entity to be added.</param>
         public override void AddEntity(Entity entity)
         {
             StateComponent state = entity.GetComponent<StateComponent>();
@@ -36,11 +49,19 @@ namespace MyGame
             });
         }
 
+        /// <summary>
+        /// Removes an entity from the system.
+        /// </summary>
+        /// <param name="entity">The entity to be removed.</param>
         public override void RemoveEntity(Entity entity)
         {
             entitiesData.RemoveAll(data => data.Entity == entity);
         }
 
+        /// <summary>
+        /// Handles Collisions between all 
+        /// </summary>
+        /// <param name="gameTime">The current game time.</param>
         public override void Update(GameTime gameTime)
         {
             foreach (EntityData data in entitiesData)
@@ -52,8 +73,8 @@ namespace MyGame
 
                 float positionX = data.Movement.Position.X;
                 float positionY = data.Movement.Position.Y;
-                bool touchingRight = false;
                 bool touchingLeft = false;
+                bool touchingRight = false;
 
                 foreach (string key in obstacles.Keys)
                 {
@@ -70,17 +91,19 @@ namespace MyGame
                         int depthX = intersection.Width;
                         int depthY = intersection.Height;
 
+                        //Side of a platform that was intersected
                         bool collidesWithRightSide = box.Left < rect.Right && box.Right >= rect.Right;
                         bool collidesWithLeftSide = box.Right > rect.Left && box.Left <= rect.Left;
                         bool collidesWithBottomSide = box.Top < rect.Bottom && box.Bottom >= rect.Bottom;
                         bool collidesWithTopSide = box.Bottom > rect.Top && box.Top <= rect.Top;
 
+                        //Colission Resolution based on the state
                         switch (data.State.currentSuperState)
                         {
                             case SuperState.isFalling:
                                 if (collidesWithTopSide)
                                 {
-                                    positionY = rect.Top - data.CollisionBox.originalHeight;
+                                    positionY = rect.Top - data.CollisionBox.originalHeight + data.CollisionBox.vertBottomOffset;
                                     data.State.SetSuperState(SuperState.OnGround);
                                     data.CollisionBox.SetGroundLocation(rect.Left, rect.Right);
                                 }
@@ -92,21 +115,23 @@ namespace MyGame
                                 if (data.Movement.Velocity.X > 0 && collidesWithLeftSide)
                                 {
                                     positionX = rect.Left - data.CollisionBox.originalWidth + data.CollisionBox.horRightOffset;
-                                    touchingRight = true;
+                                    touchingLeft = true;
                                 }
                                 else if (data.Movement.Velocity.X < 0 && collidesWithRightSide)
                                 {
                                     positionX = rect.Right - data.CollisionBox.horRightOffset;
-                                    touchingLeft = true;
+                                    touchingRight = true;
                                 }
                                 break;
 
                             case SuperState.isJumping:
                             case SuperState.isDoubleJumping:
-
-                                Console.WriteLine($"Layer Name: {key}");  //Debug message
-                                if(key == "float") goto default;
-                                if (collidesWithBottomSide)
+                                //Console.WriteLine($"Layer Name: {key}");  //Debug message
+                                if (key == "float")
+                                {
+                                    break;
+                                }
+                                else if (collidesWithBottomSide)
                                 {
                                     positionY = rect.Bottom - data.CollisionBox.vertTopOffset;
                                 }
@@ -114,27 +139,31 @@ namespace MyGame
                                 goto default;
 
                             default:
-                                if (depthX < depthY && data.Movement.Velocity.X > 0 && box.Left <= rect.Left)
+                                if (depthX < depthY)
                                 {
-                                    positionX = rect.Left - data.CollisionBox.originalWidth + data.CollisionBox.horRightOffset;
-                                    touchingRight = true;
+                                    if (data.Movement.Velocity.X > 0 && box.Left <= rect.Left)
+                                    {
+                                        positionX = rect.Left - data.CollisionBox.originalWidth + data.CollisionBox.horRightOffset;
+                                        touchingLeft = true;
+                                    }
+                                    else if (data.Movement.Velocity.X < 0 && box.Right >= rect.Right)
+                                    {
+                                        positionX = rect.Right - data.CollisionBox.horRightOffset;
+                                        touchingRight = true;
+                                    }
                                 }
-                                else if (depthX < depthY && data.Movement.Velocity.X < 0 && box.Right >= rect.Right)
-                                {
-                                    positionX = rect.Right - data.CollisionBox.horRightOffset;
-                                    touchingLeft = true;
-                                }
-
-                                if(key != "float") data.Movement.Velocity = Vector2.Zero;
+                                data.Movement.Velocity = Vector2.Zero;
                                 break;
                         }
 
-                        Console.WriteLine($"Obstacle: {rect.ToString()}, StateID: {data.State.stateID}");
+                        //Console.WriteLine($"Obstacle: {rect.ToString()}, StateID: {data.State.stateID}"); //Debug Message
 
+                        //Update entity's position and collisionBox
                         data.Movement.Position = new Vector2(positionX, positionY);
                         data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.Movement.HorizontalDirection);
                     }
 
+                    //Check if entity still on a platform
                     if (data.CollisionBox.checkIfInAir(data.Movement.Position.X + data.CollisionBox.originalWidth, data.Movement.Position.X))
                     {
                         if (data.State.IsSuperState(SuperState.OnGround))
@@ -143,14 +172,15 @@ namespace MyGame
                         }
                     }
 
+                    //Restrict Movement if Side Collision Occured for better visuals
                     data.Movement.CanMoveRight = true;
                     data.Movement.CanMoveLeft = true;
-                    if (touchingLeft)
+                    if (touchingRight)
                     {
                         data.Movement.CanMoveRight = false;
                         data.State.SetState(ObjectState.Slide);
                     }
-                    if (touchingRight)
+                    if (touchingLeft)
                     {
                         data.Movement.CanMoveLeft = false;
                         data.State.SetState(ObjectState.Slide);
@@ -160,6 +190,10 @@ namespace MyGame
             }
         }
 
+        /// <summary>
+        /// Draws the system's state using the provided SpriteBatch.
+        /// </summary>
+        /// <param name="spriteBatch">The SpriteBatch used for drawing.</param>
         public override void Draw(SpriteBatch spriteBatch)
         {
             if (!GameConstants.DisplayCollisionBoxes)

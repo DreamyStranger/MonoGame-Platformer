@@ -85,18 +85,6 @@
 /processorParam:TextureFormat=Color
 /build:Background/Purple.png
 
-#begin Obstacles/Ground.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Obstacles/Ground.png
-
 #begin Player/Frog/Double Jump.png
 /importer:TextureImporter
 /processor:TextureProcessor

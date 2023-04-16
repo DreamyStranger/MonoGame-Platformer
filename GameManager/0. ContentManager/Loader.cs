@@ -36,10 +36,7 @@ namespace MyGame
             textures.Add("player_slide", content.Load<Texture2D>("Player/Frog/Wall Jump"));
 
             // Background
-            textures.Add("background_blue", content.Load<Texture2D>("Background/Blue"));
-            textures.Add("background_brown", content.Load<Texture2D>("Background/Brown"));
-            textures.Add("background_gray", content.Load<Texture2D>("Background/Gray"));
-            textures.Add("background_green", content.Load<Texture2D>("Background/Green"));
+            textures.Add("background_green", content.Load<Texture2D>("Background/BG_Green"));
 
             // Tilesets
             textures.Add("Terrain", content.Load<Texture2D>("TiledMap/Terrain"));

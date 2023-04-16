@@ -43,7 +43,12 @@ public class Game1 : Game
 
         //Entities
         systems = new SystemManager("Level 1");
-        Player player = new Player(this);
+        ObjectInitializer objectInitializer = new ObjectInitializer();
+        List<Entity> objects = objectInitializer.GetObjects();
+        foreach(Entity entity in objects)
+        {
+            systems.Add(entity);
+        }
     }
 
     protected override void Update(GameTime gameTime)
@@ -60,13 +65,14 @@ public class Game1 : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-
-        // TODO: Add your drawing code here
-        _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
-        _spriteBatch.Draw(Loader.GetTexture("background_green"), new Vector2(0, 0), Color.White);
         
+        //Displays Layers with Manually Set Depths Properly
+        DepthStencilState noDepthBufferState = new DepthStencilState { DepthBufferEnable = false }; 
+        _spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.LinearClamp, noDepthBufferState, null);
+
         Loader.tiledHandler.Draw("Level 1", _spriteBatch);
         Loader.tiledHandler.DrawCollisionBoxes("Level 1", _spriteBatch);
+
         systems.Draw(_spriteBatch);
         _spriteBatch.End();
 

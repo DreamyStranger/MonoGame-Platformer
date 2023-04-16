@@ -3,15 +3,20 @@ using System;
 
 namespace MyGame {
 
-// Player
-    public struct Player
+    public struct ObjectInitializer
     {
-        private Entity entity;
+        private List<Entity> objects;
 
-        public Player(Game1 game)
+        public ObjectInitializer()
         {
-            entity = EntityFactory.CreatePlayer();
-            game.systems.Add(entity);
+            objects = new List<Entity>();
+            objects.Add(EntityFactory.CreateParallaxBackground());
+            objects.Add(EntityFactory.CreatePlayer());
+        }
+
+        public List<Entity> GetObjects()
+        {
+            return objects;
         }
     }
 }

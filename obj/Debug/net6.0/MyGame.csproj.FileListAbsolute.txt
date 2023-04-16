@@ -42,12 +42,6 @@ C:/Users/RD/Desktop/MyGame/MyGame/bin/Debug/net6.0/Content/Player/Frog/Walking.x
 /home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MyGame.dll
 /home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/ref/MyGame.dll
 /home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MyGame.pdb
-/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Background/Blue.xnb
-/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Background/Brown.xnb
-/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Background/Gray.xnb
-/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Background/Green.xnb
-/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Background/Pink.xnb
-/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Background/Purple.xnb
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Obstacles/Ground.xnb
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Player/Frog/Double Jump.xnb
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Player/Frog/Fall.xnb
@@ -80,3 +74,4 @@ C:/Users/RD/Desktop/MyGame/MyGame/bin/Debug/net6.0/Content/Player/Frog/Walking.x
 /home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MyGame.csproj.CoreCompileInputs.cache
 /home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MyGame.csproj.CopyComplete
 /home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MyGame.genruntimeconfig.cache
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Background/BG_Green.xnb

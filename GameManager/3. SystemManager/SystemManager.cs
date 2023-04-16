@@ -19,6 +19,7 @@ namespace MyGame
         public SystemManager(string LevelID)
         {
             systems = new List<System>();
+            systems.Add(new ParallaxSystem());
             systems.Add(new InputSystem());
             systems.Add(new MovementSystem());
             systems.Add(new ObstacleColliderSystem(LevelID));

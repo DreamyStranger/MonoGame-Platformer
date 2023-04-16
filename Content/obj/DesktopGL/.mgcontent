@@ -4,12 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/Blue.png</File>
-    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/Brown.png</File>
-    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/Gray.png</File>
-    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/Green.png</File>
-    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/Pink.png</File>
-    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/Purple.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/BG_Green.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Double Jump.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Fall.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Hit.png</File>
@@ -20,11 +15,6 @@
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/TiledMap/Terrain.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -5,6 +5,23 @@ using System.Collections.Generic;
 namespace MyGame{
     struct EntityFactory
     {
+    //Parallax Background
+        public static Entity CreateParallaxBackground()
+        {
+            Entity background = new Entity();
+            
+            //Define the desired area of parallax
+            int viewX = GameConstants.SCREEN_WIDTH;
+            int viewY =  GameConstants.SCREEN_HEIGHT;
+            
+            //Define the direction and speed of Parallax
+            Vector2 velocity = new Vector2(0, 50); // top-down, change it and see what happens c:
+            //Parallax
+            background.AddComponent(new ParallaxComponent("background_green", new Vector2(0, -50), Vector2.Zero, viewX, viewY));
+            return background;
+        }
+
+    //Player
         public static Entity CreatePlayer()
         {
         

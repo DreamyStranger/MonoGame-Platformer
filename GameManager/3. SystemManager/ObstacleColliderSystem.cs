@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MyGame
 {
+    /// <summary>
     /// The ObstacleColliderSystem class manages collision detection and response for game entities
     /// with obstacles in the game environment.
     /// </summary>

@@ -5,6 +5,9 @@ using System;
 
 namespace MyGame
 {
+    /// <summary>
+    /// The main game class.
+    /// </summary>
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
@@ -12,6 +15,9 @@ namespace MyGame
         public World world;
         private KeyboardState previousKeyboardState;
 
+        /// <summary>
+        /// Initializes the Game1 class.
+        /// </summary>
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -19,6 +25,9 @@ namespace MyGame
             IsMouseVisible = false;
         }
 
+        /// <summary>
+        /// Initializes the game window and sets the desired resolution.
+        /// </summary>
         protected override void Initialize()
         {
             // Change the resolution 
@@ -33,6 +42,9 @@ namespace MyGame
             base.Initialize();
         }
 
+        /// <summary>
+        /// Loads game content.
+        /// </summary>
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -44,6 +56,11 @@ namespace MyGame
             world = new World();
         }
 
+
+        /// <summary>
+        /// Updates the game.
+        /// </summary>
+        /// <param name="gameTime">The current game time.</param>
         protected override void Update(GameTime gameTime)
         {
             KeyboardState currentKeyboardState = Keyboard.GetState();
@@ -67,7 +84,10 @@ namespace MyGame
             base.Update(gameTime);
         }
 
-
+        /// <summary>
+        /// Draws the game.
+        /// </summary>
+        /// <param name="gameTime">The current game time.</param>
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);

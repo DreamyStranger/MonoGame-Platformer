@@ -58,6 +58,8 @@ namespace MyGame
 
         /// <summary>
         /// Updates the movement system based on the elapsed game time.
+        /// Note: Horizontal and Vertical borders are not checked
+        /// Note: Above because borders are drown in Tiled and handled in ObstacleCollisionSystem
         /// </summary>
         /// <param name="gameTime">The elapsed game time.</param>
         public override void Update(GameTime gameTime)
@@ -94,6 +96,7 @@ namespace MyGame
             // Update Position
             movement.LastPosition = movement.Position;
             movement.Position += movement.Velocity * deltaTime;
+
         }
 
         /// <summary>

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace MyGame
 {
-    // <summary>
+    /// <summary>
     /// Implements the <see cref="LevelInitializer"/> interface to provide initialization logic for Level 2.
     /// </summary>
     public class Level2Initializer : LevelInitializer

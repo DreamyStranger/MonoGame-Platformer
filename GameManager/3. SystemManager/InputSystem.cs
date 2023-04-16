@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 
 namespace MyGame
 {
-    // <summary>
+    /// <summary>
     /// Input system that updates all entities with a StateComponent and InputComponent.
     /// It manages the communication between the two components, allowing entities to respond to user input
     /// </summary>

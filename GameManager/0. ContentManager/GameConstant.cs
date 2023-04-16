@@ -1,5 +1,8 @@
 namespace MyGame
 {
+    /// <summary>
+    /// Holds common game constants
+    /// </summary>
     public static class GameConstants
     {
         // Player-related constants

@@ -19,7 +19,7 @@ namespace MyGame
 
         /// <summary>
         /// Initializes a new instance of the ParallaxComponent class.
-        /// NOTE: It will miss a tile in a top left corner for Velcity = (x < 0; y)!
+        /// NOTE: It will miss a tile in a top left corner for Velcity = (x < 0, y > 0)!!!
         /// </summary>
         /// <param name="sprite">The filename of the sprite to use.</param>
         /// <param name="velocity">The velocity of the parallax effect.</param>

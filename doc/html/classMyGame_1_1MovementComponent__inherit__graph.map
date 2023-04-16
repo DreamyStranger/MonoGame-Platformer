@@ -1,0 +1,4 @@
+<map id="MyGame.MovementComponent" name="MyGame.MovementComponent">
+<area shape="rect" id="node1" title="The MovementComponent class represents the component responsible for handling the motion of an entity..." alt="" coords="5,80,236,107"/>
+<area shape="rect" id="node2" href="$classMyGame_1_1Component.html" title="The base class for all components." alt="" coords="72,5,169,32"/>
+</map>

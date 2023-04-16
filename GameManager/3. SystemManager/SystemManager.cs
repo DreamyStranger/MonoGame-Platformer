@@ -38,13 +38,17 @@ namespace MyGame
             }
         }
         /// <summary>
-        /// Removes an entity from specified systems.
+        /// Removes an entity from the system.
         /// </summary>
         /// <param name="entity">The entity to be removed.</param>
-        public void Remove(Entity entity, int systemIndex)
+        public void Remove(Entity entity)
         {
-            systems[systemIndex].RemoveEntity(entity);
+            foreach (System system in systems)
+            {
+                system.RemoveEntity(entity);
+            }
         }
+
 
         /// <summary>
         /// Updates all the systems with the specified <see cref="GameTime"/>.

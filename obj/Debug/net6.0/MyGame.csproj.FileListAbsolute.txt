@@ -42,7 +42,6 @@ C:/Users/RD/Desktop/MyGame/MyGame/bin/Debug/net6.0/Content/Player/Frog/Walking.x
 /home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MyGame.dll
 /home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/ref/MyGame.dll
 /home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MyGame.pdb
-/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Obstacles/Ground.xnb
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Player/Frog/Double Jump.xnb
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Player/Frog/Fall.xnb
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Player/Frog/Hit.xnb

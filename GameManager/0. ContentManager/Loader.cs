@@ -17,6 +17,7 @@ namespace MyGame
         // TiledMap
         public static TileHandler tiledHandler { get; private set; }
         public static Dictionary<string, List<Rectangle>> obstacles { get; private set; }
+        private static Dictionary<string, List<LevelID>> terrainToLevel = new Dictionary<string, List<LevelID>>();
 
         //Debug box
         public static Texture2D collisionBox;
@@ -37,22 +38,28 @@ namespace MyGame
 
             // Background
             textures.Add("background_green", content.Load<Texture2D>("Background/BG_Green"));
+            
+            // Add more terrain types and their corresponding levels here
 
-            // Tilesets
             textures.Add("Terrain", content.Load<Texture2D>("TiledMap/Terrain"));
+            // Tilesets
+            AddTerrain("Terrain", LevelID.Level1);
 
             //Load TiledMaps
             tiledHandler = new TileHandler(content);
-            tiledHandler.Load(
-                //Makes sure correct path for both Ubuntu and Windows systmes
-                Path.Combine(content.RootDirectory, "TiledMap", "Level1.tmx"),
-                Path.Combine(content.RootDirectory, "TiledMap", " "),
-                "Level 1",
-                "Terrain"
-            );
+            foreach (LevelID level in LevelID.GetValues(typeof(LevelID)))
+            {
+                string levelName = level.ToString();
+                tiledHandler.Load(
+                    Path.Combine(content.RootDirectory, "TiledMap", $"{levelName}.tmx"),
+                    Path.Combine(content.RootDirectory, "TiledMap", " "),
+                    levelName,
+                    GetTerrain(level)
+                );
 
-            //Save collisionBoxes 
-            tiledHandler.GetLayersBoundsInMap();
+                // Save collision boxes for each level
+                tiledHandler.GetLayersBoundsInMap();
+            }
 
             //Box to debug Collisions
             GraphicsDevice graphicsDevice = ((IGraphicsDeviceService)content.ServiceProvider.GetService(typeof(IGraphicsDeviceService))).GraphicsDevice;
@@ -72,6 +79,30 @@ namespace MyGame
                 return textures[textureName];
             }
 
+            return null;
+        }
+
+        private static void AddTerrain(string terrain, LevelID levelID)
+        {
+            if (!terrainToLevel.ContainsKey(terrain))
+            {
+                terrainToLevel[terrain] = new List<LevelID>();
+            }
+            terrainToLevel[terrain].Add(levelID);
+        }
+
+        private static string GetTerrain(LevelID levelID)
+        {
+            foreach (var key in terrainToLevel.Keys)
+            {
+                foreach (var value in terrainToLevel[key])
+                {
+                    if (value == levelID)
+                    {
+                        return key;
+                    }
+                }
+            }
             return null;
         }
     }

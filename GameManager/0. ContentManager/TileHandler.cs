@@ -108,13 +108,13 @@ namespace MyGame
         /// <summary>
         /// Draws every tile in the "TileLayer" type layers of the specified map.
         /// </summary>
-        /// <param name="mapName">The name of the map to draw.</param>
+        /// <param name="LevelID">The name of the map to draw.</param>
         /// <param name="spriteBatch">The SpriteBatch object to use for rendering.</param>
-        public void Draw(string mapName, SpriteBatch spriteBatch)
+        public void Draw(string LevelID, SpriteBatch spriteBatch)
         {
-            TiledMap map = tiledMaps[mapName];
-            Texture2D tilesetTexture = tilesetTextures[mapName];
-            var tilesets = tileSets[mapName];
+            TiledMap map = tiledMaps[LevelID];
+            Texture2D tilesetTexture = tilesetTextures[LevelID];
+            var tilesets = tileSets[LevelID];
 
             foreach (var layer in map.Layers)
             {

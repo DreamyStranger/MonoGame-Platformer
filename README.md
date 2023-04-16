@@ -1,2 +1,2 @@
 # ECS-MonoGame
-Implementation of ECS Framework using MonoGame
+Implementation of Siple ECS Framework using MonoGame

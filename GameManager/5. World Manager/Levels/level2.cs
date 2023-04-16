@@ -3,9 +3,9 @@ using System.Collections.Generic;
 namespace MyGame
 {
     // <summary>
-    /// Implements the <see cref="LevelInitializer"/> interface to provide initialization logic for Level 1.
+    /// Implements the <see cref="LevelInitializer"/> interface to provide initialization logic for Level 2.
     /// </summary>
-    public class Level1Initializer : LevelInitializer
+    public class Level2Initializer : LevelInitializer
     {
         /// <summary>
         /// Returns a list of entities to be created and added to the level.
@@ -14,8 +14,8 @@ namespace MyGame
         public List<Entity> GetObjects()
         {
             List<Entity> objects = new List<Entity>();
-            objects.Add(EntityFactory.CreateParallaxBackground("bg_green", new Vector2(0, 50)));
-            objects.Add(EntityFactory.CreatePlayer(new Vector2(320, 180)));
+            objects.Add(EntityFactory.CreateParallaxBackground("bg_green", new Vector2(-50, 50)));
+            objects.Add(EntityFactory.CreatePlayer(new Vector2(50, 20)));
             return objects;
         }
     }

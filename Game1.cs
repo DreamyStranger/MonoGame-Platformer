@@ -10,6 +10,7 @@ namespace MyGame
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         public World world;
+        private KeyboardState previousKeyboardState;
 
         public Game1()
         {
@@ -45,19 +46,27 @@ namespace MyGame
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            KeyboardState currentKeyboardState = Keyboard.GetState();
+
+            if (currentKeyboardState.IsKeyDown(Keys.Escape) && previousKeyboardState.IsKeyUp(Keys.Escape))
                 Exit();
 
-            if (Keyboard.GetState().IsKeyDown(Keys.R))
-            {
+            if (currentKeyboardState.IsKeyDown(Keys.R) && previousKeyboardState.IsKeyUp(Keys.R))
                 world.ResetCurrentLevel();
-            }
 
-            // Update the world
+            if (currentKeyboardState.IsKeyDown(Keys.P) && previousKeyboardState.IsKeyUp(Keys.P))
+                world.PreviousLevel();
+
+            if (currentKeyboardState.IsKeyDown(Keys.N) && previousKeyboardState.IsKeyUp(Keys.N))
+                world.NextLevel();
+
+            previousKeyboardState = currentKeyboardState;
+
             world.Update(gameTime);
 
             base.Update(gameTime);
         }
+
 
         protected override void Draw(GameTime gameTime)
         {

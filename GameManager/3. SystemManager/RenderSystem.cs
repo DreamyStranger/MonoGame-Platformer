@@ -33,7 +33,6 @@ namespace MyGame
 
             if (state == null || animations == null || movement == null)
             {
-                Console.WriteLine("Missing a Component!"); //Debug message
                 return;
             }
 

@@ -21,10 +21,15 @@ namespace MyGame
         /// Initializes a new instance of the ObstacleColliderSystem class.
         /// </summary>
         /// <param name="LevelID">The identifier for the level's obstacle data.</param>
-        public ObstacleColliderSystem(string LevelID)
+        public ObstacleColliderSystem(LevelID levelID)
         {
             entitiesData = new List<EntityData>();
-            obstacles = Loader.tiledHandler.obstacles[LevelID];
+            obstacles = new Dictionary<string, List<Rectangle>>();
+            obstacles = Loader.tiledHandler.obstacles[levelID.ToString()];
+
+            //Console.WriteLine($"Loaded obstacles for Levels: {levelID}"); // Debug message
+            //Console.WriteLine($"Loaded obstacle layers: {string.Join(", ", obstacles.Keys)}"); // Debug message
+
         }
         /// <summary>
         /// Adds an entity to the system.

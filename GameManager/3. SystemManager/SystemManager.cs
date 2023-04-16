@@ -16,13 +16,13 @@ namespace MyGame
         /// Initializes a new instance of the <see cref="SystemManager"/> class with a specified level ID.
         /// </summary>
         /// <param name="LevelID">The ID of the level.</param>
-        public SystemManager(string LevelID)
+        public SystemManager(LevelID levelID)
         {
             systems = new List<System>();
             systems.Add(new ParallaxSystem());
             systems.Add(new InputSystem());
             systems.Add(new MovementSystem());
-            systems.Add(new ObstacleColliderSystem(LevelID));
+            systems.Add(new ObstacleColliderSystem(levelID));
             systems.Add(new RenderSystem());
         }
 
@@ -43,6 +43,10 @@ namespace MyGame
         /// <param name="entity">The entity to be removed.</param>
         public void Remove(Entity entity)
         {
+            if(systems == null)
+            {
+                return;
+            }
             foreach (System system in systems)
             {
                 system.RemoveEntity(entity);

@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using System.IO;
+using System;
 
 namespace MyGame
 {
@@ -22,7 +23,7 @@ namespace MyGame
         //Debug box
         public static Texture2D collisionBox;
 
-        // <summary>
+        /// <summary>
         /// Loads game assets into memory.
         /// </summary>
         /// <param name="content">The ContentManager to load assets with.</param>
@@ -37,13 +38,15 @@ namespace MyGame
             textures.Add("player_slide", content.Load<Texture2D>("Player/Frog/Wall Jump"));
 
             // Background
-            textures.Add("background_green", content.Load<Texture2D>("Background/BG_Green"));
+            textures.Add("bg_green", content.Load<Texture2D>("Background/BG_Green"));
             
-            // Add more terrain types and their corresponding levels here
-
             textures.Add("Terrain", content.Load<Texture2D>("TiledMap/Terrain"));
-            // Tilesets
+            // Add more terrain types here
+
+            // Map Terrains to their Level
             AddTerrain("Terrain", LevelID.Level1);
+            AddTerrain("Terrain", LevelID.Level2);
+            //Map more Levels to terrains here
 
             //Load TiledMaps
             tiledHandler = new TileHandler(content);
@@ -82,6 +85,11 @@ namespace MyGame
             return null;
         }
 
+        /// <summary>
+        /// Associates a terrain type with a level.
+        /// </summary>
+        /// <param name="terrain">The name of the terrain type.</param>
+        /// <param name="levelID">The ID of the level.</param>
         private static void AddTerrain(string terrain, LevelID levelID)
         {
             if (!terrainToLevel.ContainsKey(terrain))
@@ -91,6 +99,11 @@ namespace MyGame
             terrainToLevel[terrain].Add(levelID);
         }
 
+        /// <summary>
+        /// Retrieves the name of the terrain associated with a given level.
+        /// </summary>
+        /// <param name="levelID">The ID of the level.</param>
+        /// <returns>The name of the associated terrain, or null if no terrain is associated with the level.</returns>
         private static string GetTerrain(LevelID levelID)
         {
             foreach (var key in terrainToLevel.Keys)
@@ -103,6 +116,7 @@ namespace MyGame
                     }
                 }
             }
+            Console.WriteLine($"There is no Terrain associated with {levelID.ToString()}"); //Debug message
             return null;
         }
     }

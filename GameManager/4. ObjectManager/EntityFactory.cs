@@ -6,7 +6,7 @@ namespace MyGame{
     struct EntityFactory
     {
     //Parallax Background
-        public static Entity CreateParallaxBackground()
+        public static Entity CreateParallaxBackground(string texture, Vector2 velocity)
         {
             Entity background = new Entity();
             
@@ -14,15 +14,13 @@ namespace MyGame{
             int viewX = GameConstants.SCREEN_WIDTH;
             int viewY =  GameConstants.SCREEN_HEIGHT;
             
-            //Define the direction and speed of Parallax
-            Vector2 velocity = new Vector2(0, 50); // top-down, change it and see what happens c:
             //Parallax
-            background.AddComponent(new ParallaxComponent("background_green", velocity, Vector2.Zero, viewX, viewY));
+            background.AddComponent(new ParallaxComponent(texture, velocity, Vector2.Zero, viewX, viewY));
             return background;
         }
 
     //Player
-        public static Entity CreatePlayer()
+        public static Entity CreatePlayer(Vector2 position)
         {
         
         //Empty Player
@@ -43,11 +41,11 @@ namespace MyGame{
             player.AddComponent(new InputComponent());
 
         // Position and transforms
-            var Transform = new MovementComponent(new Vector2(320, 180));
+            var Transform = new MovementComponent(position);
             player.AddComponent(Transform);
 
         // Collisions
-            player.AddComponent(new CollisionBoxComponent(new Vector2(320, 180), 32, 32));
+            player.AddComponent(new CollisionBoxComponent(position, 32, 32));
 
             return player;
         }

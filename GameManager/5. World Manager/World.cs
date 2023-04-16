@@ -1,10 +1,11 @@
 using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using System;
 
 namespace MyGame
 {
+    /// <summary>
+    /// Represents the game world and manages loading and updating levels.
+    /// </summary>
     public class World
     {
         private LevelManager levelManager;
@@ -16,10 +17,13 @@ namespace MyGame
         {
             levelManager = new LevelManager();
             CurrentLevel = levelManager.GetLevel(LevelID.Level1);
-            systems = new SystemManager(CurrentLevel.Id.ToString());
+            systems = new SystemManager(CurrentLevel.Id);
             LoadLevel(CurrentLevel);
         }
 
+        /// <summary>
+        /// Gets or sets the current level.
+        /// </summary>
         public Level CurrentLevel
         {
             get { return currentLevel; }
@@ -30,9 +34,13 @@ namespace MyGame
             }
         }
 
+        /// <summary>
+        /// Loads the given level and its entities into the game world.
+        /// </summary>
         private void LoadLevel(Level level)
         {
-            systems = new SystemManager(level.Id.ToString());
+            
+            systems = new SystemManager(level.Id);
             List<Entity> objects = level.Initializer.GetObjects();
             foreach (Entity entity in objects)
             {
@@ -40,25 +48,35 @@ namespace MyGame
             }
         }
 
+        /// <summary>
+        /// Resets the current level by reloading it.
+        /// </summary>
         public void ResetCurrentLevel()
         {
             LoadLevel(CurrentLevel);
         }
 
+        /// <summary>
+        /// Advances to the next level.
+        /// </summary>
         public void NextLevel()
         {
             LevelID nextLevelID = GetNextLevelId(CurrentLevel.Id);
             CurrentLevel = levelManager.GetLevel(nextLevelID);
-            LoadLevel(CurrentLevel);
         }
 
+        /// <summary>
+        /// Goes back to the previous level.
+        /// </summary>
         public void PreviousLevel()
         {
             LevelID previousLevelID = GetPreviousLevelId(CurrentLevel.Id);
             CurrentLevel = levelManager.GetLevel(previousLevelID);
-            LoadLevel(CurrentLevel);
         }
 
+        /// <summary>
+        /// Gets the ID of the next level given the current level ID.
+        /// </summary>
         private LevelID GetNextLevelId(LevelID currentLevelID)
         {
             int currentLevelIndex = (int)currentLevelID;
@@ -66,6 +84,9 @@ namespace MyGame
             return (LevelID)nextLevelIndex;
         }
 
+        /// <summary>
+        /// Gets the ID of the previous level given the current level ID.
+        /// </summary>
         private LevelID GetPreviousLevelId(LevelID currentLevelID)
         {
             int currentLevelIndex = (int)currentLevelID;
@@ -73,11 +94,17 @@ namespace MyGame
             return (LevelID)previousLevelIndex;
         }
 
+        /// <summary>
+        /// Updates the game world.
+        /// </summary>
         public void Update(GameTime gameTime)
         {
             systems.Update(gameTime);
         }
 
+        /// <summary>
+        /// Draws the game world.
+        /// </summary>
         public void Draw(SpriteBatch spriteBatch)
         {
             systems.Draw(spriteBatch);

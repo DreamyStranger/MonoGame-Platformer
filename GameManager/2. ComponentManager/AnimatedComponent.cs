@@ -75,6 +75,11 @@ namespace MyGame
         /// <param name="direction">The horizontal direction the animation is facing.</param>
         public void Draw(SpriteBatch spriteBatch, Vector2 position, int direction = 1)
         {
+            if (CurrentAction == null)
+            {
+                Console.WriteLine("CurrentAction is null"); // Debug message
+                return;
+            }
             if (Animations.ContainsKey(CurrentAction))
             {
                 ActionAnimation currentAnimation = GetCurrentAnimation();

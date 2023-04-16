@@ -1,7 +1,4 @@
 using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
 using TiledCS;
 
 namespace MyGame
@@ -82,11 +79,9 @@ namespace MyGame
         /// </summary>
         public void GetLayersBoundsInMap()
         {
-
-            Dictionary<string, List<Rectangle>> layerBoundsMap = new Dictionary<string, List<Rectangle>>();
-
             foreach (string mapName in tiledMaps.Keys)
             {
+                Dictionary<string, List<Rectangle>> layerBoundsMap = new Dictionary<string, List<Rectangle>>(); 
                 foreach (var layer in tiledMaps[mapName].Layers)
                 {
                     string layerName = layer.name;
@@ -168,21 +163,9 @@ namespace MyGame
             {
                 foreach (Rectangle rect in obstacles[mapName][layer])
                 {
-                    if (layer == "solid")
-                    {
-                        var color = new Color(0, 0, 0, 0.3f); //black, opacity 0.3
-                        spriteBatch.Draw(collisionBox, rect, color);
-                    }
-                    else if (layer == "float")
-                    {
-                        var color = new Color(1, 0, 0, 0.3f); //red, opacity 0.3
-                        spriteBatch.Draw(collisionBox, rect, color);
-                    }
-                    else
-                    {
-                        var color = Color.Orange;
-                        spriteBatch.Draw(collisionBox, rect, color);
-                    }
+
+                    var color = new Color(1, 0, 0, 0.3f); //red, opacity 0.3
+                    spriteBatch.Draw(collisionBox, rect, color);
                 }
             }
         }

@@ -81,7 +81,7 @@ namespace MyGame
         {
             foreach (string mapName in tiledMaps.Keys)
             {
-                Dictionary<string, List<Rectangle>> layerBoundsMap = new Dictionary<string, List<Rectangle>>(); 
+                Dictionary<string, List<Rectangle>> layerBoundsMap = new Dictionary<string, List<Rectangle>>();
                 foreach (var layer in tiledMaps[mapName].Layers)
                 {
                     string layerName = layer.name;
@@ -142,30 +142,6 @@ namespace MyGame
                             spriteBatch.Draw(tilesetTexture, destination, source, Color.White);
                         }
                     }
-                }
-            }
-        }
-
-        /// <summary>
-        /// Draws collision boxes for all obstacle layers in the specified map.
-        /// </summary>
-        /// <param name="mapName">The name of the map to draw.</param>
-        /// <param name="spriteBatch">The SpriteBatch object to use for rendering.</param>
-        public void DrawCollisionBoxes(string mapName, SpriteBatch spriteBatch)
-        {
-            if (!GameConstants.DisplayCollisionBoxes)
-            {
-                return;
-            }
-            Texture2D collisionBox = Loader.collisionBox;
-
-            foreach (var layer in obstacles[mapName].Keys)
-            {
-                foreach (Rectangle rect in obstacles[mapName][layer])
-                {
-
-                    var color = new Color(1, 0, 0, 0.3f); //red, opacity 0.3
-                    spriteBatch.Draw(collisionBox, rect, color);
                 }
             }
         }

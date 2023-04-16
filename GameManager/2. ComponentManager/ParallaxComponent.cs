@@ -19,6 +19,7 @@ namespace MyGame
 
         /// <summary>
         /// Initializes a new instance of the ParallaxComponent class.
+        /// NOTE: It will miss a tile in a top left corner for Velcity = (x < 0; y)!
         /// </summary>
         /// <param name="sprite">The filename of the sprite to use.</param>
         /// <param name="velocity">The velocity of the parallax effect.</param>
@@ -32,17 +33,22 @@ namespace MyGame
             _position = position;
             _position2 = position;
 
-            _tileX = (int)Math.Ceiling((float)viewX / _texture.Width);
-            _tileY = (int)Math.Ceiling((float)viewY / _texture.Height);
+            _tileX = (int)Math.Ceiling((float)viewX / _texture.Width) + 2;
+            _tileY = (int)Math.Ceiling((float)viewY / _texture.Height) + 2;
+
+            _position2 = position;
+
 
             if (velocity.X != 0)
             {
-                _position2.X += _texture.Width;
+                _position2.X -= Math.Sign(velocity.X) * _texture.Width;
             }
+
             if (velocity.Y != 0)
             {
-                _position2.Y -= _texture.Height;
+                _position2.Y -= Math.Sign(velocity.Y) * _texture.Height;
             }
+
         }
 
         /// <summary>

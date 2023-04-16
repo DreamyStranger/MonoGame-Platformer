@@ -74,7 +74,6 @@ namespace MyGame
 
             _spriteBatch.Begin(SpriteSortMode.BackToFront, null, SamplerState.PointClamp);
             Loader.tiledHandler.Draw(world.CurrentLevel.Id.ToString(), _spriteBatch);
-            Loader.tiledHandler.DrawCollisionBoxes(world.CurrentLevel.Id.ToString(), _spriteBatch);
             world.Draw(_spriteBatch);
             _spriteBatch.End();
 

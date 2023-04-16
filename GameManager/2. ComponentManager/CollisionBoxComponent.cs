@@ -34,7 +34,7 @@ namespace MyGame
         /// <param name="horLeftOffset">The horizontal offset from the left of the collision box.</param>
         /// <param name="horRightOffset">The horizontal offset from the right of the collision box.</param>
         public CollisionBoxComponent(Vector2 position, int width = 32, int height = 32,
-                                int vertTopOffset = 8, int vertBottomOffset = 0, int horLeftOffset = 4, int horRightOffset = 6)
+                                int vertTopOffset = 0, int vertBottomOffset = 0, int horLeftOffset = 0, int horRightOffset = 0)
         {
             this.originalWidth = width;
             this.originalHeight = height;

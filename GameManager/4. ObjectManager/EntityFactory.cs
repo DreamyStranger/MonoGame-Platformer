@@ -45,7 +45,7 @@ namespace MyGame{
             player.AddComponent(Transform);
 
         // Collisions
-            player.AddComponent(new CollisionBoxComponent(position, 32, 32));
+            player.AddComponent(new CollisionBoxComponent(position, 32, 32, 8, 0, 4 ,6));
 
             return player;
         }

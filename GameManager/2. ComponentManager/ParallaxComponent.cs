@@ -4,6 +4,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MyGame
 {
+    /// <summary>
+    /// A component that implements a parallax effect for a sprite in a 2D game.
+    /// </summary>
     public class ParallaxComponent : Component
     {
         private Texture2D _texture;
@@ -14,6 +17,14 @@ namespace MyGame
         private int _tileX;
         private int _tileY;
 
+        /// <summary>
+        /// Initializes a new instance of the ParallaxComponent class.
+        /// </summary>
+        /// <param name="sprite">The filename of the sprite to use.</param>
+        /// <param name="velocity">The velocity of the parallax effect.</param>
+        /// <param name="position">The starting position of the sprite.</param>
+        /// <param name="viewX">The width of the parallax window.</param>
+        /// <param name="viewY">The height of the parallax window.</param>
         public ParallaxComponent(string sprite, Vector2 velocity, Vector2 position, int viewX, int viewY)
         {
             _texture = Loader.GetTexture(sprite);
@@ -34,6 +45,10 @@ namespace MyGame
             }
         }
 
+        /// <summary>
+        /// Updates the position of the sprite based on the elapsed time and velocity. Also loops the sprite horizontally and vertically if necessary.
+        /// </summary>
+        /// <param name="gameTime">A snapshot of the current game time.</param>
         public void Update(GameTime gameTime)
         {
             float elapsedSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -94,6 +109,10 @@ namespace MyGame
 
         }
 
+        /// <summary>
+        /// Draws the sprite with the parallax effect.
+        /// </summary>
+        /// <param name="spriteBatch">The SpriteBatch object to use for drawing.</param>
         public void Draw(SpriteBatch spriteBatch)
         {
             for (int x = 0; x < _tileX; x++)

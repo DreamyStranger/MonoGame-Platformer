@@ -65,14 +65,10 @@ public class Game1 : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-        
-        //Displays Layers with Manually Set Depths Properly
-        DepthStencilState noDepthBufferState = new DepthStencilState { DepthBufferEnable = false }; 
-        _spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.LinearClamp, noDepthBufferState, null);
 
+        _spriteBatch.Begin(SpriteSortMode.BackToFront, null, SamplerState.PointClamp); //By Layer Depth and no Blending to avoid blurs
         Loader.tiledHandler.Draw("Level 1", _spriteBatch);
         Loader.tiledHandler.DrawCollisionBoxes("Level 1", _spriteBatch);
-
         systems.Draw(_spriteBatch);
         _spriteBatch.End();
 

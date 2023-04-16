@@ -17,7 +17,7 @@ namespace MyGame{
             //Define the direction and speed of Parallax
             Vector2 velocity = new Vector2(0, 50); // top-down, change it and see what happens c:
             //Parallax
-            background.AddComponent(new ParallaxComponent("background_green", new Vector2(0, -50), Vector2.Zero, viewX, viewY));
+            background.AddComponent(new ParallaxComponent("background_green", velocity, Vector2.Zero, viewX, viewY));
             return background;
         }
 

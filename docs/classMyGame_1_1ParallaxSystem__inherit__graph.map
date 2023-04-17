@@ -1,4 +1,0 @@
-<map id="MyGame.ParallaxSystem" name="MyGame.ParallaxSystem">
-<area shape="rect" id="node1" title="A system that manages parallax components and their related entities." alt="" coords="5,80,192,107"/>
-<area shape="rect" id="node2" href="$classMyGame_1_1System.html" title="An abstract base class for systems in the game." alt="" coords="63,5,134,32"/>
-</map>

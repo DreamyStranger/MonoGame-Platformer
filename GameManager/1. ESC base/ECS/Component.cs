@@ -7,8 +7,6 @@ namespace MyGame
     /// </summary>
     public abstract class Component
     {
-        public virtual void OnDestroy()
-        {
-        }
+        
     }
 }

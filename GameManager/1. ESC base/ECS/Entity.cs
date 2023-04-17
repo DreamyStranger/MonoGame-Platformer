@@ -54,7 +54,6 @@ namespace MyGame
             if (ComponentExists(type, component))
             {
                 components[type].Remove(component);
-                component.OnDestroy();
             }
             else
             {
@@ -96,20 +95,6 @@ namespace MyGame
                 componentList.AddRange(list);
             }
             return componentList;
-        }
-
-        /// <summary>
-        /// Destroys the entity and all its components.
-        /// </summary>
-        public void Destroy()
-        {
-            foreach (var list in components.Values)
-            {
-                foreach (var component in list)
-                {
-                    component.OnDestroy();
-                }
-            }
         }
 
         /// <summary>

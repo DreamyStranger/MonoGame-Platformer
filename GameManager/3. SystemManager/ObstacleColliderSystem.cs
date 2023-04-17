@@ -106,7 +106,7 @@ namespace MyGame
                         //Colission Resolution based on the state
                         switch (data.State.currentSuperState)
                         {
-                            case SuperState.isFalling:
+                            case SuperState.IsFalling:
                                 if (collidesWithTopSide)
                                 {
                                     positionY = rect.Top - data.CollisionBox.originalHeight + data.CollisionBox.vertBottomOffset;
@@ -130,8 +130,8 @@ namespace MyGame
                                 }
                                 break;
 
-                            case SuperState.isJumping:
-                            case SuperState.isDoubleJumping:
+                            case SuperState.IsJumping:
+                            case SuperState.IsDoubleJumping:
                                 //Console.WriteLine($"Layer Name: {key}");  //Debug message
                                 if (key == "float")
                                 {
@@ -141,7 +141,7 @@ namespace MyGame
                                 {
                                     positionY = rect.Bottom - data.CollisionBox.vertTopOffset;
                                 }
-                                data.State.SetSuperState(SuperState.isFalling);
+                                data.State.SetSuperState(SuperState.IsFalling);
                                 goto default;
 
                             default:
@@ -174,7 +174,7 @@ namespace MyGame
                     {
                         if (data.State.IsSuperState(SuperState.OnGround))
                         {
-                            data.State.SetSuperState(SuperState.isFalling);
+                            data.State.SetSuperState(SuperState.IsFalling);
                         }
                     }
 

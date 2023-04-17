@@ -21,9 +21,9 @@ namespace MyGame
     public enum SuperState
     {
         OnGround,
-        isFalling,
-        isJumping,
-        isDoubleJumping,
+        IsFalling,
+        IsJumping,
+        IsDoubleJumping,
     }
 
     /// <summary>
@@ -51,7 +51,7 @@ namespace MyGame
         public StateComponent()
         {
             SetState(ObjectState.Idle);
-            SetSuperState(SuperState.isFalling);
+            SetSuperState(SuperState.IsFalling);
             UpdateStateID();
         }
 
@@ -116,16 +116,16 @@ namespace MyGame
                     }
                     break;
 
-                case SuperState.isFalling:
+                case SuperState.IsFalling:
                     stateID = "fall";
                     if (currentState == ObjectState.Slide) stateID = "slide";
                     break;
 
-                case SuperState.isJumping:
+                case SuperState.IsJumping:
                     stateID = "jump";
                     break;
 
-                case SuperState.isDoubleJumping:
+                case SuperState.IsDoubleJumping:
                     stateID = "double_jump";
                     break;
             }

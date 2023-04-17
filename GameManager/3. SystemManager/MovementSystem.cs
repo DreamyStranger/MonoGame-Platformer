@@ -76,7 +76,7 @@ namespace MyGame
         /// <param name="gameTime">The elapsed game time.</param>
         /// <param name="movement">The movement component of the entity.</param>
         /// <param name="state">The state component of the entity.</param>
-        public void UpdatePositionBasedOnState(GameTime gameTime, MovementComponent movement, StateComponent state)
+        private void UpdatePositionBasedOnState(GameTime gameTime, MovementComponent movement, StateComponent state)
         {
             // Motion variables
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -104,7 +104,7 @@ namespace MyGame
         /// </summary>
         /// <param name="state">The state component of the entity.</param>
         /// <param name="movement">The movement component of the entity.</param>
-        public void VerticalMovement(StateComponent state, MovementComponent movement)
+        private void VerticalMovement(StateComponent state, MovementComponent movement)
         {
             // Vertical Movement
             switch (state.currentSuperState)
@@ -115,21 +115,21 @@ namespace MyGame
                     if (state.IsState(ObjectState.Jump))
                     {
                         movement.Velocity = new Vector2(movement.Velocity.X, GameConstants.SpeedY);
-                        state.SetSuperState(SuperState.isJumping);
+                        state.SetSuperState(SuperState.IsJumping);
                     }
                     break;
 
-                case SuperState.isFalling:
+                case SuperState.IsFalling:
                     movement.Acceleration = new Vector2(0, GameConstants.GRAVITY);
                     if (state.IsState(ObjectState.DoubleJump))
                     {
                         movement.Velocity += new Vector2(0, GameConstants.SpeedY);
-                        state.SetSuperState(SuperState.isDoubleJumping);
+                        state.SetSuperState(SuperState.IsDoubleJumping);
                     }
                     break;
                 default:
                     movement.Acceleration = new Vector2(0, GameConstants.GRAVITY);
-                    if (movement.Velocity.Y > 0) state.SetSuperState(SuperState.isFalling);
+                    if (movement.Velocity.Y > 0) state.SetSuperState(SuperState.IsFalling);
                     break;
             }
         }
@@ -139,7 +139,7 @@ namespace MyGame
         /// </summary>
         /// <param name="state">The state component of the entity.</param>
         /// <param name="movement">The movement component of the entity.</param>
-        public void HorizontalMovement(StateComponent state, MovementComponent movement)
+        private void HorizontalMovement(StateComponent state, MovementComponent movement)
         {
             switch (state.currentState)
             {

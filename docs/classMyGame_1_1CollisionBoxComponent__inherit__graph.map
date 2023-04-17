@@ -1,0 +1,4 @@
+<map id="MyGame.CollisionBoxComponent" name="MyGame.CollisionBoxComponent">
+<area shape="rect" id="node1" title="Represents a rectangular collision box for an entity in the game." alt="" coords="5,80,247,107"/>
+<area shape="rect" id="node2" href="$classMyGame_1_1Component.html" title="The base class for all components." alt="" coords="77,5,175,32"/>
+</map>

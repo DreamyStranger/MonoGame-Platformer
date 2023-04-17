@@ -1,0 +1,4 @@
+<map id="MyGame.InputSystem" name="MyGame.InputSystem">
+<area shape="rect" id="node1" title="Input system that updates all entities with a StateComponent and InputComponent. It manages the commu..." alt="" coords="5,80,172,107"/>
+<area shape="rect" id="node2" href="$classMyGame_1_1System.html" title="An abstract base class for systems in the game." alt="" coords="53,5,124,32"/>
+</map>

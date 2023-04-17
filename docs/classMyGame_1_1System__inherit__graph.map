@@ -1,8 +1,0 @@
-<map id="MyGame.System" name="MyGame.System">
-<area shape="rect" id="node1" title="An abstract base class for systems in the game." alt="" coords="5,107,140,133"/>
-<area shape="rect" id="node2" href="$classMyGame_1_1InputSystem.html" title="Input system that updates all entities with a StateComponent and InputComponent. It manages the commu..." alt="" coords="225,5,392,32"/>
-<area shape="rect" id="node3" href="$classMyGame_1_1MovementSystem.html" title="The MovementSystem class is responsible for handling the movement of entities in the game." alt="" coords="207,56,411,83"/>
-<area shape="rect" id="node4" href="$classMyGame_1_1ObstacleColliderSystem.html" title="The ObstacleColliderSystem class manages collision detection and response for game entities with obst..." alt="" coords="188,107,429,133"/>
-<area shape="rect" id="node5" href="$classMyGame_1_1ParallaxSystem.html" title="A system that manages parallax components and their related entities." alt="" coords="215,157,402,184"/>
-<area shape="rect" id="node6" href="$classMyGame_1_1RenderSystem.html" title="The RenderSystem class is responsible for rendering the entities in the game." alt="" coords="219,208,399,235"/>
-</map>

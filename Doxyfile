@@ -1,29 +1,15 @@
 # Doxyfile configuration for ECS-MonoGame project
 
 # Project settings
-PROJECT_NAME           = "ECS-MonoGame"
-OUTPUT_DIRECTORY       = /home/m/Documents/GitHub/ECS-MonoGame/doc
-GENERATE_HTML          = YES
-GENERATE_LATEX         = NO
-GENERATE_MARKDOWN      = YES
-MARKDOWN_OUTPUT        = docs
-EXTRACT_ALL            = YES
-EXTRACT_STATIC         = YES
-FILE_PATTERNS          = *.cs
-RECURSIVE              = YES
+PROJECT_NAME       = "ECS-MonoGame"
+OUTPUT_DIRECTORY   = docs
+GENERATE_HTML      = YES
+GENERATE_LATEX     = NO
+GENERATE_MARKDOWN  = NO
+EXTRACT_ALL        = YES
+FILE_PATTERNS      = *.cs
+RECURSIVE          = YES
 
 # HTML settings
-HTML_COLORSTYLE_HUE    = 200
-HTML_COLORSTYLE_SAT    = 100
-HTML_COLORSTYLE_GAMMA  = 80
-HTML_TIMESTAMP         = YES
-HTML_DYNAMIC_MENUS     = YES
-HTML_FILE_EXTENSION    = .html
-
-# MathJax settings
-MATHJAX_RELPATH        = https://cdn.mathjax.org/mathjax/latest
-HTML_MATHJAX           = YES
-MATHJAX_EXTENSIONS     = a11y/accessibility-menu.js
-
-# End of file
+HTML_FILE_EXTENSION = .html
 

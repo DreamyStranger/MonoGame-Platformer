@@ -1,6 +1,9 @@
 using Microsoft.Xna.Framework;
 namespace MyGame
 {
+    /// <summary>
+    /// A struct that contains the most commonly used components.
+    /// </summary>
     struct EntityData
     {
         public Entity Entity;

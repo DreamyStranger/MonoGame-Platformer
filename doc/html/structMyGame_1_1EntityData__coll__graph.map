@@ -1,9 +1,0 @@
-<map id="MyGame.EntityData" name="MyGame.EntityData">
-<area shape="rect" id="node1" title=" " alt="" coords="527,107,681,133"/>
-<area shape="rect" id="node2" href="$classMyGame_1_1Entity.html" title="Represents an entity in the game world. An entity is a collection of components that define its behav..." alt="" coords="211,5,334,32"/>
-<area shape="rect" id="node3" href="$classMyGame_1_1AnimatedComponent.html" title="The AnimatedComponent class represents a component responsible for managing entity animations." alt="" coords="161,56,384,83"/>
-<area shape="rect" id="node4" href="$classMyGame_1_1Component.html" title="The base class for all components." alt="" coords="5,133,103,160"/>
-<area shape="rect" id="node5" href="$classMyGame_1_1CollisionBoxComponent.html" title="Represents a rectangular collision box for an entity in the game." alt="" coords="152,107,393,133"/>
-<area shape="rect" id="node6" href="$classMyGame_1_1StateComponent.html" title="Component that stores the current state and super state of an object, as well as its state ID and jum..." alt="" coords="175,157,370,184"/>
-<area shape="rect" id="node7" href="$classMyGame_1_1MovementComponent.html" title="The MovementComponent class represents the component responsible for handling the motion of an entity..." alt="" coords="157,208,388,235"/>
-</map>

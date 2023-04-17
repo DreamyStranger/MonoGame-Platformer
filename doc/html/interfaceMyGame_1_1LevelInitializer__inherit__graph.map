@@ -1,5 +1,0 @@
-<map id="MyGame.LevelInitializer" name="MyGame.LevelInitializer">
-<area shape="rect" id="node1" title="Provides an interface for level initializers, which can provide the objects for a level." alt="" coords="116,5,297,32"/>
-<area shape="rect" id="node2" href="$classMyGame_1_1Level1Initializer.html" title="Implements the LevelInitializer interface to provide initialization logic for Level 1." alt="" coords="5,80,195,107"/>
-<area shape="rect" id="node3" href="$classMyGame_1_1Level2Initializer.html" title="Implements the LevelInitializer interface to provide initialization logic for Level 2." alt="" coords="219,80,408,107"/>
-</map>

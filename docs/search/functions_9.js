@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nextlevel_245',['NextLevel',['../classMyGame_1_1World.html#a503b16a8cc4ec6155c1d2327b912ebd0',1,'MyGame::World']]]
+  ['obstaclecollidersystem_242',['ObstacleColliderSystem',['../classMyGame_1_1ObstacleColliderSystem.html#aa524d89c424bd8370fac2df09120a454',1,'MyGame::ObstacleColliderSystem']]]
 ];

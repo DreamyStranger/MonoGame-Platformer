@@ -1,5 +1,5 @@
 <map id="MyGame.EntityData" name="MyGame.EntityData">
-<area shape="rect" id="node1" title=" " alt="" coords="527,107,681,133"/>
+<area shape="rect" id="node1" title="A struct that contains the most commonly used components." alt="" coords="527,107,681,133"/>
 <area shape="rect" id="node2" href="$classMyGame_1_1Entity.html" title="Represents an entity in the game world. An entity is a collection of components that define its behav..." alt="" coords="211,5,334,32"/>
 <area shape="rect" id="node3" href="$classMyGame_1_1AnimatedComponent.html" title="The AnimatedComponent class represents a component responsible for managing entity animations." alt="" coords="161,56,384,83"/>
 <area shape="rect" id="node4" href="$classMyGame_1_1Component.html" title="The base class for all components." alt="" coords="5,133,103,160"/>

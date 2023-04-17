@@ -144,19 +144,13 @@ namespace MyGame
             switch (state.currentState)
             {
                 case ObjectState.WalkLeft:
-                    movement.HorizontalDirection = -1;
-                    if (movement.CanMoveLeft)
-                    {
-                        movement.Velocity += new Vector2(-GameConstants.SpeedX, 0);
-                    }
+                    state.HorizontalDirection = -1;
+                    movement.Velocity += new Vector2(-GameConstants.SpeedX, 0);
                     break;
 
                 case ObjectState.WalkRight:
-                    movement.HorizontalDirection = 1;
-                    if (movement.CanMoveRight)
-                    {
-                        movement.Velocity += new Vector2(GameConstants.SpeedX, 0);
-                    }
+                    state.HorizontalDirection = 1;
+                    movement.Velocity += new Vector2(GameConstants.SpeedX, 0);
                     break;
             }
         }

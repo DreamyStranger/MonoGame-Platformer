@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['parallaxcomponent_102',['ParallaxComponent',['../classMyGame_1_1ParallaxComponent.html',1,'MyGame.ParallaxComponent'],['../classMyGame_1_1ParallaxComponent.html#a622f18bac5c2c095874d438638ebd332',1,'MyGame.ParallaxComponent.ParallaxComponent()']]],
-  ['parallaxcomponent_2ecs_103',['ParallaxComponent.cs',['../ParallaxComponent_8cs.html',1,'']]],
-  ['parallaxsystem_104',['ParallaxSystem',['../classMyGame_1_1ParallaxSystem.html',1,'MyGame.ParallaxSystem'],['../classMyGame_1_1ParallaxSystem.html#a87269b0fc4ec78326c30767bdb7982af',1,'MyGame.ParallaxSystem.ParallaxSystem()']]],
-  ['parallaxsystem_2ecs_105',['ParallaxSystem.cs',['../ParallaxSystem_8cs.html',1,'']]],
-  ['position_106',['Position',['../classMyGame_1_1MovementComponent.html#a5363d82e5349fce30001d560ef22c18c',1,'MyGame::MovementComponent']]],
-  ['previouslevel_107',['PreviousLevel',['../classMyGame_1_1World.html#a5ac97b7bd5516b48d21b33764629129e',1,'MyGame::World']]],
-  ['previousstate_108',['previousState',['../classMyGame_1_1StateComponent.html#a6aa87fa749479bb5bfd0f0987b96fa47',1,'MyGame::StateComponent']]],
-  ['previoussuperstate_109',['previousSuperState',['../classMyGame_1_1StateComponent.html#a4f6d75f22d5a1b916a8bef5cb3603a96',1,'MyGame::StateComponent']]],
-  ['program_2ecs_110',['Program.cs',['../Program_8cs.html',1,'']]]
+  ['objectstate_95',['ObjectState',['../namespaceMyGame.html#a54150a2777a8301614320566ad5a121e',1,'MyGame']]],
+  ['obstaclecollidersystem_96',['ObstacleColliderSystem',['../classMyGame_1_1ObstacleColliderSystem.html',1,'MyGame.ObstacleColliderSystem'],['../classMyGame_1_1ObstacleColliderSystem.html#aa524d89c424bd8370fac2df09120a454',1,'MyGame.ObstacleColliderSystem.ObstacleColliderSystem()']]],
+  ['obstaclecollidersystem_2ecs_97',['ObstacleColliderSystem.cs',['../ObstacleColliderSystem_8cs.html',1,'']]],
+  ['obstacles_98',['obstacles',['../classMyGame_1_1Loader.html#a40ee07f7aa728392b1bfa1a4bcd49d59',1,'MyGame.Loader.obstacles()'],['../classMyGame_1_1TileHandler.html#a9e28eea78302a8ab67dc1752858b8575',1,'MyGame.TileHandler.obstacles()']]],
+  ['onground_99',['OnGround',['../namespaceMyGame.html#a795e2b48bbe3d51c21fba91f0d598fa2a2b9beed57034f5727573d7ded76cf777',1,'MyGame']]],
+  ['originalheight_100',['originalHeight',['../classMyGame_1_1CollisionBoxComponent.html#a81037914ef4de2214ba22db1bd4f389e',1,'MyGame::CollisionBoxComponent']]],
+  ['originalwidth_101',['originalWidth',['../classMyGame_1_1CollisionBoxComponent.html#a8e37859dbfa2de22ba1bfb31ca874c3d',1,'MyGame::CollisionBoxComponent']]]
 ];

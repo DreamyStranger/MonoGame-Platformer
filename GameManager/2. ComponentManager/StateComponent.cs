@@ -45,6 +45,27 @@ namespace MyGame
         //Jump Counter
         public int JumpsPerformed = 0;
 
+        //Flags for movement restrictions
+        public bool _canMoveLeft, _canMoveRight;
+
+        //Horizontal direction
+        private int _horizontalDirection = 1;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the entity can move to the left.
+        /// </summary>
+        public bool CanMoveLeft { get => _canMoveLeft; set => _canMoveLeft = value; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the entity can move to the right.
+        /// </summary>
+        public bool CanMoveRight { get => _canMoveRight; set => _canMoveRight = value; }
+
+        /// <summary>
+        /// Gets or sets the horizontal direction of the entity.
+        /// </summary>
+        public int HorizontalDirection { get => _horizontalDirection; set => _horizontalDirection = value; }
+
         /// <summary>
         /// Initializes a new instance of the StateComponent class with the default state and super state.
         /// </summary>
@@ -53,6 +74,8 @@ namespace MyGame
             SetState(ObjectState.Idle);
             SetSuperState(SuperState.IsFalling);
             UpdateStateID();
+            _canMoveRight = true;
+            _canMoveLeft = true;
         }
 
         /// <summary>

@@ -72,7 +72,7 @@ namespace MyGame
         {
             foreach (EntityData data in entitiesData)
             {
-                data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.Movement.HorizontalDirection);
+                data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
                 Rectangle box = data.CollisionBox.GetRectangle();
 
                 //Console.WriteLine($"StateID: {data.State.stateID}"); //Debug message
@@ -112,6 +112,7 @@ namespace MyGame
                                     positionY = rect.Top - data.CollisionBox.originalHeight + data.CollisionBox.vertBottomOffset;
                                     data.State.SetSuperState(SuperState.OnGround);
                                     data.CollisionBox.SetGroundLocation(rect.Left, rect.Right);
+                                    break;
                                 }
                                 goto default;
 
@@ -166,7 +167,7 @@ namespace MyGame
 
                         //Update entity's position and collisionBox
                         data.Movement.Position = new Vector2(positionX, positionY);
-                        data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.Movement.HorizontalDirection);
+                        data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
                     }
 
                     //Check if entity still on a platform
@@ -179,16 +180,16 @@ namespace MyGame
                     }
 
                     //Restrict Movement if Side Collision Occured for better visuals
-                    data.Movement.CanMoveRight = true;
-                    data.Movement.CanMoveLeft = true;
+                    data.State.CanMoveRight = true;
+                    data.State.CanMoveLeft = true;
                     if (touchingRight)
                     {
-                        data.Movement.CanMoveRight = false;
+                        data.State.CanMoveRight = false;
                         data.State.SetState(ObjectState.Slide);
                     }
                     if (touchingLeft)
                     {
-                        data.Movement.CanMoveLeft = false;
+                        data.State.CanMoveLeft = false;
                         data.State.SetState(ObjectState.Slide);
                     }
 

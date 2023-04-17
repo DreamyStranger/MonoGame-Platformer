@@ -1,17 +1,11 @@
 var searchData=
 [
-  ['setcurrentaction_119',['SetCurrentAction',['../classMyGame_1_1AnimatedComponent.html#a1d5de76d0c08419670e2a235f8da653d',1,'MyGame::AnimatedComponent']]],
-  ['setgroundlocation_120',['SetGroundLocation',['../classMyGame_1_1CollisionBoxComponent.html#a2816cfaae0614028aee8a1188b17275c',1,'MyGame::CollisionBoxComponent']]],
-  ['setstate_121',['SetState',['../classMyGame_1_1StateComponent.html#a9e0be08b501b1ae116c75a73b381fa1c',1,'MyGame::StateComponent']]],
-  ['setsuperstate_122',['SetSuperState',['../classMyGame_1_1StateComponent.html#acf95b87d331bd494b675f4744bd15124',1,'MyGame::StateComponent']]],
-  ['slide_123',['Slide',['../namespaceMyGame.html#a54150a2777a8301614320566ad5a121ea6160a53ece50ce6d4f5ef4452549835e',1,'MyGame']]],
-  ['state_124',['State',['../structMyGame_1_1EntityData.html#aa433c9fbfbb459b4823005cf0e5c933a',1,'MyGame::EntityData']]],
-  ['statecomponent_125',['StateComponent',['../classMyGame_1_1StateComponent.html',1,'MyGame.StateComponent'],['../classMyGame_1_1StateComponent.html#aa4b1c0835517585c71650b475cc9a1f7',1,'MyGame.StateComponent.StateComponent()']]],
-  ['statecomponent_2ecs_126',['StateComponent.cs',['../StateComponent_8cs.html',1,'']]],
-  ['stateid_127',['stateID',['../classMyGame_1_1StateComponent.html#a2ffb4a969265ebdcce7d727f045b365c',1,'MyGame::StateComponent']]],
-  ['superstate_128',['SuperState',['../namespaceMyGame.html#a795e2b48bbe3d51c21fba91f0d598fa2',1,'MyGame']]],
-  ['system_129',['System',['../classMyGame_1_1System.html',1,'MyGame']]],
-  ['system_2ecs_130',['System.cs',['../System_8cs.html',1,'']]],
-  ['systemmanager_131',['SystemManager',['../structMyGame_1_1SystemManager.html',1,'MyGame.SystemManager'],['../structMyGame_1_1SystemManager.html#a7d502460fdc86becf1f673c934a1851b',1,'MyGame.SystemManager.SystemManager()']]],
-  ['systemmanager_2ecs_132',['SystemManager.cs',['../SystemManager_8cs.html',1,'']]]
+  ['remove_111',['Remove',['../structMyGame_1_1SystemManager.html#a3ec82a60a719be7b3920dff894932a6c',1,'MyGame::SystemManager']]],
+  ['removecomponent_3c_20t_20_3e_112',['RemoveComponent&lt; T &gt;',['../classMyGame_1_1Entity.html#a7c992732bbda48e231f1b2edf903b161',1,'MyGame::Entity']]],
+  ['removeentity_113',['RemoveEntity',['../classMyGame_1_1System.html#a11f4d053e45385d087c3d4d782a9b558',1,'MyGame.System.RemoveEntity()'],['../classMyGame_1_1InputSystem.html#a7e85034222ec23b957dbb117efe92626',1,'MyGame.InputSystem.RemoveEntity()'],['../classMyGame_1_1MovementSystem.html#a21f2170a21665658c44ca3806b7d9fad',1,'MyGame.MovementSystem.RemoveEntity()'],['../classMyGame_1_1ObstacleColliderSystem.html#a1ffcf7b39b9b4410dbe234aed60070e7',1,'MyGame.ObstacleColliderSystem.RemoveEntity()'],['../classMyGame_1_1ParallaxSystem.html#a8579f217b6b477487bf04f67865fdc33',1,'MyGame.ParallaxSystem.RemoveEntity()'],['../classMyGame_1_1RenderSystem.html#aa225bc7f8fcc93cf95b56952c6652828',1,'MyGame.RenderSystem.RemoveEntity()']]],
+  ['rendersystem_114',['RenderSystem',['../classMyGame_1_1RenderSystem.html',1,'MyGame.RenderSystem'],['../classMyGame_1_1RenderSystem.html#ae6b1bb7d4afc678666e98df0eeeabc7b',1,'MyGame.RenderSystem.RenderSystem()']]],
+  ['rendersystem_2ecs_115',['RenderSystem.cs',['../RenderSystem_8cs.html',1,'']]],
+  ['reset_116',['Reset',['../classMyGame_1_1ActionAnimation.html#a8121d22069d6db6e15e73b02fe9ca7ad',1,'MyGame::ActionAnimation']]],
+  ['resetcurrentlevel_117',['ResetCurrentLevel',['../classMyGame_1_1World.html#a26c83b07f58392fc49053c075963d349',1,'MyGame::World']]],
+  ['run_118',['Run',['../Program_8cs.html#a5b91b0ce90905b3c2981d246ad35e5a5',1,'Program.cs']]]
 ];

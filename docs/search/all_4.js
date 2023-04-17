@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['entity_28',['Entity',['../structMyGame_1_1EntityData.html#a500d28aa490d9ee42c233efd8c74531c',1,'MyGame.EntityData.Entity()'],['../classMyGame_1_1Entity.html#aa01b269bcd38c43e7dc185f22b10e2fa',1,'MyGame.Entity.Entity()'],['../classMyGame_1_1Entity.html',1,'MyGame.Entity']]],
-  ['entity_2ecs_29',['Entity.cs',['../Entity_8cs.html',1,'']]],
-  ['entitycollisionssystem_2ecs_30',['EntityCollisionsSystem.cs',['../EntityCollisionsSystem_8cs.html',1,'']]],
-  ['entitydata_31',['EntityData',['../structMyGame_1_1EntityData.html',1,'MyGame']]],
-  ['entitydata_2ecs_32',['EntityData.cs',['../EntityData_8cs.html',1,'']]],
-  ['entityfactory_33',['EntityFactory',['../structMyGame_1_1EntityFactory.html',1,'MyGame']]],
-  ['entityfactory_2ecs_34',['EntityFactory.cs',['../EntityFactory_8cs.html',1,'']]]
+  ['doublejump_26',['DoubleJump',['../namespaceMyGame.html#a54150a2777a8301614320566ad5a121ea6bd5db223a35934e784d0b75a6d0d44e',1,'MyGame']]],
+  ['draw_27',['Draw',['../classMyGame_1_1Game1.html#a8477f84390ebcdc9d174219577e84ff8',1,'MyGame.Game1.Draw()'],['../classMyGame_1_1TileHandler.html#a6abc3be64c271afb51ef0b7d7f30afa5',1,'MyGame.TileHandler.Draw()'],['../classMyGame_1_1System.html#a7c32395a3edd1cd90bc6adee6dbbb7f1',1,'MyGame.System.Draw()'],['../classMyGame_1_1AnimatedComponent.html#a8043ca023c120329061941a1e88bfd5f',1,'MyGame.AnimatedComponent.Draw()'],['../classMyGame_1_1ActionAnimation.html#a8cf01453a147e6418e4df11d60644cbd',1,'MyGame.ActionAnimation.Draw()'],['../classMyGame_1_1ParallaxComponent.html#aa3bd5048d61fda68a03dca7b2064e330',1,'MyGame.ParallaxComponent.Draw()'],['../classMyGame_1_1ObstacleColliderSystem.html#a881eb0d84a6ea1faa73692a262f48f38',1,'MyGame.ObstacleColliderSystem.Draw()'],['../classMyGame_1_1ParallaxSystem.html#a6e95077ece24e82d3a98aab702316046',1,'MyGame.ParallaxSystem.Draw()'],['../classMyGame_1_1RenderSystem.html#af429158cf5dad68af5a60455659bc18a',1,'MyGame.RenderSystem.Draw()'],['../structMyGame_1_1SystemManager.html#a553475336defc26d4fbf276e2c6e2501',1,'MyGame.SystemManager.Draw()'],['../classMyGame_1_1World.html#ad665ad7cc21959f5d11c83f40f56198f',1,'MyGame.World.Draw()']]],
+  ['drawcollisionboxes_28',['DrawCollisionBoxes',['../classMyGame_1_1CollisionBoxComponent.html#a84bb91baed4f69e02c4fb2385b5374f7',1,'MyGame::CollisionBoxComponent']]]
 ];

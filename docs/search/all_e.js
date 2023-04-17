@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['remove_111',['Remove',['../structMyGame_1_1SystemManager.html#a3ec82a60a719be7b3920dff894932a6c',1,'MyGame::SystemManager']]],
-  ['removecomponent_3c_20t_20_3e_112',['RemoveComponent&lt; T &gt;',['../classMyGame_1_1Entity.html#a7c992732bbda48e231f1b2edf903b161',1,'MyGame::Entity']]],
-  ['removeentity_113',['RemoveEntity',['../classMyGame_1_1System.html#a11f4d053e45385d087c3d4d782a9b558',1,'MyGame.System.RemoveEntity()'],['../classMyGame_1_1InputSystem.html#a7e85034222ec23b957dbb117efe92626',1,'MyGame.InputSystem.RemoveEntity()'],['../classMyGame_1_1MovementSystem.html#a21f2170a21665658c44ca3806b7d9fad',1,'MyGame.MovementSystem.RemoveEntity()'],['../classMyGame_1_1ObstacleColliderSystem.html#a1ffcf7b39b9b4410dbe234aed60070e7',1,'MyGame.ObstacleColliderSystem.RemoveEntity()'],['../classMyGame_1_1ParallaxSystem.html#a8579f217b6b477487bf04f67865fdc33',1,'MyGame.ParallaxSystem.RemoveEntity()'],['../classMyGame_1_1RenderSystem.html#aa225bc7f8fcc93cf95b56952c6652828',1,'MyGame.RenderSystem.RemoveEntity()']]],
-  ['rendersystem_114',['RenderSystem',['../classMyGame_1_1RenderSystem.html',1,'MyGame.RenderSystem'],['../classMyGame_1_1RenderSystem.html#ae6b1bb7d4afc678666e98df0eeeabc7b',1,'MyGame.RenderSystem.RenderSystem()']]],
-  ['rendersystem_2ecs_115',['RenderSystem.cs',['../RenderSystem_8cs.html',1,'']]],
-  ['reset_116',['Reset',['../classMyGame_1_1ActionAnimation.html#a8121d22069d6db6e15e73b02fe9ca7ad',1,'MyGame::ActionAnimation']]],
-  ['resetcurrentlevel_117',['ResetCurrentLevel',['../classMyGame_1_1World.html#a26c83b07f58392fc49053c075963d349',1,'MyGame::World']]],
-  ['run_118',['Run',['../Program_8cs.html#a5b91b0ce90905b3c2981d246ad35e5a5',1,'Program.cs']]]
+  ['parallaxcomponent_102',['ParallaxComponent',['../classMyGame_1_1ParallaxComponent.html',1,'MyGame.ParallaxComponent'],['../classMyGame_1_1ParallaxComponent.html#a622f18bac5c2c095874d438638ebd332',1,'MyGame.ParallaxComponent.ParallaxComponent()']]],
+  ['parallaxcomponent_2ecs_103',['ParallaxComponent.cs',['../ParallaxComponent_8cs.html',1,'']]],
+  ['parallaxsystem_104',['ParallaxSystem',['../classMyGame_1_1ParallaxSystem.html',1,'MyGame.ParallaxSystem'],['../classMyGame_1_1ParallaxSystem.html#a87269b0fc4ec78326c30767bdb7982af',1,'MyGame.ParallaxSystem.ParallaxSystem()']]],
+  ['parallaxsystem_2ecs_105',['ParallaxSystem.cs',['../ParallaxSystem_8cs.html',1,'']]],
+  ['position_106',['Position',['../classMyGame_1_1MovementComponent.html#a5363d82e5349fce30001d560ef22c18c',1,'MyGame::MovementComponent']]],
+  ['previouslevel_107',['PreviousLevel',['../classMyGame_1_1World.html#a5ac97b7bd5516b48d21b33764629129e',1,'MyGame::World']]],
+  ['previousstate_108',['previousState',['../classMyGame_1_1StateComponent.html#a6aa87fa749479bb5bfd0f0987b96fa47',1,'MyGame::StateComponent']]],
+  ['previoussuperstate_109',['previousSuperState',['../classMyGame_1_1StateComponent.html#a4f6d75f22d5a1b916a8bef5cb3603a96',1,'MyGame::StateComponent']]],
+  ['program_2ecs_110',['Program.cs',['../Program_8cs.html',1,'']]]
 ];

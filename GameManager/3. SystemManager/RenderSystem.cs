@@ -82,7 +82,7 @@ namespace MyGame
         {
             foreach (var data in entitiesData)
             {
-                data.Animations.Draw(spriteBatch, data.Movement.Position, data.Movement.HorizontalDirection);
+                data.Animations.Draw(spriteBatch, data.Movement.Position, data.State.HorizontalDirection);
             }
         }
 

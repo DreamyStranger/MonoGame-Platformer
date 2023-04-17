@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['walkleft_144',['WalkLeft',['../namespaceMyGame.html#a54150a2777a8301614320566ad5a121eaa4018e883fed3c25fc3fbf8f0049d4a2',1,'MyGame']]],
-  ['walkright_145',['WalkRight',['../namespaceMyGame.html#a54150a2777a8301614320566ad5a121eabf8da33b42b9930eb716b1b2386c3fdc',1,'MyGame']]],
-  ['width_146',['width',['../classMyGame_1_1CollisionBoxComponent.html#a18dfebc68b9fafc404a0c682e96201e7',1,'MyGame::CollisionBoxComponent']]],
-  ['world_147',['World',['../classMyGame_1_1World.html',1,'MyGame']]],
-  ['world_148',['world',['../classMyGame_1_1Game1.html#adbec2a3b800537a757250cac1f7ebe4c',1,'MyGame::Game1']]],
-  ['world_149',['World',['../classMyGame_1_1World.html#acbea472e0d6df7c14469d7da8fc1df9c',1,'MyGame::World']]],
-  ['world_2ecs_150',['World.cs',['../World_8cs.html',1,'']]]
+  ['velocity_139',['Velocity',['../classMyGame_1_1MovementComponent.html#a0f39a3e2c905ddd5f334f7a55bf95312',1,'MyGame::MovementComponent']]],
+  ['vertbottomoffset_140',['vertBottomOffset',['../classMyGame_1_1CollisionBoxComponent.html#aaa7982bac11364d9339fa1196edac01f',1,'MyGame::CollisionBoxComponent']]],
+  ['verttopoffset_141',['vertTopOffset',['../classMyGame_1_1CollisionBoxComponent.html#a6ad9b16da4d23b93429614d33bf4e1b3',1,'MyGame::CollisionBoxComponent']]]
 ];

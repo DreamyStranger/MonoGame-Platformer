@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['initialize_234',['Initialize',['../classMyGame_1_1Game1.html#af737d2ffeb676f9e1c18dc1fb993ccba',1,'MyGame::Game1']]],
-  ['inputcomponent_235',['InputComponent',['../classMyGame_1_1InputComponent.html#ae7b0a8b957c1f15ec3cb417c0e96fbf4',1,'MyGame::InputComponent']]],
-  ['inputsystem_236',['InputSystem',['../classMyGame_1_1InputSystem.html#a49387a193679af0d52614f62494a56b8',1,'MyGame::InputSystem']]],
-  ['isstate_237',['IsState',['../classMyGame_1_1StateComponent.html#a075539aaa5ee639cd5b883eb449c3fd1',1,'MyGame::StateComponent']]],
-  ['issuperstate_238',['IsSuperState',['../classMyGame_1_1StateComponent.html#a279b13bc0fd8b198d5a6b7b566644840',1,'MyGame::StateComponent']]]
+  ['level_235',['Level',['../classMyGame_1_1Level.html#affee233eb6668d0edf0a62661d2edb0e',1,'MyGame::Level']]],
+  ['levelmanager_236',['LevelManager',['../classMyGame_1_1LevelManager.html#a30667ce7c46d0a2b03cc181d8f898fc7',1,'MyGame::LevelManager']]],
+  ['load_237',['Load',['../classMyGame_1_1TileHandler.html#ad28f2ad3b8370d0fab6d123b5d4b76e1',1,'MyGame::TileHandler']]],
+  ['loadcontent_238',['LoadContent',['../classMyGame_1_1Game1.html#a74a951b714a0da19c507c032438ed653',1,'MyGame.Game1.LoadContent()'],['../classMyGame_1_1Loader.html#a198acda43f17df462e33ad82ff47e219',1,'MyGame.Loader.LoadContent()']]]
 ];

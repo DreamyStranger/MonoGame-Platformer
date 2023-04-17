@@ -42,11 +42,17 @@ namespace MyGame
                 default:
                     if (isLeftKeyDown && isNotBothKeys)
                     {
-                        state.SetState(ObjectState.WalkLeft);
+                        if(state.CanMoveLeft) 
+                        {
+                            state.SetState(ObjectState.WalkLeft);
+                        }
                     }
                     else if (isRightKeyDown && isNotBothKeys)
                     {
-                        state.SetState(ObjectState.WalkRight);
+                        if(state.CanMoveRight) 
+                        {
+                            state.SetState(ObjectState.WalkRight);
+                        }
                     }
                     else if (bothKeysUp)
                     {

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jumpsperformed_274',['JumpsPerformed',['../classMyGame_1_1StateComponent.html#a28ba5081ec4e96bc8e23cfbe4eeb2f25',1,'MyGame::StateComponent']]]
+  ['entity_268',['Entity',['../structMyGame_1_1EntityData.html#a500d28aa490d9ee42c233efd8c74531c',1,'MyGame::EntityData']]]
 ];

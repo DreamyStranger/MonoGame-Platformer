@@ -1,18 +1,12 @@
 var searchData=
 [
-  ['canmoveleft_10',['CanMoveLeft',['../classMyGame_1_1MovementComponent.html#a633f9bdae91a7e39cb796aef35a96286',1,'MyGame::MovementComponent']]],
-  ['canmoveright_11',['CanMoveRight',['../classMyGame_1_1MovementComponent.html#a63d438ff49e8247ac9d59b36d1ad46bd',1,'MyGame::MovementComponent']]],
-  ['checkifinair_12',['checkIfInAir',['../classMyGame_1_1CollisionBoxComponent.html#ac4d1c0cc12948e279ec33b3f8a591d4c',1,'MyGame::CollisionBoxComponent']]],
-  ['collisionbox_13',['CollisionBox',['../structMyGame_1_1EntityData.html#a58dc2337a88e55f7d0400ed9054cdd34',1,'MyGame::EntityData']]],
-  ['collisionbox_14',['collisionBox',['../classMyGame_1_1Loader.html#ac611f625bd7934c92d2eafaf8c7bce14',1,'MyGame::Loader']]],
-  ['collisionboxcomponent_15',['CollisionBoxComponent',['../classMyGame_1_1CollisionBoxComponent.html#af4b1940b7a547a3353835ebbe77e6e52',1,'MyGame.CollisionBoxComponent.CollisionBoxComponent()'],['../classMyGame_1_1CollisionBoxComponent.html',1,'MyGame.CollisionBoxComponent']]],
-  ['collisionboxcomponent_2ecs_16',['CollisionBoxComponent.cs',['../CollisionBoxComponent_8cs.html',1,'']]],
-  ['component_17',['Component',['../classMyGame_1_1Component.html',1,'MyGame']]],
-  ['component_2ecs_18',['Component.cs',['../Component_8cs.html',1,'']]],
-  ['createparallaxbackground_19',['CreateParallaxBackground',['../structMyGame_1_1EntityFactory.html#a42b77ae30cabea4abfdc523aee2adde3',1,'MyGame::EntityFactory']]],
-  ['createplayer_20',['CreatePlayer',['../structMyGame_1_1EntityFactory.html#a957f218032e6a6fa8cff156a33d83036',1,'MyGame::EntityFactory']]],
-  ['currentaction_21',['CurrentAction',['../classMyGame_1_1AnimatedComponent.html#a628122cff20d7d3672afbf96bfa7b3fd',1,'MyGame::AnimatedComponent']]],
-  ['currentlevel_22',['CurrentLevel',['../classMyGame_1_1World.html#afea9e6b6e3c7f4454b777374ec6bd3b4',1,'MyGame::World']]],
-  ['currentstate_23',['currentState',['../classMyGame_1_1StateComponent.html#a5d4d6e5f163b506062f7f39b31170fee',1,'MyGame::StateComponent']]],
-  ['currentsuperstate_24',['currentSuperState',['../classMyGame_1_1StateComponent.html#a23007a83e73e1344d58fcaf8a11e552d',1,'MyGame::StateComponent']]]
+  ['acceleration_2',['Acceleration',['../classMyGame_1_1MovementComponent.html#a17fee3625eb3ace4195fa403c28006ef',1,'MyGame::MovementComponent']]],
+  ['actionanimation_3',['ActionAnimation',['../classMyGame_1_1ActionAnimation.html#ad5edacf465209978de7ac613813fa2a5',1,'MyGame.ActionAnimation.ActionAnimation()'],['../classMyGame_1_1ActionAnimation.html',1,'MyGame.ActionAnimation']]],
+  ['add_4',['Add',['../structMyGame_1_1SystemManager.html#a87fa013687d118c0c01ea55f21ec5576',1,'MyGame::SystemManager']]],
+  ['addanimation_5',['AddAnimation',['../classMyGame_1_1AnimatedComponent.html#a9a08ee00186f2c8af1bf765d43addd88',1,'MyGame::AnimatedComponent']]],
+  ['addcomponent_6',['AddComponent',['../classMyGame_1_1Entity.html#ad675e12391ced75bd24bfb59f4dac577',1,'MyGame::Entity']]],
+  ['addentity_7',['AddEntity',['../classMyGame_1_1System.html#ac919be2ccbaa0dc6dcfb40e136848335',1,'MyGame.System.AddEntity()'],['../classMyGame_1_1InputSystem.html#a94b1f80f2376f18cc20fb057e7323f51',1,'MyGame.InputSystem.AddEntity()'],['../classMyGame_1_1MovementSystem.html#ad9a91bcab52b20067d917d436589696a',1,'MyGame.MovementSystem.AddEntity()'],['../classMyGame_1_1ObstacleColliderSystem.html#a299cb885ac3d219d970d45c2af0df2f7',1,'MyGame.ObstacleColliderSystem.AddEntity()'],['../classMyGame_1_1ParallaxSystem.html#aa58ad360dcd72439df99e18e8be5d571',1,'MyGame.ParallaxSystem.AddEntity()'],['../classMyGame_1_1RenderSystem.html#a2ec6e1b567432947559d8e1603937fda',1,'MyGame.RenderSystem.AddEntity()']]],
+  ['animatedcomponent_8',['AnimatedComponent',['../classMyGame_1_1AnimatedComponent.html#ae579bdce4b80a66e7205299850b78154',1,'MyGame.AnimatedComponent.AnimatedComponent()'],['../classMyGame_1_1AnimatedComponent.html',1,'MyGame.AnimatedComponent']]],
+  ['animatedcomponent_2ecs_9',['AnimatedComponent.cs',['../AnimatedComponent_8cs.html',1,'']]],
+  ['animations_10',['Animations',['../structMyGame_1_1EntityData.html#a215b733b165e3d7776be54f7db965be7',1,'MyGame.EntityData.Animations()'],['../classMyGame_1_1AnimatedComponent.html#a198adb0663e73d7ce2496ab78d256668',1,'MyGame.AnimatedComponent.Animations()']]]
 ];

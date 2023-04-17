@@ -1,4 +1,0 @@
-<map id="MyGame.InputComponent" name="MyGame.InputComponent">
-<area shape="rect" id="node1" title="The InputComponent class is responsible for handling player input and updating the entity&#39;s state acc..." alt="" coords="5,80,199,107"/>
-<area shape="rect" id="node2" href="$classMyGame_1_1Component.html" title="The base class for all components." alt="" coords="53,5,151,32"/>
-</map>

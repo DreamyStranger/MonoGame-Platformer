@@ -1,9 +1,0 @@
-<map id="MyGame.Component" name="MyGame.Component">
-<area shape="rect" id="node1" title="The base class for all components." alt="" coords="5,132,165,159"/>
-<area shape="rect" id="node2" href="$classMyGame_1_1AnimatedComponent.html" title="The AnimatedComponent class represents a component responsible for managing entity animations." alt="" coords="223,5,445,32"/>
-<area shape="rect" id="node3" href="$classMyGame_1_1CollisionBoxComponent.html" title="Represents a rectangular collision box for an entity in the game." alt="" coords="213,56,455,83"/>
-<area shape="rect" id="node4" href="$classMyGame_1_1InputComponent.html" title="The InputComponent class is responsible for handling player input and updating the entity&#39;s state acc..." alt="" coords="237,107,431,133"/>
-<area shape="rect" id="node5" href="$classMyGame_1_1MovementComponent.html" title="The MovementComponent class represents the component responsible for handling the motion of an entity..." alt="" coords="219,157,449,184"/>
-<area shape="rect" id="node6" href="$classMyGame_1_1ParallaxComponent.html" title="A component that implements a parallax effect for a sprite in a 2D game." alt="" coords="228,208,440,235"/>
-<area shape="rect" id="node7" href="$classMyGame_1_1StateComponent.html" title="Component that stores the current state and super state of an object, as well as its state ID and jum..." alt="" coords="237,259,431,285"/>
-</map>

@@ -74,7 +74,6 @@ namespace MyGame
                     break;
 
                 case SuperState.IsFalling:
-                    if (state.IsState(ObjectState.Slide)) state.JumpsPerformed = 0;
                     if (isSpaceKeyDown && isNotBothKeys)
                     {
                         if (state.JumpsPerformed == 0) state.SetState(ObjectState.Jump);

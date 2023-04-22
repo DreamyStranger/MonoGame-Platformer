@@ -54,12 +54,34 @@ namespace MyGame
         /// <summary>
         /// Gets or sets a value indicating whether the entity can move to the left.
         /// </summary>
-        public bool CanMoveLeft { get => _canMoveLeft; set => _canMoveLeft = value; }
+        public bool CanMoveLeft
+        {
+            get { return _canMoveLeft; }
+            set
+            {
+                _canMoveLeft = value;
+                if (!_canMoveLeft)
+                {
+                    SetState(ObjectState.Slide);
+                }
+            }
+        }
 
         /// <summary>
         /// Gets or sets a value indicating whether the entity can move to the right.
         /// </summary>
-        public bool CanMoveRight { get => _canMoveRight; set => _canMoveRight = value; }
+        public bool CanMoveRight
+        {
+            get { return _canMoveRight; }
+            set
+            {
+                _canMoveRight = value;
+                if (!_canMoveRight)
+                {
+                    SetState(ObjectState.Slide);
+                }
+            }
+        }
 
         /// <summary>
         /// Gets or sets the horizontal direction of the entity.

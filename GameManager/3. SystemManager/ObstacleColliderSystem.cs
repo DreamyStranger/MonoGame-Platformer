@@ -21,6 +21,7 @@ namespace MyGame
         /// Initializes a new instance of the ObstacleColliderSystem class.
         /// </summary>
         /// <param name="LevelID">The identifier for the level's obstacle data.</param>
+
         public ObstacleColliderSystem(LevelID levelID)
         {
             entitiesData = new List<EntityData>();
@@ -74,13 +75,10 @@ namespace MyGame
             {
                 data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
                 Rectangle box = data.CollisionBox.GetRectangle();
-
-                //Console.WriteLine($"StateID: {data.State.stateID}"); //Debug message
-
                 float positionX = data.Movement.Position.X;
                 float positionY = data.Movement.Position.Y;
-                bool touchingLeft = false;
-                bool touchingRight = false;
+                data.State.CanMoveRight = true;
+                data.State.CanMoveLeft = true;
 
                 foreach (string key in obstacles.Keys)
                 {
@@ -88,81 +86,29 @@ namespace MyGame
 
                     foreach (Rectangle rect in obstacles[key])
                     {
-                        Rectangle intersection = Rectangle.Intersect(box, rect);
-                        if (intersection.IsEmpty)
+                        if (!box.Intersects(rect))
                         {
                             continue;
                         }
 
-                        int depthX = intersection.Width;
-                        int depthY = intersection.Height;
-
-                        //Side of a platform that was intersected
-                        bool collidesWithRightSide = box.Left < rect.Right && box.Right >= rect.Right;
-                        bool collidesWithLeftSide = box.Right > rect.Left && box.Left <= rect.Left;
-                        bool collidesWithBottomSide = box.Top < rect.Bottom && box.Bottom >= rect.Bottom;
-                        bool collidesWithTopSide = box.Bottom > rect.Top && box.Top <= rect.Top;
-
-                        //Colission Resolution based on the state
                         switch (data.State.currentSuperState)
                         {
                             case SuperState.IsFalling:
-                                if (collidesWithTopSide)
-                                {
-                                    positionY = rect.Top - data.CollisionBox.originalHeight + data.CollisionBox.vertBottomOffset;
-                                    data.State.SetSuperState(SuperState.OnGround);
-                                    data.CollisionBox.SetGroundLocation(rect.Left, rect.Right);
-                                    break;
-                                }
-                                goto default;
+                                HandleFallCollision(data, box, rect, ref positionX, ref positionY);
+                                break;
 
                             case SuperState.OnGround:
-                                if (data.State.IsState(ObjectState.Slide)) data.State.SetState(ObjectState.Idle);
-
-                                if (data.Movement.Velocity.X > 0 && collidesWithLeftSide)
-                                {
-                                    positionX = rect.Left - data.CollisionBox.originalWidth + data.CollisionBox.horRightOffset;
-                                    touchingLeft = true;
-                                }
-                                else if (data.Movement.Velocity.X < 0 && collidesWithRightSide)
-                                {
-                                    positionX = rect.Right - data.CollisionBox.horRightOffset;
-                                    touchingRight = true;
-                                }
+                                HandleGroundCollision(data, box, rect, ref positionX);
                                 break;
 
                             case SuperState.IsJumping:
                             case SuperState.IsDoubleJumping:
-                                //Console.WriteLine($"Layer Name: {key}");  //Debug message
-                                if (key == "float")
-                                {
-                                    break;
-                                }
-                                else if (collidesWithBottomSide)
-                                {
-                                    positionY = rect.Bottom - data.CollisionBox.vertTopOffset;
-                                }
-                                data.State.SetSuperState(SuperState.IsFalling);
-                                goto default;
+                                HandleJumpCollision(data, box, rect, ref positionX, ref positionY, key);
+                                break;
 
                             default:
-                                if (depthX < depthY)
-                                {
-                                    if (data.Movement.Velocity.X > 0 && box.Left <= rect.Left)
-                                    {
-                                        positionX = rect.Left - data.CollisionBox.originalWidth + data.CollisionBox.horRightOffset;
-                                        touchingLeft = true;
-                                    }
-                                    else if (data.Movement.Velocity.X < 0 && box.Right >= rect.Right)
-                                    {
-                                        positionX = rect.Right - data.CollisionBox.horRightOffset;
-                                        touchingRight = true;
-                                    }
-                                }
-                                data.Movement.Velocity = Vector2.Zero;
                                 break;
                         }
-
                         //Console.WriteLine($"Obstacle: {rect.ToString()}, StateID: {data.State.stateID}"); //Debug Message
 
                         //Update entity's position and collisionBox
@@ -178,21 +124,6 @@ namespace MyGame
                             data.State.SetSuperState(SuperState.IsFalling);
                         }
                     }
-
-                    //Restrict Movement if Side Collision Occured for better visuals
-                    data.State.CanMoveRight = true;
-                    data.State.CanMoveLeft = true;
-                    if (touchingRight)
-                    {
-                        data.State.CanMoveRight = false;
-                        data.State.SetState(ObjectState.Slide);
-                    }
-                    if (touchingLeft)
-                    {
-                        data.State.CanMoveLeft = false;
-                        data.State.SetState(ObjectState.Slide);
-                    }
-
                 }
             }
         }
@@ -211,6 +142,76 @@ namespace MyGame
             {
                 data.CollisionBox.DrawCollisionBoxes(spriteBatch);
             }
+        }
+
+        private void HandleFallCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY)
+        {
+            bool collidesWithTopSide = box.Bottom > rect.Top && box.Top <= rect.Top;
+            if (collidesWithTopSide)
+            {
+                positionY = rect.Top - data.CollisionBox.originalHeight + data.CollisionBox.vertBottomOffset;
+                data.State.SetSuperState(SuperState.OnGround);
+                data.CollisionBox.SetGroundLocation(rect.Left, rect.Right);
+            }
+            else
+            {
+                HandleHorizontalInAirCollision(data, box, rect, ref positionX);
+            }
+        }
+
+        private void HandleJumpCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY, string key)
+        {
+            if (key == "float")
+            {
+                return;
+            }
+            bool collidesWithBottomSide = box.Top < rect.Bottom && box.Bottom >= rect.Bottom;
+            if (collidesWithBottomSide)
+            {
+                positionY = rect.Bottom - data.CollisionBox.vertTopOffset;
+            }
+            HandleHorizontalInAirCollision(data, box, rect, ref positionX);
+        }
+
+        private void HandleGroundCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX)
+        {
+            bool collidesWithRightSide = box.Left < rect.Right && box.Right >= rect.Right;
+            bool collidesWithLeftSide = box.Right > rect.Left && box.Left <= rect.Left;
+
+            if (data.State.IsState(ObjectState.Slide)) data.State.SetState(ObjectState.Idle);
+
+            if (data.Movement.Velocity.X > 0 && collidesWithLeftSide)
+            {
+                positionX = rect.Left - data.CollisionBox.originalWidth + data.CollisionBox.horRightOffset;
+                data.State.CanMoveRight = false;
+            }
+            else if (data.Movement.Velocity.X < 0 && collidesWithRightSide)
+            {
+                positionX = rect.Right - data.CollisionBox.horRightOffset;
+                data.State.CanMoveLeft = false;
+            }
+        }
+
+        private void HandleHorizontalInAirCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX)
+        {
+            Rectangle intersection = Rectangle.Intersect(box, rect);
+            int depthX = intersection.Width;
+            int depthY = intersection.Height;
+            if (depthX < depthY)
+            {
+                if (data.Movement.Velocity.X > 0 && box.Left <= rect.Left)
+                {
+                    positionX = rect.Left - data.CollisionBox.originalWidth + data.CollisionBox.horRightOffset;
+                    data.State.CanMoveRight = false;
+                }
+                else if (data.Movement.Velocity.X < 0 && box.Right >= rect.Right)
+                {
+                    positionX = rect.Right - data.CollisionBox.horRightOffset;
+                    data.State.CanMoveLeft = false;
+                }
+            }
+            data.Movement.Velocity = Vector2.Zero;
+            data.State.SetSuperState(SuperState.IsFalling);
         }
     }
 }

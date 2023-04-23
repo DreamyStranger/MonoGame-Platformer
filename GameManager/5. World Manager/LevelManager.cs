@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
     /// Manages the loading and retrieval of game levels.

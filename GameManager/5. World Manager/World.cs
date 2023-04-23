@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
     /// Represents the game world and manages loading and updating levels.

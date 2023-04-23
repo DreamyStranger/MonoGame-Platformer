@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
     /// Implements the <see cref="LevelInitializer"/> interface to provide initialization logic for Level 1.

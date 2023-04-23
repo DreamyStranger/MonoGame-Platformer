@@ -3,11 +3,15 @@ using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using System;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
-    /// The AnimatedComponent class represents a component responsible for managing entity animations.
+    /// <see cref="Component"/>  responsible for managing entity animations.
     /// </summary>
+    /// <remarks>
+    /// This component contains dictionary that maps an action to its respective animation (stateID to ActionAnimation). 
+    /// It also contains current animation of an entity and few useful methods.
+    /// </remarks>
     public class AnimatedComponent : Component
     {
         /// <summary>

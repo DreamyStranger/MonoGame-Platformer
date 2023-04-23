@@ -1,11 +1,15 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
-    /// Represents a rectangular collision box for an entity in the game.
+    /// <see cref="Component"/> that contains data and methods related to collision box of an entity in the game.
     /// </summary>
+    /// <remarks>
+    /// This component contains properties for the original width and height of the entity, width and height of the entity's collision box,
+    /// dimensions of vertical and horizontal offsets, and position of the collision box.
+    /// </remarks>
     public class CollisionBoxComponent : Component
     {
         // Collision box variables
@@ -33,7 +37,7 @@ namespace MyGame
         /// <param name="vertBottomOffset">The vertical offset from the bottom of the collision box.</param>
         /// <param name="horLeftOffset">The horizontal offset from the left of the collision box.</param>
         /// <param name="horRightOffset">The horizontal offset from the right of the collision box.</param>
-        public CollisionBoxComponent(Vector2 position, int width = 32, int height = 32,
+        public CollisionBoxComponent(Vector2 position, int width, int height,
                                 int vertTopOffset = 0, int vertBottomOffset = 0, int horLeftOffset = 0, int horRightOffset = 0)
         {
             this.originalWidth = width;
@@ -68,18 +72,6 @@ namespace MyGame
 
             entityCollisionBox.Y = (int)positionY + vertTopOffset;
 
-        }
-
-        /// <summary>
-        /// Draws the collision box for debugging purposes.
-        /// </summary>
-        /// <param name="spriteBatch">The sprite batch used to draw the collision box.</param>
-        public void DrawCollisionBoxes(SpriteBatch spriteBatch)
-        {
-            Texture2D collisionBox = Loader.collisionBox;
-
-            var color = Color.Orange;
-            spriteBatch.Draw(collisionBox, entityCollisionBox, color);
         }
 
         /// <summary>

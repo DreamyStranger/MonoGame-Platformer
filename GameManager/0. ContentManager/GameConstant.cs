@@ -1,4 +1,4 @@
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
     /// Holds common game constants

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
     /// Represents the IDs for all levels in the game.

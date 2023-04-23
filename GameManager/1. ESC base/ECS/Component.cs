@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
     /// The base class for all components.

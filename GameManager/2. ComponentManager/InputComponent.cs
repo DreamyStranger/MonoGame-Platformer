@@ -1,10 +1,10 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
-    /// The InputComponent class is responsible for handling player input and updating the entity's state accordingly.
+    /// <see cref="Component"/> responsible for handling player input and updating the entity's state accordingly.
     /// </summary>
     public class InputComponent : Component
     {

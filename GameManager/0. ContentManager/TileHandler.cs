@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using TiledCS;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
     /// Handles loading and rendering of tile maps.

@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
-    /// The MovementSystem class is responsible for handling the movement of entities in the game.
+    /// <see cref="System"/> responsible for handling the movement of entities in the game.
     /// </summary>
     public class MovementSystem : System
     {

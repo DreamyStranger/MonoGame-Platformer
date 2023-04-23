@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Idle.png</SourceFile>
-  <SourceTime>2023-04-22T18:00:06.1762025-04:00</SourceTime>
+  <SourceTime>2023-04-22T22:32:31.4248303-04:00</SourceTime>
   <DestFile>/home/m/Documents/GitHub/ECS-MonoGame/Content/bin/DesktopGL/Content/Player/Frog/Idle.xnb</DestFile>
-  <DestTime>2023-04-22T18:03:19.3570546-04:00</DestTime>
+  <DestTime>2023-04-22T23:03:40.0623272-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

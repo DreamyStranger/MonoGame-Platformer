@@ -1,5 +1,5 @@
 using Microsoft.Xna.Framework;
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
     /// A struct that contains the most commonly used components.

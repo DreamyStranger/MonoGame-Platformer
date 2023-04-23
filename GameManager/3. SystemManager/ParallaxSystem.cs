@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
-    /// A system that manages parallax components and their related entities.
+    /// <see cref="System"/> that manages parallax components and their related entities.
     /// </summary>
     public class ParallaxSystem : System
     {

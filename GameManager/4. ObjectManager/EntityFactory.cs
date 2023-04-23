@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
     /// A factory class for creating entities.

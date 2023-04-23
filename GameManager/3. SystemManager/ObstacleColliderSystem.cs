@@ -3,11 +3,10 @@ using Microsoft.Xna.Framework;
 using System;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
-    /// The ObstacleColliderSystem class manages collision detection and response for game entities
-    /// with obstacles in the game environment.
+    /// <see cref="System"/> that manages collision detection and resolution between entities and level obstacles.
     /// </summary>
     public class ObstacleColliderSystem : System
     {
@@ -243,7 +242,10 @@ namespace MyGame
             }
             foreach (EntityData data in entitiesData)
             {
-                data.CollisionBox.DrawCollisionBoxes(spriteBatch);
+                Texture2D collisionBox = Loader.collisionBox;
+
+                var color = Color.Orange;
+                spriteBatch.Draw(collisionBox, data.CollisionBox.GetRectangle(), color);
             }
         }
     }

@@ -1,9 +1,9 @@
 using Microsoft.Xna.Framework;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
-    /// The MovementComponent class represents the component responsible for handling the motion of an entity in the game.
+    /// <see cref="Component"/> that contains data related to the motion of an entity in the game.
     /// </summary>
     /// <remarks>
     /// This component contains properties for the position, last position, velocity, acceleration, and flags related to horizontal movement.

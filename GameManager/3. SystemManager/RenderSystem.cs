@@ -3,10 +3,10 @@ using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using System;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
-    /// The RenderSystem class is responsible for rendering the entities in the game.
+    /// <see cref="System"/> responsible for rendering the entities in the game.
     /// </summary>
     public class RenderSystem : System
     {

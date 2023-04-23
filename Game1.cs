@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
     /// The main game class.

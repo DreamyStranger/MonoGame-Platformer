@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
     /// The possible interaptable States an object can be in.
@@ -27,7 +27,7 @@ namespace MyGame
     }
 
     /// <summary>
-    /// Component that stores the current state and super state of an object, as well as its state ID and jump counter.
+    /// <see cref="Component"/> that stores the current state and super state of an object, as well as its state ID, jump counter, and horizontal direction.
     /// </summary>
     public class StateComponent : Component
     {

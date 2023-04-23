@@ -2,10 +2,10 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
-    /// A component that implements a parallax effect for a sprite in a 2D game.
+    /// <see cref="Component"/> that contains data and methods neccessary for a parallax effect for a 2D sprite.
     /// </summary>
     public class ParallaxComponent : Component
     {
@@ -19,7 +19,6 @@ namespace MyGame
 
         /// <summary>
         /// Initializes a new instance of the ParallaxComponent class.
-        /// NOTE: It will miss a tile in a top left corner for Velcity = (x < 0, y > 0)!!!
         /// </summary>
         /// <param name="sprite">The filename of the sprite to use.</param>
         /// <param name="velocity">The velocity of the parallax effect.</param>
@@ -38,17 +37,11 @@ namespace MyGame
 
             _position2 = position;
 
-
-            if (velocity.X != 0)
+            if (velocity != Vector2.Zero)
             {
-                _position2.X -= Math.Sign(velocity.X) * _texture.Width;
-            }
-
-            if (velocity.Y != 0)
-            {
+                _position2.X += Math.Sign(velocity.X) * _texture.Width;
                 _position2.Y -= Math.Sign(velocity.Y) * _texture.Height;
             }
-
         }
 
         /// <summary>
@@ -58,18 +51,10 @@ namespace MyGame
         public void Update(GameTime gameTime)
         {
             float elapsedSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            Vector2 displacement = _velocity * elapsedSeconds;
 
-            if (_velocity.X != 0)
-            {
-                _position.X += _velocity.X * elapsedSeconds;
-                _position2.X += _velocity.X * elapsedSeconds;
-            }
-
-            if (_velocity.Y != 0)
-            {
-                _position.Y += _velocity.Y * elapsedSeconds;
-                _position2.Y += _velocity.Y * elapsedSeconds;
-            }
+            _position += displacement;
+            _position2 += displacement;
 
             // Loop the parallax background horizontally
             if (_velocity.X != 0)
@@ -121,9 +106,9 @@ namespace MyGame
         /// <param name="spriteBatch">The SpriteBatch object to use for drawing.</param>
         public void Draw(SpriteBatch spriteBatch)
         {
-            for (int x = 0; x < _tileX; x++)
+            for (int x = -1; x < _tileX; x++)
             {
-                for (int y = 0; y < _tileY; y++)
+                for (int y = -1; y < _tileY; y++)
                 {
                     Vector2 texturePosition = new Vector2(x * _texture.Width, y * _texture.Height);
                     spriteBatch.Draw(_texture, _position + texturePosition, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);

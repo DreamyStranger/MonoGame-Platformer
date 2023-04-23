@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
-namespace MyGame
+namespace ECS_Framework
 {
     /// <summary>
-    /// Input system that updates all entities with a StateComponent and InputComponent.
+    /// <see cref="System"/> that updates all entities with a StateComponent and InputComponent.
     /// It manages the communication between the two components, allowing entities to respond to user input
     /// </summary>
     public class InputSystem : System

@@ -65,7 +65,7 @@ namespace ECS_Framework
         }
 
         /// <summary>
-        /// Handles Collisions between all 
+        /// Handles Collisions between an entity and all level obstacles.
         /// </summary>
         /// <param name="gameTime">The current game time.</param>
         public override void Update(GameTime gameTime)
@@ -229,14 +229,16 @@ namespace ECS_Framework
                 {
                     positionX = rect.Left - data.CollisionBox.originalWidth + data.CollisionBox.horRightOffset;
                     data.State.CanMoveRight = false;
+                    data.State.SetSuperState(SuperState.IsFalling);
+                    data.Movement.Velocity = Vector2.Zero;
                 }
                 else if (data.Movement.Velocity.X < 0 && box.Right >= rect.Right)
                 {
                     positionX = rect.Right - data.CollisionBox.horRightOffset;
                     data.State.CanMoveLeft = false;
+                    data.State.SetSuperState(SuperState.IsFalling);
+                    data.Movement.Velocity = Vector2.Zero;
                 }
-                data.State.SetSuperState(SuperState.IsFalling);
-                data.Movement.Velocity = Vector2.Zero;
             }
         }
 

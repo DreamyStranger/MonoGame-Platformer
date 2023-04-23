@@ -20,7 +20,7 @@ namespace ECS_Framework
         {
             systems = new List<System>();
             systems.Add(new ParallaxSystem());
-            systems.Add(new InputSystem());
+            systems.Add(new PlayerInputSystem());
             systems.Add(new MovementSystem());
             systems.Add(new ObstacleColliderSystem(levelID));
             systems.Add(new RenderSystem());

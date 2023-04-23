@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['setcurrentaction_253',['SetCurrentAction',['../classMyGame_1_1AnimatedComponent.html#a1d5de76d0c08419670e2a235f8da653d',1,'MyGame::AnimatedComponent']]],
-  ['setgroundlocation_254',['SetGroundLocation',['../classMyGame_1_1CollisionBoxComponent.html#a2816cfaae0614028aee8a1188b17275c',1,'MyGame::CollisionBoxComponent']]],
-  ['setstate_255',['SetState',['../classMyGame_1_1StateComponent.html#a9e0be08b501b1ae116c75a73b381fa1c',1,'MyGame::StateComponent']]],
-  ['setsuperstate_256',['SetSuperState',['../classMyGame_1_1StateComponent.html#acf95b87d331bd494b675f4744bd15124',1,'MyGame::StateComponent']]],
-  ['statecomponent_257',['StateComponent',['../classMyGame_1_1StateComponent.html#aa4b1c0835517585c71650b475cc9a1f7',1,'MyGame::StateComponent']]],
-  ['systemmanager_258',['SystemManager',['../structMyGame_1_1SystemManager.html#a7d502460fdc86becf1f673c934a1851b',1,'MyGame::SystemManager']]]
+  ['setcurrentaction_254',['SetCurrentAction',['../classECS__Framework_1_1AnimatedComponent.html#a2f9e7e26f080fcab9cfa504828e9cc4f',1,'ECS_Framework::AnimatedComponent']]],
+  ['setgroundlocation_255',['SetGroundLocation',['../classECS__Framework_1_1CollisionBoxComponent.html#a9180909e2ebc2d9a75e0ed8e1a77a17d',1,'ECS_Framework::CollisionBoxComponent']]],
+  ['setstate_256',['SetState',['../classECS__Framework_1_1StateComponent.html#ad5d49b2d198617f37c53525da19a14d1',1,'ECS_Framework::StateComponent']]],
+  ['setsuperstate_257',['SetSuperState',['../classECS__Framework_1_1StateComponent.html#a31b921724d6bbd8be94e929c70a36276',1,'ECS_Framework::StateComponent']]],
+  ['statecomponent_258',['StateComponent',['../classECS__Framework_1_1StateComponent.html#aff4c78c08813df1a0456e7e544ed5edb',1,'ECS_Framework::StateComponent']]],
+  ['systemmanager_259',['SystemManager',['../structECS__Framework_1_1SystemManager.html#ab68a066944d5797a54d5553d855d77f0',1,'ECS_Framework::SystemManager']]]
 ];

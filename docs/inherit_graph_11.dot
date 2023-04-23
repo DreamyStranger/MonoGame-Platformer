@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="ECS_Framework.SystemManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structECS__Framework_1_1SystemManager.html",tooltip="Manages a collection of systems and provides methods to add, remove, update and draw entities through..."];
+}

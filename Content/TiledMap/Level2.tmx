@@ -29,18 +29,18 @@
 </data>
  </layer>
  <objectgroup id="2" name="float">
-  <object id="2" x="207.833" y="79.8333" width="47" height="4"/>
-  <object id="3" x="288.5" y="176.75" width="47" height="3.75"/>
-  <object id="4" x="400.5" y="223.5" width="47" height="5.25"/>
-  <object id="6" x="464.25" y="160.5" width="47.5" height="4"/>
+  <object id="2" x="208.708" y="80.2083" width="46.125" height="4.5"/>
+  <object id="3" x="288.5" y="176.125" width="47" height="4.375"/>
+  <object id="4" x="400.875" y="224" width="46" height="4.75"/>
+  <object id="6" x="465" y="160" width="45.75" height="5"/>
  </objectgroup>
  <objectgroup id="3" name="Object Layer 2">
-  <object id="9" x="0.5" y="96.75" width="158.75" height="271"/>
+  <object id="9" x="0.5" y="96.7841" width="158.75" height="270.966"/>
   <object id="10" x="208.5" y="256.75" width="94.75" height="111.75"/>
-  <object id="11" x="528.75" y="208.25" width="111" height="159.5"/>
+  <object id="11" x="528" y="208.75" width="111.75" height="159"/>
   <object id="14" x="303.75" y="304.75" width="224.5" height="63.75"/>
   <object id="15" x="159.273" y="320.182" width="49" height="47.7273"/>
-  <object id="16" x="-13.6364" y="0.545455" width="13.8182" height="94.3636"/>
+  <object id="16" x="-13.6364" y="0.545455" width="13.8182" height="111.114"/>
   <object id="17" x="1" y="-25.3333" width="640.333" height="26.8333"/>
   <object id="18" x="640.667" y="-24" width="21.3333" height="392"/>
  </objectgroup>

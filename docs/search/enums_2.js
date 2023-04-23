@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['superstate_276',['SuperState',['../namespaceMyGame.html#a795e2b48bbe3d51c21fba91f0d598fa2',1,'MyGame']]]
+  ['superstate_277',['SuperState',['../namespaceECS__Framework.html#af9d01d5477ca5135063c7d2aeb03b2cb',1,'ECS_Framework']]]
 ];

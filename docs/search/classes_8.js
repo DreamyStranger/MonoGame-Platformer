@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['parallaxcomponent_167',['ParallaxComponent',['../classMyGame_1_1ParallaxComponent.html',1,'MyGame']]],
-  ['parallaxsystem_168',['ParallaxSystem',['../classMyGame_1_1ParallaxSystem.html',1,'MyGame']]]
+  ['rendersystem_171',['RenderSystem',['../classECS__Framework_1_1RenderSystem.html',1,'ECS_Framework']]]
 ];

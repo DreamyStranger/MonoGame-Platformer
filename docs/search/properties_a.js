@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['width_316',['width',['../classMyGame_1_1CollisionBoxComponent.html#a18dfebc68b9fafc404a0c682e96201e7',1,'MyGame::CollisionBoxComponent']]]
+  ['width_320',['width',['../classECS__Framework_1_1CollisionBoxComponent.html#a932b6ec101b55e7873a693edf9e063b2',1,'ECS_Framework::CollisionBoxComponent']]]
 ];

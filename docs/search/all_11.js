@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['tiledhandler_133',['tiledHandler',['../classMyGame_1_1Loader.html#a6ae808dbe8a81259c3b16775a29fb26a',1,'MyGame::Loader']]],
-  ['tilehandler_134',['TileHandler',['../classMyGame_1_1TileHandler.html',1,'MyGame.TileHandler'],['../classMyGame_1_1TileHandler.html#a24af189d2c1526d230d5d25e3b9b2c32',1,'MyGame.TileHandler.TileHandler()']]],
-  ['tilehandler_2ecs_135',['TileHandler.cs',['../TileHandler_8cs.html',1,'']]]
+  ['tiledhandler_135',['tiledHandler',['../classECS__Framework_1_1Loader.html#a29da2db4587e34a498e36a4453e03f46',1,'ECS_Framework::Loader']]],
+  ['tilehandler_136',['TileHandler',['../classECS__Framework_1_1TileHandler.html',1,'ECS_Framework.TileHandler'],['../classECS__Framework_1_1TileHandler.html#adf45220d14ee6c47b1e059a70466b08b',1,'ECS_Framework.TileHandler.TileHandler()']]],
+  ['tilehandler_2ecs_137',['TileHandler.cs',['../TileHandler_8cs.html',1,'']]]
 ];

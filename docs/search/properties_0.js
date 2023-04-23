@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['acceleration_289',['Acceleration',['../classMyGame_1_1MovementComponent.html#a17fee3625eb3ace4195fa403c28006ef',1,'MyGame::MovementComponent']]],
-  ['animations_290',['Animations',['../classMyGame_1_1AnimatedComponent.html#a198adb0663e73d7ce2496ab78d256668',1,'MyGame::AnimatedComponent']]]
+  ['acceleration_290',['Acceleration',['../classECS__Framework_1_1MovementComponent.html#a6c1f5c5e349677ea88d9f701f53bc2c1',1,'ECS_Framework::MovementComponent']]],
+  ['animations_291',['Animations',['../classECS__Framework_1_1AnimatedComponent.html#ac1a6fead604c66d17fc7e7c14d135423',1,'ECS_Framework::AnimatedComponent']]]
 ];

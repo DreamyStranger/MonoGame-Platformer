@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['entity_219',['Entity',['../classMyGame_1_1Entity.html#aa01b269bcd38c43e7dc185f22b10e2fa',1,'MyGame::Entity']]]
+  ['entity_220',['Entity',['../classECS__Framework_1_1Entity.html#a9fa778f698b6db7eeae32afeae44153a',1,'ECS_Framework::Entity']]]
 ];

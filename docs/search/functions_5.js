@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['initialize_230',['Initialize',['../classMyGame_1_1Game1.html#af737d2ffeb676f9e1c18dc1fb993ccba',1,'MyGame::Game1']]],
-  ['inputcomponent_231',['InputComponent',['../classMyGame_1_1InputComponent.html#ae7b0a8b957c1f15ec3cb417c0e96fbf4',1,'MyGame::InputComponent']]],
-  ['inputsystem_232',['InputSystem',['../classMyGame_1_1InputSystem.html#a49387a193679af0d52614f62494a56b8',1,'MyGame::InputSystem']]],
-  ['isstate_233',['IsState',['../classMyGame_1_1StateComponent.html#a075539aaa5ee639cd5b883eb449c3fd1',1,'MyGame::StateComponent']]],
-  ['issuperstate_234',['IsSuperState',['../classMyGame_1_1StateComponent.html#a279b13bc0fd8b198d5a6b7b566644840',1,'MyGame::StateComponent']]]
+  ['initialize_231',['Initialize',['../classECS__Framework_1_1Game1.html#ae256e76f75a0cc7b4d80acc65c8b6d07',1,'ECS_Framework::Game1']]],
+  ['isstate_232',['IsState',['../classECS__Framework_1_1StateComponent.html#a053785b9dae62d049993ae8619df20f4',1,'ECS_Framework::StateComponent']]],
+  ['issuperstate_233',['IsSuperState',['../classECS__Framework_1_1StateComponent.html#a997602ef822e3e936f98950e0a218293',1,'ECS_Framework::StateComponent']]]
 ];

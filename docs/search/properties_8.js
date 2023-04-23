@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tiledhandler_312',['tiledHandler',['../classMyGame_1_1Loader.html#a6ae808dbe8a81259c3b16775a29fb26a',1,'MyGame::Loader']]]
+  ['tiledhandler_316',['tiledHandler',['../classECS__Framework_1_1Loader.html#a29da2db4587e34a498e36a4453e03f46',1,'ECS_Framework::Loader']]]
 ];

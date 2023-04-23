@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['jump_67',['Jump',['../namespaceMyGame.html#a54150a2777a8301614320566ad5a121ea101f693f72287a2819a364f64ca1c0ed',1,'MyGame']]],
-  ['jumpsperformed_68',['JumpsPerformed',['../classMyGame_1_1StateComponent.html#a28ba5081ec4e96bc8e23cfbe4eeb2f25',1,'MyGame::StateComponent']]]
+  ['jump_66',['Jump',['../namespaceECS__Framework.html#a577aaaed4462a790330dd26d8990aabba101f693f72287a2819a364f64ca1c0ed',1,'ECS_Framework']]],
+  ['jumpsperformed_67',['JumpsPerformed',['../classECS__Framework_1_1StateComponent.html#ad0a89500ba38a74f17d0159ffeac964b',1,'ECS_Framework::StateComponent']]]
 ];

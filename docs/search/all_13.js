@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['velocity_139',['Velocity',['../classMyGame_1_1MovementComponent.html#a0f39a3e2c905ddd5f334f7a55bf95312',1,'MyGame::MovementComponent']]],
-  ['vertbottomoffset_140',['vertBottomOffset',['../classMyGame_1_1CollisionBoxComponent.html#aaa7982bac11364d9339fa1196edac01f',1,'MyGame::CollisionBoxComponent']]],
-  ['verttopoffset_141',['vertTopOffset',['../classMyGame_1_1CollisionBoxComponent.html#a6ad9b16da4d23b93429614d33bf4e1b3',1,'MyGame::CollisionBoxComponent']]]
+  ['velocity_141',['Velocity',['../classECS__Framework_1_1MovementComponent.html#aa069da5eebd6499d46118a3c08b64a68',1,'ECS_Framework::MovementComponent']]],
+  ['vertbottomoffset_142',['vertBottomOffset',['../classECS__Framework_1_1CollisionBoxComponent.html#ac4cc5ed6d955620fda30c5a9a2782cbf',1,'ECS_Framework::CollisionBoxComponent']]],
+  ['verttopoffset_143',['vertTopOffset',['../classECS__Framework_1_1CollisionBoxComponent.html#a4ae2f48ace24172ab0676684af6db499',1,'ECS_Framework::CollisionBoxComponent']]]
 ];

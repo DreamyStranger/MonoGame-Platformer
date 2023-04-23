@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['entity_268',['Entity',['../structMyGame_1_1EntityData.html#a500d28aa490d9ee42c233efd8c74531c',1,'MyGame::EntityData']]]
+  ['entity_269',['Entity',['../structECS__Framework_1_1EntityData.html#a4f873d71ead9438df38eb9f9b9542c0b',1,'ECS_Framework::EntityData']]]
 ];

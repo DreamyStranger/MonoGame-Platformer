@@ -63,6 +63,7 @@ namespace ECS_Framework
                 if (!_canMoveLeft)
                 {
                     SetState(ObjectState.Slide);
+                    JumpsPerformed = 2;
                 }
             }
         }
@@ -79,6 +80,7 @@ namespace ECS_Framework
                 if (!_canMoveRight)
                 {
                     SetState(ObjectState.Slide);
+                    JumpsPerformed = 2;
                 }
             }
         }

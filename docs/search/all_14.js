@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['walkleft_142',['WalkLeft',['../namespaceMyGame.html#a54150a2777a8301614320566ad5a121eaa4018e883fed3c25fc3fbf8f0049d4a2',1,'MyGame']]],
-  ['walkright_143',['WalkRight',['../namespaceMyGame.html#a54150a2777a8301614320566ad5a121eabf8da33b42b9930eb716b1b2386c3fdc',1,'MyGame']]],
-  ['width_144',['width',['../classMyGame_1_1CollisionBoxComponent.html#a18dfebc68b9fafc404a0c682e96201e7',1,'MyGame::CollisionBoxComponent']]],
-  ['world_145',['World',['../classMyGame_1_1World.html',1,'MyGame.World'],['../classMyGame_1_1World.html#acbea472e0d6df7c14469d7da8fc1df9c',1,'MyGame.World.World()']]],
-  ['world_146',['world',['../classMyGame_1_1Game1.html#adbec2a3b800537a757250cac1f7ebe4c',1,'MyGame::Game1']]],
-  ['world_2ecs_147',['World.cs',['../World_8cs.html',1,'']]]
+  ['walkleft_144',['WalkLeft',['../namespaceECS__Framework.html#a577aaaed4462a790330dd26d8990aabbaa4018e883fed3c25fc3fbf8f0049d4a2',1,'ECS_Framework']]],
+  ['walkright_145',['WalkRight',['../namespaceECS__Framework.html#a577aaaed4462a790330dd26d8990aabbabf8da33b42b9930eb716b1b2386c3fdc',1,'ECS_Framework']]],
+  ['width_146',['width',['../classECS__Framework_1_1CollisionBoxComponent.html#a932b6ec101b55e7873a693edf9e063b2',1,'ECS_Framework::CollisionBoxComponent']]],
+  ['world_147',['World',['../classECS__Framework_1_1World.html',1,'ECS_Framework.World'],['../classECS__Framework_1_1World.html#a0e9c233747d5602ea5f5563d725a55d4',1,'ECS_Framework.World.World()']]],
+  ['world_148',['world',['../classECS__Framework_1_1Game1.html#a41f723a449f8c634c5a28f955bb9cdb2',1,'ECS_Framework::Game1']]],
+  ['world_2ecs_149',['World.cs',['../World_8cs.html',1,'']]]
 ];

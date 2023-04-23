@@ -51,7 +51,7 @@ namespace ECS_Framework
 
             // States
             player.AddComponent(new StateComponent());
-            player.AddComponent(new InputComponent());
+            player.AddComponent(new PlayerInputComponent());
 
             // Position and transforms
             var Transform = new MovementComponent(position);

@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['actionanimation_207',['ActionAnimation',['../classMyGame_1_1ActionAnimation.html#ad5edacf465209978de7ac613813fa2a5',1,'MyGame::ActionAnimation']]],
-  ['add_208',['Add',['../structMyGame_1_1SystemManager.html#a87fa013687d118c0c01ea55f21ec5576',1,'MyGame::SystemManager']]],
-  ['addanimation_209',['AddAnimation',['../classMyGame_1_1AnimatedComponent.html#a9a08ee00186f2c8af1bf765d43addd88',1,'MyGame::AnimatedComponent']]],
-  ['addcomponent_210',['AddComponent',['../classMyGame_1_1Entity.html#ad675e12391ced75bd24bfb59f4dac577',1,'MyGame::Entity']]],
-  ['addentity_211',['AddEntity',['../classMyGame_1_1System.html#ac919be2ccbaa0dc6dcfb40e136848335',1,'MyGame.System.AddEntity()'],['../classMyGame_1_1InputSystem.html#a94b1f80f2376f18cc20fb057e7323f51',1,'MyGame.InputSystem.AddEntity()'],['../classMyGame_1_1MovementSystem.html#ad9a91bcab52b20067d917d436589696a',1,'MyGame.MovementSystem.AddEntity()'],['../classMyGame_1_1ObstacleColliderSystem.html#a299cb885ac3d219d970d45c2af0df2f7',1,'MyGame.ObstacleColliderSystem.AddEntity()'],['../classMyGame_1_1ParallaxSystem.html#aa58ad360dcd72439df99e18e8be5d571',1,'MyGame.ParallaxSystem.AddEntity()'],['../classMyGame_1_1RenderSystem.html#a2ec6e1b567432947559d8e1603937fda',1,'MyGame.RenderSystem.AddEntity()']]],
-  ['animatedcomponent_212',['AnimatedComponent',['../classMyGame_1_1AnimatedComponent.html#ae579bdce4b80a66e7205299850b78154',1,'MyGame::AnimatedComponent']]]
+  ['actionanimation_209',['ActionAnimation',['../classECS__Framework_1_1ActionAnimation.html#a42e290c4c398d5bdfe8c52faabca392c',1,'ECS_Framework::ActionAnimation']]],
+  ['add_210',['Add',['../structECS__Framework_1_1SystemManager.html#aecde90884fdee8649ab945ac86d5885a',1,'ECS_Framework::SystemManager']]],
+  ['addanimation_211',['AddAnimation',['../classECS__Framework_1_1AnimatedComponent.html#a29f5992c42ab81056239d22c9e48cc36',1,'ECS_Framework::AnimatedComponent']]],
+  ['addcomponent_212',['AddComponent',['../classECS__Framework_1_1Entity.html#ae8b2032a96f1800a48891e20ca2c3690',1,'ECS_Framework::Entity']]],
+  ['addentity_213',['AddEntity',['../classECS__Framework_1_1System.html#a840be60e3979a94ec0ee72334186ec72',1,'ECS_Framework.System.AddEntity()'],['../classECS__Framework_1_1MovementSystem.html#ad60054b2ff99b6afe21d08a5a6d14834',1,'ECS_Framework.MovementSystem.AddEntity()'],['../classECS__Framework_1_1ObstacleColliderSystem.html#a57f4be6589600bf69d693b198ec5d73f',1,'ECS_Framework.ObstacleColliderSystem.AddEntity()'],['../classECS__Framework_1_1ParallaxSystem.html#a116833be37496bbb90f1dbd283701447',1,'ECS_Framework.ParallaxSystem.AddEntity()'],['../classECS__Framework_1_1PlayerInputSystem.html#a09a29508bb98a31141258f50109793f6',1,'ECS_Framework.PlayerInputSystem.AddEntity()'],['../classECS__Framework_1_1RenderSystem.html#ad7d0c02aa9f6e524b9bb0406e9483a5c',1,'ECS_Framework.RenderSystem.AddEntity()']]],
+  ['animatedcomponent_214',['AnimatedComponent',['../classECS__Framework_1_1AnimatedComponent.html#a4fe5b6f1cb19e3e43f4c923b1e6b85cc',1,'ECS_Framework::AnimatedComponent']]]
 ];

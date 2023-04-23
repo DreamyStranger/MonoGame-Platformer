@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['objectstate_95',['ObjectState',['../namespaceMyGame.html#a54150a2777a8301614320566ad5a121e',1,'MyGame']]],
-  ['obstaclecollidersystem_96',['ObstacleColliderSystem',['../classMyGame_1_1ObstacleColliderSystem.html',1,'MyGame.ObstacleColliderSystem'],['../classMyGame_1_1ObstacleColliderSystem.html#aa524d89c424bd8370fac2df09120a454',1,'MyGame.ObstacleColliderSystem.ObstacleColliderSystem()']]],
-  ['obstaclecollidersystem_2ecs_97',['ObstacleColliderSystem.cs',['../ObstacleColliderSystem_8cs.html',1,'']]],
-  ['obstacles_98',['obstacles',['../classMyGame_1_1Loader.html#a40ee07f7aa728392b1bfa1a4bcd49d59',1,'MyGame.Loader.obstacles()'],['../classMyGame_1_1TileHandler.html#a9e28eea78302a8ab67dc1752858b8575',1,'MyGame.TileHandler.obstacles()']]],
-  ['onground_99',['OnGround',['../namespaceMyGame.html#a795e2b48bbe3d51c21fba91f0d598fa2a2b9beed57034f5727573d7ded76cf777',1,'MyGame']]],
-  ['originalheight_100',['originalHeight',['../classMyGame_1_1CollisionBoxComponent.html#a81037914ef4de2214ba22db1bd4f389e',1,'MyGame::CollisionBoxComponent']]],
-  ['originalwidth_101',['originalWidth',['../classMyGame_1_1CollisionBoxComponent.html#a8e37859dbfa2de22ba1bfb31ca874c3d',1,'MyGame::CollisionBoxComponent']]]
+  ['objectstate_93',['ObjectState',['../namespaceECS__Framework.html#a577aaaed4462a790330dd26d8990aabb',1,'ECS_Framework']]],
+  ['obstaclecollidersystem_94',['ObstacleColliderSystem',['../classECS__Framework_1_1ObstacleColliderSystem.html',1,'ECS_Framework.ObstacleColliderSystem'],['../classECS__Framework_1_1ObstacleColliderSystem.html#af823cff89bacbc234f851c56ff5a569e',1,'ECS_Framework.ObstacleColliderSystem.ObstacleColliderSystem()']]],
+  ['obstaclecollidersystem_2ecs_95',['ObstacleColliderSystem.cs',['../ObstacleColliderSystem_8cs.html',1,'']]],
+  ['obstacles_96',['obstacles',['../classECS__Framework_1_1Loader.html#a389733c4689ddd627deb5c960f8f9d31',1,'ECS_Framework.Loader.obstacles()'],['../classECS__Framework_1_1TileHandler.html#a02e8752017ca51bd4583c58b9b3e0063',1,'ECS_Framework.TileHandler.obstacles()']]],
+  ['onground_97',['OnGround',['../namespaceECS__Framework.html#af9d01d5477ca5135063c7d2aeb03b2cba2b9beed57034f5727573d7ded76cf777',1,'ECS_Framework']]],
+  ['originalheight_98',['originalHeight',['../classECS__Framework_1_1CollisionBoxComponent.html#ae3e67ea3d136dd392811a9baeba3f895',1,'ECS_Framework::CollisionBoxComponent']]],
+  ['originalwidth_99',['originalWidth',['../classECS__Framework_1_1CollisionBoxComponent.html#adddc3feba75f5f52b02a970e7656750b',1,'ECS_Framework::CollisionBoxComponent']]]
 ];

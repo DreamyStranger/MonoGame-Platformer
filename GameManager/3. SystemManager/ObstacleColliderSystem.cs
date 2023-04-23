@@ -137,14 +137,17 @@ namespace ECS_Framework
         /// <param name="positionY">The entity's current Y position.</param>
         private void HandleFallCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY)
         {
+            bool wasAbove = data.Movement.LastPosition.Y + data.CollisionBox.originalHeight - data.CollisionBox.vertBottomOffset <= rect.Top + 1;
             bool collidesWithTopSide = box.Bottom > rect.Top && box.Top <= rect.Top;
-            if (collidesWithTopSide)
+
+
+            if (collidesWithTopSide && wasAbove)
             {
                 positionY = rect.Top - data.CollisionBox.originalHeight + data.CollisionBox.vertBottomOffset;
                 data.CollisionBox.SetGroundLocation(rect.Left, rect.Right);
+                data.State.SetSuperState(SuperState.OnGround);
                 data.Movement.Velocity = Vector2.Zero;
                 data.Movement.Acceleration = Vector2.Zero;
-                data.State.SetSuperState(SuperState.OnGround);
             }
             else
             {
@@ -167,12 +170,19 @@ namespace ECS_Framework
             {
                 return;
             }
+            //bool wasBelow = data.Movement.LastPosition.Y - data.CollisionBox.vertTopOffset >= rect.Top;
             bool collidesWithBottomSide = box.Top < rect.Bottom && box.Bottom >= rect.Bottom;
             if (collidesWithBottomSide)
             {
                 positionY = rect.Bottom - data.CollisionBox.vertTopOffset;
+                data.State.SetSuperState(SuperState.IsFalling);
+                data.Movement.Velocity = Vector2.Zero;
+                //data.State.JumpsPerformed = 2;
             }
-            HandleHorizontalInAirCollision(data, box, rect, ref positionX);
+            else
+            {
+                HandleHorizontalInAirCollision(data, box, rect, ref positionX);
+            }
         }
 
         /// <summary>
@@ -225,9 +235,9 @@ namespace ECS_Framework
                     positionX = rect.Right - data.CollisionBox.horRightOffset;
                     data.State.CanMoveLeft = false;
                 }
+                data.State.SetSuperState(SuperState.IsFalling);
+                data.Movement.Velocity = Vector2.Zero;
             }
-            data.Movement.Velocity = Vector2.Zero;
-            data.State.SetSuperState(SuperState.IsFalling);
         }
 
         /// <summary>

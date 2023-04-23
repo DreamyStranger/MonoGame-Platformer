@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['game_36',['game',['../Program_8cs.html#a74dcf6305d4640170c336655f6b333ff',1,'Program.cs']]],
-  ['game1_37',['Game1',['../classMyGame_1_1Game1.html#ac36fb968c2144e2bdeb4002e2412cf64',1,'MyGame.Game1.Game1()'],['../classMyGame_1_1Game1.html',1,'MyGame.Game1']]],
+  ['game_36',['game',['../Program_8cs.html#adb31d5946e35ccc1436b9c9e8f77d0b6',1,'Program.cs']]],
+  ['game1_37',['Game1',['../classECS__Framework_1_1Game1.html',1,'ECS_Framework.Game1'],['../classECS__Framework_1_1Game1.html#a992141d75705d9f2cc0ff5412555a648',1,'ECS_Framework.Game1.Game1()']]],
   ['game1_2ecs_38',['Game1.cs',['../Game1_8cs.html',1,'']]],
   ['gameconstant_2ecs_39',['GameConstant.cs',['../GameConstant_8cs.html',1,'']]],
-  ['getallcomponents_40',['GetAllComponents',['../classMyGame_1_1Entity.html#ad2a77071bfd15d90faadbfde551c057f',1,'MyGame::Entity']]],
-  ['getcomponent_3c_20t_20_3e_41',['GetComponent&lt; T &gt;',['../classMyGame_1_1Entity.html#a1ab9b69f9381c4435cf766da867de9c5',1,'MyGame::Entity']]],
-  ['getcurrentanimation_42',['GetCurrentAnimation',['../classMyGame_1_1AnimatedComponent.html#ad5c697ecf91f05569fbd309278f24b52',1,'MyGame::AnimatedComponent']]],
-  ['getlayerbounds_43',['GetLayerBounds',['../classMyGame_1_1TileHandler.html#a29a51e86c2a6174f0c307b8c413c2df4',1,'MyGame::TileHandler']]],
-  ['getlayersboundsinmap_44',['GetLayersBoundsInMap',['../classMyGame_1_1TileHandler.html#a739fb5559d2d57ea26bc5b1eed886588',1,'MyGame::TileHandler']]],
-  ['getlevel_45',['GetLevel',['../classMyGame_1_1LevelManager.html#a5917b72623907a684abada63c7e2bed4',1,'MyGame::LevelManager']]],
-  ['getobjects_46',['GetObjects',['../interfaceMyGame_1_1LevelInitializer.html#a30f81d5353cbadb1abdd58cdc71be098',1,'MyGame.LevelInitializer.GetObjects()'],['../classMyGame_1_1Level1Initializer.html#a874c31150149a5dd7a02845970472b5a',1,'MyGame.Level1Initializer.GetObjects()'],['../classMyGame_1_1Level2Initializer.html#aca9c6218edd69f9c7d41bb080dd01e0e',1,'MyGame.Level2Initializer.GetObjects()']]],
-  ['getrectangle_47',['GetRectangle',['../classMyGame_1_1CollisionBoxComponent.html#a12a443e9072e4404eb1d08a347ebd7a1',1,'MyGame::CollisionBoxComponent']]],
-  ['gettexture_48',['GetTexture',['../classMyGame_1_1Loader.html#a3af5032d6078633dcf63161a2c53e624',1,'MyGame::Loader']]]
+  ['getallcomponents_40',['GetAllComponents',['../classECS__Framework_1_1Entity.html#adccf37d6b4c6e955f730071881af1918',1,'ECS_Framework::Entity']]],
+  ['getcomponent_3c_20t_20_3e_41',['GetComponent&lt; T &gt;',['../classECS__Framework_1_1Entity.html#a959ae88f890b9b2239a4a2dd848d6845',1,'ECS_Framework::Entity']]],
+  ['getcurrentanimation_42',['GetCurrentAnimation',['../classECS__Framework_1_1AnimatedComponent.html#ab8dc6588cfb8874c7cdffcc2818463dc',1,'ECS_Framework::AnimatedComponent']]],
+  ['getlayerbounds_43',['GetLayerBounds',['../classECS__Framework_1_1TileHandler.html#a8f6c0f3aebb7c620bfc766d6adf8096b',1,'ECS_Framework::TileHandler']]],
+  ['getlayersboundsinmap_44',['GetLayersBoundsInMap',['../classECS__Framework_1_1TileHandler.html#ab6bb56b97bdba9159cc95ea2074e047c',1,'ECS_Framework::TileHandler']]],
+  ['getlevel_45',['GetLevel',['../classECS__Framework_1_1LevelManager.html#a04d38bfe5460dced79b9fbfbc5d75225',1,'ECS_Framework::LevelManager']]],
+  ['getobjects_46',['GetObjects',['../interfaceECS__Framework_1_1LevelInitializer.html#a219475ee040d1fc6146e707b5bef727c',1,'ECS_Framework.LevelInitializer.GetObjects()'],['../classECS__Framework_1_1Level1Initializer.html#a372da5620f9694ccf7d915a7f33b4545',1,'ECS_Framework.Level1Initializer.GetObjects()'],['../classECS__Framework_1_1Level2Initializer.html#acd6929eabe973dd7cc657d17d49c1c17',1,'ECS_Framework.Level2Initializer.GetObjects()']]],
+  ['getrectangle_47',['GetRectangle',['../classECS__Framework_1_1CollisionBoxComponent.html#a10e1a7198b0cd2140ee7acd7f9ea0913',1,'ECS_Framework::CollisionBoxComponent']]],
+  ['gettexture_48',['GetTexture',['../classECS__Framework_1_1Loader.html#a109e7bf266e1f094fe060787aff7425c',1,'ECS_Framework::Loader']]]
 ];

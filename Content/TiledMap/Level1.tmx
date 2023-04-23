@@ -31,8 +31,8 @@
  <objectgroup id="2" name="solid">
   <object id="8" x="0.666667" y="320" width="640" height="46.6082"/>
   <object id="9" x="432.667" y="256" width="47.3762" height="32"/>
-  <object id="10" x="177.333" y="256.667" width="46.6667" height="30"/>
-  <object id="13" x="256" y="224.667" width="143.333" height="94"/>
+  <object id="10" x="176.958" y="256.167" width="46.7917" height="31.625"/>
+  <object id="13" x="256.875" y="224.292" width="142.833" height="95.75"/>
   <object id="26" x="608.667" y="1.33333" width="30" height="29.3333"/>
   <object id="27" x="626" y="32.6667" width="11.3333" height="286.667"/>
   <object id="28" x="0.666667" y="32" width="15.3333" height="287.333"/>
@@ -40,8 +40,8 @@
   <object id="31" x="32" y="1.33333" width="576" height="14"/>
  </objectgroup>
  <objectgroup id="9" name="float">
-  <object id="19" x="79.3333" y="207.333" width="64" height="5.84409"/>
-  <object id="20" x="512.667" y="207.333" width="62.6667" height="5.22031"/>
-  <object id="22" x="302.667" y="160.667" width="48.6667" height="4.66667"/>
+  <object id="19" x="80.7083" y="208.083" width="62.625" height="5.09409"/>
+  <object id="20" x="512.667" y="208.083" width="62.6667" height="4.47031"/>
+  <object id="22" x="304.667" y="160.667" width="46.6667" height="4.66667"/>
  </objectgroup>
 </map>

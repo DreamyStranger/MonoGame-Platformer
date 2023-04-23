@@ -11,5 +11,5 @@ FILE_PATTERNS      = *.cs
 RECURSIVE          = YES
 
 # HTML settings
+HTML_OUTPUT        = .    # Add this line
 HTML_FILE_EXTENSION = .html
-

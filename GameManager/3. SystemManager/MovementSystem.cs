@@ -96,7 +96,6 @@ namespace MyGame
             // Update Position
             movement.LastPosition = movement.Position;
             movement.Position += movement.Velocity * deltaTime;
-
         }
 
         /// <summary>

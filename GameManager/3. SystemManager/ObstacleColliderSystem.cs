@@ -144,14 +144,24 @@ namespace MyGame
             }
         }
 
+        /// <summary>
+        /// Handles collision when the entity is in a falling state.
+        /// </summary>
+        /// <param name="data">The EntityData containing the entity's components.</param>
+        /// <param name="box">The entity's collision box.</param>
+        /// <param name="rect">The obstacle's rectangle.</param>
+        /// <param name="positionX">The entity's current X position.</param>
+        /// <param name="positionY">The entity's current Y position.</param>
         private void HandleFallCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY)
         {
             bool collidesWithTopSide = box.Bottom > rect.Top && box.Top <= rect.Top;
             if (collidesWithTopSide)
             {
                 positionY = rect.Top - data.CollisionBox.originalHeight + data.CollisionBox.vertBottomOffset;
-                data.State.SetSuperState(SuperState.OnGround);
                 data.CollisionBox.SetGroundLocation(rect.Left, rect.Right);
+                data.Movement.Velocity = Vector2.Zero;
+                data.Movement.Acceleration = Vector2.Zero;
+                data.State.SetSuperState(SuperState.OnGround);
             }
             else
             {
@@ -159,6 +169,15 @@ namespace MyGame
             }
         }
 
+        /// <summary>
+        /// Handles collision when the entity is in a jumping state.
+        /// </summary>
+        /// <param name="data">The EntityData containing the entity's components.</param>
+        /// <param name="box">The entity's collision box.</param>
+        /// <param name="rect">The obstacle's rectangle.</param>
+        /// <param name="positionX">The entity's current X position.</param>
+        /// <param name="positionY">The entity's current Y position.</param>
+        /// <param name="key">The key indicating the current layer being checked.</param>
         private void HandleJumpCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY, string key)
         {
             if (key == "float")
@@ -173,6 +192,13 @@ namespace MyGame
             HandleHorizontalInAirCollision(data, box, rect, ref positionX);
         }
 
+        /// <summary>
+        /// Handles collision when the entity is on the ground.
+        /// </summary>
+        /// <param name="data">The EntityData containing the entity's components.</param>
+        /// <param name="box">The entity's collision box.</param>
+        /// <param name="rect">The obstacle's rectangle.</param>
+        /// <param name="positionX">The entity's current X position.</param>
         private void HandleGroundCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX)
         {
             bool collidesWithRightSide = box.Left < rect.Right && box.Right >= rect.Right;
@@ -192,6 +218,13 @@ namespace MyGame
             }
         }
 
+        /// <summary>
+        /// Handles horizontal collision when the entity is in air (jumping or falling).
+        /// </summary>
+        /// <param name="data">The EntityData containing the entity's components.</param>
+        /// <param name="box">The entity's collision box.</param>
+        /// <param name="rect">The obstacle's rectangle.</param>
+        /// <param name="positionX">The entity's current X position.</param>
         private void HandleHorizontalInAirCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX)
         {
             Rectangle intersection = Rectangle.Intersect(box, rect);

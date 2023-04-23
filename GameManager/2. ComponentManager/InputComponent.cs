@@ -68,17 +68,25 @@ namespace MyGame
                     state.JumpsPerformed = 0;
                     if (isSpaceKeyDown && isNotBothKeys)
                     {
-                        state.JumpsPerformed += 1;
+                        state.JumpsPerformed = 1;
                         state.SetState(ObjectState.Jump);
                     }
                     break;
 
                 case SuperState.IsFalling:
+                    if(state.currentState == ObjectState.Slide) state.JumpsPerformed = 2;
                     if (isSpaceKeyDown && isNotBothKeys)
                     {
-                        if (state.JumpsPerformed == 0) state.SetState(ObjectState.Jump);
-                        if (state.JumpsPerformed == 1) state.SetState(ObjectState.DoubleJump);
-                        state.JumpsPerformed++;
+                        if (state.JumpsPerformed == 0)
+                        {
+                            state.SetState(ObjectState.Jump);
+                            state.JumpsPerformed = 1;
+                        }
+                        if (state.JumpsPerformed == 1)
+                        {
+                            state.SetState(ObjectState.DoubleJump);
+                            state.JumpsPerformed = 2;
+                        }
                     }
                     break;
 

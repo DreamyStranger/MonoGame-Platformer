@@ -151,19 +151,19 @@ namespace MyGame
             switch (currentSuperState)
             {
                 case SuperState.OnGround:
+                    stateID = "idle";
                     if (currentState == ObjectState.WalkLeft || currentState == ObjectState.WalkRight)
                     {
                         stateID = "walking";
-                    }
-                    else if (currentState == ObjectState.Idle)
-                    {
-                        stateID = "idle";
                     }
                     break;
 
                 case SuperState.IsFalling:
                     stateID = "fall";
-                    if (currentState == ObjectState.Slide) stateID = "slide";
+                    if (currentState == ObjectState.Slide)
+                    {
+                        stateID = "slide";
+                    }
                     break;
 
                 case SuperState.IsJumping:

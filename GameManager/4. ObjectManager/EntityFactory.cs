@@ -43,10 +43,10 @@ namespace MyGame
             AnimatedComponent animation =  new AnimatedComponent();
             animation.AddAnimation("player_idle", "idle", 1, 11, 20);
             animation.AddAnimation("player_walking", "walking", 1, 12, 20);
-            animation.AddAnimation("player_jump", "jump", 1, 1, GameConstants.AnimationFPS);
-            animation.AddAnimation("player_double_jump", "double_jump",  1, 6, GameConstants.AnimationFPS);
-            animation.AddAnimation("player_fall", "fall", 1, 1, GameConstants.AnimationFPS);
-            animation.AddAnimation("player_slide", "slide", 1, 5, GameConstants.AnimationFPS);
+            animation.AddAnimation("player_jump", "jump", 1, 1, 20);
+            animation.AddAnimation("player_double_jump", "double_jump",  1, 6, 20);
+            animation.AddAnimation("player_fall", "fall", 1, 1, 20);
+            animation.AddAnimation("player_slide", "slide", 1, 5, 20);
             player.AddComponent(animation);
 
             // States
@@ -58,7 +58,14 @@ namespace MyGame
             player.AddComponent(Transform);
 
             // Collisions
-            player.AddComponent(new CollisionBoxComponent(position, 32, 32, 8, 0, 4 ,6));
+            player.AddComponent(new CollisionBoxComponent(
+                    position: position, 
+                    width: 32, 
+                    height: 32, 
+                    vertTopOffset: 8,
+                    vertBottomOffset: 0, 
+                    horLeftOffset: 4,
+                    horRightOffset: 6));
 
             return player;
         }

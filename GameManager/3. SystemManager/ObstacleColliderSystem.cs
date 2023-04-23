@@ -129,22 +129,6 @@ namespace MyGame
         }
 
         /// <summary>
-        /// Draws the system's state using the provided SpriteBatch.
-        /// </summary>
-        /// <param name="spriteBatch">The SpriteBatch used for drawing.</param>
-        public override void Draw(SpriteBatch spriteBatch)
-        {
-            if (!GameConstants.DisplayCollisionBoxes)
-            {
-                return;
-            }
-            foreach (EntityData data in entitiesData)
-            {
-                data.CollisionBox.DrawCollisionBoxes(spriteBatch);
-            }
-        }
-
-        /// <summary>
         /// Handles collision when the entity is in a falling state.
         /// </summary>
         /// <param name="data">The EntityData containing the entity's components.</param>
@@ -245,6 +229,22 @@ namespace MyGame
             }
             data.Movement.Velocity = Vector2.Zero;
             data.State.SetSuperState(SuperState.IsFalling);
+        }
+
+        /// <summary>
+        /// Draws the system's state using the provided SpriteBatch.
+        /// </summary>
+        /// <param name="spriteBatch">The SpriteBatch used for drawing.</param>
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            if (!GameConstants.DisplayCollisionBoxes)
+            {
+                return;
+            }
+            foreach (EntityData data in entitiesData)
+            {
+                data.CollisionBox.DrawCollisionBoxes(spriteBatch);
+            }
         }
     }
 }

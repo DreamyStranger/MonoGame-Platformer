@@ -6,7 +6,7 @@ namespace ECS_Framework
     /// <summary>
     /// A factory class for creating entities.
     /// </summary>
-    struct EntityFactory
+    static class EntityFactory
     {
         //Parallax Background
         /// <summary>

@@ -66,7 +66,7 @@ namespace ECS_Framework
         {
             foreach (EntityData data in entitiesData)
             {
-                if(data.State.CurrentSuperState == SuperState.IsDead)
+                if (data.State.CurrentSuperState == SuperState.IsDead)
                 {
                     continue;
                 }

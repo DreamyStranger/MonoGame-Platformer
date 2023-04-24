@@ -91,12 +91,12 @@ namespace ECS_Framework
             coin.State.CurrentSuperState = SuperState.IsDead;
         }
 
-        private void ResolveNextLevelCollision(EntityData player, EntityData coin)
+        private void ResolveNextLevelCollision(EntityData player, EntityData portal)
         {
             //Implement
         }
 
-        private void ResolveWalkingEnemyCollision(EntityData player, EntityData coin)
+        private void ResolveWalkingEnemyCollision(EntityData player, EntityData enemy)
         {
             //Implement
         }

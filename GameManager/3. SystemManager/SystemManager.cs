@@ -25,7 +25,7 @@ namespace ECS_Framework
             systems.Add(new ObstacleCollisionSystem(levelID));
             systems.Add(new PlayerEntityCollisionSystem());
             systems.Add(new RenderSystem());
-            systems.Add(new DeathAnimationSystem());
+            systems.Add(new DeathEventSystem());
         }
 
         /// <summary>

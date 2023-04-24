@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace ECS_Framework
 {
-    public class DeathAnimationSystem : System
+    public class DeathEventSystem : System
     {
         private List<Entity> _entities;
 
-        public DeathAnimationSystem()
+        public DeathEventSystem()
         {
             _entities = new List<Entity>();
         }
@@ -40,6 +40,10 @@ namespace ECS_Framework
                     // Check if the animation has completed
                     if (deathAnimation.IsFinished)
                     {
+                        if (entity.GetComponent<EntityTypeComponent>().Type == EntityType.Player)
+                        {
+                            MessageBus.Publish(new ExitGameMessage());
+                        }
                         // Remove the entity
                         MessageBus.Publish(new DestroyEntityMessage(entity));
                     }

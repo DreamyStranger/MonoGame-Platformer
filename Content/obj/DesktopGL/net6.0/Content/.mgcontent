@@ -5,6 +5,15 @@
   <Config />
   <SourceFiles>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/BG_Green.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Apple.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Bananas.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Cherries.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Collected.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Kiwi.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Melon.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Orange.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Pineapple.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Strawberry.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Double Jump.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Fall.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Hit.png</File>
@@ -15,6 +24,15 @@
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/TiledMap/Terrain.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

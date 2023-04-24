@@ -36,6 +36,14 @@ namespace ECS_Framework
             textures.Add("player_double_jump", content.Load<Texture2D>("Player/Frog/Double Jump"));
             textures.Add("player_fall", content.Load<Texture2D>("Player/Frog/Fall"));
             textures.Add("player_slide", content.Load<Texture2D>("Player/Frog/Wall Jump"));
+            textures.Add("player_death", content.Load<Texture2D>("Player/Frog/Hit"));
+
+
+            //Collictible Items
+            textures.Add("apple_idle", content.Load<Texture2D>("Items/Fruits/Apple"));
+
+            //Collectible Collected
+            textures.Add("fruits_death", content.Load<Texture2D>("Items/Fruits/Collected"));
 
             // Background
             textures.Add("bg_green", content.Load<Texture2D>("Background/BG_Green"));

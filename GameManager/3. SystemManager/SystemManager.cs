@@ -22,8 +22,10 @@ namespace ECS_Framework
             systems.Add(new ParallaxSystem());
             systems.Add(new PlayerInputSystem());
             systems.Add(new MovementSystem());
-            systems.Add(new ObstacleColliderSystem(levelID));
+            systems.Add(new ObstacleCollisionSystem(levelID));
+            systems.Add(new PlayerEntityCollisionSystem());
             systems.Add(new RenderSystem());
+            systems.Add(new DeathAnimationSystem());
         }
 
         /// <summary>
@@ -43,10 +45,6 @@ namespace ECS_Framework
         /// <param name="entity">The entity to be removed.</param>
         public void Remove(Entity entity)
         {
-            if(systems == null)
-            {
-                return;
-            }
             foreach (System system in systems)
             {
                 system.RemoveEntity(entity);

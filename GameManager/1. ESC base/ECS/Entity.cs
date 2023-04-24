@@ -11,18 +11,11 @@ namespace ECS_Framework
         private Dictionary<Type, List<Component>> components;
 
         /// <summary>
-        /// The ID of the entity.
-        /// </summary>
-        public int id { get; private set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Entity"/> class with a specified ID.
-        /// </summary>
-        /// <param name="id">The ID of the entity.</param>        
-        public Entity(int id = 1)
+        /// Initializes a new instance of the <see cref="Entity"/> class.
+        /// </summary>    
+        public Entity()
         {
             components = new Dictionary<Type, List<Component>>();
-            this.id = id;
         }
 
         /// <summary>

@@ -99,7 +99,5 @@ namespace ECS_Framework
 
             base.Draw(gameTime);
         }
-
-
     }
 }

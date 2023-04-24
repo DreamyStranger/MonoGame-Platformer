@@ -14,7 +14,10 @@ namespace ECS_Framework
         private int totalLevels = Enum.GetValues(typeof(LevelID)).Length;
 
         private List<Entity> entitiesToDestroy;
-
+        
+        /// <summary>
+        /// Initializes a new instance of the World class.
+        /// </summary>
         public World()
         {
             levelManager = new LevelManager();
@@ -23,6 +26,7 @@ namespace ECS_Framework
             LoadLevel(CurrentLevel);
             MessageBus.Subscribe<DestroyEntityMessage>(OnDestroyEntity);
             MessageBus.Subscribe<NextLevelMessage>(NextLevel);
+            MessageBus.Subscribe<ReloadLevelMessage>(ResetCurrentLevel);
             entitiesToDestroy = new List<Entity>();
         }
 
@@ -56,7 +60,7 @@ namespace ECS_Framework
         /// <summary>
         /// Resets the current level by reloading it.
         /// </summary>
-        public void ResetCurrentLevel()
+        public void ResetCurrentLevel(ReloadLevelMessage message = null)
         {
             LoadLevel(CurrentLevel);
         }
@@ -99,7 +103,9 @@ namespace ECS_Framework
             return (LevelID)previousLevelIndex;
         }
 
-
+        /// <summary>
+        /// Handles the destruction of entities.
+        /// </summary>
         private void OnDestroyEntity(DestroyEntityMessage message)
         {
             // Remove the entity from all systems

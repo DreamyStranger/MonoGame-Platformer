@@ -5,6 +5,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace ECS_Framework
 {
+    /// <summary>
+    /// Represents a system that handles collisions between the player entity and other entities.
+    /// </summary>
     public class PlayerEntityCollisionSystem : System
     {
         private List<EntityData> _entitiesData;
@@ -79,6 +82,7 @@ namespace ECS_Framework
                         case EntityType.PortalToNextLevel:
                             ResolveNextLevelCollision(player, gameObject);
                             break;
+                        //Add more cases for new entity types as needed
                         default:
                             break;
                     }
@@ -94,12 +98,23 @@ namespace ECS_Framework
         private void ResolveNextLevelCollision(EntityData player, EntityData portal)
         {
             //Implement
-            MessageBus.Publish(new NextLevelMessage());
+            if(player.State.CurrentSuperState == SuperState.IsOnGround)
+            {
+                MessageBus.Publish(new NextLevelMessage());
+            }
         }
 
         private void ResolveWalkingEnemyCollision(EntityData player, EntityData enemy)
         {
-            //Implement
+            switch(player.State.CurrentSuperState)
+            {
+                case SuperState.IsFalling:
+                    enemy.State.CurrentSuperState = SuperState.IsDead;
+                    break;
+                default:
+                    player.State.CurrentSuperState = SuperState.IsDead;
+                    break;
+            }
         }
     }
 }

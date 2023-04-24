@@ -42,10 +42,13 @@ namespace ECS_Framework
                     {
                         if (entity.GetComponent<EntityTypeComponent>().Type == EntityType.Player)
                         {
-                            MessageBus.Publish(new ExitGameMessage());
+                            MessageBus.Publish(new ReloadLevelMessage());
                         }
-                        // Remove the entity
-                        MessageBus.Publish(new DestroyEntityMessage(entity));
+                        else
+                        {
+                            // Remove the entity
+                            MessageBus.Publish(new DestroyEntityMessage(entity));
+                        }
                     }
                 }
             }

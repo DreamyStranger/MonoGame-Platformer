@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['position_312',['Position',['../classECS__Framework_1_1MovementComponent.html#a983cf99818f9e9f0ea18c62b2bac0c83',1,'ECS_Framework::MovementComponent']]],
-  ['previousstate_313',['previousState',['../classECS__Framework_1_1StateComponent.html#ab8b4e9cced5ab776660843452ecded65',1,'ECS_Framework::StateComponent']]],
-  ['previoussuperstate_314',['previousSuperState',['../classECS__Framework_1_1StateComponent.html#a98cd3cfb9246b0d7e61cb190ff37df2d',1,'ECS_Framework::StateComponent']]]
+  ['obstacles_351',['obstacles',['../classECS__Framework_1_1Loader.html#a389733c4689ddd627deb5c960f8f9d31',1,'ECS_Framework.Loader.obstacles()'],['../classECS__Framework_1_1TileHandler.html#a02e8752017ca51bd4583c58b9b3e0063',1,'ECS_Framework.TileHandler.obstacles()']]],
+  ['originalheight_352',['originalHeight',['../classECS__Framework_1_1CollisionBoxComponent.html#ae3e67ea3d136dd392811a9baeba3f895',1,'ECS_Framework::CollisionBoxComponent']]],
+  ['originalwidth_353',['originalWidth',['../classECS__Framework_1_1CollisionBoxComponent.html#adddc3feba75f5f52b02a970e7656750b',1,'ECS_Framework::CollisionBoxComponent']]]
 ];

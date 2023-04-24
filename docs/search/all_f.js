@@ -1,11 +1,16 @@
 var searchData=
 [
-  ['remove_113',['Remove',['../structECS__Framework_1_1SystemManager.html#abda16142d69c01fa8f0318b03ec7866a',1,'ECS_Framework::SystemManager']]],
-  ['removecomponent_3c_20t_20_3e_114',['RemoveComponent&lt; T &gt;',['../classECS__Framework_1_1Entity.html#addbffd3e08211cdfb11084cb1e1b4554',1,'ECS_Framework::Entity']]],
-  ['removeentity_115',['RemoveEntity',['../classECS__Framework_1_1System.html#a8cd1623523e6c4b6c64bf43cc9b7b5f5',1,'ECS_Framework.System.RemoveEntity()'],['../classECS__Framework_1_1MovementSystem.html#addf0f3aabed5091615ab7ac4a71ca562',1,'ECS_Framework.MovementSystem.RemoveEntity()'],['../classECS__Framework_1_1ObstacleColliderSystem.html#a596214fa64cb7321229d2dc808cf14ec',1,'ECS_Framework.ObstacleColliderSystem.RemoveEntity()'],['../classECS__Framework_1_1ParallaxSystem.html#a74321b245dd46bf5368633ee4e98137d',1,'ECS_Framework.ParallaxSystem.RemoveEntity()'],['../classECS__Framework_1_1PlayerInputSystem.html#af46f0021b55b28a2b3e8b7b8b18e4bd7',1,'ECS_Framework.PlayerInputSystem.RemoveEntity()'],['../classECS__Framework_1_1RenderSystem.html#a1b2b14b66b294d5381a1f4e6ff950ffe',1,'ECS_Framework.RenderSystem.RemoveEntity()']]],
-  ['rendersystem_116',['RenderSystem',['../classECS__Framework_1_1RenderSystem.html',1,'ECS_Framework.RenderSystem'],['../classECS__Framework_1_1RenderSystem.html#a64aa9aaae05aea4f4d677f11ccefbc8b',1,'ECS_Framework.RenderSystem.RenderSystem()']]],
-  ['rendersystem_2ecs_117',['RenderSystem.cs',['../RenderSystem_8cs.html',1,'']]],
-  ['reset_118',['Reset',['../classECS__Framework_1_1ActionAnimation.html#a3074b71e821932a2a04faa7537e29f0d',1,'ECS_Framework::ActionAnimation']]],
-  ['resetcurrentlevel_119',['ResetCurrentLevel',['../classECS__Framework_1_1World.html#a5286131a1a2f760dd31f454924135a84',1,'ECS_Framework::World']]],
-  ['run_120',['Run',['../Program_8cs.html#a5b91b0ce90905b3c2981d246ad35e5a5',1,'Program.cs']]]
+  ['setcurrentaction_136',['SetCurrentAction',['../classECS__Framework_1_1AnimatedComponent.html#a2f9e7e26f080fcab9cfa504828e9cc4f',1,'ECS_Framework::AnimatedComponent']]],
+  ['setgroundlocation_137',['SetGroundLocation',['../classECS__Framework_1_1CollisionBoxComponent.html#a9180909e2ebc2d9a75e0ed8e1a77a17d',1,'ECS_Framework::CollisionBoxComponent']]],
+  ['slide_138',['Slide',['../namespaceECS__Framework.html#a1d0644bc18b04d7f02cb424124b843f1a6160a53ece50ce6d4f5ef4452549835e',1,'ECS_Framework']]],
+  ['state_139',['State',['../structECS__Framework_1_1EntityData.html#a4e640a6f187eb3716a9638a767391bf6',1,'ECS_Framework.EntityData.State()'],['../namespaceECS__Framework.html#a1d0644bc18b04d7f02cb424124b843f1',1,'ECS_Framework.State()']]],
+  ['statecomponent_140',['StateComponent',['../classECS__Framework_1_1StateComponent.html',1,'ECS_Framework.StateComponent'],['../classECS__Framework_1_1StateComponent.html#afb374cf5c1cce5bf061b2bd1fa89f3ac',1,'ECS_Framework.StateComponent.StateComponent()']]],
+  ['statecomponent_2ecs_141',['StateComponent.cs',['../StateComponent_8cs.html',1,'']]],
+  ['stateid_142',['stateID',['../classECS__Framework_1_1StateComponent.html#a87078dc7a32b9a08418a45ba1640df40',1,'ECS_Framework::StateComponent']]],
+  ['subscribe_3c_20t_20_3e_143',['Subscribe&lt; T &gt;',['../classECS__Framework_1_1MessageBus.html#abfd347de17ccf5cb88ecf5a19294b2b3',1,'ECS_Framework::MessageBus']]],
+  ['superstate_144',['SuperState',['../namespaceECS__Framework.html#af9d01d5477ca5135063c7d2aeb03b2cb',1,'ECS_Framework']]],
+  ['system_145',['System',['../classECS__Framework_1_1System.html',1,'ECS_Framework']]],
+  ['system_2ecs_146',['System.cs',['../System_8cs.html',1,'']]],
+  ['systemmanager_147',['SystemManager',['../structECS__Framework_1_1SystemManager.html',1,'ECS_Framework.SystemManager'],['../structECS__Framework_1_1SystemManager.html#ab68a066944d5797a54d5553d855d77f0',1,'ECS_Framework.SystemManager.SystemManager()']]],
+  ['systemmanager_2ecs_148',['SystemManager.cs',['../SystemManager_8cs.html',1,'']]]
 ];

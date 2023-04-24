@@ -77,9 +77,11 @@ $(function() {
 : <a class="el" href="classECS__Framework_1_1Entity.html#ae8b2032a96f1800a48891e20ca2c3690">ECS_Framework.Entity</a>
 </li>
 <li>AddEntity()
-: <a class="el" href="classECS__Framework_1_1MovementSystem.html#ad60054b2ff99b6afe21d08a5a6d14834">ECS_Framework.MovementSystem</a>
-, <a class="el" href="classECS__Framework_1_1ObstacleColliderSystem.html#a57f4be6589600bf69d693b198ec5d73f">ECS_Framework.ObstacleColliderSystem</a>
+: <a class="el" href="classECS__Framework_1_1DeathEventSystem.html#aca7d6613b24b4940a0ba790a4cb81f36">ECS_Framework.DeathEventSystem</a>
+, <a class="el" href="classECS__Framework_1_1MovementSystem.html#ad60054b2ff99b6afe21d08a5a6d14834">ECS_Framework.MovementSystem</a>
+, <a class="el" href="classECS__Framework_1_1ObstacleCollisionSystem.html#ad2e4a129e02443fc1dfb3491c25775a7">ECS_Framework.ObstacleCollisionSystem</a>
 , <a class="el" href="classECS__Framework_1_1ParallaxSystem.html#a116833be37496bbb90f1dbd283701447">ECS_Framework.ParallaxSystem</a>
+, <a class="el" href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#ae2e9f58004a6febba97f9a14b5568f7f">ECS_Framework.PlayerEntityCollisionSystem</a>
 , <a class="el" href="classECS__Framework_1_1PlayerInputSystem.html#a09a29508bb98a31141258f50109793f6">ECS_Framework.PlayerInputSystem</a>
 , <a class="el" href="classECS__Framework_1_1RenderSystem.html#ad7d0c02aa9f6e524b9bb0406e9483a5c">ECS_Framework.RenderSystem</a>
 , <a class="el" href="classECS__Framework_1_1System.html#a840be60e3979a94ec0ee72334186ec72">ECS_Framework.System</a>
@@ -97,21 +99,21 @@ $(function() {
 <li>CollisionBoxComponent()
 : <a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a46b75071a00f0e23ee612e4c61689a66">ECS_Framework.CollisionBoxComponent</a>
 </li>
-<li>CreateParallaxBackground()
-: <a class="el" href="structECS__Framework_1_1EntityFactory.html#aa57b64af6b8bb16a4e808f7e68c8d739">ECS_Framework.EntityFactory</a>
-</li>
-<li>CreatePlayer()
-: <a class="el" href="structECS__Framework_1_1EntityFactory.html#a7d9a980d153b371b9fc2ff2cad5f4ac2">ECS_Framework.EntityFactory</a>
-</li>
 </ul>
 
 
 <h3><a id="index_d"></a>- d -</h3><ul>
+<li>DeathEventSystem()
+: <a class="el" href="classECS__Framework_1_1DeathEventSystem.html#aafe03d61007ed80b3dcfd79d8806c1c3">ECS_Framework.DeathEventSystem</a>
+</li>
+<li>DestroyEntityMessage()
+: <a class="el" href="classECS__Framework_1_1DestroyEntityMessage.html#aaebf74085dedcfe4f8b109d5f43f423d">ECS_Framework.DestroyEntityMessage</a>
+</li>
 <li>Draw()
 : <a class="el" href="classECS__Framework_1_1ActionAnimation.html#ad544f31b2d48d79bc68d747875855eaa">ECS_Framework.ActionAnimation</a>
 , <a class="el" href="classECS__Framework_1_1AnimatedComponent.html#a6467d260aac7a022d505cab713a5929c">ECS_Framework.AnimatedComponent</a>
 , <a class="el" href="classECS__Framework_1_1Game1.html#ad2d279253f5d428ad34c551e7a0bf820">ECS_Framework.Game1</a>
-, <a class="el" href="classECS__Framework_1_1ObstacleColliderSystem.html#ab09549279b97ed0634cd29139a70f7e8">ECS_Framework.ObstacleColliderSystem</a>
+, <a class="el" href="classECS__Framework_1_1ObstacleCollisionSystem.html#a12ddd79d551da24d7c19299a0c8250ae">ECS_Framework.ObstacleCollisionSystem</a>
 , <a class="el" href="classECS__Framework_1_1ParallaxComponent.html#a89235fae8c4deae06c08d6cc5ed16bbe">ECS_Framework.ParallaxComponent</a>
 , <a class="el" href="classECS__Framework_1_1ParallaxSystem.html#a876a6594d2e2749ec22b25f655b2d6c6">ECS_Framework.ParallaxSystem</a>
 , <a class="el" href="classECS__Framework_1_1RenderSystem.html#aca1110b93aab9a1541bad345783f3118">ECS_Framework.RenderSystem</a>
@@ -125,7 +127,13 @@ $(function() {
 
 <h3><a id="index_e"></a>- e -</h3><ul>
 <li>Entity()
-: <a class="el" href="classECS__Framework_1_1Entity.html#a9fa778f698b6db7eeae32afeae44153a">ECS_Framework.Entity</a>
+: <a class="el" href="classECS__Framework_1_1Entity.html#a413ce6987a06449ff86b366fd6220aca">ECS_Framework.Entity</a>
+</li>
+<li>EntityTypeComponent()
+: <a class="el" href="classECS__Framework_1_1EntityTypeComponent.html#a08eb7a42fa830f27112f04c20f040d71">ECS_Framework.EntityTypeComponent</a>
+</li>
+<li>ExitGameMessage()
+: <a class="el" href="classECS__Framework_1_1ExitGameMessage.html#a3a9c8c4bc0e86bb2c11ff96eccceaa18">ECS_Framework.ExitGameMessage</a>
 </li>
 </ul>
 
@@ -170,12 +178,6 @@ $(function() {
 <li>Initialize()
 : <a class="el" href="classECS__Framework_1_1Game1.html#ae256e76f75a0cc7b4d80acc65c8b6d07">ECS_Framework.Game1</a>
 </li>
-<li>IsState()
-: <a class="el" href="classECS__Framework_1_1StateComponent.html#a053785b9dae62d049993ae8619df20f4">ECS_Framework.StateComponent</a>
-</li>
-<li>IsSuperState()
-: <a class="el" href="classECS__Framework_1_1StateComponent.html#a997602ef822e3e936f98950e0a218293">ECS_Framework.StateComponent</a>
-</li>
 </ul>
 
 
@@ -208,14 +210,17 @@ $(function() {
 
 <h3><a id="index_n"></a>- n -</h3><ul>
 <li>NextLevel()
-: <a class="el" href="classECS__Framework_1_1World.html#a50672ac7ba51896f92df07537a2ddda8">ECS_Framework.World</a>
+: <a class="el" href="classECS__Framework_1_1World.html#a28c2e864cfcbfda362f750a160fff339">ECS_Framework.World</a>
+</li>
+<li>NextLevelMessage()
+: <a class="el" href="classECS__Framework_1_1NextLevelMessage.html#afe5fd793fd4901a4cf62d8472d0a57a0">ECS_Framework.NextLevelMessage</a>
 </li>
 </ul>
 
 
 <h3><a id="index_o"></a>- o -</h3><ul>
-<li>ObstacleColliderSystem()
-: <a class="el" href="classECS__Framework_1_1ObstacleColliderSystem.html#af823cff89bacbc234f851c56ff5a569e">ECS_Framework.ObstacleColliderSystem</a>
+<li>ObstacleCollisionSystem()
+: <a class="el" href="classECS__Framework_1_1ObstacleCollisionSystem.html#adfd999bcc58cb6c9246de9f18b9bbc8f">ECS_Framework.ObstacleCollisionSystem</a>
 </li>
 </ul>
 
@@ -227,6 +232,9 @@ $(function() {
 <li>ParallaxSystem()
 : <a class="el" href="classECS__Framework_1_1ParallaxSystem.html#a00822b927dab1e859aea4d4e4c657db7">ECS_Framework.ParallaxSystem</a>
 </li>
+<li>PlayerEntityCollisionSystem()
+: <a class="el" href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#a1bd382c12b8a8d0b2c2c3dfb28265753">ECS_Framework.PlayerEntityCollisionSystem</a>
+</li>
 <li>PlayerInputComponent()
 : <a class="el" href="classECS__Framework_1_1PlayerInputComponent.html#a04ee1d8e96b09d7044b54c8080721531">ECS_Framework.PlayerInputComponent</a>
 </li>
@@ -236,10 +244,16 @@ $(function() {
 <li>PreviousLevel()
 : <a class="el" href="classECS__Framework_1_1World.html#a55ee3f05a3ec9ce07b723c3a8d1f6c89">ECS_Framework.World</a>
 </li>
+<li>Publish()
+: <a class="el" href="classECS__Framework_1_1MessageBus.html#adf8293b05bb5489ee3687b7b3eb3c2f6">ECS_Framework.MessageBus</a>
+</li>
 </ul>
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
+<li>ReloadLevelMessage()
+: <a class="el" href="classECS__Framework_1_1ReloadLevelMessage.html#a3f05dd2b894c68d13892170fc863576c">ECS_Framework.ReloadLevelMessage</a>
+</li>
 <li>Remove()
 : <a class="el" href="structECS__Framework_1_1SystemManager.html#abda16142d69c01fa8f0318b03ec7866a">ECS_Framework.SystemManager</a>
 </li>
@@ -247,9 +261,11 @@ $(function() {
 : <a class="el" href="classECS__Framework_1_1Entity.html#addbffd3e08211cdfb11084cb1e1b4554">ECS_Framework.Entity</a>
 </li>
 <li>RemoveEntity()
-: <a class="el" href="classECS__Framework_1_1MovementSystem.html#addf0f3aabed5091615ab7ac4a71ca562">ECS_Framework.MovementSystem</a>
-, <a class="el" href="classECS__Framework_1_1ObstacleColliderSystem.html#a596214fa64cb7321229d2dc808cf14ec">ECS_Framework.ObstacleColliderSystem</a>
+: <a class="el" href="classECS__Framework_1_1DeathEventSystem.html#ae8d300cd4abad5a515db8ef7c50ce259">ECS_Framework.DeathEventSystem</a>
+, <a class="el" href="classECS__Framework_1_1MovementSystem.html#addf0f3aabed5091615ab7ac4a71ca562">ECS_Framework.MovementSystem</a>
+, <a class="el" href="classECS__Framework_1_1ObstacleCollisionSystem.html#a42e5b5a87ee8abf97159af07a56eaf98">ECS_Framework.ObstacleCollisionSystem</a>
 , <a class="el" href="classECS__Framework_1_1ParallaxSystem.html#a74321b245dd46bf5368633ee4e98137d">ECS_Framework.ParallaxSystem</a>
+, <a class="el" href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#ac3e63b64e44c445fdfac64f1d287c236">ECS_Framework.PlayerEntityCollisionSystem</a>
 , <a class="el" href="classECS__Framework_1_1PlayerInputSystem.html#af46f0021b55b28a2b3e8b7b8b18e4bd7">ECS_Framework.PlayerInputSystem</a>
 , <a class="el" href="classECS__Framework_1_1RenderSystem.html#a1b2b14b66b294d5381a1f4e6ff950ffe">ECS_Framework.RenderSystem</a>
 , <a class="el" href="classECS__Framework_1_1System.html#a8cd1623523e6c4b6c64bf43cc9b7b5f5">ECS_Framework.System</a>
@@ -261,7 +277,7 @@ $(function() {
 : <a class="el" href="classECS__Framework_1_1ActionAnimation.html#a3074b71e821932a2a04faa7537e29f0d">ECS_Framework.ActionAnimation</a>
 </li>
 <li>ResetCurrentLevel()
-: <a class="el" href="classECS__Framework_1_1World.html#a5286131a1a2f760dd31f454924135a84">ECS_Framework.World</a>
+: <a class="el" href="classECS__Framework_1_1World.html#a4ea1f79006ea47a5d7ff7841c5a1c143">ECS_Framework.World</a>
 </li>
 </ul>
 
@@ -273,14 +289,11 @@ $(function() {
 <li>SetGroundLocation()
 : <a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a9180909e2ebc2d9a75e0ed8e1a77a17d">ECS_Framework.CollisionBoxComponent</a>
 </li>
-<li>SetState()
-: <a class="el" href="classECS__Framework_1_1StateComponent.html#ad5d49b2d198617f37c53525da19a14d1">ECS_Framework.StateComponent</a>
-</li>
-<li>SetSuperState()
-: <a class="el" href="classECS__Framework_1_1StateComponent.html#a31b921724d6bbd8be94e929c70a36276">ECS_Framework.StateComponent</a>
-</li>
 <li>StateComponent()
-: <a class="el" href="classECS__Framework_1_1StateComponent.html#aff4c78c08813df1a0456e7e544ed5edb">ECS_Framework.StateComponent</a>
+: <a class="el" href="classECS__Framework_1_1StateComponent.html#afb374cf5c1cce5bf061b2bd1fa89f3ac">ECS_Framework.StateComponent</a>
+</li>
+<li>Subscribe&lt; T &gt;()
+: <a class="el" href="classECS__Framework_1_1MessageBus.html#abfd347de17ccf5cb88ecf5a19294b2b3">ECS_Framework.MessageBus</a>
 </li>
 <li>SystemManager()
 : <a class="el" href="structECS__Framework_1_1SystemManager.html#ab68a066944d5797a54d5553d855d77f0">ECS_Framework.SystemManager</a>
@@ -296,14 +309,19 @@ $(function() {
 
 
 <h3><a id="index_u"></a>- u -</h3><ul>
+<li>Unsubscribe&lt; T &gt;()
+: <a class="el" href="classECS__Framework_1_1MessageBus.html#a0f421de7fc77505bc05c7942dcb63947">ECS_Framework.MessageBus</a>
+</li>
 <li>Update()
 : <a class="el" href="classECS__Framework_1_1ActionAnimation.html#a61366a5bec045ef424b03138122c766c">ECS_Framework.ActionAnimation</a>
 , <a class="el" href="classECS__Framework_1_1AnimatedComponent.html#a1cfefc1ee307246d502be4ac045ea1f1">ECS_Framework.AnimatedComponent</a>
+, <a class="el" href="classECS__Framework_1_1DeathEventSystem.html#a5a904b4175214ff64f34c8776754fce0">ECS_Framework.DeathEventSystem</a>
 , <a class="el" href="classECS__Framework_1_1Game1.html#a3097564c8abc278b598ab999cc3b7384">ECS_Framework.Game1</a>
 , <a class="el" href="classECS__Framework_1_1MovementSystem.html#addf04c3f6c2a6d5c7665f1b7c361852a">ECS_Framework.MovementSystem</a>
-, <a class="el" href="classECS__Framework_1_1ObstacleColliderSystem.html#a3768bf747366cb2026a33585b54aadc3">ECS_Framework.ObstacleColliderSystem</a>
+, <a class="el" href="classECS__Framework_1_1ObstacleCollisionSystem.html#ad3cfe1e92c4c45a1c2f5c02998eb72af">ECS_Framework.ObstacleCollisionSystem</a>
 , <a class="el" href="classECS__Framework_1_1ParallaxComponent.html#a6339e471dbe9439a28086cbc3cd34be9">ECS_Framework.ParallaxComponent</a>
 , <a class="el" href="classECS__Framework_1_1ParallaxSystem.html#aff89508fefbfcd47528d0567598c1757">ECS_Framework.ParallaxSystem</a>
+, <a class="el" href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#adce5e5b355303924c3cfbb24328cf32b">ECS_Framework.PlayerEntityCollisionSystem</a>
 , <a class="el" href="classECS__Framework_1_1PlayerInputComponent.html#ab9039dadc1b7154e1f2c585a9906c7f8">ECS_Framework.PlayerInputComponent</a>
 , <a class="el" href="classECS__Framework_1_1PlayerInputSystem.html#a81c7236ba08f449892a4b6d2e5c8fafd">ECS_Framework.PlayerInputSystem</a>
 , <a class="el" href="classECS__Framework_1_1RenderSystem.html#a9225b6d1e3b1b2c3ce8122ea7e1005a6">ECS_Framework.RenderSystem</a>

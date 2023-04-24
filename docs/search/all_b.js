@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['movement_85',['Movement',['../structECS__Framework_1_1EntityData.html#a988f6d9be687ae109057206775ea239c',1,'ECS_Framework::EntityData']]],
-  ['movementcomponent_86',['MovementComponent',['../classECS__Framework_1_1MovementComponent.html',1,'ECS_Framework.MovementComponent'],['../classECS__Framework_1_1MovementComponent.html#a6cb607dc31886b0511ffd78e5ff70348',1,'ECS_Framework.MovementComponent.MovementComponent()']]],
-  ['movementcomponent_2ecs_87',['MovementComponent.cs',['../MovementComponent_8cs.html',1,'']]],
-  ['movementsystem_88',['MovementSystem',['../classECS__Framework_1_1MovementSystem.html',1,'ECS_Framework.MovementSystem'],['../classECS__Framework_1_1MovementSystem.html#a6c860ba7802028653362f22db910883c',1,'ECS_Framework.MovementSystem.MovementSystem()']]],
-  ['movementsystem_2ecs_89',['MovementSystem.cs',['../MovementSystem_8cs.html',1,'']]],
-  ['mygame_2eassemblyinfo_2ecs_90',['MyGame.AssemblyInfo.cs',['../MyGame_8AssemblyInfo_8cs.html',1,'']]],
-  ['mygame_2eglobalusings_2eg_2ecs_91',['MyGame.GlobalUsings.g.cs',['../MyGame_8GlobalUsings_8g_8cs.html',1,'']]]
+  ['nextlevel_100',['NextLevel',['../classECS__Framework_1_1World.html#a28c2e864cfcbfda362f750a160fff339',1,'ECS_Framework::World']]],
+  ['nextlevelmessage_101',['NextLevelMessage',['../classECS__Framework_1_1NextLevelMessage.html',1,'ECS_Framework.NextLevelMessage'],['../classECS__Framework_1_1NextLevelMessage.html#afe5fd793fd4901a4cf62d8472d0a57a0',1,'ECS_Framework.NextLevelMessage.NextLevelMessage()']]],
+  ['nextlevelmessage_2ecs_102',['NextLevelMessage.cs',['../NextLevelMessage_8cs.html',1,'']]]
 ];

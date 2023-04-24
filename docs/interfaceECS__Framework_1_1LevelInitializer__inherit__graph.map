@@ -1,0 +1,5 @@
+<map id="ECS_Framework.LevelInitializer" name="ECS_Framework.LevelInitializer">
+<area shape="rect" id="node1" title="Provides an interface for level initializers, which can provide the objects for a level." alt="" coords="139,5,365,32"/>
+<area shape="rect" id="node2" href="$classECS__Framework_1_1Level1Initializer.html" title="Implements the LevelInitializer interface to provide initialization logic for Level 1." alt="" coords="5,80,240,107"/>
+<area shape="rect" id="node3" href="$classECS__Framework_1_1Level2Initializer.html" title="Implements the LevelInitializer interface to provide initialization logic for Level 2." alt="" coords="264,80,499,107"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="ECS_Framework.System" name="ECS_Framework.System">
+<area shape="rect" id="node1" title="An abstract base class for systems in the game." alt="" coords="5,189,185,215"/>
+<area shape="rect" id="node2" href="$classECS__Framework_1_1DeathEventSystem.html" title=" " alt="" coords="255,5,462,47"/>
+<area shape="rect" id="node3" href="$classECS__Framework_1_1MovementSystem.html" title="System responsible for handling the movement of entities in the game." alt="" coords="233,71,484,98"/>
+<area shape="rect" id="node4" href="$classECS__Framework_1_1ObstacleCollisionSystem.html" title="System that manages collision detection and resolution between entities and level obstacles." alt="" coords="237,123,481,164"/>
+<area shape="rect" id="node5" href="$classECS__Framework_1_1ParallaxSystem.html" title="System that manages parallax components and their related entities." alt="" coords="243,189,475,215"/>
+<area shape="rect" id="node6" href="$classECS__Framework_1_1PlayerEntityCollisionSystem.html" title="Represents a system that handles collisions between the player entity and other entities." alt="" coords="253,240,464,281"/>
+<area shape="rect" id="node7" href="$classECS__Framework_1_1PlayerInputSystem.html" title="System that updates the state of entities based on keyboard input." alt="" coords="256,305,461,347"/>
+<area shape="rect" id="node8" href="$classECS__Framework_1_1RenderSystem.html" title="System responsible for rendering the entities in the game." alt="" coords="245,371,472,398"/>
+</map>

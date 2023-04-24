@@ -1,10 +1,21 @@
 var searchData=
 [
-  ['objectstate_93',['ObjectState',['../namespaceECS__Framework.html#a577aaaed4462a790330dd26d8990aabb',1,'ECS_Framework']]],
-  ['obstaclecollidersystem_94',['ObstacleColliderSystem',['../classECS__Framework_1_1ObstacleColliderSystem.html',1,'ECS_Framework.ObstacleColliderSystem'],['../classECS__Framework_1_1ObstacleColliderSystem.html#af823cff89bacbc234f851c56ff5a569e',1,'ECS_Framework.ObstacleColliderSystem.ObstacleColliderSystem()']]],
-  ['obstaclecollidersystem_2ecs_95',['ObstacleColliderSystem.cs',['../ObstacleColliderSystem_8cs.html',1,'']]],
-  ['obstacles_96',['obstacles',['../classECS__Framework_1_1Loader.html#a389733c4689ddd627deb5c960f8f9d31',1,'ECS_Framework.Loader.obstacles()'],['../classECS__Framework_1_1TileHandler.html#a02e8752017ca51bd4583c58b9b3e0063',1,'ECS_Framework.TileHandler.obstacles()']]],
-  ['onground_97',['OnGround',['../namespaceECS__Framework.html#af9d01d5477ca5135063c7d2aeb03b2cba2b9beed57034f5727573d7ded76cf777',1,'ECS_Framework']]],
-  ['originalheight_98',['originalHeight',['../classECS__Framework_1_1CollisionBoxComponent.html#ae3e67ea3d136dd392811a9baeba3f895',1,'ECS_Framework::CollisionBoxComponent']]],
-  ['originalwidth_99',['originalWidth',['../classECS__Framework_1_1CollisionBoxComponent.html#adddc3feba75f5f52b02a970e7656750b',1,'ECS_Framework::CollisionBoxComponent']]]
+  ['parallaxcomponent_108',['ParallaxComponent',['../classECS__Framework_1_1ParallaxComponent.html',1,'ECS_Framework.ParallaxComponent'],['../classECS__Framework_1_1ParallaxComponent.html#a5f42518ed7bc3be765b16b4662e7d637',1,'ECS_Framework.ParallaxComponent.ParallaxComponent()']]],
+  ['parallaxcomponent_2ecs_109',['ParallaxComponent.cs',['../ParallaxComponent_8cs.html',1,'']]],
+  ['parallaxsystem_110',['ParallaxSystem',['../classECS__Framework_1_1ParallaxSystem.html',1,'ECS_Framework.ParallaxSystem'],['../classECS__Framework_1_1ParallaxSystem.html#a00822b927dab1e859aea4d4e4c657db7',1,'ECS_Framework.ParallaxSystem.ParallaxSystem()']]],
+  ['parallaxsystem_2ecs_111',['ParallaxSystem.cs',['../ParallaxSystem_8cs.html',1,'']]],
+  ['player_112',['Player',['../namespaceECS__Framework.html#a03ae648f8a4ed11f6cdc325765068971a636da1d35e805b00eae0fcd8333f9234',1,'ECS_Framework']]],
+  ['playerentitycollisionssystem_2ecs_113',['PlayerEntityCollisionsSystem.cs',['../PlayerEntityCollisionsSystem_8cs.html',1,'']]],
+  ['playerentitycollisionsystem_114',['PlayerEntityCollisionSystem',['../classECS__Framework_1_1PlayerEntityCollisionSystem.html',1,'ECS_Framework.PlayerEntityCollisionSystem'],['../classECS__Framework_1_1PlayerEntityCollisionSystem.html#a1bd382c12b8a8d0b2c2c3dfb28265753',1,'ECS_Framework.PlayerEntityCollisionSystem.PlayerEntityCollisionSystem()']]],
+  ['playerinputcomponent_115',['PlayerInputComponent',['../classECS__Framework_1_1PlayerInputComponent.html',1,'ECS_Framework.PlayerInputComponent'],['../classECS__Framework_1_1PlayerInputComponent.html#a04ee1d8e96b09d7044b54c8080721531',1,'ECS_Framework.PlayerInputComponent.PlayerInputComponent()']]],
+  ['playerinputcomponent_2ecs_116',['PlayerInputComponent.cs',['../PlayerInputComponent_8cs.html',1,'']]],
+  ['playerinputsystem_117',['PlayerInputSystem',['../classECS__Framework_1_1PlayerInputSystem.html',1,'ECS_Framework.PlayerInputSystem'],['../classECS__Framework_1_1PlayerInputSystem.html#a3663e5bfb9401dd44c20671304552677',1,'ECS_Framework.PlayerInputSystem.PlayerInputSystem()']]],
+  ['playerinputsystem_2ecs_118',['PlayerInputSystem.cs',['../PlayerInputSystem_8cs.html',1,'']]],
+  ['portaltonextlevel_119',['PortalToNextLevel',['../namespaceECS__Framework.html#a03ae648f8a4ed11f6cdc325765068971a42c97fceb42aabb1baed3b86186be6f3',1,'ECS_Framework']]],
+  ['position_120',['Position',['../classECS__Framework_1_1MovementComponent.html#a983cf99818f9e9f0ea18c62b2bac0c83',1,'ECS_Framework::MovementComponent']]],
+  ['previouslevel_121',['PreviousLevel',['../classECS__Framework_1_1World.html#a55ee3f05a3ec9ce07b723c3a8d1f6c89',1,'ECS_Framework::World']]],
+  ['previousstate_122',['previousState',['../classECS__Framework_1_1StateComponent.html#a9e4d40128f097ff64739821cc7ec8fde',1,'ECS_Framework::StateComponent']]],
+  ['previoussuperstate_123',['previousSuperState',['../classECS__Framework_1_1StateComponent.html#a98cd3cfb9246b0d7e61cb190ff37df2d',1,'ECS_Framework::StateComponent']]],
+  ['program_2ecs_124',['Program.cs',['../Program_8cs.html',1,'']]],
+  ['publish_125',['Publish',['../classECS__Framework_1_1MessageBus.html#adf8293b05bb5489ee3687b7b3eb3c2f6',1,'ECS_Framework::MessageBus']]]
 ];

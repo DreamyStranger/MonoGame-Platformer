@@ -1,11 +1,16 @@
 var searchData=
 [
-  ['ecs_5fframework_28',['ECS_Framework',['../namespaceECS__Framework.html',1,'']]],
-  ['entity_29',['Entity',['../classECS__Framework_1_1Entity.html',1,'ECS_Framework.Entity'],['../structECS__Framework_1_1EntityData.html#a4f873d71ead9438df38eb9f9b9542c0b',1,'ECS_Framework.EntityData.Entity()'],['../classECS__Framework_1_1Entity.html#a9fa778f698b6db7eeae32afeae44153a',1,'ECS_Framework.Entity.Entity()']]],
-  ['entity_2ecs_30',['Entity.cs',['../Entity_8cs.html',1,'']]],
-  ['entitycollisionssystem_2ecs_31',['EntityCollisionsSystem.cs',['../EntityCollisionsSystem_8cs.html',1,'']]],
-  ['entitydata_32',['EntityData',['../structECS__Framework_1_1EntityData.html',1,'ECS_Framework']]],
-  ['entitydata_2ecs_33',['EntityData.cs',['../EntityData_8cs.html',1,'']]],
-  ['entityfactory_34',['EntityFactory',['../structECS__Framework_1_1EntityFactory.html',1,'ECS_Framework']]],
-  ['entityfactory_2ecs_35',['EntityFactory.cs',['../EntityFactory_8cs.html',1,'']]]
+  ['game_41',['game',['../Program_8cs.html#adb31d5946e35ccc1436b9c9e8f77d0b6',1,'Program.cs']]],
+  ['game1_42',['Game1',['../classECS__Framework_1_1Game1.html',1,'ECS_Framework.Game1'],['../classECS__Framework_1_1Game1.html#a992141d75705d9f2cc0ff5412555a648',1,'ECS_Framework.Game1.Game1()']]],
+  ['game1_2ecs_43',['Game1.cs',['../Game1_8cs.html',1,'']]],
+  ['gameconstant_2ecs_44',['GameConstant.cs',['../GameConstant_8cs.html',1,'']]],
+  ['getallcomponents_45',['GetAllComponents',['../classECS__Framework_1_1Entity.html#adccf37d6b4c6e955f730071881af1918',1,'ECS_Framework::Entity']]],
+  ['getcomponent_3c_20t_20_3e_46',['GetComponent&lt; T &gt;',['../classECS__Framework_1_1Entity.html#a959ae88f890b9b2239a4a2dd848d6845',1,'ECS_Framework::Entity']]],
+  ['getcurrentanimation_47',['GetCurrentAnimation',['../classECS__Framework_1_1AnimatedComponent.html#ab8dc6588cfb8874c7cdffcc2818463dc',1,'ECS_Framework::AnimatedComponent']]],
+  ['getlayerbounds_48',['GetLayerBounds',['../classECS__Framework_1_1TileHandler.html#a8f6c0f3aebb7c620bfc766d6adf8096b',1,'ECS_Framework::TileHandler']]],
+  ['getlayersboundsinmap_49',['GetLayersBoundsInMap',['../classECS__Framework_1_1TileHandler.html#ab6bb56b97bdba9159cc95ea2074e047c',1,'ECS_Framework::TileHandler']]],
+  ['getlevel_50',['GetLevel',['../classECS__Framework_1_1LevelManager.html#a04d38bfe5460dced79b9fbfbc5d75225',1,'ECS_Framework::LevelManager']]],
+  ['getobjects_51',['GetObjects',['../interfaceECS__Framework_1_1LevelInitializer.html#a219475ee040d1fc6146e707b5bef727c',1,'ECS_Framework.LevelInitializer.GetObjects()'],['../classECS__Framework_1_1Level1Initializer.html#a372da5620f9694ccf7d915a7f33b4545',1,'ECS_Framework.Level1Initializer.GetObjects()'],['../classECS__Framework_1_1Level2Initializer.html#acd6929eabe973dd7cc657d17d49c1c17',1,'ECS_Framework.Level2Initializer.GetObjects()']]],
+  ['getrectangle_52',['GetRectangle',['../classECS__Framework_1_1CollisionBoxComponent.html#a10e1a7198b0cd2140ee7acd7f9ea0913',1,'ECS_Framework::CollisionBoxComponent']]],
+  ['gettexture_53',['GetTexture',['../classECS__Framework_1_1Loader.html#a109e7bf266e1f094fe060787aff7425c',1,'ECS_Framework::Loader']]]
 ];

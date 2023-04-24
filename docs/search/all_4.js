@@ -1,5 +1,14 @@
 var searchData=
 [
-  ['doublejump_26',['DoubleJump',['../namespaceECS__Framework.html#a577aaaed4462a790330dd26d8990aabba6bd5db223a35934e784d0b75a6d0d44e',1,'ECS_Framework']]],
-  ['draw_27',['Draw',['../classECS__Framework_1_1Game1.html#ad2d279253f5d428ad34c551e7a0bf820',1,'ECS_Framework.Game1.Draw()'],['../classECS__Framework_1_1TileHandler.html#a299522498975156a44c35c8a40fce21a',1,'ECS_Framework.TileHandler.Draw()'],['../classECS__Framework_1_1System.html#af7d4d576bd243e196c31c606b3d82e31',1,'ECS_Framework.System.Draw()'],['../classECS__Framework_1_1AnimatedComponent.html#a6467d260aac7a022d505cab713a5929c',1,'ECS_Framework.AnimatedComponent.Draw()'],['../classECS__Framework_1_1ActionAnimation.html#ad544f31b2d48d79bc68d747875855eaa',1,'ECS_Framework.ActionAnimation.Draw()'],['../classECS__Framework_1_1ParallaxComponent.html#a89235fae8c4deae06c08d6cc5ed16bbe',1,'ECS_Framework.ParallaxComponent.Draw()'],['../classECS__Framework_1_1ObstacleColliderSystem.html#ab09549279b97ed0634cd29139a70f7e8',1,'ECS_Framework.ObstacleColliderSystem.Draw()'],['../classECS__Framework_1_1ParallaxSystem.html#a876a6594d2e2749ec22b25f655b2d6c6',1,'ECS_Framework.ParallaxSystem.Draw()'],['../classECS__Framework_1_1RenderSystem.html#aca1110b93aab9a1541bad345783f3118',1,'ECS_Framework.RenderSystem.Draw()'],['../structECS__Framework_1_1SystemManager.html#a7c8928ef07120420e7bd18d252844149',1,'ECS_Framework.SystemManager.Draw()'],['../classECS__Framework_1_1World.html#a0e6b9075d6b5eba43925ac5fbf301a2c',1,'ECS_Framework.World.Draw()']]]
+  ['ecs_5fframework_30',['ECS_Framework',['../namespaceECS__Framework.html',1,'']]],
+  ['entity_31',['Entity',['../classECS__Framework_1_1Entity.html',1,'ECS_Framework.Entity'],['../structECS__Framework_1_1EntityData.html#a4f873d71ead9438df38eb9f9b9542c0b',1,'ECS_Framework.EntityData.Entity()'],['../classECS__Framework_1_1DestroyEntityMessage.html#a3b3c2ca6d0e297df951287614ef26a14',1,'ECS_Framework.DestroyEntityMessage.Entity()'],['../classECS__Framework_1_1Entity.html#a413ce6987a06449ff86b366fd6220aca',1,'ECS_Framework.Entity.Entity()']]],
+  ['entity_2ecs_32',['Entity.cs',['../Entity_8cs.html',1,'']]],
+  ['entitydata_33',['EntityData',['../structECS__Framework_1_1EntityData.html',1,'ECS_Framework']]],
+  ['entitydata_2ecs_34',['EntityData.cs',['../EntityData_8cs.html',1,'']]],
+  ['entityfactory_2ecs_35',['EntityFactory.cs',['../EntityFactory_8cs.html',1,'']]],
+  ['entitytype_36',['EntityType',['../namespaceECS__Framework.html#a03ae648f8a4ed11f6cdc325765068971',1,'ECS_Framework']]],
+  ['entitytypecomponent_37',['EntityTypeComponent',['../classECS__Framework_1_1EntityTypeComponent.html',1,'ECS_Framework.EntityTypeComponent'],['../classECS__Framework_1_1EntityTypeComponent.html#a08eb7a42fa830f27112f04c20f040d71',1,'ECS_Framework.EntityTypeComponent.EntityTypeComponent()']]],
+  ['entitytypecomponent_2ecs_38',['EntityTypeComponent.cs',['../EntityTypeComponent_8cs.html',1,'']]],
+  ['exitgamemessage_39',['ExitGameMessage',['../classECS__Framework_1_1ExitGameMessage.html',1,'ECS_Framework.ExitGameMessage'],['../classECS__Framework_1_1ExitGameMessage.html#a3a9c8c4bc0e86bb2c11ff96eccceaa18',1,'ECS_Framework.ExitGameMessage.ExitGameMessage()']]],
+  ['exitgamemessage_2ecs_40',['ExitGameMessage.cs',['../ExitGameMessage_8cs.html',1,'']]]
 ];

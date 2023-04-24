@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['levelid_275',['LevelID',['../namespaceECS__Framework.html#ab98f526dd304c35ce573b5ae4dd02f90',1,'ECS_Framework']]]
+  ['entitytype_310',['EntityType',['../namespaceECS__Framework.html#a03ae648f8a4ed11f6cdc325765068971',1,'ECS_Framework']]]
 ];

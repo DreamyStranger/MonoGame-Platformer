@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['doublejump_278',['DoubleJump',['../namespaceECS__Framework.html#a577aaaed4462a790330dd26d8990aabba6bd5db223a35934e784d0b75a6d0d44e',1,'ECS_Framework']]]
+  ['coin_314',['Coin',['../namespaceECS__Framework.html#a03ae648f8a4ed11f6cdc325765068971aff45bd9a024c61169a542316bd7b3b1a',1,'ECS_Framework']]]
 ];

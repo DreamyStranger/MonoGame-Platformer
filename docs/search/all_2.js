@@ -1,12 +1,17 @@
 var searchData=
 [
-  ['acceleration_2',['Acceleration',['../classECS__Framework_1_1MovementComponent.html#a6c1f5c5e349677ea88d9f701f53bc2c1',1,'ECS_Framework::MovementComponent']]],
-  ['actionanimation_3',['ActionAnimation',['../classECS__Framework_1_1ActionAnimation.html#a42e290c4c398d5bdfe8c52faabca392c',1,'ECS_Framework.ActionAnimation.ActionAnimation()'],['../classECS__Framework_1_1ActionAnimation.html',1,'ECS_Framework.ActionAnimation']]],
-  ['add_4',['Add',['../structECS__Framework_1_1SystemManager.html#aecde90884fdee8649ab945ac86d5885a',1,'ECS_Framework::SystemManager']]],
-  ['addanimation_5',['AddAnimation',['../classECS__Framework_1_1AnimatedComponent.html#a29f5992c42ab81056239d22c9e48cc36',1,'ECS_Framework::AnimatedComponent']]],
-  ['addcomponent_6',['AddComponent',['../classECS__Framework_1_1Entity.html#ae8b2032a96f1800a48891e20ca2c3690',1,'ECS_Framework::Entity']]],
-  ['addentity_7',['AddEntity',['../classECS__Framework_1_1System.html#a840be60e3979a94ec0ee72334186ec72',1,'ECS_Framework.System.AddEntity()'],['../classECS__Framework_1_1MovementSystem.html#ad60054b2ff99b6afe21d08a5a6d14834',1,'ECS_Framework.MovementSystem.AddEntity()'],['../classECS__Framework_1_1ObstacleColliderSystem.html#a57f4be6589600bf69d693b198ec5d73f',1,'ECS_Framework.ObstacleColliderSystem.AddEntity()'],['../classECS__Framework_1_1ParallaxSystem.html#a116833be37496bbb90f1dbd283701447',1,'ECS_Framework.ParallaxSystem.AddEntity()'],['../classECS__Framework_1_1PlayerInputSystem.html#a09a29508bb98a31141258f50109793f6',1,'ECS_Framework.PlayerInputSystem.AddEntity()'],['../classECS__Framework_1_1RenderSystem.html#ad7d0c02aa9f6e524b9bb0406e9483a5c',1,'ECS_Framework.RenderSystem.AddEntity()']]],
-  ['animatedcomponent_8',['AnimatedComponent',['../classECS__Framework_1_1AnimatedComponent.html#a4fe5b6f1cb19e3e43f4c923b1e6b85cc',1,'ECS_Framework.AnimatedComponent.AnimatedComponent()'],['../classECS__Framework_1_1AnimatedComponent.html',1,'ECS_Framework.AnimatedComponent']]],
-  ['animatedcomponent_2ecs_9',['AnimatedComponent.cs',['../AnimatedComponent_8cs.html',1,'']]],
-  ['animations_10',['Animations',['../structECS__Framework_1_1EntityData.html#a4a365152b298c9f4b45c7a875710e73e',1,'ECS_Framework.EntityData.Animations()'],['../classECS__Framework_1_1AnimatedComponent.html#ac1a6fead604c66d17fc7e7c14d135423',1,'ECS_Framework.AnimatedComponent.Animations()']]]
+  ['canmoveleft_10',['CanMoveLeft',['../classECS__Framework_1_1StateComponent.html#a89072adc8987c51b0aa68d8c396a778a',1,'ECS_Framework::StateComponent']]],
+  ['canmoveright_11',['CanMoveRight',['../classECS__Framework_1_1StateComponent.html#a52429454c944d913d0dc7e10a4daa564',1,'ECS_Framework::StateComponent']]],
+  ['checkifinair_12',['checkIfInAir',['../classECS__Framework_1_1CollisionBoxComponent.html#ac707d5d481133d8daf1698515897c6bc',1,'ECS_Framework::CollisionBoxComponent']]],
+  ['coin_13',['Coin',['../namespaceECS__Framework.html#a03ae648f8a4ed11f6cdc325765068971aff45bd9a024c61169a542316bd7b3b1a',1,'ECS_Framework']]],
+  ['collisionbox_14',['CollisionBox',['../structECS__Framework_1_1EntityData.html#abb8d079563ec7cb60d85290a99a2bd0f',1,'ECS_Framework::EntityData']]],
+  ['collisionbox_15',['collisionBox',['../classECS__Framework_1_1Loader.html#a5c580a751edf473612b2c73db95c9659',1,'ECS_Framework::Loader']]],
+  ['collisionboxcomponent_16',['CollisionBoxComponent',['../classECS__Framework_1_1CollisionBoxComponent.html#a46b75071a00f0e23ee612e4c61689a66',1,'ECS_Framework.CollisionBoxComponent.CollisionBoxComponent()'],['../classECS__Framework_1_1CollisionBoxComponent.html',1,'ECS_Framework.CollisionBoxComponent']]],
+  ['collisionboxcomponent_2ecs_17',['CollisionBoxComponent.cs',['../CollisionBoxComponent_8cs.html',1,'']]],
+  ['component_18',['Component',['../classECS__Framework_1_1Component.html',1,'ECS_Framework']]],
+  ['component_2ecs_19',['Component.cs',['../Component_8cs.html',1,'']]],
+  ['currentaction_20',['CurrentAction',['../classECS__Framework_1_1AnimatedComponent.html#aa2b60cd86502f27606771b2ee52e4847',1,'ECS_Framework::AnimatedComponent']]],
+  ['currentlevel_21',['CurrentLevel',['../classECS__Framework_1_1World.html#a6dde0336563466a567fb4ab3978de86e',1,'ECS_Framework::World']]],
+  ['currentstate_22',['CurrentState',['../classECS__Framework_1_1StateComponent.html#a93587bc38aaf0ae8ed4c7564967dd571',1,'ECS_Framework::StateComponent']]],
+  ['currentsuperstate_23',['CurrentSuperState',['../classECS__Framework_1_1StateComponent.html#a677bd477d780ed21effee5b8896a8a16',1,'ECS_Framework::StateComponent']]]
 ];

@@ -1,0 +1,5 @@
+<map id="ECS_Framework.Game1" name="ECS_Framework.Game1">
+<area shape="rect" id="node1" title="The main game class." alt="" coords="16,95,195,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,67,32"/>
+<area shape="rect" id="node3" href="$classECS__Framework_1_1World.html" title="Represents the game world and manages loading and updating levels." alt="" coords="91,5,259,32"/>
+</map>

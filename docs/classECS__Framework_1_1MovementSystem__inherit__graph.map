@@ -1,0 +1,4 @@
+<map id="ECS_Framework.MovementSystem" name="ECS_Framework.MovementSystem">
+<area shape="rect" id="node1" title="System responsible for handling the movement of entities in the game." alt="" coords="5,80,256,107"/>
+<area shape="rect" id="node2" href="$classECS__Framework_1_1System.html" title="An abstract base class for systems in the game." alt="" coords="95,5,166,32"/>
+</map>

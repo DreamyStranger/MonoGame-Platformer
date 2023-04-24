@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['slide_287',['Slide',['../namespaceECS__Framework.html#a577aaaed4462a790330dd26d8990aabba6160a53ece50ce6d4f5ef4452549835e',1,'ECS_Framework']]]
+  ['player_325',['Player',['../namespaceECS__Framework.html#a03ae648f8a4ed11f6cdc325765068971a636da1d35e805b00eae0fcd8333f9234',1,'ECS_Framework']]],
+  ['portaltonextlevel_326',['PortalToNextLevel',['../namespaceECS__Framework.html#a03ae648f8a4ed11f6cdc325765068971a42c97fceb42aabb1baed3b86186be6f3',1,'ECS_Framework']]]
 ];

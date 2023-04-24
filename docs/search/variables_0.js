@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5fcanmoveleft_265',['_canMoveLeft',['../classECS__Framework_1_1StateComponent.html#af6fcb08a1281aa95958352a0e8ab26ab',1,'ECS_Framework::StateComponent']]]
+  ['animations_301',['Animations',['../structECS__Framework_1_1EntityData.html#a4a365152b298c9f4b45c7a875710e73e',1,'ECS_Framework::EntityData']]]
 ];

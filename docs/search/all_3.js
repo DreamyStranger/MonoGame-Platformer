@@ -1,18 +1,9 @@
 var searchData=
 [
-  ['canmoveleft_11',['CanMoveLeft',['../classECS__Framework_1_1StateComponent.html#a89072adc8987c51b0aa68d8c396a778a',1,'ECS_Framework::StateComponent']]],
-  ['canmoveright_12',['CanMoveRight',['../classECS__Framework_1_1StateComponent.html#a52429454c944d913d0dc7e10a4daa564',1,'ECS_Framework::StateComponent']]],
-  ['checkifinair_13',['checkIfInAir',['../classECS__Framework_1_1CollisionBoxComponent.html#ac707d5d481133d8daf1698515897c6bc',1,'ECS_Framework::CollisionBoxComponent']]],
-  ['collisionbox_14',['CollisionBox',['../structECS__Framework_1_1EntityData.html#abb8d079563ec7cb60d85290a99a2bd0f',1,'ECS_Framework::EntityData']]],
-  ['collisionbox_15',['collisionBox',['../classECS__Framework_1_1Loader.html#a5c580a751edf473612b2c73db95c9659',1,'ECS_Framework::Loader']]],
-  ['collisionboxcomponent_16',['CollisionBoxComponent',['../classECS__Framework_1_1CollisionBoxComponent.html#a46b75071a00f0e23ee612e4c61689a66',1,'ECS_Framework.CollisionBoxComponent.CollisionBoxComponent()'],['../classECS__Framework_1_1CollisionBoxComponent.html',1,'ECS_Framework.CollisionBoxComponent']]],
-  ['collisionboxcomponent_2ecs_17',['CollisionBoxComponent.cs',['../CollisionBoxComponent_8cs.html',1,'']]],
-  ['component_18',['Component',['../classECS__Framework_1_1Component.html',1,'ECS_Framework']]],
-  ['component_2ecs_19',['Component.cs',['../Component_8cs.html',1,'']]],
-  ['createparallaxbackground_20',['CreateParallaxBackground',['../structECS__Framework_1_1EntityFactory.html#aa57b64af6b8bb16a4e808f7e68c8d739',1,'ECS_Framework::EntityFactory']]],
-  ['createplayer_21',['CreatePlayer',['../structECS__Framework_1_1EntityFactory.html#a7d9a980d153b371b9fc2ff2cad5f4ac2',1,'ECS_Framework::EntityFactory']]],
-  ['currentaction_22',['CurrentAction',['../classECS__Framework_1_1AnimatedComponent.html#aa2b60cd86502f27606771b2ee52e4847',1,'ECS_Framework::AnimatedComponent']]],
-  ['currentlevel_23',['CurrentLevel',['../classECS__Framework_1_1World.html#a6dde0336563466a567fb4ab3978de86e',1,'ECS_Framework::World']]],
-  ['currentstate_24',['currentState',['../classECS__Framework_1_1StateComponent.html#a003db484231331e524f1897d42baf75f',1,'ECS_Framework::StateComponent']]],
-  ['currentsuperstate_25',['currentSuperState',['../classECS__Framework_1_1StateComponent.html#aa3080048b609d96b2987ec51e4fe8ff5',1,'ECS_Framework::StateComponent']]]
+  ['deatheventsystem_24',['DeathEventSystem',['../classECS__Framework_1_1DeathEventSystem.html#aafe03d61007ed80b3dcfd79d8806c1c3',1,'ECS_Framework.DeathEventSystem.DeathEventSystem()'],['../classECS__Framework_1_1DeathEventSystem.html',1,'ECS_Framework.DeathEventSystem']]],
+  ['deathsystem_2ecs_25',['DeathSystem.cs',['../DeathSystem_8cs.html',1,'']]],
+  ['destroyentitymessage_26',['DestroyEntityMessage',['../classECS__Framework_1_1DestroyEntityMessage.html#aaebf74085dedcfe4f8b109d5f43f423d',1,'ECS_Framework.DestroyEntityMessage.DestroyEntityMessage()'],['../classECS__Framework_1_1DestroyEntityMessage.html',1,'ECS_Framework.DestroyEntityMessage']]],
+  ['destroyentitymessage_2ecs_27',['DestroyEntityMessage.cs',['../DestroyEntityMessage_8cs.html',1,'']]],
+  ['doublejump_28',['DoubleJump',['../namespaceECS__Framework.html#a1d0644bc18b04d7f02cb424124b843f1a6bd5db223a35934e784d0b75a6d0d44e',1,'ECS_Framework']]],
+  ['draw_29',['Draw',['../classECS__Framework_1_1TileHandler.html#a299522498975156a44c35c8a40fce21a',1,'ECS_Framework.TileHandler.Draw()'],['../classECS__Framework_1_1System.html#af7d4d576bd243e196c31c606b3d82e31',1,'ECS_Framework.System.Draw()'],['../classECS__Framework_1_1ParallaxComponent.html#a89235fae8c4deae06c08d6cc5ed16bbe',1,'ECS_Framework.ParallaxComponent.Draw()'],['../classECS__Framework_1_1AnimatedComponent.html#a6467d260aac7a022d505cab713a5929c',1,'ECS_Framework.AnimatedComponent.Draw()'],['../classECS__Framework_1_1ActionAnimation.html#ad544f31b2d48d79bc68d747875855eaa',1,'ECS_Framework.ActionAnimation.Draw()'],['../classECS__Framework_1_1ParallaxSystem.html#a876a6594d2e2749ec22b25f655b2d6c6',1,'ECS_Framework.ParallaxSystem.Draw()'],['../classECS__Framework_1_1ObstacleCollisionSystem.html#a12ddd79d551da24d7c19299a0c8250ae',1,'ECS_Framework.ObstacleCollisionSystem.Draw()'],['../classECS__Framework_1_1RenderSystem.html#aca1110b93aab9a1541bad345783f3118',1,'ECS_Framework.RenderSystem.Draw()'],['../structECS__Framework_1_1SystemManager.html#a7c8928ef07120420e7bd18d252844149',1,'ECS_Framework.SystemManager.Draw()'],['../classECS__Framework_1_1World.html#a0e6b9075d6b5eba43925ac5fbf301a2c',1,'ECS_Framework.World.Draw()'],['../classECS__Framework_1_1Game1.html#ad2d279253f5d428ad34c551e7a0bf820',1,'ECS_Framework.Game1.Draw()']]]
 ];

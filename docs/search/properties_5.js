@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['obstacles_309',['obstacles',['../classECS__Framework_1_1Loader.html#a389733c4689ddd627deb5c960f8f9d31',1,'ECS_Framework.Loader.obstacles()'],['../classECS__Framework_1_1TileHandler.html#a02e8752017ca51bd4583c58b9b3e0063',1,'ECS_Framework.TileHandler.obstacles()']]],
-  ['originalheight_310',['originalHeight',['../classECS__Framework_1_1CollisionBoxComponent.html#ae3e67ea3d136dd392811a9baeba3f895',1,'ECS_Framework::CollisionBoxComponent']]],
-  ['originalwidth_311',['originalWidth',['../classECS__Framework_1_1CollisionBoxComponent.html#adddc3feba75f5f52b02a970e7656750b',1,'ECS_Framework::CollisionBoxComponent']]]
+  ['lastposition_350',['LastPosition',['../classECS__Framework_1_1MovementComponent.html#a7d54c555c05f7db58592b765486c6f03',1,'ECS_Framework::MovementComponent']]]
 ];

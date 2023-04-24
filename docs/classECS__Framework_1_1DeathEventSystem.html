@@ -72,12 +72,15 @@ $(function() {
 <div class="title">ECS_Framework.DeathEventSystem Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages entity death events, triggering actions depending on the entity type.  
+ <a href="classECS__Framework_1_1DeathEventSystem.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ECS_Framework.DeathEventSystem:</div>
 <div class="dyncontent">
 <div class="center"><img src="classECS__Framework_1_1DeathEventSystem__inherit__graph.png" border="0" usemap="#aECS__Framework_8DeathEventSystem_inherit__map" alt="Inheritance graph"/></div>
 <map name="aECS__Framework_8DeathEventSystem_inherit__map" id="aECS__Framework_8DeathEventSystem_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,212,121"/>
+<area shape="rect" title="System that manages entity death events, triggering actions depending on the entity type." alt="" coords="5,80,212,121"/>
 <area shape="rect" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game." alt="" coords="73,5,144,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -86,7 +89,7 @@ Collaboration diagram for ECS_Framework.DeathEventSystem:</div>
 <div class="dyncontent">
 <div class="center"><img src="classECS__Framework_1_1DeathEventSystem__coll__graph.png" border="0" usemap="#aECS__Framework_8DeathEventSystem_coll__map" alt="Collaboration graph"/></div>
 <map name="aECS__Framework_8DeathEventSystem_coll__map" id="aECS__Framework_8DeathEventSystem_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,212,121"/>
+<area shape="rect" title="System that manages entity death events, triggering actions depending on the entity type." alt="" coords="5,80,212,121"/>
 <area shape="rect" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game." alt="" coords="73,5,144,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -94,22 +97,25 @@ Collaboration diagram for ECS_Framework.DeathEventSystem:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aafe03d61007ed80b3dcfd79d8806c1c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1DeathEventSystem.html#aafe03d61007ed80b3dcfd79d8806c1c3">DeathEventSystem</a> ()</td></tr>
+<tr class="memdesc:aafe03d61007ed80b3dcfd79d8806c1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="classECS__Framework_1_1DeathEventSystem.html" title="System that manages entity death events, triggering actions depending on the entity type.">DeathEventSystem</a> class.  <a href="classECS__Framework_1_1DeathEventSystem.html#aafe03d61007ed80b3dcfd79d8806c1c3">More...</a><br /></td></tr>
 <tr class="separator:aafe03d61007ed80b3dcfd79d8806c1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca7d6613b24b4940a0ba790a4cb81f36"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1DeathEventSystem.html#aca7d6613b24b4940a0ba790a4cb81f36">AddEntity</a> (<a class="el" href="classECS__Framework_1_1Entity.html">Entity</a> entity)</td></tr>
-<tr class="memdesc:aca7d6613b24b4940a0ba790a4cb81f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an entity to the system.  <a href="classECS__Framework_1_1DeathEventSystem.html#aca7d6613b24b4940a0ba790a4cb81f36">More...</a><br /></td></tr>
+<tr class="memdesc:aca7d6613b24b4940a0ba790a4cb81f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an entity to the system if it has both a <a class="el" href="classECS__Framework_1_1StateComponent.html" title="Component that stores the current state and super state of an object, as well as its state ID,...">StateComponent</a> and an <a class="el" href="classECS__Framework_1_1AnimatedComponent.html" title="Component responsible for managing entity animations.">AnimatedComponent</a>.  <a href="classECS__Framework_1_1DeathEventSystem.html#aca7d6613b24b4940a0ba790a4cb81f36">More...</a><br /></td></tr>
 <tr class="separator:aca7d6613b24b4940a0ba790a4cb81f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8d300cd4abad5a515db8ef7c50ce259"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1DeathEventSystem.html#ae8d300cd4abad5a515db8ef7c50ce259">RemoveEntity</a> (<a class="el" href="classECS__Framework_1_1Entity.html">Entity</a> entity)</td></tr>
 <tr class="memdesc:ae8d300cd4abad5a515db8ef7c50ce259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an entity from the system.  <a href="classECS__Framework_1_1DeathEventSystem.html#ae8d300cd4abad5a515db8ef7c50ce259">More...</a><br /></td></tr>
 <tr class="separator:ae8d300cd4abad5a515db8ef7c50ce259"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a904b4175214ff64f34c8776754fce0"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1DeathEventSystem.html#a5a904b4175214ff64f34c8776754fce0">Update</a> (GameTime gameTime)</td></tr>
-<tr class="memdesc:a5a904b4175214ff64f34c8776754fce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the system.  <a href="classECS__Framework_1_1DeathEventSystem.html#a5a904b4175214ff64f34c8776754fce0">More...</a><br /></td></tr>
+<tr class="memdesc:a5a904b4175214ff64f34c8776754fce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the system, checking for entities in a dead state and triggering the appropriate action.  <a href="classECS__Framework_1_1DeathEventSystem.html#a5a904b4175214ff64f34c8776754fce0">More...</a><br /></td></tr>
 <tr class="separator:a5a904b4175214ff64f34c8776754fce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classECS__Framework_1_1System"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classECS__Framework_1_1System')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classECS__Framework_1_1System.html">ECS_Framework.System</a></td></tr>
 <tr class="memitem:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1System.html#af7d4d576bd243e196c31c606b3d82e31">Draw</a> (SpriteBatch spriteBatch)</td></tr>
 <tr class="memdesc:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the system.  <a href="classECS__Framework_1_1System.html#af7d4d576bd243e196c31c606b3d82e31">More...</a><br /></td></tr>
 <tr class="separator:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages entity death events, triggering actions depending on the entity type. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aafe03d61007ed80b3dcfd79d8806c1c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aafe03d61007ed80b3dcfd79d8806c1c3">&#9670;&nbsp;</a></span>DeathEventSystem()</h2>
 
@@ -132,6 +138,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Initializes a new instance of the <a class="el" href="classECS__Framework_1_1DeathEventSystem.html" title="System that manages entity death events, triggering actions depending on the entity type.">DeathEventSystem</a> class. </p>
 
 </div>
 </div>
@@ -160,10 +168,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Adds an entity to the system. </p>
+<p>Adds an entity to the system if it has both a <a class="el" href="classECS__Framework_1_1StateComponent.html" title="Component that stores the current state and super state of an object, as well as its state ID,...">StateComponent</a> and an <a class="el" href="classECS__Framework_1_1AnimatedComponent.html" title="Component responsible for managing entity animations.">AnimatedComponent</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">entity</td><td>The entity to add.</td></tr>
+    <tr><td class="paramname">entity</td><td>The entity to be added.</td></tr>
   </table>
   </dd>
 </dl>
@@ -199,7 +207,7 @@ Public Member Functions</h2></td></tr>
 <p>Removes an entity from the system. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">entity</td><td>The entity to remove.</td></tr>
+    <tr><td class="paramname">entity</td><td>The entity to be removed.</td></tr>
   </table>
   </dd>
 </dl>
@@ -232,7 +240,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Updates the system. </p>
+<p>Updates the system, checking for entities in a dead state and triggering the appropriate action. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">gameTime</td><td>The current game time.</td></tr>

@@ -5,6 +5,7 @@
   <Config />
   <SourceFiles>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/BG_Green.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/BG_Yellow.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Apple.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Bananas.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Cherries.png</File>
@@ -24,6 +25,7 @@
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/TiledMap/Terrain.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

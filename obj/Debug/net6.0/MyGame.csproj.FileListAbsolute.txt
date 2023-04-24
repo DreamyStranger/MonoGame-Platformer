@@ -42,3 +42,4 @@
 /home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/ref/MyGame.dll
 /home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MyGame.pdb
 /home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MyGame.genruntimeconfig.cache
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Background/BG_Yellow.xnb

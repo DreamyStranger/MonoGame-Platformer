@@ -1,5 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/BG_Green.png","/home/m/Documents/GitHub/ECS-MonoGame/Content/bin/DesktopGL/Content/Background/BG_Green.xnb","TextureProcessor","Texture2DContent",543,16469,0.1265974
+"/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/BG_Yellow.png","/home/m/Documents/GitHub/ECS-MonoGame/Content/bin/DesktopGL/Content/Background/BG_Yellow.xnb","TextureProcessor","Texture2DContent",488,16469,0.1243782
 "/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Apple.png","/home/m/Documents/GitHub/ECS-MonoGame/Content/bin/DesktopGL/Content/Items/Fruits/Apple.xnb","TextureProcessor","Texture2DContent",1065,69717,0.00349
 "/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Bananas.png","/home/m/Documents/GitHub/ECS-MonoGame/Content/bin/DesktopGL/Content/Items/Fruits/Bananas.xnb","TextureProcessor","Texture2DContent",1196,69717,0.0017366
 "/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Cherries.png","/home/m/Documents/GitHub/ECS-MonoGame/Content/bin/DesktopGL/Content/Items/Fruits/Cherries.xnb","TextureProcessor","Texture2DContent",1090,69717,0.0017717

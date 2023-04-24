@@ -47,6 +47,7 @@ namespace ECS_Framework
 
             // Background
             textures.Add("bg_green", content.Load<Texture2D>("Background/BG_Green"));
+            textures.Add("bg_yellow", content.Load<Texture2D>("Background/BG_Yellow"));
             
             textures.Add("Terrain", content.Load<Texture2D>("TiledMap/Terrain"));
             // Add more terrain types here

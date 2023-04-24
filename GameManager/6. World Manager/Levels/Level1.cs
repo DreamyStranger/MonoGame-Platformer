@@ -14,7 +14,7 @@ namespace ECS_Framework
         public List<Entity> GetObjects()
         {
             List<Entity> objects = new List<Entity>();
-            objects.Add(EntityFactory.CreateParallaxBackground("bg_green", new Vector2(0, 50)));
+            objects.Add(EntityFactory.CreateParallaxBackground("bg_green", new Vector2(50, 50)));
             objects.Add(EntityFactory.CreatePlayer(new Vector2(320, 180)));
             objects.Add(EntityFactory.CreateApple(new Vector2(100, 100)));
             objects.Add(EntityFactory.CreateApple(new Vector2(524, 100)));

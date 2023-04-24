@@ -94,6 +94,7 @@ namespace ECS_Framework
         private void ResolveNextLevelCollision(EntityData player, EntityData portal)
         {
             //Implement
+            MessageBus.Publish(new NextLevelMessage());
         }
 
         private void ResolveWalkingEnemyCollision(EntityData player, EntityData enemy)

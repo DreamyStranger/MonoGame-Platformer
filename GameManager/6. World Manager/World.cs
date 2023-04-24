@@ -22,6 +22,7 @@ namespace ECS_Framework
             systems = new SystemManager(CurrentLevel.Id);
             LoadLevel(CurrentLevel);
             MessageBus.Subscribe<DestroyEntityMessage>(OnDestroyEntity);
+            MessageBus.Subscribe<NextLevelMessage>(NextLevel);
             entitiesToDestroy = new List<Entity>();
         }
 
@@ -63,7 +64,7 @@ namespace ECS_Framework
         /// <summary>
         /// Advances to the next level.
         /// </summary>
-        public void NextLevel()
+        public void NextLevel(NextLevelMessage message = null)
         {
             LevelID nextLevelID = GetNextLevelId(CurrentLevel.Id);
             CurrentLevel = levelManager.GetLevel(nextLevelID);

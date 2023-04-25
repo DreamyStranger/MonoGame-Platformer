@@ -100,9 +100,16 @@ namespace ECS_Framework
         /// <param name="left">The left boundary of the entity.</param>
         /// <param name="right">The right boundary of the entity.</param>
         /// <returns>True if the entity is in the air, false otherwise.</returns>
-        public bool checkIfInAir(float left, float right)
+        public bool checkIfInAir(float position, int direction)
         {
-            return left < groundLeft || right > groundRight;
+            float left = position + horLeftOffset;
+            float right =  position - horRightOffset + originalWidth;
+            if(direction == -1)
+            {
+                left = position + horRightOffset;
+                right = position - horLeftOffset + originalWidth;
+            }
+            return right < groundLeft || left  > groundRight;
         }
     }
 }

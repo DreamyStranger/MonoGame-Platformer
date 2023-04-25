@@ -116,7 +116,7 @@ namespace ECS_Framework
                     }
 
                     //Check if entity still on a platform
-                    if (data.CollisionBox.checkIfInAir(data.Movement.Position.X + data.CollisionBox.originalWidth, data.Movement.Position.X))
+                    if (data.CollisionBox.checkIfInAir(data.Movement.Position.X, data.State.HorizontalDirection))
                     {
                         if (data.State.CurrentSuperState == SuperState.IsOnGround)
                         {

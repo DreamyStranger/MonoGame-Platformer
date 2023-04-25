@@ -11,10 +11,13 @@ namespace ECS_Framework
     public class PlayerEntityCollisionSystem : System
     {
         private List<EntityData> _entitiesData;
+        private EntityData playerData;
         public PlayerEntityCollisionSystem()
         {
             _entitiesData = new List<EntityData>();
+            playerData = new EntityData();
         }
+
         /// <summary>
         /// Adds an entity to the system.
         /// </summary>
@@ -30,13 +33,19 @@ namespace ECS_Framework
                 return;
             }
 
-            _entitiesData.Add(new EntityData
+            var data = new EntityData
             {
                 Entity = entity,
                 State = state,
                 CollisionBox = collisionBox,
                 Movement = movement,
-            });
+            };
+            
+            _entitiesData.Add(data);
+            if (entity.GetComponent<EntityTypeComponent>().Type == EntityType.Player)
+            {
+                playerData = data;
+            }
         }
 
         /// <summary>
@@ -54,33 +63,33 @@ namespace ECS_Framework
         /// <param name="gameTime">The current game time.</param>
         public override void Update(GameTime gameTime)
         {
-            if (_entitiesData.Count <= 1)
+            if (_entitiesData.Count <= 1 || playerData.Entity == null)
             {
                 return;
             }
 
-            //Player always must be first in entity data for this system!
-            EntityData player = _entitiesData[0];
-
             // Iterate through all entities after the player
-            for (int i = 1; i < _entitiesData.Count; i++)
+            foreach(EntityData data in _entitiesData)
             {
-                EntityData gameObject = _entitiesData[i];
+                if(data.Entity == playerData.Entity)
+                {
+                    continue;
+                }
                 // Check if the two entities are colliding
-                if (player.CollisionBox.GetRectangle().Intersects(gameObject.CollisionBox.GetRectangle()))
+                if (playerData.CollisionBox.GetRectangle().Intersects(data.CollisionBox.GetRectangle()))
                 {
                     // Check the entity types to determine the appropriate collision resolution
-                    EntityTypeComponent entityType = gameObject.Entity.GetComponent<EntityTypeComponent>();
+                    EntityTypeComponent entityType = data.Entity.GetComponent<EntityTypeComponent>();
                     switch (entityType.Type)
                     {
                         case EntityType.Coin:
-                            ResolveCoinCollision(player, gameObject);
+                            ResolveCoinCollision(playerData, data);
                             break;
                         case EntityType.WalkingEnemy:
-                            ResolveWalkingEnemyCollision(player, gameObject);
+                            ResolveWalkingEnemyCollision(playerData, data);
                             break;
                         case EntityType.PortalToNextLevel:
-                            ResolveNextLevelCollision(player, gameObject);
+                            ResolveNextLevelCollision(playerData, data);
                             break;
                         //Add more cases for new entity types as needed
                         default:
@@ -98,7 +107,7 @@ namespace ECS_Framework
         private void ResolveNextLevelCollision(EntityData player, EntityData portal)
         {
             //Implement
-            if(player.State.CurrentSuperState == SuperState.IsOnGround)
+            if (player.State.CurrentSuperState == SuperState.IsOnGround)
             {
                 MessageBus.Publish(new NextLevelMessage());
             }
@@ -106,7 +115,7 @@ namespace ECS_Framework
 
         private void ResolveWalkingEnemyCollision(EntityData player, EntityData enemy)
         {
-            switch(player.State.CurrentSuperState)
+            switch (player.State.CurrentSuperState)
             {
                 case SuperState.IsFalling:
                     enemy.State.CurrentSuperState = SuperState.IsDead;

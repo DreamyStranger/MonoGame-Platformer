@@ -69,13 +69,13 @@ namespace ECS_Framework
                 Exit();
 
             else if (currentKeyboardState.IsKeyDown(Keys.R) && previousKeyboardState.IsKeyUp(Keys.R))
-                world.ResetCurrentLevel();
+                MessageBus.Publish(new ReloadLevelMessage());
 
             else if (currentKeyboardState.IsKeyDown(Keys.P) && previousKeyboardState.IsKeyUp(Keys.P))
                 world.PreviousLevel();
 
             else if (currentKeyboardState.IsKeyDown(Keys.N) && previousKeyboardState.IsKeyUp(Keys.N))
-                world.NextLevel();
+                MessageBus.Publish(new NextLevelMessage());
 
             previousKeyboardState = currentKeyboardState;
 

@@ -8,14 +8,15 @@ namespace ECS_Framework
     /// </summary>
     public class Entity
     {
-        private Dictionary<Type, List<Component>> components;
+        // Stores a dictionary where the key is the Type of the Component and the value is the Component instance.
+        private Dictionary<Type, Component> components;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Entity"/> class.
-        /// </summary>    
+        /// Initializes a new instance of the Entity class.
+        /// </summary>
         public Entity()
         {
-            components = new Dictionary<Type, List<Component>>();
+            components = new Dictionary<Type, Component>();
         }
 
         /// <summary>
@@ -25,14 +26,13 @@ namespace ECS_Framework
         public void AddComponent(Component component)
         {
             Type type = component.GetType();
-            if (!ComponentExists(type, component))
+            if (!components.ContainsKey(type))
             {
-                if (!components.TryGetValue(type, out List<Component> list))
-                {
-                    list = new List<Component>();
-                    components.Add(type, list);
-                }
-                list.Add(component);
+                components.Add(type, component);
+            }
+            else
+            {
+                Console.WriteLine($"Component of type {type} already exists!");
             }
         }
 
@@ -44,14 +44,13 @@ namespace ECS_Framework
         public void RemoveComponent<T>(T component) where T : Component
         {
             Type type = typeof(T);
-            if (ComponentExists(type, component))
+            if (components.ContainsKey(type) && components[type] == component)
             {
-                components[type].Remove(component);
+                components.Remove(type);
             }
             else
             {
                 Console.WriteLine("Tried to remove a component that doesn't exist!");
-                return;
             }
         }
 
@@ -63,15 +62,9 @@ namespace ECS_Framework
         public T GetComponent<T>() where T : Component
         {
             Type type = typeof(T);
-            if (components.TryGetValue(type, out List<Component> list))
+            if (components.TryGetValue(type, out Component component) && component is T tComponent)
             {
-                foreach (Component component in list)
-                {
-                    if (component is T tComponent)
-                    {
-                        return tComponent;
-                    }
-                }
+                return tComponent;
             }
             return null;
         }
@@ -82,27 +75,8 @@ namespace ECS_Framework
         /// <returns>A list of all the components of the entity.</returns>
         public List<Component> GetAllComponents()
         {
-            List<Component> componentList = new List<Component>();
-            foreach (var list in components.Values)
-            {
-                componentList.AddRange(list);
-            }
+            List<Component> componentList = new List<Component>(components.Values);
             return componentList;
-        }
-
-        /// <summary>
-        /// Checks if a component of a specified type exists in the entity.
-        /// </summary>
-        /// <param name="type">The type of the component to check.</param>
-        /// <param name="component">The component to check.</param>
-        /// <returns>true if the component exists, false otherwise.</returns>
-        private bool ComponentExists(Type type, Component component)
-        {
-            if (components.TryGetValue(type, out List<Component> list))
-            {
-                return list.Contains(component);
-            }
-            return false;
         }
     }
 }

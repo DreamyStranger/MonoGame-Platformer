@@ -33,26 +33,7 @@ namespace ECS_Framework
             subscribers[typeof(T)].Add(message => action((T)message));
         }
 
-        /// <summary>
-        /// Unsubscribes an action from a specific message type.
-        /// </summary>
-        /// <typeparam name="T">The type of message to unsubscribe from. Must implement IMessage.</typeparam>
-        /// <param name="action">The action to be removed from the list of subscribers for the specified message type.</param>
-        public static void Unsubscribe<T>(Action<T> action) where T : IMessage
-        {
-            Type messageType = typeof(T);
-
-            if (subscribers.ContainsKey(messageType))
-            {
-                subscribers[messageType].RemoveAll(subscriber => subscriber.Target == action.Target && subscriber.Method == action.Method);
-
-                // Remove the key from the dictionary if there are no subscribers left for that message type.
-                if (subscribers[messageType].Count == 0)
-                {
-                    subscribers.Remove(messageType);
-                }
-            }
-        }
+        //Implement proper unsubscribe if needed
 
         /// <summary>
         /// Publishes a message to all subscribers of the message type.

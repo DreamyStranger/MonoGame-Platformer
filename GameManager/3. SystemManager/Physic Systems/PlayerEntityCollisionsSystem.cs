@@ -40,7 +40,7 @@ namespace ECS_Framework
                 CollisionBox = collisionBox,
                 Movement = movement,
             };
-            
+
             _entitiesData.Add(data);
             if (entity.GetComponent<EntityTypeComponent>().Type == EntityType.Player)
             {
@@ -69,9 +69,9 @@ namespace ECS_Framework
             }
 
             // Iterate through all entities after the player
-            foreach(EntityData data in _entitiesData)
+            foreach (EntityData data in _entitiesData)
             {
-                if(data.Entity == playerData.Entity)
+                if (data.Entity == playerData.Entity)
                 {
                     continue;
                 }
@@ -121,7 +121,10 @@ namespace ECS_Framework
                     enemy.State.CurrentSuperState = SuperState.IsDead;
                     break;
                 default:
-                    player.State.CurrentSuperState = SuperState.IsDead;
+                    if (enemy.State.CurrentSuperState != SuperState.IsDead)
+                    {
+                        player.State.CurrentSuperState = SuperState.IsDead;
+                    }
                     break;
             }
         }

@@ -18,6 +18,7 @@ namespace ECS_Framework
             objects.Add(EntityFactory.CreateApple(new Vector2(100, 100)));
             objects.Add(EntityFactory.CreateApple(new Vector2(524, 100)));
             objects.Add(EntityFactory.CreatePlayer(new Vector2(320, 180)));
+            objects.Add(EntityFactory.CreateSimpleEnemy(new Vector2(160, 240), 110, 200));
             return objects;
         }
     }

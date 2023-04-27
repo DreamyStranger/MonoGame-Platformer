@@ -108,7 +108,6 @@ namespace ECS_Framework
         /// </summary>
         private void OnDestroyEntity(DestroyEntityMessage message)
         {
-            MessageBus.Unsubscribe<DestroyEntityMessage>(OnDestroyEntity);
             // Remove the entity from all systems
             entitiesToDestroy.Add(message.Entity);
         }

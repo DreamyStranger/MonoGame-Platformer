@@ -116,5 +116,39 @@ namespace ECS_Framework
 
             return coin;
         }
+
+        public static Entity CreateSimpleEnemy(Vector2 position, float left, float right)
+        {
+            //Empty Player
+            Entity enemy = new Entity();
+            enemy.AddComponent(new EntityTypeComponent(EntityType.WalkingEnemy));
+
+            // Animations
+            AnimatedComponent animation = new AnimatedComponent();
+            animation.AddAnimation("player_idle", "idle", 1, 11, 20);
+            animation.AddAnimation("player_walking", "walking", 1, 12, 20);
+            animation.AddAnimation("player_fall", "fall", 1, 1, 20);
+            animation.AddAnimation("player_death", "death", 1, 7, 20);
+            enemy.AddComponent(animation);
+
+            // States
+            enemy.AddComponent(new StateComponent());
+            enemy.AddComponent(new SimpleWalkingEnemyComponent(left, right));
+
+            // Position and transforms
+            enemy.AddComponent(new MovementComponent(position));
+
+            // Collisions
+            enemy.AddComponent(new CollisionBoxComponent(
+                    position: position,
+                    width: 32,
+                    height: 32,
+                    vertTopOffset: 8,
+                    vertBottomOffset: 0,
+                    horLeftOffset: 4,
+                    horRightOffset: 6));
+
+            return enemy;
+        }
     }
 }

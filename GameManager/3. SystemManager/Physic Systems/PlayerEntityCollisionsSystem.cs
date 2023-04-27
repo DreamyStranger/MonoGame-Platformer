@@ -83,7 +83,7 @@ namespace ECS_Framework
                     switch (entityType.Type)
                     {
                         case EntityType.Coin:
-                            ResolveWalkingEnemyCollision(playerData, data);
+                            ResolveCoinCollision(playerData, data);
                             break;
                         case EntityType.WalkingEnemy:
                             ResolveWalkingEnemyCollision(playerData, data);

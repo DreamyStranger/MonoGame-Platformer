@@ -17,7 +17,6 @@ namespace ECS_Framework
 
         // TiledMap
         public static TileHandler tiledHandler { get; private set; }
-        public static Dictionary<string, List<Rectangle>> obstacles { get; private set; }
 
         //Debug box
         public static Texture2D collisionBox;
@@ -29,28 +28,27 @@ namespace ECS_Framework
         public static void LoadContent(ContentManager content)
         {
             // Player
-            textures.Add("player_idle", content.Load<Texture2D>("Player/Frog/Idle"));
-            textures.Add("player_walking", content.Load<Texture2D>("Player/Frog/Walking"));
-            textures.Add("player_jump", content.Load<Texture2D>("Player/Frog/Jump"));
-            textures.Add("player_double_jump", content.Load<Texture2D>("Player/Frog/Double Jump"));
-            textures.Add("player_fall", content.Load<Texture2D>("Player/Frog/Fall"));
-            textures.Add("player_slide", content.Load<Texture2D>("Player/Frog/Wall Jump"));
-            textures.Add("player_death", content.Load<Texture2D>("Player/Frog/Hit"));
-
+            textures.Add("player_idle", content.Load<Texture2D>(Path.Combine("Player", "Frog", "Idle")));
+            textures.Add("player_walking", content.Load<Texture2D>(Path.Combine("Player", "Frog", "Walking")));
+            textures.Add("player_jump", content.Load<Texture2D>(Path.Combine("Player", "Frog", "Jump")));
+            textures.Add("player_double_jump", content.Load<Texture2D>(Path.Combine("Player", "Frog", "Double Jump")));
+            textures.Add("player_fall", content.Load<Texture2D>(Path.Combine("Player", "Frog", "Fall")));
+            textures.Add("player_slide", content.Load<Texture2D>(Path.Combine("Player", "Frog", "Wall Jump")));
+            textures.Add("player_death", content.Load<Texture2D>(Path.Combine("Player", "Frog", "Hit")));
 
             //Collictable Items
-            textures.Add("apple_idle", content.Load<Texture2D>("Items/Fruits/Apple"));
+            textures.Add("apple_idle", content.Load<Texture2D>(Path.Combine("Items", "Fruits", "Apple")));
 
             //Collectable Collected
-            textures.Add("fruits_death", content.Load<Texture2D>("Items/Fruits/Collected"));
+            textures.Add("fruits_death", content.Load<Texture2D>(Path.Combine("Items", "Fruits", "Collected")));
 
             // Background
-            textures.Add("bg_green", content.Load<Texture2D>("Background/BG_Green"));
-            textures.Add("bg_yellow", content.Load<Texture2D>("Background/BG_Yellow"));
-            
+            textures.Add("bg_green", content.Load<Texture2D>(Path.Combine("Background", "BG_Green")));
+            textures.Add("bg_yellow", content.Load<Texture2D>(Path.Combine("Background", "BG_Yellow")));
+
             //Tilesets textures, make sure the key will be the same as respective tsx file's name
-            textures.Add("Terrain", content.Load<Texture2D>("TiledMap/Textures/Terrain"));
-            textures.Add("UI", content.Load<Texture2D>("TiledMap/Textures/UI"));
+            textures.Add("Terrain", content.Load<Texture2D>(Path.Combine("TiledMap", "Textures", "Terrain")));
+            textures.Add("UI", content.Load<Texture2D>(Path.Combine("TiledMap", "Textures", "UI")));
             // Add more tilesets here
 
             //Load TiledMaps
@@ -59,8 +57,8 @@ namespace ECS_Framework
             {
                 string levelName = level.ToString();
                 tiledHandler.Load(
-                    Path.Combine(content.RootDirectory, "TiledMap/Levels", $"{levelName}.tmx"),
-                    Path.Combine(content.RootDirectory, "TiledMap/Levels", " "),
+                    Path.Combine(content.RootDirectory, "TiledMap", "Levels", $"{levelName}.tmx"),
+                    Path.Combine(content.RootDirectory, "TiledMap", "Levels", " "),
                     levelName
                 );
 
@@ -75,7 +73,7 @@ namespace ECS_Framework
         }
 
         /// <summary>
-        /// Retrieves a loaded texture by name.
+        /// Retrieves a texture given its name.
         /// </summary>
         /// <param name="textureName">The name of the texture to retrieve.</param>
         /// <returns>The loaded texture, or null if the texture was not found.</returns>
@@ -90,3 +88,4 @@ namespace ECS_Framework
         }
     }
 }
+

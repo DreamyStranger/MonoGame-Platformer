@@ -111,8 +111,8 @@ namespace ECS_Framework
                 for (int y = -1; y < _tileY; y++)
                 {
                     Vector2 texturePosition = new Vector2(x * _texture.Width, y * _texture.Height);
-                    spriteBatch.Draw(_texture, _position + texturePosition, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
-                    spriteBatch.Draw(_texture, _position2 + texturePosition, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 1f);
+                    spriteBatch.Draw(_texture, _position + texturePosition, null, Color.White);
+                    spriteBatch.Draw(_texture, _position2 + texturePosition, null, Color.White);
                 }
             }
         }

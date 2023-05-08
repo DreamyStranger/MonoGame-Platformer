@@ -92,7 +92,7 @@ namespace ECS_Framework
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            _spriteBatch.Begin(SpriteSortMode.BackToFront, null, SamplerState.PointClamp);
+            _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
             world.Draw(_spriteBatch);
             _spriteBatch.End();
 

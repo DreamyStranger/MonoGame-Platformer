@@ -12,13 +12,19 @@ namespace ECS_Framework
         /// Adds an entity to the system.
         /// </summary>
         /// <param name="entity">The entity to add.</param>
-        public abstract void AddEntity(Entity entity);
+        public virtual void AddEntity(Entity entity)
+        {
+
+        }
 
         /// <summary>
         /// Removes an entity from the system.
         /// </summary>
         /// <param name="entity">The entity to remove.</param>
-        public abstract void RemoveEntity(Entity entity);
+        public virtual void RemoveEntity(Entity entity)
+        {
+            
+        }
 
 
         /// <summary>

@@ -60,6 +60,7 @@ namespace ECS_Framework
                     {
                         if (entity.GetComponent<EntityTypeComponent>().Type == EntityType.Player)
                         {
+                            MessageBus.Publish(new DestroyEntityMessage(entity));
                             MessageBus.Publish(new ReloadLevelMessage());
                         }
                         else

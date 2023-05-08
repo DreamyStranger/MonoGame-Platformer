@@ -107,45 +107,45 @@ namespace ECS_Framework
 
             foreach (var layer in map.Layers)
             {
-                if (layer.type == TiledLayerType.TileLayer)
+                if (layer.type != TiledLayerType.TileLayer)
                 {
-                    for (int y = 0; y < layer.height; y++)
+                    continue;
+                }
+                for (int y = 0; y < layer.height; y++)
+                {
+                    for (int x = 0; x < layer.width; x++)
                     {
-                        for (int x = 0; x < layer.width; x++)
+                        // Assuming the default render order is used which is from right to bottom
+                        var index = (y * layer.width) + x;
+                        var gid = layer.data[index];
+                        var tileX = x * map.TileWidth;
+                        var tileY = y * map.TileHeight;
+                        // Gid 0 is used to tell there is no tile set
+                        if (gid == 0)
                         {
-                            // Assuming the default render order is used which is from right to bottom
-                            var index = (y * layer.width) + x;
-                            var gid = layer.data[index];
-                            var tileX = x * map.TileWidth;
-                            var tileY = y * map.TileHeight;
-                            // Gid 0 is used to tell there is no tile set
-                            if (gid == 0)
-                            {
-                                continue;
-                            }
-
-                            // Helper method to fetch the right TieldMapTileset instance.
-                            // This is a connection object Tiled uses for linking the correct tileset to the gid value using the firstgid property.
-                            var mapTileset = map.GetTiledMapTileset(gid);
-
-                            // Retrieve the actual tileset based on the firstgid property of the connection object we retrieved just now
-                            var tileset = tilesets[mapTileset.firstgid];
-                            //Console.WriteLine("name: " + tileset.Name);  //Debug message
-
-                            // Use the connection object as well as the tileset to figure out the source rectangle.
-                            var rect = map.GetSourceRect(mapTileset, tileset, gid);
-                            // Create destination and source rectangles
-                            var source = new Rectangle(rect.x, rect.y, rect.width, rect.height);
-                            var destination = new Rectangle(tileX, tileY, map.TileWidth, map.TileHeight);
-                            // Retrieve texture used in the tileset
-                            var tilesetTexture = Loader.GetTexture(tileset.Name);
-
-                            spriteBatch.Draw(tilesetTexture, destination, source, Color.White);
+                            continue;
                         }
+
+                        // Helper method to fetch the right TieldMapTileset instance.
+                        // This is a connection object Tiled uses for linking the correct tileset to the gid value using the firstgid property.
+                        var mapTileset = map.GetTiledMapTileset(gid);
+
+                        // Retrieve the actual tileset based on the firstgid property of the connection object we retrieved just now
+                        var tileset = tilesets[mapTileset.firstgid];
+                        //Console.WriteLine("name: " + tileset.Name);  //Debug message
+
+                        // Use the connection object as well as the tileset to figure out the source rectangle.
+                        var rect = map.GetSourceRect(mapTileset, tileset, gid);
+                        // Create destination and source rectangles
+                        var source = new Rectangle(rect.x, rect.y, rect.width, rect.height);
+                        var destination = new Rectangle(tileX, tileY, map.TileWidth, map.TileHeight);
+                        // Retrieve texture used in the tileset
+                        var tilesetTexture = Loader.GetTexture(tileset.Name);
+                        // Draw tile
+                        spriteBatch.Draw(tilesetTexture, destination, source, Color.White);
                     }
                 }
             }
         }
-
     }
 }

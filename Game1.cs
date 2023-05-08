@@ -93,7 +93,6 @@ namespace ECS_Framework
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             _spriteBatch.Begin(SpriteSortMode.BackToFront, null, SamplerState.PointClamp);
-            Loader.tiledHandler.Draw(world.CurrentLevel.Id.ToString(), _spriteBatch);
             world.Draw(_spriteBatch);
             _spriteBatch.End();
 

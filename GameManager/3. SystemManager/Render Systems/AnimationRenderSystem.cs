@@ -8,7 +8,7 @@ namespace ECS_Framework
     /// <summary>
     /// <see cref="System"/> responsible for rendering the entities in the game.
     /// </summary>
-    public class RenderSystem : System
+    public class AnimationRenderSystem : System
     {
         // A list of EntityData instances, which store references to the associated Entity, StateComponent, AnimatedComponent, and MovementComponent.
         private List<EntityData> entitiesData;
@@ -16,7 +16,7 @@ namespace ECS_Framework
         /// <summary>
         /// Initializes a new instance of the RenderSystem class and creates an empty list of EntityData.
         /// </summary>
-        public RenderSystem()
+        public AnimationRenderSystem()
         {
             entitiesData = new List<EntityData>();
         }

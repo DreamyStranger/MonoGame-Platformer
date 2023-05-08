@@ -1,3 +1,5 @@
+using System.Reflection;
+
 namespace ECS_Framework
 {
     /// <summary>
@@ -6,22 +8,36 @@ namespace ECS_Framework
     public static class GameConstants
     {
         // Player-related constants
-        public const int PLAYER_MAX_HP = 3;
+        public static int PLAYER_MAX_HP = 3;
 
         // Entity-related constant
-        public const float GRAVITY = 2000f;
-        public const int OTHER_HP = 1;
-        public const float SpeedY = -500f;
-        public const float SpeedX = 100f;
+        public static float GRAVITY = 2000f;
+        public static int OTHER_HP = 1;
+        public static float SpeedY = -500f;
+        public static float SpeedX = 100f;
 
         // Other game constants
-        public const int SCREEN_WIDTH = 640;
-        public const int SCREEN_HEIGHT = 368;
-        public const float AnimationFPS = 20f;
-        public const float FPS = 60f;
+        public static int SCREEN_WIDTH = 640;
+        public static int SCREEN_HEIGHT = 368;
+        public static float AnimationFPS = 20f;
+        public static float FPS = 60f;
 
         //Debug
-        public const bool DisplayCollisionBoxes = false;
-        public const bool AnimationDebugMessages = false;
+        public static bool DisplayCollisionBoxes = false;
+        public static bool AnimationDebugMessages = false;
+
+        /// <summary>
+        /// Updates the value of a game constant field.
+        /// </summary>
+        /// <param name="fieldName">The name of the field to update.</param>
+        /// <param name="value">The new value of the field.</param>
+        public static void UpdateConstant(string fieldName, object value)
+        {
+            FieldInfo field = typeof(GameConstants).GetField(fieldName, BindingFlags.Static | BindingFlags.Public);
+            if (field != null)
+            {
+                field.SetValue(null, value);
+            }
+        }
     }
 }

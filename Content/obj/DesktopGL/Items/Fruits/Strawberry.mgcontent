@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Strawberry.png</SourceFile>
-  <SourceTime>2023-04-24T11:41:13.5664313-04:00</SourceTime>
+  <SourceTime>2023-05-07T23:15:17.644491-04:00</SourceTime>
   <DestFile>/home/m/Documents/GitHub/ECS-MonoGame/Content/bin/DesktopGL/Items/Fruits/Strawberry.xnb</DestFile>
-  <DestTime>2023-04-24T15:01:07.3152791-04:00</DestTime>
+  <DestTime>2023-05-08T00:39:17.4102992-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

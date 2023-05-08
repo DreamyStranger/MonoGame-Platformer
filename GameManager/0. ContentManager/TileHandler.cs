@@ -130,7 +130,7 @@ namespace ECS_Framework
 
                             // Retrieve the actual tileset based on the firstgid property of the connection object we retrieved just now
                             var tileset = tilesets[mapTileset.firstgid];
-                            Console.WriteLine("name: " + tileset.Name);
+                            //Console.WriteLine("name: " + tileset.Name);  //Debug message
 
                             // Use the connection object as well as the tileset to figure out the source rectangle.
                             var rect = map.GetSourceRect(mapTileset, tileset, gid);

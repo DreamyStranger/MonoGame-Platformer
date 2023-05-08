@@ -22,9 +22,11 @@
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Jump.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Walking.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Player/Frog/Wall Jump.png</File>
-    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/TiledMap/Terrain.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/TiledMap/Textures/Terrain.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/TiledMap/Textures/UI.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

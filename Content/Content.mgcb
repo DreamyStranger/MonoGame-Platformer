@@ -229,7 +229,7 @@
 /processorParam:TextureFormat=Color
 /build:Player/Frog/Wall Jump.png
 
-#begin TiledMap/Terrain.png
+#begin TiledMap/Textures/Terrain.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -239,5 +239,17 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:TiledMap/Terrain.png
+/build:TiledMap/Textures/Terrain.png
+
+#begin TiledMap/Textures/UI.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TiledMap/Textures/UI.png
 

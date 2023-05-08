@@ -38,10 +38,10 @@ namespace ECS_Framework
             textures.Add("player_death", content.Load<Texture2D>("Player/Frog/Hit"));
 
 
-            //Collictible Items
+            //Collictable Items
             textures.Add("apple_idle", content.Load<Texture2D>("Items/Fruits/Apple"));
 
-            //Collectible Collected
+            //Collectable Collected
             textures.Add("fruits_death", content.Load<Texture2D>("Items/Fruits/Collected"));
 
             // Background
@@ -49,7 +49,8 @@ namespace ECS_Framework
             textures.Add("bg_yellow", content.Load<Texture2D>("Background/BG_Yellow"));
             
             //Tilesets textures, make sure the key will be the same as respective tsx file's name
-            textures.Add("Terrain", content.Load<Texture2D>("TiledMap/Terrain"));
+            textures.Add("Terrain", content.Load<Texture2D>("TiledMap/Textures/Terrain"));
+            textures.Add("UI", content.Load<Texture2D>("TiledMap/Textures/UI"));
             // Add more tilesets here
 
             //Load TiledMaps
@@ -58,8 +59,8 @@ namespace ECS_Framework
             {
                 string levelName = level.ToString();
                 tiledHandler.Load(
-                    Path.Combine(content.RootDirectory, "TiledMap", $"{levelName}.tmx"),
-                    Path.Combine(content.RootDirectory, "TiledMap", " "),
+                    Path.Combine(content.RootDirectory, "TiledMap/Levels", $"{levelName}.tmx"),
+                    Path.Combine(content.RootDirectory, "TiledMap/Levels", " "),
                     levelName
                 );
 

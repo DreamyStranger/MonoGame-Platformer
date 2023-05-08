@@ -3,31 +3,6 @@ using Microsoft.Xna.Framework;
 namespace ECS_Framework
 {
     /// <summary>
-    /// The possible interaptable States an object can be in.
-    /// </summary>
-    public enum State
-    {
-        Idle,
-        WalkLeft,
-        WalkRight,
-        Jump,
-        DoubleJump,
-        Slide,
-    }
-
-    /// <summary>
-    /// The possible continuous SuperStates an object can be in.
-    /// </summary>
-    public enum SuperState
-    {
-        IsOnGround,
-        IsFalling,
-        IsJumping,
-        IsDoubleJumping,
-        IsDead,
-    }
-
-    /// <summary>
     /// Component that stores the current state and super state of an object, as well as its state ID, jump counter, and horizontal direction.
     /// </summary>
     public class StateComponent : Component

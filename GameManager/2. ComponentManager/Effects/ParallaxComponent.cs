@@ -32,8 +32,8 @@ namespace ECS_Framework
             _position = position;
             _position2 = position;
 
-            _tileX = (int)Math.Ceiling((float)viewX / _texture.Width) + 2;
-            _tileY = (int)Math.Ceiling((float)viewY / _texture.Height) + 2;
+            _tileX = (int)Math.Ceiling((float)viewX / _texture.Width) + 1;
+            _tileY = (int)Math.Ceiling((float)viewY / _texture.Height) + 1;
 
             _position2 = position;
 

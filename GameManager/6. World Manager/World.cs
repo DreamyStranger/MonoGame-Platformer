@@ -13,8 +13,8 @@ namespace ECS_Framework
         private SystemManager systems;
         private int totalLevels = Enum.GetValues(typeof(LevelID)).Length;
 
-        private List<Entity> entitiesToDestroy;
-        
+        private readonly Queue<Entity> entitiesToDestroy;
+
         /// <summary>
         /// Initializes a new instance of the World class.
         /// </summary>
@@ -27,7 +27,7 @@ namespace ECS_Framework
             MessageBus.Subscribe<DestroyEntityMessage>(OnDestroyEntity);
             MessageBus.Subscribe<NextLevelMessage>(NextLevel);
             MessageBus.Subscribe<ReloadLevelMessage>(ResetCurrentLevel);
-            entitiesToDestroy = new List<Entity>();
+            entitiesToDestroy = new Queue<Entity>();
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace ECS_Framework
         private void LoadLevel(Level level)
         {
 
-            systems = new SystemManager(level.Id);
+            systems.ResetSystems(level.Id);
             List<Entity> objects = level.Initializer.GetObjects();
             foreach (Entity entity in objects)
             {
@@ -109,7 +109,7 @@ namespace ECS_Framework
         private void OnDestroyEntity(DestroyEntityMessage message)
         {
             // Remove the entity from all systems
-            entitiesToDestroy.Add(message.Entity);
+            entitiesToDestroy.Enqueue(message.Entity);
         }
 
         /// <summary>
@@ -118,11 +118,11 @@ namespace ECS_Framework
         public void Update(GameTime gameTime)
         {
             systems.Update(gameTime);
-            foreach (Entity entity in entitiesToDestroy)
+            while (entitiesToDestroy.Count > 0)
             {
+                Entity entity = entitiesToDestroy.Dequeue();
                 systems.Remove(entity);
             }
-            entitiesToDestroy.Clear();
         }
 
         /// <summary>

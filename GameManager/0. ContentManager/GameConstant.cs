@@ -22,5 +22,6 @@ namespace ECS_Framework
 
         //Debug
         public const bool DisplayCollisionBoxes = false;
+        public const bool AnimationDebugMessages = false;
     }
 }

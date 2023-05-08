@@ -18,6 +18,11 @@ namespace ECS_Framework
         /// <param name="LevelID">The ID of the level.</param>
         public SystemManager(LevelID levelID)
         {
+            ResetSystems(levelID);
+        }
+
+        public void ResetSystems(LevelID levelID)
+        {
             systems = new List<System>();
             systems.Add(new ParallaxSystem());
             systems.Add(new PlayerInputSystem());

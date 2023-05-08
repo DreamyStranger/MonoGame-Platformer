@@ -45,13 +45,25 @@ namespace ECS_Framework
             Animations[action] = new ActionAnimation(sprite, rows, columns, fps);
         }
 
-        /// <summary>
-        /// Gets the current animation associated with the component.
+        // <summary>
+        /// Returns the current animation associated with the component,
+        /// or the default "idle" animation if the current action does not have an animation associated with it.
         /// </summary>
-        /// <returns>The current animation associated with the component.</returns>
+        /// <returns>The current animation associated with the component, or the default "idle" animation if the current action does not have an animation associated with it.</returns>
         public ActionAnimation GetCurrentAnimation()
         {
-            return Animations[CurrentAction];
+            if (Animations.ContainsKey(CurrentAction))
+            {
+                return Animations[CurrentAction];
+            }
+            else
+            {
+                if (GameConstants.AnimationDebugMessages)
+                {
+                    Console.WriteLine($"Animation for action '{CurrentAction}' does not exist, playing default animation"); // Debug message
+                }
+                return Animations.TryGetValue("idle", out ActionAnimation defaultAnimation) ? defaultAnimation : null;
+            }
         }
 
         /// <summary>
@@ -60,15 +72,8 @@ namespace ECS_Framework
         /// <param name="gameTime">The elapsed game time.</param>
         public void Update(GameTime gameTime)
         {
-            if (Animations.ContainsKey(CurrentAction))
-            {
-                ActionAnimation currentAnimation = GetCurrentAnimation();
-                currentAnimation.Update(gameTime);
-            }
-            else
-            {
-                Console.WriteLine($"Incorrect Action for Animation: {CurrentAction}"); // Debug message
-            }
+            ActionAnimation currentAnimation = GetCurrentAnimation();
+            currentAnimation.Update(gameTime);
         }
 
         /// <summary>
@@ -79,21 +84,8 @@ namespace ECS_Framework
         /// <param name="direction">The horizontal direction the animation is facing.</param>
         public void Draw(SpriteBatch spriteBatch, Vector2 position, int direction = 1)
         {
-            if (CurrentAction == null)
-            {
-                Console.WriteLine("CurrentAction is null"); // Debug message
-                return;
-            }
-            if (Animations.ContainsKey(CurrentAction))
-            {
-                ActionAnimation currentAnimation = GetCurrentAnimation();
-                currentAnimation.Draw(spriteBatch, position, direction);
-                //Console.WriteLine($"Drawing: {CurrentAction}"); // Debug message
-            }
-            else
-            {
-                Console.WriteLine($"Incorrect Action to Draw: {CurrentAction}"); // Debug message
-            }
+            ActionAnimation currentAnimation = GetCurrentAnimation();
+            currentAnimation.Draw(spriteBatch, position, direction);
         }
 
         /// <summary>
@@ -104,7 +96,10 @@ namespace ECS_Framework
         {
             if (CurrentAction != action)
             {
-                //Console.WriteLine($"Animation {CurrentAction} changes to Animation {action}"); // Debug message
+                if (GameConstants.AnimationDebugMessages)
+                {
+                    Console.WriteLine($"Animation {CurrentAction} changes to Animation {action}");
+                }
                 CurrentAction = action;
                 ResetCurrentAnimation();
             }
@@ -199,7 +194,6 @@ namespace ECS_Framework
 
             Rectangle currentFrame = Frames[CurrentFrame];
 
-            // Debug message
             //Console.WriteLine($"Drawing frame {CurrentFrame}: X = {currentFrame.X}, Y = {currentFrame.Y}, Width = {currentFrame.Width}, Height = {currentFrame.Height}");
 
             spriteBatch.Draw(Texture,

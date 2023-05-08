@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TiledCS;
+using System;
 
 namespace ECS_Framework
 {
@@ -8,9 +9,8 @@ namespace ECS_Framework
     /// </summary>
     public class TileHandler
     {
-        private Dictionary<string, Texture2D> tilesetTextures;
-        private Dictionary<string, TiledMap> tiledMaps;
-        private Dictionary<string, Dictionary<int, TiledTileset>> tileSets;
+        private Dictionary<string, TiledMap> _tiledMaps;
+        private Dictionary<string, Dictionary<int, TiledTileset>> _tileSets;
 
         /// <summary>
         /// A dictionary of all obstacles in every loaded map.
@@ -23,9 +23,8 @@ namespace ECS_Framework
         /// <param name="contentManager">The ContentManager to load tile textures with.</param>
         public TileHandler(ContentManager contentManager)
         {
-            this.tilesetTextures = new Dictionary<string, Texture2D>();
-            this.tiledMaps = new Dictionary<string, TiledMap>();
-            this.tileSets = new Dictionary<string, Dictionary<int, TiledTileset>>();
+            this._tiledMaps = new Dictionary<string, TiledMap>();
+            this._tileSets = new Dictionary<string, Dictionary<int, TiledTileset>>();
             this.obstacles = new Dictionary<string, Dictionary<string, List<Rectangle>>>();
         }
 
@@ -36,20 +35,16 @@ namespace ECS_Framework
         /// <param name="pathToFolder">The path to the folder containing the tileset texture.</param>
         /// <param name="levelID">The name to give the loaded map.</param>
         /// <param name="textureName">The name to give the loaded tileset texture.</param>
-        public void Load(string pathToMap, string pathToFolder, string levelID, string textureName)
+        public void Load(string pathToMap, string pathToFolder, string levelID)
         {
             // Load the tileset using TiledCS
             TiledMap map = new TiledMap(pathToMap);
             var tilesets = map.GetTiledTilesets(pathToFolder);
 
-            // Load the tileset texture using MonoGame
-            Texture2D tilesetTexture = Loader.GetTexture(textureName);
-
-            // Update dictionaries
-            tilesetTextures[levelID] = tilesetTexture;
-            tiledMaps[levelID] = map;
-            tileSets[levelID] = tilesets;
+            _tiledMaps[levelID] = map;
+            _tileSets[levelID] = tilesets;
         }
+
 
         /// <summary>
         /// Helper method for the All Bounds method below. Creates rectangles representing the bounds of a specified layer.
@@ -60,7 +55,7 @@ namespace ECS_Framework
         public List<Rectangle> GetLayerBounds(TiledLayer layer, string mapName)
         {
             List<Rectangle> layerBounds = new List<Rectangle>();
-            TiledMap map = tiledMaps[mapName];
+            TiledMap map = _tiledMaps[mapName];
 
             foreach (var obj in layer.objects)
             {
@@ -79,10 +74,10 @@ namespace ECS_Framework
         /// </summary>
         public void GetLayersBoundsInMap()
         {
-            foreach (string mapName in tiledMaps.Keys)
+            foreach (string mapName in _tiledMaps.Keys)
             {
                 Dictionary<string, List<Rectangle>> layerBoundsMap = new Dictionary<string, List<Rectangle>>();
-                foreach (var layer in tiledMaps[mapName].Layers)
+                foreach (var layer in _tiledMaps[mapName].Layers)
                 {
                     string layerName = layer.name;
                     if (layer.type != TiledLayerType.ObjectLayer)
@@ -107,9 +102,8 @@ namespace ECS_Framework
         /// <param name="spriteBatch">The SpriteBatch object to use for rendering.</param>
         public void Draw(string LevelID, SpriteBatch spriteBatch)
         {
-            TiledMap map = tiledMaps[LevelID];
-            Texture2D tilesetTexture = tilesetTextures[LevelID];
-            var tilesets = tileSets[LevelID];
+            TiledMap map = _tiledMaps[LevelID];
+            var tilesets = _tileSets[LevelID];
 
             foreach (var layer in map.Layers)
             {
@@ -130,14 +124,20 @@ namespace ECS_Framework
                                 continue;
                             }
 
-                            //TiledCS methods to retrieve needed data
+                            // Helper method to fetch the right TieldMapTileset instance.
+                            // This is a connection object Tiled uses for linking the correct tileset to the gid value using the firstgid property.
                             var mapTileset = map.GetTiledMapTileset(gid);
-                            var tileset = tilesets[mapTileset.firstgid];
-                            var rect = map.GetSourceRect(mapTileset, tileset, gid);
 
+                            // Retrieve the actual tileset based on the firstgid property of the connection object we retrieved just now
+                            var tileset = tilesets[mapTileset.firstgid];
+                            Console.WriteLine("name: " + tileset.Name);
+
+                            // Use the connection object as well as the tileset to figure out the source rectangle.
+                            var rect = map.GetSourceRect(mapTileset, tileset, gid);
                             // Create destination and source rectangles
                             var source = new Rectangle(rect.x, rect.y, rect.width, rect.height);
                             var destination = new Rectangle(tileX, tileY, map.TileWidth, map.TileHeight);
+                            var tilesetTexture = Loader.GetTexture(tileset.Name);
 
                             spriteBatch.Draw(tilesetTexture, destination, source, Color.White);
                         }
@@ -145,5 +145,6 @@ namespace ECS_Framework
                 }
             }
         }
+
     }
 }

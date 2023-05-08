@@ -18,7 +18,6 @@ namespace ECS_Framework
         // TiledMap
         public static TileHandler tiledHandler { get; private set; }
         public static Dictionary<string, List<Rectangle>> obstacles { get; private set; }
-        private static Dictionary<string, List<LevelID>> terrainToLevel = new Dictionary<string, List<LevelID>>();
 
         //Debug box
         public static Texture2D collisionBox;
@@ -49,13 +48,9 @@ namespace ECS_Framework
             textures.Add("bg_green", content.Load<Texture2D>("Background/BG_Green"));
             textures.Add("bg_yellow", content.Load<Texture2D>("Background/BG_Yellow"));
             
+            //Tilesets textures, make sure the key will be the same as respective tsx file's name
             textures.Add("Terrain", content.Load<Texture2D>("TiledMap/Terrain"));
-            // Add more terrain types here
-
-            // Map Terrains to their Level
-            AddTerrain("Terrain", LevelID.Level1);
-            AddTerrain("Terrain", LevelID.Level2);
-            //Map more Levels to terrains here
+            // Add more tilesets here
 
             //Load TiledMaps
             tiledHandler = new TileHandler(content);
@@ -65,8 +60,7 @@ namespace ECS_Framework
                 tiledHandler.Load(
                     Path.Combine(content.RootDirectory, "TiledMap", $"{levelName}.tmx"),
                     Path.Combine(content.RootDirectory, "TiledMap", " "),
-                    levelName,
-                    GetTerrain(level)
+                    levelName
                 );
 
                 // Save collision boxes for each level
@@ -91,41 +85,6 @@ namespace ECS_Framework
                 return textures[textureName];
             }
 
-            return null;
-        }
-
-        /// <summary>
-        /// Associates a terrain type with a level.
-        /// </summary>
-        /// <param name="terrain">The name of the terrain type.</param>
-        /// <param name="levelID">The ID of the level.</param>
-        private static void AddTerrain(string terrain, LevelID levelID)
-        {
-            if (!terrainToLevel.ContainsKey(terrain))
-            {
-                terrainToLevel[terrain] = new List<LevelID>();
-            }
-            terrainToLevel[terrain].Add(levelID);
-        }
-
-        /// <summary>
-        /// Retrieves the name of the terrain associated with a given level.
-        /// </summary>
-        /// <param name="levelID">The ID of the level.</param>
-        /// <returns>The name of the associated terrain, or null if no terrain is associated with the level.</returns>
-        private static string GetTerrain(LevelID levelID)
-        {
-            foreach (var key in terrainToLevel.Keys)
-            {
-                foreach (var value in terrainToLevel[key])
-                {
-                    if (value == levelID)
-                    {
-                        return key;
-                    }
-                }
-            }
-            Console.WriteLine($"There is no Terrain associated with {levelID.ToString()}"); //Debug message
             return null;
         }
     }

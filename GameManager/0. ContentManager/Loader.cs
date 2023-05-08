@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework;
 using System.IO;
 using System;
@@ -8,17 +10,20 @@ using System;
 namespace ECS_Framework
 {
     /// <summary>
-    /// Handles loading and retrieval of game assets, including textures and tile maps.
+    /// Handles loading and retrieval of game assets, including textures, tile maps, and music.
     /// </summary>
     public class Loader
     {
         // Textures
         private static Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
 
+        // Music
+        private static Dictionary<string, Song> songs = new Dictionary<string, Song>();
+
         // TiledMap
         public static TileHandler tiledHandler { get; private set; }
 
-        //Debug box
+        // Debug box
         public static Texture2D collisionBox;
 
         /// <summary>
@@ -27,31 +32,37 @@ namespace ECS_Framework
         /// <param name="content">The ContentManager to load assets with.</param>
         public static void LoadContent(ContentManager content)
         {
-            // Player
-            textures.Add("player_idle", content.Load<Texture2D>(Path.Combine("Player", "Frog", "Idle")));
-            textures.Add("player_walking", content.Load<Texture2D>(Path.Combine("Player", "Frog", "Walking")));
-            textures.Add("player_jump", content.Load<Texture2D>(Path.Combine("Player", "Frog", "Jump")));
-            textures.Add("player_double_jump", content.Load<Texture2D>(Path.Combine("Player", "Frog", "Double Jump")));
-            textures.Add("player_fall", content.Load<Texture2D>(Path.Combine("Player", "Frog", "Fall")));
-            textures.Add("player_slide", content.Load<Texture2D>(Path.Combine("Player", "Frog", "Wall Jump")));
-            textures.Add("player_death", content.Load<Texture2D>(Path.Combine("Player", "Frog", "Hit")));
+            //Load music
 
-            //Collictable Items
-            textures.Add("apple_idle", content.Load<Texture2D>(Path.Combine("Items", "Fruits", "Apple")));
+            // ... add more music here
 
-            //Collectable Collected
-            textures.Add("fruits_death", content.Load<Texture2D>(Path.Combine("Items", "Fruits", "Collected")));
+            // Load textures
+            //Player
+            AddTexture("player_idle", content, "Player", "Frog", "Idle");
+            AddTexture("player_walking", content, "Player", "Frog", "Walking");
+            AddTexture("player_jump", content, "Player", "Frog", "Jump");
+            AddTexture("player_double_jump", content, "Player", "Frog", "Double Jump");
+            AddTexture("player_fall", content, "Player", "Frog", "Fall");
+            AddTexture("player_slide", content, "Player", "Frog", "Wall Jump");
+            AddTexture("player_death", content, "Player", "Frog", "Hit");
 
-            // Background
-            textures.Add("bg_green", content.Load<Texture2D>(Path.Combine("Background", "BG_Green")));
-            textures.Add("bg_yellow", content.Load<Texture2D>(Path.Combine("Background", "BG_Yellow")));
+            //Collectables
+            AddTexture("apple_idle", content, "Items", "Fruits", "Apple");
 
-            //Tilesets textures, make sure the key will be the same as respective tsx file's name
-            textures.Add("Terrain", content.Load<Texture2D>(Path.Combine("TiledMap", "Textures", "Terrain")));
-            textures.Add("UI", content.Load<Texture2D>(Path.Combine("TiledMap", "Textures", "UI")));
-            // Add more tilesets here
+            //Collectable collected
+            AddTexture("fruits_death", content, "Items", "Fruits", "Collected");
+
+            //Background tile for parallax
+            AddTexture("bg_green", content, "Background", "BG_Green");
+            AddTexture("bg_yellow", content, "Background", "BG_Yellow");
+            // ... add more textures here
 
             //Load TiledMaps
+            //Tilesets' textures, key should be the same as respective tilesets's name
+            AddTexture("Terrain", content, "TiledMap", "Textures", "Terrain");
+            AddTexture("UI", content, "TiledMap", "Textures", "UI");
+
+            //TileMaps
             tiledHandler = new TileHandler(content);
             foreach (LevelID level in LevelID.GetValues(typeof(LevelID)))
             {
@@ -73,6 +84,30 @@ namespace ECS_Framework
         }
 
         /// <summary>
+        /// Adds a texture to the textures dictionary.
+        /// </summary>
+        /// <param name="textureName">The name of the texture, used as the key in the dictionary.</param>
+        /// <param name="content">The ContentManager to load assets with.</param>
+        /// <param name="pathParts">An array of strings representing the path parts to the texture file. These will be combined using Path.Combine.</param>
+        private static void AddTexture(string textureName, ContentManager content, params string[] pathParts)
+        {
+            string path = Path.Combine(pathParts);
+            textures.Add(textureName, content.Load<Texture2D>(path));
+        }
+
+        /// <summary>
+        /// Adds a music file to the songs dictionary.
+        /// </summary>
+        /// <param name="songName">The name of the music file, used as the key in the dictionary.</param>
+        /// <param name="content">The ContentManager to load assets with.</param>
+        /// <param name="pathParts">An array of strings representing the path parts to the music file. These will be combined using Path.Combine.</param>
+        private static void AddMusic(string songName, ContentManager content, params string[] pathParts)
+        {
+            string path = Path.Combine(pathParts);
+            songs.Add(songName, content.Load<Song>(path));
+        }
+
+        /// <summary>
         /// Retrieves a texture given its name.
         /// </summary>
         /// <param name="textureName">The name of the texture to retrieve.</param>
@@ -86,6 +121,20 @@ namespace ECS_Framework
 
             return null;
         }
+
+        /// <summary>
+        /// Retrieves a music file given its name.
+        /// </summary>
+        /// <param name="songName">The name of the music file to retrieve.</param>
+        /// <returns>The loaded music, or null if the music file was not found.</returns>
+        public static Song GetMusic(string songName)
+        {
+            if (songs.ContainsKey(songName))
+            {
+                return songs[songName];
+            }
+
+            return null;
+        }
     }
 }
-

@@ -13,6 +13,12 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Audio/Background/FuriousFreak.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Audio/Background/FuriousFreak.mp3
+
 #begin Background/BG_Green.png
 /importer:TextureImporter
 /processor:TextureProcessor

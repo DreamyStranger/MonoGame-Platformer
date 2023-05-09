@@ -45,3 +45,5 @@
 /home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MyGame.genruntimeconfig.cache
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/TiledMap/Textures/Terrain.xnb
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/TiledMap/Textures/UI.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Audio/Background/FuriousFreak.ogg
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Audio/Background/FuriousFreak.xnb

@@ -30,6 +30,7 @@ namespace ECS_Framework
         public AnimatedComponent()
         {
             Animations = new Dictionary<string, ActionAnimation>();
+            CurrentAction = "idle";
         }
 
         /// <summary>

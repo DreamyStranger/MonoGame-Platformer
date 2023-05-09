@@ -4,6 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Audio/Background/FuriousFreak.mp3</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/BG_Green.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/BG_Yellow.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Apple.png</File>
@@ -26,6 +27,7 @@
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/TiledMap/Textures/UI.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

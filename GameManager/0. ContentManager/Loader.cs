@@ -33,7 +33,7 @@ namespace ECS_Framework
         public static void LoadContent(ContentManager content)
         {
             //Load music
-
+            AddMusic("bg_music", content, "Audio", "Background", "FuriousFreak");
             // ... add more music here
 
             // Load textures

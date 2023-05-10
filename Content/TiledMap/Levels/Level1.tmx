@@ -33,14 +33,14 @@
   <object id="8" x="0.666667" y="320" width="640" height="46.6082"/>
   <object id="9" x="415.311" y="256" width="48.019" height="32"/>
   <object id="10" x="176.958" y="256.167" width="46.7917" height="31.625"/>
-  <object id="13" x="256.875" y="224.292" width="126.762" height="95.75"/>
+  <object id="13" x="256" y="224" width="128" height="96"/>
   <object id="26" x="608.667" y="1.33333" width="30" height="29.3333"/>
   <object id="27" x="626" y="32.6667" width="11.3333" height="286.667"/>
   <object id="28" x="0.666667" y="32" width="15.3333" height="287.333"/>
   <object id="29" x="1.33333" y="2" width="28.6667" height="28.6667"/>
   <object id="31" x="32" y="1.33333" width="576" height="14"/>
  </objectgroup>
- <objectgroup id="13" name="entity">
+ <objectgroup id="13" name="entity" locked="1">
   <object id="34" name="player" x="304" y="190" width="32" height="32"/>
   <object id="38" name="regularEnemy" x="128" y="280" width="32" height="32">
    <properties>
@@ -51,8 +51,8 @@
   <object id="39" name="regularEnemy" x="480" y="280" width="32" height="32">
    <properties>
     <property name="direction" type="int" value="1"/>
-    <property name="left" type="int" value="40"/>
-    <property name="right" type="int" value="60"/>
+    <property name="left" type="int" value="60"/>
+    <property name="right" type="int" value="40"/>
    </properties>
   </object>
   <object id="35" name="fruit" x="96" y="144" width="32" height="32">

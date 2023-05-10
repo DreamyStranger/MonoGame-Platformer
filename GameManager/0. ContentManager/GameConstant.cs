@@ -15,6 +15,9 @@ namespace ECS_Framework
         public static int OTHER_HP = 1;
         public static float SpeedY = -500f;
         public static float SpeedX = 100f;
+        public static float SpeedXonCollision = -50f;
+        public static float SpeedYonCollision = 300f;
+
 
         // Other game constants
         public static int SCREEN_WIDTH = 640;

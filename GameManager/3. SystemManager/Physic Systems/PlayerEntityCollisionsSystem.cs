@@ -149,6 +149,7 @@ namespace ECS_Framework
             // If the player is falling, kill the enemy and set its state to idle
             if (player.State.CurrentSuperState == SuperState.IsFalling)
             {
+                int direction = player.State.HorizontalDirection;
                 float positionX = player.Movement.Position.X;
                 float positionY = player.Movement.Position.Y;
                 bool properHit = HandleFallCollision(player, player.CollisionBox.GetRectangle(), enemy.CollisionBox.GetRectangle(), ref positionX, ref positionY);
@@ -157,8 +158,8 @@ namespace ECS_Framework
                     enemy.State.CurrentSuperState = SuperState.IsDead;
                     enemy.State.CurrentState = State.Idle;
                     player.Movement.Position = new Vector2 (positionX, positionY);
-                    player.CollisionBox.UpdateBoxPosition(positionX, positionY, player.State.HorizontalDirection);
-                    player.Movement.Velocity = new Vector2(player.Movement.Velocity.X, player.Movement.Velocity.Y - 300);
+                    player.CollisionBox.UpdateBoxPosition(positionX, positionY, direction);
+                    player.Movement.Velocity = new Vector2(GameConstants.SpeedXonCollision * direction, player.Movement.Velocity.Y - GameConstants.SpeedYonCollision);
                     player.State.CurrentSuperState = SuperState.IsJumping;
                     return;
                 }

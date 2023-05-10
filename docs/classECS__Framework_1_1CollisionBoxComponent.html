@@ -97,7 +97,7 @@ Collaboration diagram for ECS_Framework.CollisionBoxComponent:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a46b75071a00f0e23ee612e4c61689a66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a46b75071a00f0e23ee612e4c61689a66">CollisionBoxComponent</a> (Vector2 position, int <a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a932b6ec101b55e7873a693edf9e063b2">width</a>, int <a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a4146dfc3c110b51ba4638b42ada84d89">height</a>, int <a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a4ae2f48ace24172ab0676684af6db499">vertTopOffset</a>=0, int <a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#ac4cc5ed6d955620fda30c5a9a2782cbf">vertBottomOffset</a>=0, int <a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a9ce79484a6bc409f102d49fee919e357">horLeftOffset</a>=0, int <a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a17d4728844c937b7dfc04a4a33939d4d">horRightOffset</a>=0)</td></tr>
+<tr class="memitem:a46b75071a00f0e23ee612e4c61689a66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a46b75071a00f0e23ee612e4c61689a66">CollisionBoxComponent</a> (Vector2 position, int width, int height, int vertTopOffset=0, int vertBottomOffset=0, int horLeftOffset=0, int horRightOffset=0)</td></tr>
 <tr class="memdesc:a46b75071a00f0e23ee612e4c61689a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new instance of the <a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html" title="Component that contains data and methods related to collision box of an entity in the game.">CollisionBoxComponent</a> class.  <a href="classECS__Framework_1_1CollisionBoxComponent.html#a46b75071a00f0e23ee612e4c61689a66">More...</a><br /></td></tr>
 <tr class="separator:a46b75071a00f0e23ee612e4c61689a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8656326e643c9bab2f28bb50fcc28ef2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a8656326e643c9bab2f28bb50fcc28ef2">UpdateBoxPosition</a> (float positionX, float positionY, int direction)</td></tr>
@@ -109,28 +109,36 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9180909e2ebc2d9a75e0ed8e1a77a17d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a9180909e2ebc2d9a75e0ed8e1a77a17d">SetGroundLocation</a> (int left, int right)</td></tr>
 <tr class="memdesc:a9180909e2ebc2d9a75e0ed8e1a77a17d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the boundaries of the platform for checking if the entity is on the ground.  <a href="classECS__Framework_1_1CollisionBoxComponent.html#a9180909e2ebc2d9a75e0ed8e1a77a17d">More...</a><br /></td></tr>
 <tr class="separator:a9180909e2ebc2d9a75e0ed8e1a77a17d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac707d5d481133d8daf1698515897c6bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#ac707d5d481133d8daf1698515897c6bc">checkIfInAir</a> (float left, float right)</td></tr>
-<tr class="memdesc:ac707d5d481133d8daf1698515897c6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the entity is in the air (not on the platform).  <a href="classECS__Framework_1_1CollisionBoxComponent.html#ac707d5d481133d8daf1698515897c6bc">More...</a><br /></td></tr>
-<tr class="separator:ac707d5d481133d8daf1698515897c6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac002760af1ca43fdb8aec843ccac5c6e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#ac002760af1ca43fdb8aec843ccac5c6e">checkIfInAir</a> (float position, int direction)</td></tr>
+<tr class="memdesc:ac002760af1ca43fdb8aec843ccac5c6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the entity is in the air (not on the platform).  <a href="classECS__Framework_1_1CollisionBoxComponent.html#ac002760af1ca43fdb8aec843ccac5c6e">More...</a><br /></td></tr>
+<tr class="separator:ac002760af1ca43fdb8aec843ccac5c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:adddc3feba75f5f52b02a970e7656750b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#adddc3feba75f5f52b02a970e7656750b">originalWidth</a><code> [get]</code></td></tr>
-<tr class="separator:adddc3feba75f5f52b02a970e7656750b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3e67ea3d136dd392811a9baeba3f895"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#ae3e67ea3d136dd392811a9baeba3f895">originalHeight</a><code> [get]</code></td></tr>
-<tr class="separator:ae3e67ea3d136dd392811a9baeba3f895"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a932b6ec101b55e7873a693edf9e063b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a932b6ec101b55e7873a693edf9e063b2">width</a><code> [get]</code></td></tr>
-<tr class="separator:a932b6ec101b55e7873a693edf9e063b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4146dfc3c110b51ba4638b42ada84d89"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a4146dfc3c110b51ba4638b42ada84d89">height</a><code> [get]</code></td></tr>
-<tr class="separator:a4146dfc3c110b51ba4638b42ada84d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ae2f48ace24172ab0676684af6db499"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a4ae2f48ace24172ab0676684af6db499">vertTopOffset</a><code> [get]</code></td></tr>
-<tr class="separator:a4ae2f48ace24172ab0676684af6db499"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4cc5ed6d955620fda30c5a9a2782cbf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#ac4cc5ed6d955620fda30c5a9a2782cbf">vertBottomOffset</a><code> [get]</code></td></tr>
-<tr class="separator:ac4cc5ed6d955620fda30c5a9a2782cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ce79484a6bc409f102d49fee919e357"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a9ce79484a6bc409f102d49fee919e357">horLeftOffset</a><code> [get]</code></td></tr>
-<tr class="separator:a9ce79484a6bc409f102d49fee919e357"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17d4728844c937b7dfc04a4a33939d4d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a17d4728844c937b7dfc04a4a33939d4d">horRightOffset</a><code> [get]</code></td></tr>
-<tr class="separator:a17d4728844c937b7dfc04a4a33939d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a710ec6d720eb61aa156996bd9567f248"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a710ec6d720eb61aa156996bd9567f248">OriginalWidth</a><code> [get]</code></td></tr>
+<tr class="memdesc:a710ec6d720eb61aa156996bd9567f248"><td class="mdescLeft">&#160;</td><td class="mdescRight">The original width of the collision box.  <a href="classECS__Framework_1_1CollisionBoxComponent.html#a710ec6d720eb61aa156996bd9567f248">More...</a><br /></td></tr>
+<tr class="separator:a710ec6d720eb61aa156996bd9567f248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed6c4efc517d2ca518f5f539003ac058"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#aed6c4efc517d2ca518f5f539003ac058">OriginalHeight</a><code> [get]</code></td></tr>
+<tr class="memdesc:aed6c4efc517d2ca518f5f539003ac058"><td class="mdescLeft">&#160;</td><td class="mdescRight">The original height of the collision box.  <a href="classECS__Framework_1_1CollisionBoxComponent.html#aed6c4efc517d2ca518f5f539003ac058">More...</a><br /></td></tr>
+<tr class="separator:aed6c4efc517d2ca518f5f539003ac058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ac79952c238a97cbb7cfda1beb1c7a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a1ac79952c238a97cbb7cfda1beb1c7a9">Width</a><code> [get]</code></td></tr>
+<tr class="memdesc:a1ac79952c238a97cbb7cfda1beb1c7a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current width of the collision box.  <a href="classECS__Framework_1_1CollisionBoxComponent.html#a1ac79952c238a97cbb7cfda1beb1c7a9">More...</a><br /></td></tr>
+<tr class="separator:a1ac79952c238a97cbb7cfda1beb1c7a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7e64f68a0e56fe102e2466547ec07e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#af7e64f68a0e56fe102e2466547ec07e5">Height</a><code> [get]</code></td></tr>
+<tr class="memdesc:af7e64f68a0e56fe102e2466547ec07e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current height of the collision box.  <a href="classECS__Framework_1_1CollisionBoxComponent.html#af7e64f68a0e56fe102e2466547ec07e5">More...</a><br /></td></tr>
+<tr class="separator:af7e64f68a0e56fe102e2466547ec07e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb00c32866e4113e1b477ebd5a73745"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#aaeb00c32866e4113e1b477ebd5a73745">VertTopOffset</a><code> [get]</code></td></tr>
+<tr class="memdesc:aaeb00c32866e4113e1b477ebd5a73745"><td class="mdescLeft">&#160;</td><td class="mdescRight">The vertical top offset of the collision box.  <a href="classECS__Framework_1_1CollisionBoxComponent.html#aaeb00c32866e4113e1b477ebd5a73745">More...</a><br /></td></tr>
+<tr class="separator:aaeb00c32866e4113e1b477ebd5a73745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e9b4134737086be5111f24d3c38f24"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#ae1e9b4134737086be5111f24d3c38f24">VertBottomOffset</a><code> [get]</code></td></tr>
+<tr class="memdesc:ae1e9b4134737086be5111f24d3c38f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">The vertical bottom offset of the collision box.  <a href="classECS__Framework_1_1CollisionBoxComponent.html#ae1e9b4134737086be5111f24d3c38f24">More...</a><br /></td></tr>
+<tr class="separator:ae1e9b4134737086be5111f24d3c38f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37aab6bf3099f0c3a8f8d9e36fddc8b6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a37aab6bf3099f0c3a8f8d9e36fddc8b6">HorLeftOffset</a><code> [get]</code></td></tr>
+<tr class="memdesc:a37aab6bf3099f0c3a8f8d9e36fddc8b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The horizontal left offset of the collision box.  <a href="classECS__Framework_1_1CollisionBoxComponent.html#a37aab6bf3099f0c3a8f8d9e36fddc8b6">More...</a><br /></td></tr>
+<tr class="separator:a37aab6bf3099f0c3a8f8d9e36fddc8b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a689c2be46143f80c783e06d7e6eddb27"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html#a689c2be46143f80c783e06d7e6eddb27">HorRightOffset</a><code> [get]</code></td></tr>
+<tr class="memdesc:a689c2be46143f80c783e06d7e6eddb27"><td class="mdescLeft">&#160;</td><td class="mdescRight">The horizontal right offset of the collision box.  <a href="classECS__Framework_1_1CollisionBoxComponent.html#a689c2be46143f80c783e06d7e6eddb27">More...</a><br /></td></tr>
+<tr class="separator:a689c2be46143f80c783e06d7e6eddb27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classECS__Framework_1_1Component.html" title="The base class for all components.">Component</a> that contains data and methods related to collision box of an entity in the game. </p>
@@ -217,8 +225,8 @@ Properties</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac707d5d481133d8daf1698515897c6bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac707d5d481133d8daf1698515897c6bc">&#9670;&nbsp;</a></span>checkIfInAir()</h2>
+<a id="ac002760af1ca43fdb8aec843ccac5c6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac002760af1ca43fdb8aec843ccac5c6e">&#9670;&nbsp;</a></span>checkIfInAir()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -230,13 +238,13 @@ Properties</h2></td></tr>
           <td class="memname">bool ECS_Framework.CollisionBoxComponent.checkIfInAir </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>left</em>, </td>
+          <td class="paramname"><em>position</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>right</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -389,8 +397,8 @@ Properties</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
-<a id="a4146dfc3c110b51ba4638b42ada84d89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4146dfc3c110b51ba4638b42ada84d89">&#9670;&nbsp;</a></span>height</h2>
+<a id="af7e64f68a0e56fe102e2466547ec07e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7e64f68a0e56fe102e2466547ec07e5">&#9670;&nbsp;</a></span>Height</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -399,7 +407,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ECS_Framework.CollisionBoxComponent.height</td>
+          <td class="memname">int ECS_Framework.CollisionBoxComponent.Height</td>
         </tr>
       </table>
   </td>
@@ -409,10 +417,12 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The current height of the collision box. </p>
+
 </div>
 </div>
-<a id="a9ce79484a6bc409f102d49fee919e357"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ce79484a6bc409f102d49fee919e357">&#9670;&nbsp;</a></span>horLeftOffset</h2>
+<a id="a37aab6bf3099f0c3a8f8d9e36fddc8b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37aab6bf3099f0c3a8f8d9e36fddc8b6">&#9670;&nbsp;</a></span>HorLeftOffset</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -421,7 +431,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ECS_Framework.CollisionBoxComponent.horLeftOffset</td>
+          <td class="memname">int ECS_Framework.CollisionBoxComponent.HorLeftOffset</td>
         </tr>
       </table>
   </td>
@@ -431,10 +441,12 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The horizontal left offset of the collision box. </p>
+
 </div>
 </div>
-<a id="a17d4728844c937b7dfc04a4a33939d4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17d4728844c937b7dfc04a4a33939d4d">&#9670;&nbsp;</a></span>horRightOffset</h2>
+<a id="a689c2be46143f80c783e06d7e6eddb27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a689c2be46143f80c783e06d7e6eddb27">&#9670;&nbsp;</a></span>HorRightOffset</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -443,7 +455,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ECS_Framework.CollisionBoxComponent.horRightOffset</td>
+          <td class="memname">int ECS_Framework.CollisionBoxComponent.HorRightOffset</td>
         </tr>
       </table>
   </td>
@@ -453,10 +465,12 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The horizontal right offset of the collision box. </p>
+
 </div>
 </div>
-<a id="ae3e67ea3d136dd392811a9baeba3f895"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3e67ea3d136dd392811a9baeba3f895">&#9670;&nbsp;</a></span>originalHeight</h2>
+<a id="aed6c4efc517d2ca518f5f539003ac058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed6c4efc517d2ca518f5f539003ac058">&#9670;&nbsp;</a></span>OriginalHeight</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -465,7 +479,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ECS_Framework.CollisionBoxComponent.originalHeight</td>
+          <td class="memname">int ECS_Framework.CollisionBoxComponent.OriginalHeight</td>
         </tr>
       </table>
   </td>
@@ -475,10 +489,12 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The original height of the collision box. </p>
+
 </div>
 </div>
-<a id="adddc3feba75f5f52b02a970e7656750b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adddc3feba75f5f52b02a970e7656750b">&#9670;&nbsp;</a></span>originalWidth</h2>
+<a id="a710ec6d720eb61aa156996bd9567f248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a710ec6d720eb61aa156996bd9567f248">&#9670;&nbsp;</a></span>OriginalWidth</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -487,7 +503,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ECS_Framework.CollisionBoxComponent.originalWidth</td>
+          <td class="memname">int ECS_Framework.CollisionBoxComponent.OriginalWidth</td>
         </tr>
       </table>
   </td>
@@ -497,10 +513,12 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The original width of the collision box. </p>
+
 </div>
 </div>
-<a id="ac4cc5ed6d955620fda30c5a9a2782cbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4cc5ed6d955620fda30c5a9a2782cbf">&#9670;&nbsp;</a></span>vertBottomOffset</h2>
+<a id="ae1e9b4134737086be5111f24d3c38f24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e9b4134737086be5111f24d3c38f24">&#9670;&nbsp;</a></span>VertBottomOffset</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -509,7 +527,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ECS_Framework.CollisionBoxComponent.vertBottomOffset</td>
+          <td class="memname">int ECS_Framework.CollisionBoxComponent.VertBottomOffset</td>
         </tr>
       </table>
   </td>
@@ -519,10 +537,12 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The vertical bottom offset of the collision box. </p>
+
 </div>
 </div>
-<a id="a4ae2f48ace24172ab0676684af6db499"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ae2f48ace24172ab0676684af6db499">&#9670;&nbsp;</a></span>vertTopOffset</h2>
+<a id="aaeb00c32866e4113e1b477ebd5a73745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeb00c32866e4113e1b477ebd5a73745">&#9670;&nbsp;</a></span>VertTopOffset</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -531,7 +551,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ECS_Framework.CollisionBoxComponent.vertTopOffset</td>
+          <td class="memname">int ECS_Framework.CollisionBoxComponent.VertTopOffset</td>
         </tr>
       </table>
   </td>
@@ -541,10 +561,12 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The vertical top offset of the collision box. </p>
+
 </div>
 </div>
-<a id="a932b6ec101b55e7873a693edf9e063b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a932b6ec101b55e7873a693edf9e063b2">&#9670;&nbsp;</a></span>width</h2>
+<a id="a1ac79952c238a97cbb7cfda1beb1c7a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ac79952c238a97cbb7cfda1beb1c7a9">&#9670;&nbsp;</a></span>Width</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -553,7 +575,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ECS_Framework.CollisionBoxComponent.width</td>
+          <td class="memname">int ECS_Framework.CollisionBoxComponent.Width</td>
         </tr>
       </table>
   </td>
@@ -562,6 +584,8 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The current width of the collision box. </p>
 
 </div>
 </div>

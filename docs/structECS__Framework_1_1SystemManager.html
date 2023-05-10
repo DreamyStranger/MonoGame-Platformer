@@ -79,8 +79,11 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab68a066944d5797a54d5553d855d77f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structECS__Framework_1_1SystemManager.html#ab68a066944d5797a54d5553d855d77f0">SystemManager</a> (<a class="el" href="namespaceECS__Framework.html#ab98f526dd304c35ce573b5ae4dd02f90">LevelID</a> levelID)</td></tr>
-<tr class="memdesc:ab68a066944d5797a54d5553d855d77f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="structECS__Framework_1_1SystemManager.html" title="Manages a collection of systems and provides methods to add, remove, update and draw entities through...">SystemManager</a> class with a specified level ID.  <a href="structECS__Framework_1_1SystemManager.html#ab68a066944d5797a54d5553d855d77f0">More...</a><br /></td></tr>
+<tr class="memdesc:ab68a066944d5797a54d5553d855d77f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="structECS__Framework_1_1SystemManager.html" title="Manages a collection of systems and provides methods to add, remove, update and draw entities through...">SystemManager</a> class.  <a href="structECS__Framework_1_1SystemManager.html#ab68a066944d5797a54d5553d855d77f0">More...</a><br /></td></tr>
 <tr class="separator:ab68a066944d5797a54d5553d855d77f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a797293f333b40223e8bdd98fdb20f573"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structECS__Framework_1_1SystemManager.html#a797293f333b40223e8bdd98fdb20f573">ResetSystems</a> (<a class="el" href="namespaceECS__Framework.html#ab98f526dd304c35ce573b5ae4dd02f90">LevelID</a> levelID)</td></tr>
+<tr class="memdesc:a797293f333b40223e8bdd98fdb20f573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the system manager, used whenever a level is changed/reloaded  <a href="structECS__Framework_1_1SystemManager.html#a797293f333b40223e8bdd98fdb20f573">More...</a><br /></td></tr>
+<tr class="separator:a797293f333b40223e8bdd98fdb20f573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecde90884fdee8649ab945ac86d5885a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structECS__Framework_1_1SystemManager.html#aecde90884fdee8649ab945ac86d5885a">Add</a> (<a class="el" href="classECS__Framework_1_1Entity.html">Entity</a> entity)</td></tr>
 <tr class="memdesc:aecde90884fdee8649ab945ac86d5885a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an entity to all the systems.  <a href="structECS__Framework_1_1SystemManager.html#aecde90884fdee8649ab945ac86d5885a">More...</a><br /></td></tr>
 <tr class="separator:aecde90884fdee8649ab945ac86d5885a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,7 +124,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Initializes a new instance of the <a class="el" href="structECS__Framework_1_1SystemManager.html" title="Manages a collection of systems and provides methods to add, remove, update and draw entities through...">SystemManager</a> class with a specified level ID. </p>
+<p>Initializes a new instance of the <a class="el" href="structECS__Framework_1_1SystemManager.html" title="Manages a collection of systems and provides methods to add, remove, update and draw entities through...">SystemManager</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">LevelID</td><td>The ID of the level.</td></tr>
@@ -228,6 +231,40 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">entity</td><td>The entity to be removed.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a797293f333b40223e8bdd98fdb20f573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a797293f333b40223e8bdd98fdb20f573">&#9670;&nbsp;</a></span>ResetSystems()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.SystemManager.ResetSystems </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceECS__Framework.html#ab98f526dd304c35ce573b5ae4dd02f90">LevelID</a>&#160;</td>
+          <td class="paramname"><em>levelID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resets the system manager, used whenever a level is changed/reloaded </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LevelID</td><td>The ID of the level.</td></tr>
   </table>
   </dd>
 </dl>

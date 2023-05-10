@@ -104,7 +104,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a29f5992c42ab81056239d22c9e48cc36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an animation for a given action to the list of animations.  <a href="classECS__Framework_1_1AnimatedComponent.html#a29f5992c42ab81056239d22c9e48cc36">More...</a><br /></td></tr>
 <tr class="separator:a29f5992c42ab81056239d22c9e48cc36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8dc6588cfb8874c7cdffcc2818463dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classECS__Framework_1_1ActionAnimation.html">ActionAnimation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1AnimatedComponent.html#ab8dc6588cfb8874c7cdffcc2818463dc">GetCurrentAnimation</a> ()</td></tr>
-<tr class="memdesc:ab8dc6588cfb8874c7cdffcc2818463dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current animation associated with the component.  <a href="classECS__Framework_1_1AnimatedComponent.html#ab8dc6588cfb8874c7cdffcc2818463dc">More...</a><br /></td></tr>
 <tr class="separator:ab8dc6588cfb8874c7cdffcc2818463dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cfefc1ee307246d502be4ac045ea1f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1AnimatedComponent.html#a1cfefc1ee307246d502be4ac045ea1f1">Update</a> (GameTime gameTime)</td></tr>
 <tr class="memdesc:a1cfefc1ee307246d502be4ac045ea1f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current animation based on the elapsed game time.  <a href="classECS__Framework_1_1AnimatedComponent.html#a1cfefc1ee307246d502be4ac045ea1f1">More...</a><br /></td></tr>
@@ -212,7 +211,7 @@ Properties</h2></td></tr>
 <p>Adds an animation for a given action to the list of animations. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sprite</td><td>The name (ID from <a class="el" href="classECS__Framework_1_1Loader.html" title="Handles loading and retrieval of game assets, including textures and tile maps.">Loader</a> Class) of the sprite to use for the animation.</td></tr>
+    <tr><td class="paramname">sprite</td><td>The name (ID from <a class="el" href="classECS__Framework_1_1Loader.html" title="Handles loading and retrieval of game assets, including textures, tile maps, and music.">Loader</a> Class) of the sprite to use for the animation.</td></tr>
     <tr><td class="paramname">action</td><td>The name of the action (ID from <a class="el" href="classECS__Framework_1_1StateComponent.html" title="Component that stores the current state and super state of an object, as well as its state ID,...">StateComponent</a>) associated with the animation.</td></tr>
     <tr><td class="paramname">rows</td><td>The number of rows in the sprite sheet.</td></tr>
     <tr><td class="paramname">columns</td><td>The number of columns in the sprite sheet.</td></tr>
@@ -298,8 +297,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gets the current animation associated with the component. </p>
-<dl class="section return"><dt>Returns</dt><dd>The current animation associated with the component.</dd></dl>
+<p></p>
+<p>Returns the current animation associated with the component, or the default "idle" animation if the current action does not have an animation associated with it.</p>
+<dl class="section return"><dt>Returns</dt><dd>The current animation associated with the component, or the default "idle" animation if the current action does not have an animation associated with it.</dd></dl>
 
 </div>
 </div>

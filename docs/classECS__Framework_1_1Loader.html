@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Handles loading and retrieval of game assets, including textures and tile maps.  
+<p>Handles loading and retrieval of game assets, including textures, tile maps, and music.  
  <a href="classECS__Framework_1_1Loader.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -84,8 +84,13 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4d0dae3282da6db33df1cbcdd2e1ff92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads game assets into memory.  <a href="classECS__Framework_1_1Loader.html#a4d0dae3282da6db33df1cbcdd2e1ff92">More...</a><br /></td></tr>
 <tr class="separator:a4d0dae3282da6db33df1cbcdd2e1ff92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a109e7bf266e1f094fe060787aff7425c"><td class="memItemLeft" align="right" valign="top">static Texture2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1Loader.html#a109e7bf266e1f094fe060787aff7425c">GetTexture</a> (string textureName)</td></tr>
-<tr class="memdesc:a109e7bf266e1f094fe060787aff7425c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a loaded texture by name.  <a href="classECS__Framework_1_1Loader.html#a109e7bf266e1f094fe060787aff7425c">More...</a><br /></td></tr>
+<tr class="memdesc:a109e7bf266e1f094fe060787aff7425c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a texture given its name.  <a href="classECS__Framework_1_1Loader.html#a109e7bf266e1f094fe060787aff7425c">More...</a><br /></td></tr>
 <tr class="separator:a109e7bf266e1f094fe060787aff7425c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebddba0a8a1282a1008307d6db2a2b23"><td class="memItemLeft" align="right" valign="top">static Song&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1Loader.html#aebddba0a8a1282a1008307d6db2a2b23">GetMusic</a> (string songName)</td></tr>
+<tr class="memdesc:aebddba0a8a1282a1008307d6db2a2b23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a music file given its name.  <a href="classECS__Framework_1_1Loader.html#aebddba0a8a1282a1008307d6db2a2b23">More...</a><br /></td></tr>
+<tr class="separator:aebddba0a8a1282a1008307d6db2a2b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3b98a6c6a827487113a398642420cd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1Loader.html#aed3b98a6c6a827487113a398642420cd">PlayMusic</a> (string musicName, bool loop=false)</td></tr>
+<tr class="separator:aed3b98a6c6a827487113a398642420cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -96,12 +101,45 @@ Static Public Attributes</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:a29da2db4587e34a498e36a4453e03f46"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classECS__Framework_1_1TileHandler.html">TileHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1Loader.html#a29da2db4587e34a498e36a4453e03f46">tiledHandler</a><code> [get]</code></td></tr>
 <tr class="separator:a29da2db4587e34a498e36a4453e03f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a389733c4689ddd627deb5c960f8f9d31"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; string, List&lt; Rectangle &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1Loader.html#a389733c4689ddd627deb5c960f8f9d31">obstacles</a><code> [get]</code></td></tr>
-<tr class="separator:a389733c4689ddd627deb5c960f8f9d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Handles loading and retrieval of game assets, including textures and tile maps. </p>
+<div class="textblock"><p>Handles loading and retrieval of game assets, including textures, tile maps, and music. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aebddba0a8a1282a1008307d6db2a2b23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebddba0a8a1282a1008307d6db2a2b23">&#9670;&nbsp;</a></span>GetMusic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Song ECS_Framework.Loader.GetMusic </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>songName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves a music file given its name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">songName</td><td>The name of the music file to retrieve.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The loaded music, or null if the music file was not found.</dd></dl>
+
+</div>
+</div>
 <a id="a109e7bf266e1f094fe060787aff7425c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a109e7bf266e1f094fe060787aff7425c">&#9670;&nbsp;</a></span>GetTexture()</h2>
 
@@ -126,7 +164,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Retrieves a loaded texture by name. </p>
+<p>Retrieves a texture given its name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">textureName</td><td>The name of the texture to retrieve.</td></tr>
@@ -171,6 +209,52 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="aed3b98a6c6a827487113a398642420cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed3b98a6c6a827487113a398642420cd">&#9670;&nbsp;</a></span>PlayMusic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ECS_Framework.Loader.PlayMusic </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>musicName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>loop</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>Plays a music file given its name.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">musicName</td><td>The name of the music file to play.</td></tr>
+    <tr><td class="paramname">loop</td><td>If set to true, the music will loop. Defaults to false.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a5c580a751edf473612b2c73db95c9659"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5c580a751edf473612b2c73db95c9659">&#9670;&nbsp;</a></span>collisionBox</h2>
@@ -195,28 +279,6 @@ Properties</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
-<a id="a389733c4689ddd627deb5c960f8f9d31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a389733c4689ddd627deb5c960f8f9d31">&#9670;&nbsp;</a></span>obstacles</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Dictionary&lt;string, List&lt;Rectangle&gt; &gt; ECS_Framework.Loader.obstacles</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a29da2db4587e34a498e36a4453e03f46"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29da2db4587e34a498e36a4453e03f46">&#9670;&nbsp;</a></span>tiledHandler</h2>
 

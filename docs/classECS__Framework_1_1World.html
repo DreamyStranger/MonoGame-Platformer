@@ -88,9 +88,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a28c2e864cfcbfda362f750a160fff339"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1World.html#a28c2e864cfcbfda362f750a160fff339">NextLevel</a> (<a class="el" href="classECS__Framework_1_1NextLevelMessage.html">NextLevelMessage</a> message=null)</td></tr>
 <tr class="memdesc:a28c2e864cfcbfda362f750a160fff339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advances to the next level.  <a href="classECS__Framework_1_1World.html#a28c2e864cfcbfda362f750a160fff339">More...</a><br /></td></tr>
 <tr class="separator:a28c2e864cfcbfda362f750a160fff339"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55ee3f05a3ec9ce07b723c3a8d1f6c89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1World.html#a55ee3f05a3ec9ce07b723c3a8d1f6c89">PreviousLevel</a> ()</td></tr>
-<tr class="memdesc:a55ee3f05a3ec9ce07b723c3a8d1f6c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Goes back to the previous level.  <a href="classECS__Framework_1_1World.html#a55ee3f05a3ec9ce07b723c3a8d1f6c89">More...</a><br /></td></tr>
-<tr class="separator:a55ee3f05a3ec9ce07b723c3a8d1f6c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b7439dc596618b531d6d29d7fa8683"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1World.html#ad5b7439dc596618b531d6d29d7fa8683">PreviousLevel</a> (<a class="el" href="classECS__Framework_1_1PreviousLevelMessage.html">PreviousLevelMessage</a> message=null)</td></tr>
+<tr class="memdesc:ad5b7439dc596618b531d6d29d7fa8683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Goes back to the previous level.  <a href="classECS__Framework_1_1World.html#ad5b7439dc596618b531d6d29d7fa8683">More...</a><br /></td></tr>
+<tr class="separator:ad5b7439dc596618b531d6d29d7fa8683"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a830a6c6f6b88f255b0a5a3f7c3c65b81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1World.html#a830a6c6f6b88f255b0a5a3f7c3c65b81">Update</a> (GameTime gameTime)</td></tr>
 <tr class="memdesc:a830a6c6f6b88f255b0a5a3f7c3c65b81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the game world.  <a href="classECS__Framework_1_1World.html#a830a6c6f6b88f255b0a5a3f7c3c65b81">More...</a><br /></td></tr>
 <tr class="separator:a830a6c6f6b88f255b0a5a3f7c3c65b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -100,9 +100,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a6dde0336563466a567fb4ab3978de86e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classECS__Framework_1_1Level.html">Level</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1World.html#a6dde0336563466a567fb4ab3978de86e">CurrentLevel</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:a6dde0336563466a567fb4ab3978de86e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or sets the current level.  <a href="classECS__Framework_1_1World.html#a6dde0336563466a567fb4ab3978de86e">More...</a><br /></td></tr>
-<tr class="separator:a6dde0336563466a567fb4ab3978de86e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95948045791e109e436043ecf588ca64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceECS__Framework.html#ab98f526dd304c35ce573b5ae4dd02f90">LevelID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1World.html#a95948045791e109e436043ecf588ca64">CurrentLevel</a><code> [get]</code></td></tr>
+<tr class="memdesc:a95948045791e109e436043ecf588ca64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current level.  <a href="classECS__Framework_1_1World.html#a95948045791e109e436043ecf588ca64">More...</a><br /></td></tr>
+<tr class="separator:a95948045791e109e436043ecf588ca64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents the game world and manages loading and updating levels. </p>
@@ -160,6 +160,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Draws the game world. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spriteBatch</td><td>The SpriteBatch to draw with.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -188,11 +194,17 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Advances to the next level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Optional message parameter.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a55ee3f05a3ec9ce07b723c3a8d1f6c89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55ee3f05a3ec9ce07b723c3a8d1f6c89">&#9670;&nbsp;</a></span>PreviousLevel()</h2>
+<a id="ad5b7439dc596618b531d6d29d7fa8683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5b7439dc596618b531d6d29d7fa8683">&#9670;&nbsp;</a></span>PreviousLevel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,7 +215,8 @@ Properties</h2></td></tr>
         <tr>
           <td class="memname">void ECS_Framework.World.PreviousLevel </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1PreviousLevelMessage.html">PreviousLevelMessage</a>&#160;</td>
+          <td class="paramname"><em>message</em> = <code>null</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -243,6 +256,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Resets the current level by reloading it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Optional message parameter.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -271,12 +290,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Updates the game world. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gameTime</td><td>Provides a snapshot of timing values.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
-<a id="a6dde0336563466a567fb4ab3978de86e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dde0336563466a567fb4ab3978de86e">&#9670;&nbsp;</a></span>CurrentLevel</h2>
+<a id="a95948045791e109e436043ecf588ca64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95948045791e109e436043ecf588ca64">&#9670;&nbsp;</a></span>CurrentLevel</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -285,17 +310,17 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classECS__Framework_1_1Level.html">Level</a> ECS_Framework.World.CurrentLevel</td>
+          <td class="memname"><a class="el" href="namespaceECS__Framework.html#ab98f526dd304c35ce573b5ae4dd02f90">LevelID</a> ECS_Framework.World.CurrentLevel</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gets or sets the current level. </p>
+<p>Gets the current level. </p>
 
 </div>
 </div>

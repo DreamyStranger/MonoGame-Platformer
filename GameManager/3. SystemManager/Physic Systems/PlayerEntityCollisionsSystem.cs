@@ -188,6 +188,7 @@ namespace ECS_Framework
             if (collidesWithTopSide && wasAbove)
             {
                 positionY = rect.Top - data.CollisionBox.OriginalHeight + data.CollisionBox.VertBottomOffset;
+                // I will leave it be in case I find usage for this later
                 data.CollisionBox.SetGroundLocation(rect.Left, rect.Right);
                 data.Movement.Velocity = Vector2.Zero;
                 data.Movement.Acceleration = Vector2.Zero;

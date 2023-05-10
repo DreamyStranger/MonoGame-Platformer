@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initialize_279',['Initialize',['../classECS__Framework_1_1Game1.html#ae256e76f75a0cc7b4d80acc65c8b6d07',1,'ECS_Framework::Game1']]]
+  ['fruit_342',['Fruit',['../classECS__Framework_1_1LevelLoader.html#a27563b07c3c39771eda2204c3ce4da43',1,'ECS_Framework::LevelLoader']]]
 ];

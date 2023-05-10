@@ -67,6 +67,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classECS__Framework_1_1PlayerInputSystem-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ECS_Framework.PlayerInputSystem Class Reference</div>  </div>
@@ -112,6 +114,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1System.html#af7d4d576bd243e196c31c606b3d82e31">Draw</a> (SpriteBatch spriteBatch)</td></tr>
 <tr class="memdesc:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the system.  <a href="classECS__Framework_1_1System.html#af7d4d576bd243e196c31c606b3d82e31">More...</a><br /></td></tr>
 <tr class="separator:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a12c1a293fa4c19fdae9bae042691b016"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1PlayerInputSystem.html#a12c1a293fa4c19fdae9bae042691b016">UpdateEntityState</a> (GameTime gameTime, <a class="el" href="classECS__Framework_1_1PlayerInputComponent.html">PlayerInputComponent</a> input, <a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a> state)</td></tr>
+<tr class="memdesc:a12c1a293fa4c19fdae9bae042691b016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the state of an entity based on its input and current state.  <a href="classECS__Framework_1_1PlayerInputSystem.html#a12c1a293fa4c19fdae9bae042691b016">More...</a><br /></td></tr>
+<tr class="separator:a12c1a293fa4c19fdae9bae042691b016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a91ac0293ef92e9d1f2bbd71a647ef449"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classECS__Framework_1_1Entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1PlayerInputSystem.html#a91ac0293ef92e9d1f2bbd71a647ef449">entities</a></td></tr>
+<tr class="separator:a91ac0293ef92e9d1f2bbd71a647ef449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a303a7d1ac7a6bde4281d0bcac8ed47c0"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1PlayerInputSystem.html#a303a7d1ac7a6bde4281d0bcac8ed47c0">states</a></td></tr>
+<tr class="separator:a303a7d1ac7a6bde4281d0bcac8ed47c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2bd1c12556d3c33420b4ec32f7f99d5"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classECS__Framework_1_1PlayerInputComponent.html">PlayerInputComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1PlayerInputSystem.html#aa2bd1c12556d3c33420b4ec32f7f99d5">inputs</a></td></tr>
+<tr class="separator:aa2bd1c12556d3c33420b4ec32f7f99d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> that updates the state of entities based on keyboard input. </p>
@@ -249,6 +266,125 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classECS__Framework_1_1System.html#a1155e41625fd6c6d5b5a9848fd4a9b6e">ECS_Framework.System</a>.</p>
+
+</div>
+</div>
+<a id="a12c1a293fa4c19fdae9bae042691b016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12c1a293fa4c19fdae9bae042691b016">&#9670;&nbsp;</a></span>UpdateEntityState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.PlayerInputSystem.UpdateEntityState </td>
+          <td>(</td>
+          <td class="paramtype">GameTime&#160;</td>
+          <td class="paramname"><em>gameTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1PlayerInputComponent.html">PlayerInputComponent</a>&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the state of an entity based on its input and current state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gameTime</td><td>The current game time.</td></tr>
+    <tr><td class="paramname">input</td><td>The input component for the entity.</td></tr>
+    <tr><td class="paramname">state</td><td>The state component for the entity.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a91ac0293ef92e9d1f2bbd71a647ef449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91ac0293ef92e9d1f2bbd71a647ef449">&#9670;&nbsp;</a></span>entities</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classECS__Framework_1_1Entity.html">Entity</a>&gt; ECS_Framework.PlayerInputSystem.entities</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2bd1c12556d3c33420b4ec32f7f99d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2bd1c12556d3c33420b4ec32f7f99d5">&#9670;&nbsp;</a></span>inputs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classECS__Framework_1_1PlayerInputComponent.html">PlayerInputComponent</a>&gt; ECS_Framework.PlayerInputSystem.inputs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a303a7d1ac7a6bde4281d0bcac8ed47c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a303a7d1ac7a6bde4281d0bcac8ed47c0">&#9670;&nbsp;</a></span>states</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a>&gt; ECS_Framework.PlayerInputSystem.states</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

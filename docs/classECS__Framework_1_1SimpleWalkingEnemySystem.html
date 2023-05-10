@@ -67,6 +67,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classECS__Framework_1_1SimpleWalkingEnemySystem-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ECS_Framework.SimpleWalkingEnemySystem Class Reference</div>  </div>
@@ -104,6 +106,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1System.html#af7d4d576bd243e196c31c606b3d82e31">Draw</a> (SpriteBatch spriteBatch)</td></tr>
 <tr class="memdesc:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the system.  <a href="classECS__Framework_1_1System.html#af7d4d576bd243e196c31c606b3d82e31">More...</a><br /></td></tr>
 <tr class="separator:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:adcb018720a2f50d615b40ce6ae844f55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1SimpleWalkingEnemySystem.html#adcb018720a2f50d615b40ce6ae844f55">UpdateEntityState</a> (GameTime gameTime, <a class="el" href="classECS__Framework_1_1SimpleWalkingEnemyComponent.html">SimpleWalkingEnemyComponent</a> input, <a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a> state)</td></tr>
+<tr class="separator:adcb018720a2f50d615b40ce6ae844f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af7665d4df1e5f5a3235dd111f8fd7afe"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classECS__Framework_1_1Entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1SimpleWalkingEnemySystem.html#af7665d4df1e5f5a3235dd111f8fd7afe">entities</a></td></tr>
+<tr class="separator:af7665d4df1e5f5a3235dd111f8fd7afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5046102c0eabfeaa72e090192a1d9012"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1SimpleWalkingEnemySystem.html#a5046102c0eabfeaa72e090192a1d9012">states</a></td></tr>
+<tr class="separator:a5046102c0eabfeaa72e090192a1d9012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ad12aa4e041ad03e5bfaab95f88901d"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classECS__Framework_1_1SimpleWalkingEnemyComponent.html">SimpleWalkingEnemyComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1SimpleWalkingEnemySystem.html#a4ad12aa4e041ad03e5bfaab95f88901d">inputs</a></td></tr>
+<tr class="separator:a4ad12aa4e041ad03e5bfaab95f88901d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a47fd00ac606ec32cb660e0611888db"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classECS__Framework_1_1MovementComponent.html">MovementComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1SimpleWalkingEnemySystem.html#a3a47fd00ac606ec32cb660e0611888db">movements</a></td></tr>
+<tr class="separator:a3a47fd00ac606ec32cb660e0611888db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> that updates the state of entities based on keyboard input. </p>
@@ -241,6 +259,137 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classECS__Framework_1_1System.html#a1155e41625fd6c6d5b5a9848fd4a9b6e">ECS_Framework.System</a>.</p>
+
+</div>
+</div>
+<a id="adcb018720a2f50d615b40ce6ae844f55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcb018720a2f50d615b40ce6ae844f55">&#9670;&nbsp;</a></span>UpdateEntityState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.SimpleWalkingEnemySystem.UpdateEntityState </td>
+          <td>(</td>
+          <td class="paramtype">GameTime&#160;</td>
+          <td class="paramname"><em>gameTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1SimpleWalkingEnemyComponent.html">SimpleWalkingEnemyComponent</a>&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af7665d4df1e5f5a3235dd111f8fd7afe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7665d4df1e5f5a3235dd111f8fd7afe">&#9670;&nbsp;</a></span>entities</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classECS__Framework_1_1Entity.html">Entity</a>&gt; ECS_Framework.SimpleWalkingEnemySystem.entities</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ad12aa4e041ad03e5bfaab95f88901d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad12aa4e041ad03e5bfaab95f88901d">&#9670;&nbsp;</a></span>inputs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classECS__Framework_1_1SimpleWalkingEnemyComponent.html">SimpleWalkingEnemyComponent</a>&gt; ECS_Framework.SimpleWalkingEnemySystem.inputs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a47fd00ac606ec32cb660e0611888db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a47fd00ac606ec32cb660e0611888db">&#9670;&nbsp;</a></span>movements</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classECS__Framework_1_1MovementComponent.html">MovementComponent</a>&gt; ECS_Framework.SimpleWalkingEnemySystem.movements</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5046102c0eabfeaa72e090192a1d9012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5046102c0eabfeaa72e090192a1d9012">&#9670;&nbsp;</a></span>states</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a>&gt; ECS_Framework.SimpleWalkingEnemySystem.states</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

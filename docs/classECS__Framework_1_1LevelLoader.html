@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="classECS__Framework_1_1LevelLoader-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ECS_Framework.LevelLoader Class Reference</div>  </div>
@@ -81,10 +82,103 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a2724dc8e3f9d9273621f4ef2969d804a"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="classECS__Framework_1_1Entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1LevelLoader.html#a2724dc8e3f9d9273621f4ef2969d804a">GetObjects</a> (<a class="el" href="namespaceECS__Framework.html#ab98f526dd304c35ce573b5ae4dd02f90">LevelID</a> level)</td></tr>
 <tr class="memdesc:a2724dc8e3f9d9273621f4ef2969d804a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads entities from the specified level's Tiled map.  <a href="classECS__Framework_1_1LevelLoader.html#a2724dc8e3f9d9273621f4ef2969d804a">More...</a><br /></td></tr>
 <tr class="separator:a2724dc8e3f9d9273621f4ef2969d804a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a1c7f55d8c662fb70d670799a0151684c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classECS__Framework_1_1Entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1LevelLoader.html#a1c7f55d8c662fb70d670799a0151684c">Background</a> (TiledObject obj)</td></tr>
+<tr class="memdesc:a1c7f55d8c662fb70d670799a0151684c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a parallax background entity from the specified Tiled object.  <a href="classECS__Framework_1_1LevelLoader.html#a1c7f55d8c662fb70d670799a0151684c">More...</a><br /></td></tr>
+<tr class="separator:a1c7f55d8c662fb70d670799a0151684c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6730c69d4415ed0ad645ea4d5a856ffd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classECS__Framework_1_1Entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1LevelLoader.html#a6730c69d4415ed0ad645ea4d5a856ffd">RegularEnemy</a> (TiledObject obj, Vector2 position)</td></tr>
+<tr class="memdesc:a6730c69d4415ed0ad645ea4d5a856ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a regular enemy entity based on a TiledObject and its position.  <a href="classECS__Framework_1_1LevelLoader.html#a6730c69d4415ed0ad645ea4d5a856ffd">More...</a><br /></td></tr>
+<tr class="separator:a6730c69d4415ed0ad645ea4d5a856ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27563b07c3c39771eda2204c3ce4da43"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classECS__Framework_1_1Entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1LevelLoader.html#a27563b07c3c39771eda2204c3ce4da43">Fruit</a> (TiledObject obj, Vector2 position)</td></tr>
+<tr class="memdesc:a27563b07c3c39771eda2204c3ce4da43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a fruit entity based on the given TiledObject and position.  <a href="classECS__Framework_1_1LevelLoader.html#a27563b07c3c39771eda2204c3ce4da43">More...</a><br /></td></tr>
+<tr class="separator:a27563b07c3c39771eda2204c3ce4da43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides a static method for loading entities from a Tiled map. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1c7f55d8c662fb70d670799a0151684c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c7f55d8c662fb70d670799a0151684c">&#9670;&nbsp;</a></span>Background()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classECS__Framework_1_1Entity.html">Entity</a> ECS_Framework.LevelLoader.Background </td>
+          <td>(</td>
+          <td class="paramtype">TiledObject&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a parallax background entity from the specified Tiled object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>The Tiled object representing the background.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new parallax background entity.</dd></dl>
+
+</div>
+</div>
+<a id="a27563b07c3c39771eda2204c3ce4da43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27563b07c3c39771eda2204c3ce4da43">&#9670;&nbsp;</a></span>Fruit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classECS__Framework_1_1Entity.html">Entity</a> ECS_Framework.LevelLoader.Fruit </td>
+          <td>(</td>
+          <td class="paramtype">TiledObject&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a fruit entity based on the given TiledObject and position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>The TiledObject containing the fruit properties.</td></tr>
+    <tr><td class="paramname">position</td><td>The position of the fruit.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The created fruit entity.</dd></dl>
+
+</div>
+</div>
 <a id="a2724dc8e3f9d9273621f4ef2969d804a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2724dc8e3f9d9273621f4ef2969d804a">&#9670;&nbsp;</a></span>GetObjects()</h2>
 
@@ -117,6 +211,52 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A list of entities loaded from the level's Tiled map.</dd></dl>
+
+</div>
+</div>
+<a id="a6730c69d4415ed0ad645ea4d5a856ffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6730c69d4415ed0ad645ea4d5a856ffd">&#9670;&nbsp;</a></span>RegularEnemy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classECS__Framework_1_1Entity.html">Entity</a> ECS_Framework.LevelLoader.RegularEnemy </td>
+          <td>(</td>
+          <td class="paramtype">TiledObject&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a regular enemy entity based on a TiledObject and its position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>The TiledObject representing the enemy.</td></tr>
+    <tr><td class="paramname">position</td><td>The position of the enemy in the game world.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new regular enemy entity.</dd></dl>
 
 </div>
 </div>

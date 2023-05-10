@@ -69,6 +69,8 @@ $(function() {
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classECS__Framework_1_1Loader-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ECS_Framework.Loader Class Reference</div>  </div>
@@ -99,12 +101,132 @@ Static Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a29da2db4587e34a498e36a4453e03f46"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classECS__Framework_1_1TileHandler.html">TileHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1Loader.html#a29da2db4587e34a498e36a4453e03f46">tiledHandler</a><code> [get]</code></td></tr>
+<tr class="memitem:a29da2db4587e34a498e36a4453e03f46"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classECS__Framework_1_1TileHandler.html">TileHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1Loader.html#a29da2db4587e34a498e36a4453e03f46">tiledHandler</a><code> [get, private set]</code></td></tr>
 <tr class="separator:a29da2db4587e34a498e36a4453e03f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:aa4390773482a7aef66c225f41f47d306"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1Loader.html#aa4390773482a7aef66c225f41f47d306">AddTexture</a> (string textureName, ContentManager content, params string[] pathParts)</td></tr>
+<tr class="memdesc:aa4390773482a7aef66c225f41f47d306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a texture to the textures dictionary.  <a href="classECS__Framework_1_1Loader.html#aa4390773482a7aef66c225f41f47d306">More...</a><br /></td></tr>
+<tr class="separator:aa4390773482a7aef66c225f41f47d306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a025dbeb72c090e15b5fe4be6428e2622"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1Loader.html#a025dbeb72c090e15b5fe4be6428e2622">AddMusic</a> (string songName, ContentManager content, params string[] pathParts)</td></tr>
+<tr class="memdesc:a025dbeb72c090e15b5fe4be6428e2622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a music file to the songs dictionary.  <a href="classECS__Framework_1_1Loader.html#a025dbeb72c090e15b5fe4be6428e2622">More...</a><br /></td></tr>
+<tr class="separator:a025dbeb72c090e15b5fe4be6428e2622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a699548de8d4c8370bc6ff1024f62a694"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; string, Texture2D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1Loader.html#a699548de8d4c8370bc6ff1024f62a694">textures</a> = new Dictionary&lt;string, Texture2D&gt;()</td></tr>
+<tr class="separator:a699548de8d4c8370bc6ff1024f62a694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1feda714f56e562ed5b9d093140d32d"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; string, Song &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1Loader.html#ae1feda714f56e562ed5b9d093140d32d">songs</a> = new Dictionary&lt;string, Song&gt;()</td></tr>
+<tr class="separator:ae1feda714f56e562ed5b9d093140d32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles loading and retrieval of game assets, including textures, tile maps, and music. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a025dbeb72c090e15b5fe4be6428e2622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a025dbeb72c090e15b5fe4be6428e2622">&#9670;&nbsp;</a></span>AddMusic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ECS_Framework.Loader.AddMusic </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>songName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ContentManager&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params string[]&#160;</td>
+          <td class="paramname"><em>pathParts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a music file to the songs dictionary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">songName</td><td>The name of the music file, used as the key in the dictionary.</td></tr>
+    <tr><td class="paramname">content</td><td>The ContentManager to load assets with.</td></tr>
+    <tr><td class="paramname">pathParts</td><td>An array of strings representing the path parts to the music file. These will be combined using Path.Combine.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa4390773482a7aef66c225f41f47d306"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4390773482a7aef66c225f41f47d306">&#9670;&nbsp;</a></span>AddTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ECS_Framework.Loader.AddTexture </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>textureName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ContentManager&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params string[]&#160;</td>
+          <td class="paramname"><em>pathParts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a texture to the textures dictionary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textureName</td><td>The name of the texture, used as the key in the dictionary.</td></tr>
+    <tr><td class="paramname">content</td><td>The ContentManager to load assets with.</td></tr>
+    <tr><td class="paramname">pathParts</td><td>An array of strings representing the path parts to the texture file. These will be combined using Path.Combine.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aebddba0a8a1282a1008307d6db2a2b23"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aebddba0a8a1282a1008307d6db2a2b23">&#9670;&nbsp;</a></span>GetMusic()</h2>
 
@@ -278,6 +400,50 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="ae1feda714f56e562ed5b9d093140d32d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1feda714f56e562ed5b9d093140d32d">&#9670;&nbsp;</a></span>songs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, Song&gt; ECS_Framework.Loader.songs = new Dictionary&lt;string, Song&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a699548de8d4c8370bc6ff1024f62a694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a699548de8d4c8370bc6ff1024f62a694">&#9670;&nbsp;</a></span>textures</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, Texture2D&gt; ECS_Framework.Loader.textures = new Dictionary&lt;string, Texture2D&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Property Documentation</h2>
 <a id="a29da2db4587e34a498e36a4453e03f46"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29da2db4587e34a498e36a4453e03f46">&#9670;&nbsp;</a></span>tiledHandler</h2>
@@ -294,7 +460,7 @@ Properties</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

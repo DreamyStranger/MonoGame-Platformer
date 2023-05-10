@@ -68,6 +68,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classECS__Framework_1_1ActionAnimation-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ECS_Framework.ActionAnimation Class Reference</div>  </div>
@@ -97,6 +98,25 @@ Properties</h2></td></tr>
 <tr class="memitem:a54923f4f6cb8328cac135f4b63d1acd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ActionAnimation.html#a54923f4f6cb8328cac135f4b63d1acd1">IsFinished</a><code> [get]</code></td></tr>
 <tr class="memdesc:a54923f4f6cb8328cac135f4b63d1acd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tells if current animation was finished  <a href="classECS__Framework_1_1ActionAnimation.html#a54923f4f6cb8328cac135f4b63d1acd1">More...</a><br /></td></tr>
 <tr class="separator:a54923f4f6cb8328cac135f4b63d1acd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ae5c9d6a5be2028f900749afe4e1c68a0"><td class="memItemLeft" align="right" valign="top">Texture2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ActionAnimation.html#ae5c9d6a5be2028f900749afe4e1c68a0">_texture</a></td></tr>
+<tr class="separator:ae5c9d6a5be2028f900749afe4e1c68a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22182f7743888afadd81a1340980a2dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ActionAnimation.html#a22182f7743888afadd81a1340980a2dd">_rows</a></td></tr>
+<tr class="separator:a22182f7743888afadd81a1340980a2dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d8884a4443b0055e447be671203d3e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ActionAnimation.html#a9d8884a4443b0055e447be671203d3e5">_columns</a></td></tr>
+<tr class="separator:a9d8884a4443b0055e447be671203d3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47eea22f111a279c2e2d365266e88b1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ActionAnimation.html#a47eea22f111a279c2e2d365266e88b1f">_currentFrame</a></td></tr>
+<tr class="separator:a47eea22f111a279c2e2d365266e88b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6feb14f4f90562d6b5d2df3e708f8edd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ActionAnimation.html#a6feb14f4f90562d6b5d2df3e708f8edd">_totalFrames</a></td></tr>
+<tr class="separator:a6feb14f4f90562d6b5d2df3e708f8edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a9b486589a9368cf1c2e73c24880cf7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ActionAnimation.html#a5a9b486589a9368cf1c2e73c24880cf7">_frameTime</a></td></tr>
+<tr class="separator:a5a9b486589a9368cf1c2e73c24880cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a642ca3d524fb6ba3d43c72c4fdd038ee"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ActionAnimation.html#a642ca3d524fb6ba3d43c72c4fdd038ee">_elapsedFrameTime</a></td></tr>
+<tr class="separator:a642ca3d524fb6ba3d43c72c4fdd038ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a546c78dd9359ef732fea3ce123454191"><td class="memItemLeft" align="right" valign="top">Rectangle[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ActionAnimation.html#a546c78dd9359ef732fea3ce123454191">_frames</a></td></tr>
+<tr class="separator:a546c78dd9359ef732fea3ce123454191"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents an individual animation composed of multiple frames, each of which is a rectangle in a sprite sheet. </p>
@@ -271,6 +291,183 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9d8884a4443b0055e447be671203d3e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d8884a4443b0055e447be671203d3e5">&#9670;&nbsp;</a></span>_columns</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ECS_Framework.ActionAnimation._columns</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47eea22f111a279c2e2d365266e88b1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47eea22f111a279c2e2d365266e88b1f">&#9670;&nbsp;</a></span>_currentFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ECS_Framework.ActionAnimation._currentFrame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a642ca3d524fb6ba3d43c72c4fdd038ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a642ca3d524fb6ba3d43c72c4fdd038ee">&#9670;&nbsp;</a></span>_elapsedFrameTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ECS_Framework.ActionAnimation._elapsedFrameTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a546c78dd9359ef732fea3ce123454191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546c78dd9359ef732fea3ce123454191">&#9670;&nbsp;</a></span>_frames</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rectangle [] ECS_Framework.ActionAnimation._frames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a9b486589a9368cf1c2e73c24880cf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a9b486589a9368cf1c2e73c24880cf7">&#9670;&nbsp;</a></span>_frameTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ECS_Framework.ActionAnimation._frameTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22182f7743888afadd81a1340980a2dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22182f7743888afadd81a1340980a2dd">&#9670;&nbsp;</a></span>_rows</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ECS_Framework.ActionAnimation._rows</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5c9d6a5be2028f900749afe4e1c68a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5c9d6a5be2028f900749afe4e1c68a0">&#9670;&nbsp;</a></span>_texture</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Texture2D ECS_Framework.ActionAnimation._texture</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6feb14f4f90562d6b5d2df3e708f8edd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6feb14f4f90562d6b5d2df3e708f8edd">&#9670;&nbsp;</a></span>_totalFrames</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ECS_Framework.ActionAnimation._totalFrames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

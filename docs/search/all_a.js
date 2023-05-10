@@ -1,12 +1,19 @@
 var searchData=
 [
-  ['messagebus_92',['MessageBus',['../classECS__Framework_1_1MessageBus.html',1,'ECS_Framework']]],
-  ['messagebus_2ecs_93',['MessageBus.cs',['../MessageBus_8cs.html',1,'']]],
-  ['movement_94',['Movement',['../structECS__Framework_1_1EntityData.html#a988f6d9be687ae109057206775ea239c',1,'ECS_Framework::EntityData']]],
-  ['movementcomponent_95',['MovementComponent',['../classECS__Framework_1_1MovementComponent.html',1,'ECS_Framework.MovementComponent'],['../classECS__Framework_1_1MovementComponent.html#a6cb607dc31886b0511ffd78e5ff70348',1,'ECS_Framework.MovementComponent.MovementComponent()']]],
-  ['movementcomponent_2ecs_96',['MovementComponent.cs',['../MovementComponent_8cs.html',1,'']]],
-  ['movementsystem_97',['MovementSystem',['../classECS__Framework_1_1MovementSystem.html',1,'ECS_Framework.MovementSystem'],['../classECS__Framework_1_1MovementSystem.html#a6c860ba7802028653362f22db910883c',1,'ECS_Framework.MovementSystem.MovementSystem()']]],
-  ['movementsystem_2ecs_98',['MovementSystem.cs',['../MovementSystem_8cs.html',1,'']]],
-  ['mygame_2eassemblyinfo_2ecs_99',['MyGame.AssemblyInfo.cs',['../MyGame_8AssemblyInfo_8cs.html',1,'']]],
-  ['mygame_2eglobalusings_2eg_2ecs_100',['MyGame.GlobalUsings.g.cs',['../MyGame_8GlobalUsings_8g_8cs.html',1,'']]]
+  ['idle_112',['Idle',['../namespaceECS__Framework.html#a1d0644bc18b04d7f02cb424124b843f1ae599161956d626eda4cb0a5ffb85271c',1,'ECS_Framework']]],
+  ['imessage_113',['IMessage',['../interfaceECS__Framework_1_1IMessage.html',1,'ECS_Framework']]],
+  ['initialize_114',['Initialize',['../classECS__Framework_1_1Game1.html#ae256e76f75a0cc7b4d80acc65c8b6d07',1,'ECS_Framework::Game1']]],
+  ['inputs_115',['inputs',['../classECS__Framework_1_1PlayerInputSystem.html#aa2bd1c12556d3c33420b4ec32f7f99d5',1,'ECS_Framework.PlayerInputSystem.inputs()'],['../classECS__Framework_1_1SimpleWalkingEnemySystem.html#a4ad12aa4e041ad03e5bfaab95f88901d',1,'ECS_Framework.SimpleWalkingEnemySystem.inputs()']]],
+  ['isdead_116',['IsDead',['../namespaceECS__Framework.html#af9d01d5477ca5135063c7d2aeb03b2cba12a66a0b0b263f7412b0433db19f54b0',1,'ECS_Framework']]],
+  ['isdoublejumping_117',['IsDoubleJumping',['../namespaceECS__Framework.html#af9d01d5477ca5135063c7d2aeb03b2cba9e4db82d1449472d1dd0eecc689896c3',1,'ECS_Framework']]],
+  ['isfalling_118',['IsFalling',['../namespaceECS__Framework.html#af9d01d5477ca5135063c7d2aeb03b2cbaa77faf0e393e7428251923b28b0637b5',1,'ECS_Framework']]],
+  ['isfinished_119',['IsFinished',['../classECS__Framework_1_1ActionAnimation.html#a54923f4f6cb8328cac135f4b63d1acd1',1,'ECS_Framework::ActionAnimation']]],
+  ['isjumping_120',['IsJumping',['../namespaceECS__Framework.html#af9d01d5477ca5135063c7d2aeb03b2cbab8d52747a87c3f3b6378b3e689ea6b81',1,'ECS_Framework']]],
+  ['isjumpkeydown_121',['IsJumpKeyDown',['../classECS__Framework_1_1PlayerInputComponent.html#ab8ae36bfb66c96abd947e158218d52ee',1,'ECS_Framework::PlayerInputComponent']]],
+  ['isleft_122',['IsLeft',['../classECS__Framework_1_1SimpleWalkingEnemyComponent.html#a0d41c5f15e870d7f1284d0e89cd7b687',1,'ECS_Framework::SimpleWalkingEnemyComponent']]],
+  ['isleftkeydown_123',['IsLeftKeyDown',['../classECS__Framework_1_1PlayerInputComponent.html#a754f05de85a2d73ac3bad6061690403d',1,'ECS_Framework::PlayerInputComponent']]],
+  ['isonground_124',['IsOnGround',['../namespaceECS__Framework.html#af9d01d5477ca5135063c7d2aeb03b2cbad2156c4d93f583c9d1098b62a02e90bf',1,'ECS_Framework']]],
+  ['isright_125',['IsRight',['../classECS__Framework_1_1SimpleWalkingEnemyComponent.html#ae8ba0cc217b5a28a48aa6e941d70862b',1,'ECS_Framework::SimpleWalkingEnemyComponent']]],
+  ['isrightkeydown_126',['IsRightKeyDown',['../classECS__Framework_1_1PlayerInputComponent.html#a7d4c6f63ac851bcc162d8468cd159097',1,'ECS_Framework::PlayerInputComponent']]],
+  ['issliding_127',['IsSliding',['../namespaceECS__Framework.html#af9d01d5477ca5135063c7d2aeb03b2cbaebd98812a40eadd347ed73f39e9dab98',1,'ECS_Framework']]]
 ];

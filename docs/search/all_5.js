@@ -1,17 +1,9 @@
 var searchData=
 [
-  ['game_44',['game',['../Program_8cs.html#adb31d5946e35ccc1436b9c9e8f77d0b6',1,'Program.cs']]],
-  ['game1_45',['Game1',['../classECS__Framework_1_1Game1.html',1,'ECS_Framework.Game1'],['../classECS__Framework_1_1Game1.html#a992141d75705d9f2cc0ff5412555a648',1,'ECS_Framework.Game1.Game1()']]],
-  ['game1_2ecs_46',['Game1.cs',['../Game1_8cs.html',1,'']]],
-  ['gameconstant_2ecs_47',['GameConstant.cs',['../GameConstant_8cs.html',1,'']]],
-  ['getallcomponents_48',['GetAllComponents',['../classECS__Framework_1_1Entity.html#adccf37d6b4c6e955f730071881af1918',1,'ECS_Framework::Entity']]],
-  ['getcomponent_3c_20t_20_3e_49',['GetComponent&lt; T &gt;',['../classECS__Framework_1_1Entity.html#a959ae88f890b9b2239a4a2dd848d6845',1,'ECS_Framework::Entity']]],
-  ['getcurrentanimation_50',['GetCurrentAnimation',['../classECS__Framework_1_1AnimatedComponent.html#ab8dc6588cfb8874c7cdffcc2818463dc',1,'ECS_Framework::AnimatedComponent']]],
-  ['getlayerobjects_51',['GetLayerObjects',['../classECS__Framework_1_1TileHandler.html#ad2a03910731731e647bfb33e42917f7a',1,'ECS_Framework::TileHandler']]],
-  ['getlayersobjectsinmap_52',['GetLayersObjectsInMap',['../classECS__Framework_1_1TileHandler.html#aa602cdbe40d67cdb12a690adc4b865e3',1,'ECS_Framework::TileHandler']]],
-  ['getmap_53',['GetMap',['../classECS__Framework_1_1TileHandler.html#ac7a5ab1cfaeef18434dd3d0da5b4dc58',1,'ECS_Framework::TileHandler']]],
-  ['getmusic_54',['GetMusic',['../classECS__Framework_1_1Loader.html#aebddba0a8a1282a1008307d6db2a2b23',1,'ECS_Framework::Loader']]],
-  ['getobjects_55',['GetObjects',['../classECS__Framework_1_1LevelLoader.html#a2724dc8e3f9d9273621f4ef2969d804a',1,'ECS_Framework::LevelLoader']]],
-  ['getrectangle_56',['GetRectangle',['../classECS__Framework_1_1CollisionBoxComponent.html#a10e1a7198b0cd2140ee7acd7f9ea0913',1,'ECS_Framework::CollisionBoxComponent']]],
-  ['gettexture_57',['GetTexture',['../classECS__Framework_1_1Loader.html#a109e7bf266e1f094fe060787aff7425c',1,'ECS_Framework::Loader']]]
+  ['deatheventsystem_66',['DeathEventSystem',['../classECS__Framework_1_1DeathEventSystem.html#aafe03d61007ed80b3dcfd79d8806c1c3',1,'ECS_Framework.DeathEventSystem.DeathEventSystem()'],['../classECS__Framework_1_1DeathEventSystem.html',1,'ECS_Framework.DeathEventSystem']]],
+  ['deatheventsystem_2ecs_67',['DeathEventSystem.cs',['../DeathEventSystem_8cs.html',1,'']]],
+  ['destroyentitymessage_68',['DestroyEntityMessage',['../classECS__Framework_1_1DestroyEntityMessage.html#aaebf74085dedcfe4f8b109d5f43f423d',1,'ECS_Framework.DestroyEntityMessage.DestroyEntityMessage()'],['../classECS__Framework_1_1DestroyEntityMessage.html',1,'ECS_Framework.DestroyEntityMessage']]],
+  ['destroyentitymessage_2ecs_69',['DestroyEntityMessage.cs',['../DestroyEntityMessage_8cs.html',1,'']]],
+  ['doublejump_70',['DoubleJump',['../namespaceECS__Framework.html#a1d0644bc18b04d7f02cb424124b843f1a6bd5db223a35934e784d0b75a6d0d44e',1,'ECS_Framework']]],
+  ['draw_71',['Draw',['../classECS__Framework_1_1TileHandler.html#a299522498975156a44c35c8a40fce21a',1,'ECS_Framework.TileHandler.Draw()'],['../classECS__Framework_1_1System.html#af7d4d576bd243e196c31c606b3d82e31',1,'ECS_Framework.System.Draw()'],['../classECS__Framework_1_1ParallaxComponent.html#a89235fae8c4deae06c08d6cc5ed16bbe',1,'ECS_Framework.ParallaxComponent.Draw()'],['../classECS__Framework_1_1AnimatedComponent.html#a6467d260aac7a022d505cab713a5929c',1,'ECS_Framework.AnimatedComponent.Draw()'],['../classECS__Framework_1_1ActionAnimation.html#ad544f31b2d48d79bc68d747875855eaa',1,'ECS_Framework.ActionAnimation.Draw()'],['../classECS__Framework_1_1ParallaxSystem.html#a876a6594d2e2749ec22b25f655b2d6c6',1,'ECS_Framework.ParallaxSystem.Draw()'],['../classECS__Framework_1_1ObstacleCollisionSystem.html#a12ddd79d551da24d7c19299a0c8250ae',1,'ECS_Framework.ObstacleCollisionSystem.Draw()'],['../classECS__Framework_1_1AnimationRenderSystem.html#ae278802acf0c1f32b931b8f2eb25b25d',1,'ECS_Framework.AnimationRenderSystem.Draw()'],['../classECS__Framework_1_1LevelRenderSystem.html#ac7506c431727ec8212be7aa3883ae1d0',1,'ECS_Framework.LevelRenderSystem.Draw()'],['../structECS__Framework_1_1SystemManager.html#a7c8928ef07120420e7bd18d252844149',1,'ECS_Framework.SystemManager.Draw()'],['../classECS__Framework_1_1World.html#a0e6b9075d6b5eba43925ac5fbf301a2c',1,'ECS_Framework.World.Draw()'],['../classECS__Framework_1_1Game1.html#ad2d279253f5d428ad34c551e7a0bf820',1,'ECS_Framework.Game1.Draw()']]]
 ];

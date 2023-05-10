@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classECS__Framework_1_1MessageBus-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ECS_Framework.MessageBus Class Reference</div>  </div>
@@ -87,6 +88,11 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:adf8293b05bb5489ee3687b7b3eb3c2f6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1MessageBus.html#adf8293b05bb5489ee3687b7b3eb3c2f6">Publish</a> (<a class="el" href="interfaceECS__Framework_1_1IMessage.html">IMessage</a> message)</td></tr>
 <tr class="memdesc:adf8293b05bb5489ee3687b7b3eb3c2f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publishes a message to all subscribers of the message type.  <a href="classECS__Framework_1_1MessageBus.html#adf8293b05bb5489ee3687b7b3eb3c2f6">More...</a><br /></td></tr>
 <tr class="separator:adf8293b05bb5489ee3687b7b3eb3c2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a3256374df8a58bcddcff0cf7dd846c80"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; Type, List&lt; Action&lt; <a class="el" href="interfaceECS__Framework_1_1IMessage.html">IMessage</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1MessageBus.html#a3256374df8a58bcddcff0cf7dd846c80">subscribers</a> = new Dictionary&lt;Type, List&lt;Action&lt;<a class="el" href="interfaceECS__Framework_1_1IMessage.html">IMessage</a>&gt;&gt;&gt;()</td></tr>
+<tr class="separator:a3256374df8a58bcddcff0cf7dd846c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides a message bus implementation for decoupled communication between components using a publish-subscribe pattern. </p>
@@ -219,6 +225,29 @@ Static Public Member Functions</h2></td></tr>
 </dd>
 </dl>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3256374df8a58bcddcff0cf7dd846c80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3256374df8a58bcddcff0cf7dd846c80">&#9670;&nbsp;</a></span>subscribers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;Type, List&lt;Action&lt;<a class="el" href="interfaceECS__Framework_1_1IMessage.html">IMessage</a>&gt; &gt; &gt; ECS_Framework.MessageBus.subscribers = new Dictionary&lt;Type, List&lt;Action&lt;<a class="el" href="interfaceECS__Framework_1_1IMessage.html">IMessage</a>&gt;&gt;&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

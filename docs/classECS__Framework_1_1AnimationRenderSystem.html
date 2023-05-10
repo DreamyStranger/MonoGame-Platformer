@@ -67,6 +67,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classECS__Framework_1_1AnimationRenderSystem-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ECS_Framework.AnimationRenderSystem Class Reference</div>  </div>
@@ -103,6 +105,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae278802acf0c1f32b931b8f2eb25b25d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1AnimationRenderSystem.html#ae278802acf0c1f32b931b8f2eb25b25d">Draw</a> (SpriteBatch spriteBatch)</td></tr>
 <tr class="memdesc:ae278802acf0c1f32b931b8f2eb25b25d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the entities in the render system.  <a href="classECS__Framework_1_1AnimationRenderSystem.html#ae278802acf0c1f32b931b8f2eb25b25d">More...</a><br /></td></tr>
 <tr class="separator:ae278802acf0c1f32b931b8f2eb25b25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a249209a838b65e50cdf989736af3bc7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1AnimationRenderSystem.html#a249209a838b65e50cdf989736af3bc7c">GetAnimationForState</a> (<a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a> state, <a class="el" href="classECS__Framework_1_1AnimatedComponent.html">AnimatedComponent</a> animations)</td></tr>
+<tr class="memdesc:a249209a838b65e50cdf989736af3bc7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current animation for an entity based on its current state.  <a href="classECS__Framework_1_1AnimationRenderSystem.html#a249209a838b65e50cdf989736af3bc7c">More...</a><br /></td></tr>
+<tr class="separator:a249209a838b65e50cdf989736af3bc7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9e4906ac2af556415efaf6c126faa2d7"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1AnimationRenderSystem.html#a9e4906ac2af556415efaf6c126faa2d7">_entitiesData</a></td></tr>
+<tr class="separator:a9e4906ac2af556415efaf6c126faa2d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> responsible for rendering the entities in the game. </p>
@@ -207,6 +220,51 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a249209a838b65e50cdf989736af3bc7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249209a838b65e50cdf989736af3bc7c">&#9670;&nbsp;</a></span>GetAnimationForState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.AnimationRenderSystem.GetAnimationForState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1AnimatedComponent.html">AnimatedComponent</a>&#160;</td>
+          <td class="paramname"><em>animations</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the current animation for an entity based on its current state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>The state component of the entity.</td></tr>
+    <tr><td class="paramname">animations</td><td>The animated component of the entity.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab5b967a7475913d87665193827869df7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5b967a7475913d87665193827869df7">&#9670;&nbsp;</a></span>RemoveEntity()</h2>
 
@@ -276,6 +334,29 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classECS__Framework_1_1System.html#a1155e41625fd6c6d5b5a9848fd4a9b6e">ECS_Framework.System</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9e4906ac2af556415efaf6c126faa2d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e4906ac2af556415efaf6c126faa2d7">&#9670;&nbsp;</a></span>_entitiesData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&gt; ECS_Framework.AnimationRenderSystem._entitiesData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

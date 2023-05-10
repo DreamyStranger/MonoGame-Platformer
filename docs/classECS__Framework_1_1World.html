@@ -68,6 +68,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classECS__Framework_1_1World-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ECS_Framework.World Class Reference</div>  </div>
@@ -76,6 +78,11 @@ $(function() {
 
 <p>Represents the game world and manages loading and updating levels.  
  <a href="classECS__Framework_1_1World.html#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for ECS_Framework.World:</div>
+<div class="dyncontent">
+<div class="center"><img src="classECS__Framework_1_1World__coll__graph.png" border="0" usemap="#aECS__Framework_8World_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -103,6 +110,29 @@ Properties</h2></td></tr>
 <tr class="memitem:a95948045791e109e436043ecf588ca64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceECS__Framework.html#ab98f526dd304c35ce573b5ae4dd02f90">LevelID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1World.html#a95948045791e109e436043ecf588ca64">CurrentLevel</a><code> [get]</code></td></tr>
 <tr class="memdesc:a95948045791e109e436043ecf588ca64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current level.  <a href="classECS__Framework_1_1World.html#a95948045791e109e436043ecf588ca64">More...</a><br /></td></tr>
 <tr class="separator:a95948045791e109e436043ecf588ca64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aaeeedce88ab57e92f2cf2cdd2db3f52e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1World.html#aaeeedce88ab57e92f2cf2cdd2db3f52e">ChangeLevel</a> (<a class="el" href="namespaceECS__Framework.html#ab98f526dd304c35ce573b5ae4dd02f90">LevelID</a> level)</td></tr>
+<tr class="memdesc:aaeeedce88ab57e92f2cf2cdd2db3f52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the current level to the specified level.  <a href="classECS__Framework_1_1World.html#aaeeedce88ab57e92f2cf2cdd2db3f52e">More...</a><br /></td></tr>
+<tr class="separator:aaeeedce88ab57e92f2cf2cdd2db3f52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5075f160172257c63e98359c85f45ea6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1World.html#a5075f160172257c63e98359c85f45ea6">LoadLevel</a> ()</td></tr>
+<tr class="memdesc:a5075f160172257c63e98359c85f45ea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the current level and its entities into the game world.  <a href="classECS__Framework_1_1World.html#a5075f160172257c63e98359c85f45ea6">More...</a><br /></td></tr>
+<tr class="separator:a5075f160172257c63e98359c85f45ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8213318593db476d1512983913fcb0a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1World.html#a8213318593db476d1512983913fcb0a9">OnDestroyEntity</a> (<a class="el" href="classECS__Framework_1_1DestroyEntityMessage.html">DestroyEntityMessage</a> message)</td></tr>
+<tr class="memdesc:a8213318593db476d1512983913fcb0a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the destruction of entities.  <a href="classECS__Framework_1_1World.html#a8213318593db476d1512983913fcb0a9">More...</a><br /></td></tr>
+<tr class="separator:a8213318593db476d1512983913fcb0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af4d7ae8615d189cc01b895a3dbb30c28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceECS__Framework.html#ab98f526dd304c35ce573b5ae4dd02f90">LevelID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1World.html#af4d7ae8615d189cc01b895a3dbb30c28">currentLevel</a></td></tr>
+<tr class="separator:af4d7ae8615d189cc01b895a3dbb30c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58585467976248c455c464330a2f989e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structECS__Framework_1_1SystemManager.html">SystemManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1World.html#a58585467976248c455c464330a2f989e">systems</a></td></tr>
+<tr class="separator:a58585467976248c455c464330a2f989e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b149e5e30a59558a914923f31a8715"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1World.html#a99b149e5e30a59558a914923f31a8715">totalLevels</a> = Enum.GetValues(typeof(<a class="el" href="namespaceECS__Framework.html#ab98f526dd304c35ce573b5ae4dd02f90">LevelID</a>)).Length</td></tr>
+<tr class="separator:a99b149e5e30a59558a914923f31a8715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aa5131621903fc8b4488155c7df7c15"><td class="memItemLeft" align="right" valign="top">readonly Queue&lt; <a class="el" href="classECS__Framework_1_1Entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1World.html#a4aa5131621903fc8b4488155c7df7c15">entitiesToDestroy</a></td></tr>
+<tr class="separator:a4aa5131621903fc8b4488155c7df7c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents the game world and manages loading and updating levels. </p>
@@ -135,6 +165,40 @@ Properties</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aaeeedce88ab57e92f2cf2cdd2db3f52e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeeedce88ab57e92f2cf2cdd2db3f52e">&#9670;&nbsp;</a></span>ChangeLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.World.ChangeLevel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceECS__Framework.html#ab98f526dd304c35ce573b5ae4dd02f90">LevelID</a>&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Changes the current level to the specified level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>The level to change to.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a0e6b9075d6b5eba43925ac5fbf301a2c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e6b9075d6b5eba43925ac5fbf301a2c">&#9670;&nbsp;</a></span>Draw()</h2>
 
@@ -169,6 +233,33 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="a5075f160172257c63e98359c85f45ea6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5075f160172257c63e98359c85f45ea6">&#9670;&nbsp;</a></span>LoadLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.World.LoadLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads the current level and its entities into the game world. </p>
+
+</div>
+</div>
 <a id="a28c2e864cfcbfda362f750a160fff339"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a28c2e864cfcbfda362f750a160fff339">&#9670;&nbsp;</a></span>NextLevel()</h2>
 
@@ -197,6 +288,40 @@ Properties</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">message</td><td>Optional message parameter.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8213318593db476d1512983913fcb0a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8213318593db476d1512983913fcb0a9">&#9670;&nbsp;</a></span>OnDestroyEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.World.OnDestroyEntity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1DestroyEntityMessage.html">DestroyEntityMessage</a>&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles the destruction of entities. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The message containing the entity to destroy.</td></tr>
   </table>
   </dd>
 </dl>
@@ -296,6 +421,95 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af4d7ae8615d189cc01b895a3dbb30c28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4d7ae8615d189cc01b895a3dbb30c28">&#9670;&nbsp;</a></span>currentLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceECS__Framework.html#ab98f526dd304c35ce573b5ae4dd02f90">LevelID</a> ECS_Framework.World.currentLevel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4aa5131621903fc8b4488155c7df7c15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa5131621903fc8b4488155c7df7c15">&#9670;&nbsp;</a></span>entitiesToDestroy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Queue&lt;<a class="el" href="classECS__Framework_1_1Entity.html">Entity</a>&gt; ECS_Framework.World.entitiesToDestroy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58585467976248c455c464330a2f989e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58585467976248c455c464330a2f989e">&#9670;&nbsp;</a></span>systems</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structECS__Framework_1_1SystemManager.html">SystemManager</a> ECS_Framework.World.systems</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99b149e5e30a59558a914923f31a8715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b149e5e30a59558a914923f31a8715">&#9670;&nbsp;</a></span>totalLevels</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ECS_Framework.World.totalLevels = Enum.GetValues(typeof(<a class="el" href="namespaceECS__Framework.html#ab98f526dd304c35ce573b5ae4dd02f90">LevelID</a>)).Length</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

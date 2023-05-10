@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['nextlevel_101',['NextLevel',['../classECS__Framework_1_1World.html#a28c2e864cfcbfda362f750a160fff339',1,'ECS_Framework::World']]],
-  ['nextlevelmessage_102',['NextLevelMessage',['../classECS__Framework_1_1NextLevelMessage.html',1,'ECS_Framework.NextLevelMessage'],['../classECS__Framework_1_1NextLevelMessage.html#afe5fd793fd4901a4cf62d8472d0a57a0',1,'ECS_Framework.NextLevelMessage.NextLevelMessage()']]],
-  ['nextlevelmessage_2ecs_103',['NextLevelMessage.cs',['../NextLevelMessage_8cs.html',1,'']]]
+  ['jump_128',['Jump',['../namespaceECS__Framework.html#a1d0644bc18b04d7f02cb424124b843f1a101f693f72287a2819a364f64ca1c0ed',1,'ECS_Framework']]],
+  ['jumpsperformed_129',['JumpsPerformed',['../classECS__Framework_1_1StateComponent.html#ad0a89500ba38a74f17d0159ffeac964b',1,'ECS_Framework::StateComponent']]]
 ];

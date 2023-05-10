@@ -67,6 +67,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classECS__Framework_1_1LevelRenderSystem-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ECS_Framework.LevelRenderSystem Class Reference</div>  </div>
@@ -104,6 +106,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1155e41625fd6c6d5b5a9848fd4a9b6e inherit pub_methods_classECS__Framework_1_1System"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1System.html#a1155e41625fd6c6d5b5a9848fd4a9b6e">Update</a> (GameTime gameTime)</td></tr>
 <tr class="memdesc:a1155e41625fd6c6d5b5a9848fd4a9b6e inherit pub_methods_classECS__Framework_1_1System"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the system.  <a href="classECS__Framework_1_1System.html#a1155e41625fd6c6d5b5a9848fd4a9b6e">More...</a><br /></td></tr>
 <tr class="separator:a1155e41625fd6c6d5b5a9848fd4a9b6e inherit pub_methods_classECS__Framework_1_1System"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aeb9097b503bba2b49f4f5b6dfeadc3b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1LevelRenderSystem.html#aeb9097b503bba2b49f4f5b6dfeadc3b1">GetAnimationForState</a> (<a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a> state, <a class="el" href="classECS__Framework_1_1AnimatedComponent.html">AnimatedComponent</a> animations)</td></tr>
+<tr class="memdesc:aeb9097b503bba2b49f4f5b6dfeadc3b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current animation for an entity based on its current state.  <a href="classECS__Framework_1_1LevelRenderSystem.html#aeb9097b503bba2b49f4f5b6dfeadc3b1">More...</a><br /></td></tr>
+<tr class="separator:aeb9097b503bba2b49f4f5b6dfeadc3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a33b1884a294cdde953bb5c972ec96c27"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1LevelRenderSystem.html#a33b1884a294cdde953bb5c972ec96c27">_levelID</a></td></tr>
+<tr class="separator:a33b1884a294cdde953bb5c972ec96c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> responsible for rendering the entities in the game. </p>
@@ -170,6 +183,74 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classECS__Framework_1_1System.html#af7d4d576bd243e196c31c606b3d82e31">ECS_Framework.System</a>.</p>
+
+</div>
+</div>
+<a id="aeb9097b503bba2b49f4f5b6dfeadc3b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb9097b503bba2b49f4f5b6dfeadc3b1">&#9670;&nbsp;</a></span>GetAnimationForState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.LevelRenderSystem.GetAnimationForState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1AnimatedComponent.html">AnimatedComponent</a>&#160;</td>
+          <td class="paramname"><em>animations</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the current animation for an entity based on its current state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>The state component of the entity.</td></tr>
+    <tr><td class="paramname">animations</td><td>The animated component of the entity.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a33b1884a294cdde953bb5c972ec96c27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b1884a294cdde953bb5c972ec96c27">&#9670;&nbsp;</a></span>_levelID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ECS_Framework.LevelRenderSystem._levelID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

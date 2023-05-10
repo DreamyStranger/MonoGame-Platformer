@@ -68,6 +68,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classECS__Framework_1_1TileHandler-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ECS_Framework.TileHandler Class Reference</div>  </div>
@@ -100,9 +101,16 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a312b534e2fc33d5336da163bf1675f3f"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, Dictionary&lt; string, List&lt; Rectangle &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1TileHandler.html#a312b534e2fc33d5336da163bf1675f3f">objects</a><code> [get]</code></td></tr>
+<tr class="memitem:a312b534e2fc33d5336da163bf1675f3f"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, Dictionary&lt; string, List&lt; Rectangle &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1TileHandler.html#a312b534e2fc33d5336da163bf1675f3f">objects</a><code> [get, private set]</code></td></tr>
 <tr class="memdesc:a312b534e2fc33d5336da163bf1675f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A dictionary of all obstacles in every loaded map.  <a href="classECS__Framework_1_1TileHandler.html#a312b534e2fc33d5336da163bf1675f3f">More...</a><br /></td></tr>
 <tr class="separator:a312b534e2fc33d5336da163bf1675f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a05f2af9bb98f61682e3a2c79c98394f4"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, TiledMap &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1TileHandler.html#a05f2af9bb98f61682e3a2c79c98394f4">_tiledMaps</a></td></tr>
+<tr class="separator:a05f2af9bb98f61682e3a2c79c98394f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ca4f0192c052aedf444c3b952edb905"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, Dictionary&lt; int, TiledTileset &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1TileHandler.html#a5ca4f0192c052aedf444c3b952edb905">_tileSets</a></td></tr>
+<tr class="separator:a5ca4f0192c052aedf444c3b952edb905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles loading and rendering of tile maps. </p>
@@ -341,6 +349,51 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a05f2af9bb98f61682e3a2c79c98394f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05f2af9bb98f61682e3a2c79c98394f4">&#9670;&nbsp;</a></span>_tiledMaps</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, TiledMap&gt; ECS_Framework.TileHandler._tiledMaps</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ca4f0192c052aedf444c3b952edb905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca4f0192c052aedf444c3b952edb905">&#9670;&nbsp;</a></span>_tileSets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, Dictionary&lt;int, TiledTileset&gt; &gt; ECS_Framework.TileHandler._tileSets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Property Documentation</h2>
 <a id="a312b534e2fc33d5336da163bf1675f3f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a312b534e2fc33d5336da163bf1675f3f">&#9670;&nbsp;</a></span>objects</h2>
@@ -357,7 +410,7 @@ Properties</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

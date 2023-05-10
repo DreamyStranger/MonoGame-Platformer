@@ -67,6 +67,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classECS__Framework_1_1PlayerEntityCollisionSystem-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ECS_Framework.PlayerEntityCollisionSystem Class Reference</div>  </div>
@@ -111,6 +113,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1System.html#af7d4d576bd243e196c31c606b3d82e31">Draw</a> (SpriteBatch spriteBatch)</td></tr>
 <tr class="memdesc:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the system.  <a href="classECS__Framework_1_1System.html#af7d4d576bd243e196c31c606b3d82e31">More...</a><br /></td></tr>
 <tr class="separator:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aba1ca01347a712e81803e497b39c59aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#aba1ca01347a712e81803e497b39c59aa">ResolveCoinCollision</a> (<a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> playerData, <a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> coinData)</td></tr>
+<tr class="memdesc:aba1ca01347a712e81803e497b39c59aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves collisions between the player and a coin object.  <a href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#aba1ca01347a712e81803e497b39c59aa">More...</a><br /></td></tr>
+<tr class="separator:aba1ca01347a712e81803e497b39c59aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fbfa6905dd13813ee753dadd5a91acf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#a4fbfa6905dd13813ee753dadd5a91acf">ResolveNextLevelCollision</a> (<a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> playerData, <a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> portalData)</td></tr>
+<tr class="memdesc:a4fbfa6905dd13813ee753dadd5a91acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves collisions between the player and a portal object that leads to the next level.  <a href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#a4fbfa6905dd13813ee753dadd5a91acf">More...</a><br /></td></tr>
+<tr class="separator:a4fbfa6905dd13813ee753dadd5a91acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab291ef95716265418eb23acc437c7899"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#ab291ef95716265418eb23acc437c7899">ResolveWalkingEnemyCollision</a> (<a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> player, <a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> enemy)</td></tr>
+<tr class="memdesc:ab291ef95716265418eb23acc437c7899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves collisions between the player and a regular enemy that is walking on the ground.  <a href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#ab291ef95716265418eb23acc437c7899">More...</a><br /></td></tr>
+<tr class="separator:ab291ef95716265418eb23acc437c7899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af1372550e8fd81b27b67cb51775127fc"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#af1372550e8fd81b27b67cb51775127fc">_entitiesData</a></td></tr>
+<tr class="separator:af1372550e8fd81b27b67cb51775127fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad44459cdf4a416e3353ab016003f2d84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#ad44459cdf4a416e3353ab016003f2d84">_playerData</a></td></tr>
+<tr class="separator:ad44459cdf4a416e3353ab016003f2d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a system that handles collisions between the player entity and other entities. </p>
@@ -213,6 +234,141 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aba1ca01347a712e81803e497b39c59aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba1ca01347a712e81803e497b39c59aa">&#9670;&nbsp;</a></span>ResolveCoinCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.PlayerEntityCollisionSystem.ResolveCoinCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&#160;</td>
+          <td class="paramname"><em>playerData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&#160;</td>
+          <td class="paramname"><em>coinData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolves collisions between the player and a coin object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerData</td><td>The data for the player entity.</td></tr>
+    <tr><td class="paramname">coinData</td><td>The data for the coin entity.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4fbfa6905dd13813ee753dadd5a91acf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fbfa6905dd13813ee753dadd5a91acf">&#9670;&nbsp;</a></span>ResolveNextLevelCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.PlayerEntityCollisionSystem.ResolveNextLevelCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&#160;</td>
+          <td class="paramname"><em>playerData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&#160;</td>
+          <td class="paramname"><em>portalData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolves collisions between the player and a portal object that leads to the next level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerData</td><td>The data for the player entity.</td></tr>
+    <tr><td class="paramname">portalData</td><td>The data for the portal entity.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab291ef95716265418eb23acc437c7899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab291ef95716265418eb23acc437c7899">&#9670;&nbsp;</a></span>ResolveWalkingEnemyCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.PlayerEntityCollisionSystem.ResolveWalkingEnemyCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&#160;</td>
+          <td class="paramname"><em>enemy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolves collisions between the player and a regular enemy that is walking on the ground. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>The data for the player entity.</td></tr>
+    <tr><td class="paramname">enemy</td><td>The data for the enemy entity.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="adce5e5b355303924c3cfbb24328cf32b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adce5e5b355303924c3cfbb24328cf32b">&#9670;&nbsp;</a></span>Update()</h2>
 
@@ -246,6 +402,51 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classECS__Framework_1_1System.html#a1155e41625fd6c6d5b5a9848fd4a9b6e">ECS_Framework.System</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af1372550e8fd81b27b67cb51775127fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1372550e8fd81b27b67cb51775127fc">&#9670;&nbsp;</a></span>_entitiesData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&gt; ECS_Framework.PlayerEntityCollisionSystem._entitiesData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad44459cdf4a416e3353ab016003f2d84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad44459cdf4a416e3353ab016003f2d84">&#9670;&nbsp;</a></span>_playerData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> ECS_Framework.PlayerEntityCollisionSystem._playerData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

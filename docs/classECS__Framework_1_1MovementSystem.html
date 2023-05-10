@@ -67,6 +67,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classECS__Framework_1_1MovementSystem-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ECS_Framework.MovementSystem Class Reference</div>  </div>
@@ -112,6 +114,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1System.html#af7d4d576bd243e196c31c606b3d82e31">Draw</a> (SpriteBatch spriteBatch)</td></tr>
 <tr class="memdesc:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the system.  <a href="classECS__Framework_1_1System.html#af7d4d576bd243e196c31c606b3d82e31">More...</a><br /></td></tr>
 <tr class="separator:af7d4d576bd243e196c31c606b3d82e31 inherit pub_methods_classECS__Framework_1_1System"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4e8aefd82745d9958458f7f37bb14c54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1MovementSystem.html#a4e8aefd82745d9958458f7f37bb14c54">UpdatePositionBasedOnState</a> (GameTime gameTime, <a class="el" href="classECS__Framework_1_1MovementComponent.html">MovementComponent</a> movement, <a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a> state)</td></tr>
+<tr class="memdesc:a4e8aefd82745d9958458f7f37bb14c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the position of an entity based on its state, movement, and elapsed game time.  <a href="classECS__Framework_1_1MovementSystem.html#a4e8aefd82745d9958458f7f37bb14c54">More...</a><br /></td></tr>
+<tr class="separator:a4e8aefd82745d9958458f7f37bb14c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f418b08c122c1b714dfdf02a282d98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1MovementSystem.html#a74f418b08c122c1b714dfdf02a282d98">VerticalMovement</a> (<a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a> state, <a class="el" href="classECS__Framework_1_1MovementComponent.html">MovementComponent</a> movement)</td></tr>
+<tr class="memdesc:a74f418b08c122c1b714dfdf02a282d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the vertical velocity of an entity based on its state.  <a href="classECS__Framework_1_1MovementSystem.html#a74f418b08c122c1b714dfdf02a282d98">More...</a><br /></td></tr>
+<tr class="separator:a74f418b08c122c1b714dfdf02a282d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3f5ab0beef12c767b31655527468c25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1MovementSystem.html#ab3f5ab0beef12c767b31655527468c25">HorizontalMovement</a> (<a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a> state, <a class="el" href="classECS__Framework_1_1MovementComponent.html">MovementComponent</a> movement)</td></tr>
+<tr class="memdesc:ab3f5ab0beef12c767b31655527468c25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the horizontal velocity of an entity based on its state.  <a href="classECS__Framework_1_1MovementSystem.html#ab3f5ab0beef12c767b31655527468c25">More...</a><br /></td></tr>
+<tr class="separator:ab3f5ab0beef12c767b31655527468c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa39894909823e6b13fef63527ae2796d"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1MovementSystem.html#aa39894909823e6b13fef63527ae2796d">entitiesData</a></td></tr>
+<tr class="separator:aa39894909823e6b13fef63527ae2796d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> responsible for handling the movement of entities in the game. </p>
@@ -177,6 +196,51 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classECS__Framework_1_1System.html#a707d4bd1e14fa713cdd3a6179bcba2f7">ECS_Framework.System</a>.</p>
+
+</div>
+</div>
+<a id="ab3f5ab0beef12c767b31655527468c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3f5ab0beef12c767b31655527468c25">&#9670;&nbsp;</a></span>HorizontalMovement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.MovementSystem.HorizontalMovement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1MovementComponent.html">MovementComponent</a>&#160;</td>
+          <td class="paramname"><em>movement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the horizontal velocity of an entity based on its state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>The state component of the entity.</td></tr>
+    <tr><td class="paramname">movement</td><td>The movement component of the entity.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -249,6 +313,126 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classECS__Framework_1_1System.html#a1155e41625fd6c6d5b5a9848fd4a9b6e">ECS_Framework.System</a>.</p>
+
+</div>
+</div>
+<a id="a4e8aefd82745d9958458f7f37bb14c54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e8aefd82745d9958458f7f37bb14c54">&#9670;&nbsp;</a></span>UpdatePositionBasedOnState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.MovementSystem.UpdatePositionBasedOnState </td>
+          <td>(</td>
+          <td class="paramtype">GameTime&#160;</td>
+          <td class="paramname"><em>gameTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1MovementComponent.html">MovementComponent</a>&#160;</td>
+          <td class="paramname"><em>movement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the position of an entity based on its state, movement, and elapsed game time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gameTime</td><td>The elapsed game time.</td></tr>
+    <tr><td class="paramname">movement</td><td>The movement component of the entity.</td></tr>
+    <tr><td class="paramname">state</td><td>The state component of the entity.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a74f418b08c122c1b714dfdf02a282d98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74f418b08c122c1b714dfdf02a282d98">&#9670;&nbsp;</a></span>VerticalMovement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.MovementSystem.VerticalMovement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1StateComponent.html">StateComponent</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classECS__Framework_1_1MovementComponent.html">MovementComponent</a>&#160;</td>
+          <td class="paramname"><em>movement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the vertical velocity of an entity based on its state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>The state component of the entity.</td></tr>
+    <tr><td class="paramname">movement</td><td>The movement component of the entity.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa39894909823e6b13fef63527ae2796d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa39894909823e6b13fef63527ae2796d">&#9670;&nbsp;</a></span>entitiesData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&gt; ECS_Framework.MovementSystem.entitiesData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

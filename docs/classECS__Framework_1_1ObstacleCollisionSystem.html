@@ -67,6 +67,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classECS__Framework_1_1ObstacleCollisionSystem-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ECS_Framework.ObstacleCollisionSystem Class Reference</div>  </div>
@@ -111,6 +113,29 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a12ddd79d551da24d7c19299a0c8250ae"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ObstacleCollisionSystem.html#a12ddd79d551da24d7c19299a0c8250ae">Draw</a> (SpriteBatch spriteBatch)</td></tr>
 <tr class="memdesc:a12ddd79d551da24d7c19299a0c8250ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the system's state using the provided SpriteBatch.  <a href="classECS__Framework_1_1ObstacleCollisionSystem.html#a12ddd79d551da24d7c19299a0c8250ae">More...</a><br /></td></tr>
 <tr class="separator:a12ddd79d551da24d7c19299a0c8250ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a3ed55bcfb1cf9cf787ee0026341a14ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ObstacleCollisionSystem.html#a3ed55bcfb1cf9cf787ee0026341a14ff">HandleFallCollision</a> (<a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY)</td></tr>
+<tr class="memdesc:a3ed55bcfb1cf9cf787ee0026341a14ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles collision when the entity is in a falling state.  <a href="classECS__Framework_1_1ObstacleCollisionSystem.html#a3ed55bcfb1cf9cf787ee0026341a14ff">More...</a><br /></td></tr>
+<tr class="separator:a3ed55bcfb1cf9cf787ee0026341a14ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab51821d0e6b7662a256aa811907ec2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ObstacleCollisionSystem.html#a1ab51821d0e6b7662a256aa811907ec2">HandleJumpCollision</a> (<a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY, string key)</td></tr>
+<tr class="memdesc:a1ab51821d0e6b7662a256aa811907ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles collision when the entity is in a jumping state.  <a href="classECS__Framework_1_1ObstacleCollisionSystem.html#a1ab51821d0e6b7662a256aa811907ec2">More...</a><br /></td></tr>
+<tr class="separator:a1ab51821d0e6b7662a256aa811907ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc0db01177d9e240a0e32f605dbbbc48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ObstacleCollisionSystem.html#abc0db01177d9e240a0e32f605dbbbc48">HandleGroundCollision</a> (<a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> data, Rectangle box, Rectangle rect, ref float positionX)</td></tr>
+<tr class="memdesc:abc0db01177d9e240a0e32f605dbbbc48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles collision when the entity is on the ground.  <a href="classECS__Framework_1_1ObstacleCollisionSystem.html#abc0db01177d9e240a0e32f605dbbbc48">More...</a><br /></td></tr>
+<tr class="separator:abc0db01177d9e240a0e32f605dbbbc48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7c00df2171209434a75fd4c3d948fd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ObstacleCollisionSystem.html#aa7c00df2171209434a75fd4c3d948fd9">HandleHorizontalInAirCollision</a> (<a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> data, Rectangle box, Rectangle rect, ref float positionX)</td></tr>
+<tr class="memdesc:aa7c00df2171209434a75fd4c3d948fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles horizontal collision when the entity is in air (jumping or falling).  <a href="classECS__Framework_1_1ObstacleCollisionSystem.html#aa7c00df2171209434a75fd4c3d948fd9">More...</a><br /></td></tr>
+<tr class="separator:aa7c00df2171209434a75fd4c3d948fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a0065978e9a5f0f8804cc82c2c5586935"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ObstacleCollisionSystem.html#a0065978e9a5f0f8804cc82c2c5586935">entitiesData</a></td></tr>
+<tr class="separator:a0065978e9a5f0f8804cc82c2c5586935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba460cee8e605734e29aecf8a0520ee"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, List&lt; Rectangle &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ObstacleCollisionSystem.html#a0ba460cee8e605734e29aecf8a0520ee">obstacles</a></td></tr>
+<tr class="memdesc:a0ba460cee8e605734e29aecf8a0520ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary containing the obstacle data for each layer in the game environment.  <a href="classECS__Framework_1_1ObstacleCollisionSystem.html#a0ba460cee8e605734e29aecf8a0520ee">More...</a><br /></td></tr>
+<tr class="separator:a0ba460cee8e605734e29aecf8a0520ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages collision detection and resolution between entities and level obstacles. </p>
@@ -222,6 +247,263 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a3ed55bcfb1cf9cf787ee0026341a14ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ed55bcfb1cf9cf787ee0026341a14ff">&#9670;&nbsp;</a></span>HandleFallCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.ObstacleCollisionSystem.HandleFallCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramname"><em>box</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref float&#160;</td>
+          <td class="paramname"><em>positionX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref float&#160;</td>
+          <td class="paramname"><em>positionY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles collision when the entity is in a falling state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The <a class="el" href="structECS__Framework_1_1EntityData.html" title="A struct that contains the most commonly used components.">EntityData</a> containing the entity's components.</td></tr>
+    <tr><td class="paramname">box</td><td>The entity's collision box.</td></tr>
+    <tr><td class="paramname">rect</td><td>The obstacle's rectangle.</td></tr>
+    <tr><td class="paramname">positionX</td><td>The entity's current X position.</td></tr>
+    <tr><td class="paramname">positionY</td><td>The entity's current Y position.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abc0db01177d9e240a0e32f605dbbbc48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc0db01177d9e240a0e32f605dbbbc48">&#9670;&nbsp;</a></span>HandleGroundCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.ObstacleCollisionSystem.HandleGroundCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramname"><em>box</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref float&#160;</td>
+          <td class="paramname"><em>positionX</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles collision when the entity is on the ground. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The <a class="el" href="structECS__Framework_1_1EntityData.html" title="A struct that contains the most commonly used components.">EntityData</a> containing the entity's components.</td></tr>
+    <tr><td class="paramname">box</td><td>The entity's collision box.</td></tr>
+    <tr><td class="paramname">rect</td><td>The obstacle's rectangle.</td></tr>
+    <tr><td class="paramname">positionX</td><td>The entity's current X position.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa7c00df2171209434a75fd4c3d948fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7c00df2171209434a75fd4c3d948fd9">&#9670;&nbsp;</a></span>HandleHorizontalInAirCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.ObstacleCollisionSystem.HandleHorizontalInAirCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramname"><em>box</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref float&#160;</td>
+          <td class="paramname"><em>positionX</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles horizontal collision when the entity is in air (jumping or falling). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The <a class="el" href="structECS__Framework_1_1EntityData.html" title="A struct that contains the most commonly used components.">EntityData</a> containing the entity's components.</td></tr>
+    <tr><td class="paramname">box</td><td>The entity's collision box.</td></tr>
+    <tr><td class="paramname">rect</td><td>The obstacle's rectangle.</td></tr>
+    <tr><td class="paramname">positionX</td><td>The entity's current X position.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1ab51821d0e6b7662a256aa811907ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ab51821d0e6b7662a256aa811907ec2">&#9670;&nbsp;</a></span>HandleJumpCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECS_Framework.ObstacleCollisionSystem.HandleJumpCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramname"><em>box</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref float&#160;</td>
+          <td class="paramname"><em>positionX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref float&#160;</td>
+          <td class="paramname"><em>positionY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles collision when the entity is in a jumping state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The <a class="el" href="structECS__Framework_1_1EntityData.html" title="A struct that contains the most commonly used components.">EntityData</a> containing the entity's components.</td></tr>
+    <tr><td class="paramname">box</td><td>The entity's collision box.</td></tr>
+    <tr><td class="paramname">rect</td><td>The obstacle's rectangle.</td></tr>
+    <tr><td class="paramname">positionX</td><td>The entity's current X position.</td></tr>
+    <tr><td class="paramname">positionY</td><td>The entity's current Y position.</td></tr>
+    <tr><td class="paramname">key</td><td>The key indicating the current layer being checked.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a42e5b5a87ee8abf97159af07a56eaf98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a42e5b5a87ee8abf97159af07a56eaf98">&#9670;&nbsp;</a></span>RemoveEntity()</h2>
 
@@ -291,6 +573,53 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classECS__Framework_1_1System.html#a1155e41625fd6c6d5b5a9848fd4a9b6e">ECS_Framework.System</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a0065978e9a5f0f8804cc82c2c5586935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0065978e9a5f0f8804cc82c2c5586935">&#9670;&nbsp;</a></span>entitiesData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&gt; ECS_Framework.ObstacleCollisionSystem.entitiesData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ba460cee8e605734e29aecf8a0520ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba460cee8e605734e29aecf8a0520ee">&#9670;&nbsp;</a></span>obstacles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, List&lt;Rectangle&gt; &gt; ECS_Framework.ObstacleCollisionSystem.obstacles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dictionary containing the obstacle data for each layer in the game environment. </p>
 
 </div>
 </div>

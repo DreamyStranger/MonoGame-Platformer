@@ -25,7 +25,7 @@ namespace ECS_Framework
         {
             entitiesData = new List<EntityData>();
             obstacles = new Dictionary<string, List<Rectangle>>();
-            obstacles = Loader.tiledHandler.obstacles[levelID.ToString()];
+            obstacles = Loader.tiledHandler.objects[levelID.ToString()];
 
             //Console.WriteLine($"Loaded obstacles for Levels: {levelID}"); // Debug message
             //Console.WriteLine($"Loaded obstacle layers: {string.Join(", ", obstacles.Keys)}"); // Debug message
@@ -81,8 +81,10 @@ namespace ECS_Framework
 
                 foreach (string key in obstacles.Keys)
                 {
-                    //Console.WriteLine($"Layer Name: {key}");  //Debug message
-
+                    if(key == "entity")
+                    {
+                        continue;
+                    }
                     foreach (Rectangle rect in obstacles[key])
                     {
                         if (!box.Intersects(rect))

@@ -11,11 +11,11 @@ namespace ECS_Framework
     public class PlayerEntityCollisionSystem : System
     {
         private List<EntityData> _entitiesData;
-        private EntityData playerData;
+        private EntityData _playerData;
         public PlayerEntityCollisionSystem()
         {
             _entitiesData = new List<EntityData>();
-            playerData = new EntityData();
+            _playerData = new EntityData();
         }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace ECS_Framework
             _entitiesData.Add(data);
             if (entity.GetComponent<EntityTypeComponent>().Type == EntityType.Player)
             {
-                playerData = data;
+                _playerData = data;
             }
         }
 
@@ -63,33 +63,32 @@ namespace ECS_Framework
         /// <param name="gameTime">The current game time.</param>
         public override void Update(GameTime gameTime)
         {
-            if (_entitiesData.Count <= 1 || playerData.Entity == null)
+            if (_entitiesData.Count <= 1 || _playerData.Entity == null)
             {
                 return;
             }
 
-            // Iterate through all entities after the player
             foreach (EntityData data in _entitiesData)
             {
-                if (data.Entity == playerData.Entity)
+                if (data.Entity == _playerData.Entity)
                 {
                     continue;
                 }
                 // Check if the two entities are colliding
-                if (playerData.CollisionBox.GetRectangle().Intersects(data.CollisionBox.GetRectangle()))
+                if (_playerData.CollisionBox.GetRectangle().Intersects(data.CollisionBox.GetRectangle()))
                 {
                     // Check the entity types to determine the appropriate collision resolution
                     EntityTypeComponent entityType = data.Entity.GetComponent<EntityTypeComponent>();
                     switch (entityType.Type)
                     {
                         case EntityType.Coin:
-                            ResolveCoinCollision(playerData, data);
+                            ResolveCoinCollision(_playerData, data);
                             break;
-                        case EntityType.WalkingEnemy:
-                            ResolveWalkingEnemyCollision(playerData, data);
+                        case EntityType.RegularEnemy:
+                            ResolveWalkingEnemyCollision(_playerData, data);
                             break;
                         case EntityType.PortalToNextLevel:
-                            ResolveNextLevelCollision(playerData, data);
+                            ResolveNextLevelCollision(_playerData, data);
                             break;
                         //Add more cases for new entity types as needed
                         default:
@@ -99,34 +98,67 @@ namespace ECS_Framework
             }
         }
 
-        private void ResolveCoinCollision(EntityData player, EntityData coin)
+        /// <summary>
+        /// Resolves collisions between the player and a coin object.
+        /// </summary>
+        /// <param name="playerData">The data for the player entity.</param>
+        /// <param name="coinData">The data for the coin entity.</param>
+        private void ResolveCoinCollision(EntityData playerData, EntityData coinData)
         {
-            coin.State.CurrentSuperState = SuperState.IsDead;
-        }
-
-        private void ResolveNextLevelCollision(EntityData player, EntityData portal)
-        {
-            //Implement
-            if (player.State.CurrentSuperState == SuperState.IsOnGround)
+            // If the coin is already dead, do nothing
+            if (coinData.State.CurrentSuperState == SuperState.IsDead)
             {
-                MessageBus.Publish(new NextLevelMessage());
+                return;
             }
+
+            // Mark the coin as dead and set its state to idle
+            coinData.State.CurrentSuperState = SuperState.IsDead;
+            coinData.State.CurrentState = State.Idle;
         }
 
+        /// <summary>
+        /// Resolves collisions between the player and a portal object that leads to the next level.
+        /// </summary>
+        /// <param name="playerData">The data for the player entity.</param>
+        /// <param name="portalData">The data for the portal entity.</param>
+        private void ResolveNextLevelCollision(EntityData playerData, EntityData portalData)
+        {
+            // If the player is already dead, do nothing
+            if (playerData.State.CurrentSuperState == SuperState.IsDead)
+            {
+                return;
+            }
+
+            // Publish a message indicating that the player has reached the next level
+            MessageBus.Publish(new NextLevelMessage());
+        }
+
+        /// <summary>
+        /// Resolves collisions between the player and a regular enemy that is walking on the ground.
+        /// </summary>
+        /// <param name="player">The data for the player entity.</param>
+        /// <param name="enemy">The data for the enemy entity.</param>
         private void ResolveWalkingEnemyCollision(EntityData player, EntityData enemy)
         {
-            switch (player.State.CurrentSuperState)
+            // If the enemy is already dead, do nothing
+            if (enemy.State.CurrentSuperState == SuperState.IsDead)
             {
-                case SuperState.IsFalling:
-                    enemy.State.CurrentSuperState = SuperState.IsDead;
-                    break;
-                default:
-                    if (enemy.State.CurrentSuperState != SuperState.IsDead)
-                    {
-                        player.State.CurrentSuperState = SuperState.IsDead;
-                    }
-                    break;
+                return;
+            }
+
+            // If the player is falling, kill the enemy and set its state to idle
+            if (player.State.CurrentSuperState == SuperState.IsFalling)
+            {
+                enemy.State.CurrentSuperState = SuperState.IsDead;
+                enemy.State.CurrentState = State.Idle;
+            }
+            // Otherwise, kill the player and set its state to idle
+            else
+            {
+                player.State.CurrentSuperState = SuperState.IsDead;
+                player.State.CurrentState = State.Idle;
             }
         }
+
     }
 }

@@ -7,7 +7,7 @@ namespace ECS_Framework
     {
         Player,
         Coin,
-        WalkingEnemy,
+        RegularEnemy,
         PortalToNextLevel,
         // Add more entity types as needed
     }

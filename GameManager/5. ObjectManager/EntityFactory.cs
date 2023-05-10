@@ -74,7 +74,7 @@ namespace ECS_Framework
             return player;
         }
 
-        public static Entity CreateApple(Vector2 position)
+        public static Entity CreateFruit(Vector2 position, string fruitName)
         {
             //Empty coin
             Entity coin = new Entity();
@@ -82,7 +82,7 @@ namespace ECS_Framework
 
             //Animations
             AnimatedComponent animation = new AnimatedComponent();
-            animation.AddAnimation("apple_idle", "idle", 1, 17, 20);
+            animation.AddAnimation(fruitName + "_idle", "idle", 1, 17, 20);
             animation.AddAnimation("fruits_death", "death", 1, 6, 20);
             coin.AddComponent(animation);
 
@@ -105,22 +105,22 @@ namespace ECS_Framework
             return coin;
         }
 
-        public static Entity CreateSimpleEnemy(Vector2 position, float left, float right)
+        public static Entity CreateSimpleEnemy(Vector2 position, float leftRange, float rightRange, State initialDirection)
         {
             //Empty Player
             Entity enemy = new Entity();
-            enemy.AddComponent(new EntityTypeComponent(EntityType.WalkingEnemy));
+            enemy.AddComponent(new EntityTypeComponent(EntityType.RegularEnemy));
 
             // Animations
             AnimatedComponent animation = new AnimatedComponent();
             animation.AddAnimation("voodo_idle", "idle", 1, 11, 20);
             animation.AddAnimation("voodo_walking", "walking", 1, 12, 20);
-            animation.AddAnimation("voodo_death", "death", 1, 7, 20);
+            animation.AddAnimation("fruits_death", "death", 1, 6, 20);
             enemy.AddComponent(animation);
 
             // States
-            enemy.AddComponent(new StateComponent());
-            enemy.AddComponent(new SimpleWalkingEnemyComponent(left, right));
+            enemy.AddComponent(new StateComponent(initialDirection));
+            enemy.AddComponent(new SimpleWalkingEnemyComponent(position.X, leftRange, rightRange));
 
             // Position and transforms
             enemy.AddComponent(new MovementComponent(position));

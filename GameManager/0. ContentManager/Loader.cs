@@ -83,7 +83,7 @@ namespace ECS_Framework
                 );
 
                 // Save collision boxes for each level
-                tiledHandler.GetLayersBoundsInMap();
+                tiledHandler.GetLayersObjectsInMap();
             }
 
             //Box to debug Collisions
@@ -144,6 +144,15 @@ namespace ECS_Framework
             }
 
             return null;
+        }
+
+        public static void PlayMusic(string musicName, bool loop = false)
+        {
+            if (songs.ContainsKey(musicName))
+            {
+                MediaPlayer.IsRepeating = loop;
+                MediaPlayer.Play(songs[musicName]);
+            }
         }
     }
 }

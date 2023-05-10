@@ -34,7 +34,7 @@
   <object id="4" x="400.875" y="224" width="46" height="4.75"/>
   <object id="6" x="465" y="160" width="45.75" height="5"/>
  </objectgroup>
- <objectgroup id="3" name="Object Layer 2">
+ <objectgroup id="3" name="solid">
   <object id="9" x="0.5" y="96.7841" width="158.75" height="270.966"/>
   <object id="10" x="208.5" y="256.75" width="94.75" height="111.75"/>
   <object id="11" x="528" y="208.75" width="111.75" height="159"/>

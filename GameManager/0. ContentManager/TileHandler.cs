@@ -15,7 +15,7 @@ namespace ECS_Framework
         /// <summary>
         /// A dictionary of all obstacles in every loaded map.
         /// </summary>
-        public Dictionary<string, Dictionary<string, List<Rectangle>>> obstacles { get; private set; }
+        public Dictionary<string, Dictionary<string, List<Rectangle>>> objects { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the TileHandler class.
@@ -25,7 +25,7 @@ namespace ECS_Framework
         {
             this._tiledMaps = new Dictionary<string, TiledMap>();
             this._tileSets = new Dictionary<string, Dictionary<int, TiledTileset>>();
-            this.obstacles = new Dictionary<string, Dictionary<string, List<Rectangle>>>();
+            this.objects = new Dictionary<string, Dictionary<string, List<Rectangle>>>();
         }
 
         /// <summary>
@@ -45,14 +45,18 @@ namespace ECS_Framework
             _tileSets[levelID] = tilesets;
         }
 
+        public TiledMap GetMap(LevelID level)
+        {
+            return _tiledMaps[level.ToString()];
+        }
 
         /// <summary>
-        /// Helper method for the All Bounds method below. Creates rectangles representing the bounds of a specified layer.
+        /// Helper method for the All Bounds method below. Creates rectangles representing the objects of a specified layer.
         /// </summary>
         /// <param name="layer">The layer to create bounds for.</param>
         /// <param name="mapName">The name of the map the layer belongs to.</param>
         /// <returns>A list of rectangles representing the layer's bounds.</returns>
-        public List<Rectangle> GetLayerBounds(TiledLayer layer, string mapName)
+        public List<Rectangle> GetLayerObjects(TiledLayer layer, string mapName)
         {
             List<Rectangle> layerBounds = new List<Rectangle>();
             TiledMap map = _tiledMaps[mapName];
@@ -72,7 +76,7 @@ namespace ECS_Framework
         /// <summary>
         /// Creates rectangles that bound every Object Layer in every loaded Level. Useful for collision detection with Rectangle.Intersects() method.
         /// </summary>
-        public void GetLayersBoundsInMap()
+        public void GetLayersObjectsInMap()
         {
             foreach (string mapName in _tiledMaps.Keys)
             {
@@ -84,14 +88,14 @@ namespace ECS_Framework
                     {
                         continue;
                     }
-                    List<Rectangle> layerBounds = GetLayerBounds(layer, mapName);
+                    List<Rectangle> layerBounds = GetLayerObjects(layer, mapName);
                     if (!layerBoundsMap.ContainsKey(layerName))
                     {
                         layerBoundsMap[layerName] = new List<Rectangle>();
                     }
                     layerBoundsMap[layerName].AddRange(layerBounds);
                 }
-                obstacles[mapName] = layerBoundsMap;
+                objects[mapName] = layerBoundsMap;
             }
         }
 

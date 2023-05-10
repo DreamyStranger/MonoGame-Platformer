@@ -21,10 +21,10 @@ namespace ECS_Framework
         private float _right;
 
 
-        public SimpleWalkingEnemyComponent(float leftBorder, float rightBorder)
+        public SimpleWalkingEnemyComponent(float start, float leftRange, float rightRange)
         {
-            _left = leftBorder;
-            _right = rightBorder;
+            _left = start - leftRange;
+            _right = start + rightRange;
         }
 
         /// <summary>

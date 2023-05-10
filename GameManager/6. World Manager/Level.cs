@@ -47,6 +47,6 @@ namespace ECS_Framework
         /// Gets a list of entities that will be placed in the level.
         /// </summary>
         /// <returns>A list of entities to be placed in the level.</returns>
-        List<Entity> GetObjects();
+        List<Entity> GetObjects(LevelID level);
     }
 }

@@ -76,6 +76,11 @@ namespace ECS_Framework
         /// <param name="state">The state component for the entity.</param>
         private void UpdateEntityState(GameTime gameTime, PlayerInputComponent input, StateComponent state)
         {
+            if(state.CurrentSuperState == SuperState.IsDead)
+            {
+                return;
+            }
+
             bool isNotBothKeys = !(input.IsLeftKeyDown && input.IsRightKeyDown);
             bool bothKeysUp = !input.IsLeftKeyDown && !input.IsRightKeyDown;
 
@@ -132,6 +137,9 @@ namespace ECS_Framework
                             state.JumpsPerformed = 2;
                         }
                     }
+                    break;
+
+                case SuperState.IsDead:
                     break;
 
                 default:

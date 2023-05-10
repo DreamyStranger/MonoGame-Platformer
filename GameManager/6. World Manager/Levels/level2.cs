@@ -11,12 +11,13 @@ namespace ECS_Framework
         /// Returns a list of entities to be created and added to the level.
         /// </summary>
         /// <returns>A list of entities.</returns>
-        public List<Entity> GetObjects()
+        public List<Entity> GetObjects(LevelID level)
         {
             List<Entity> objects = new List<Entity>();
             objects.Add(EntityFactory.CreateParallaxBackground("bg_yellow", new Vector2(0, 50)));
             objects.Add(EntityFactory.CreatePlayer(new Vector2(50, 20)));
             return objects;
         }
+
     }
 }

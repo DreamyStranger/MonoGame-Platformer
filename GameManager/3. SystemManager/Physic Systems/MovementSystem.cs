@@ -66,10 +66,6 @@ namespace ECS_Framework
         {
             foreach (EntityData data in entitiesData)
             {
-                if (data.State.CurrentSuperState == SuperState.IsDead)
-                {
-                    continue;
-                }
                 UpdatePositionBasedOnState(gameTime, data.Movement, data.State);
                 //update collision box
                 CollisionBoxComponent collisionBox = data.Entity.GetComponent<CollisionBoxComponent>();
@@ -136,6 +132,12 @@ namespace ECS_Framework
                         state.CurrentSuperState = SuperState.IsDoubleJumping;
                     }
                     break;
+
+                case SuperState.IsDead:
+                    movement.Velocity = Vector2.Zero;
+                    movement.Acceleration = Vector2.Zero;
+                    break;
+
                 default:
                     movement.Acceleration = new Vector2(0, GameConstants.GRAVITY);
                     if (movement.Velocity.Y > 0)

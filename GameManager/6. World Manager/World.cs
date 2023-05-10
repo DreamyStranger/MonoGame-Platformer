@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System;
+using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 
 namespace ECS_Framework
 {
@@ -48,9 +50,9 @@ namespace ECS_Framework
         /// </summary>
         private void LoadLevel(Level level)
         {
-
+            MediaPlayer.Stop();
             systems.ResetSystems(level.Id);
-            List<Entity> objects = level.Initializer.GetObjects();
+            List<Entity> objects = level.Initializer.GetObjects(currentLevel.Id);
             foreach (Entity entity in objects)
             {
                 systems.Add(entity);

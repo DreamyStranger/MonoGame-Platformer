@@ -9,14 +9,14 @@ namespace ECS_Framework
     public class MovementSystem : System
     {
         // A list of EntityData instances, which store references to the associated Entity, StateComponent, and MovementComponent.
-        private List<EntityData> entitiesData;
+        private List<EntityData> _entitiesData;
 
         /// <summary>
         /// Initializes a new instance of the MovementSystem class and creates an empty list of EntityData.
         /// </summary>
         public MovementSystem()
         {
-            entitiesData = new List<EntityData>();
+            _entitiesData = new List<EntityData>();
         }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace ECS_Framework
                 Movement = movement,
             };
 
-            entitiesData.Add(data);
+            _entitiesData.Add(data);
         }
 
         /// <summary>
@@ -49,10 +49,10 @@ namespace ECS_Framework
         /// <param name="entity">The entity to be removed.</param>
         public override void RemoveEntity(Entity entity)
         {
-            var index = entitiesData.FindIndex(data => data.Entity == entity);
+            var index = _entitiesData.FindIndex(data => data.Entity == entity);
             if (index != -1)
             {
-                entitiesData.RemoveAt(index);
+                _entitiesData.RemoveAt(index);
             }
         }
 
@@ -64,7 +64,7 @@ namespace ECS_Framework
         /// <param name="gameTime">The elapsed game time.</param>
         public override void Update(GameTime gameTime)
         {
-            foreach (EntityData data in entitiesData)
+            foreach (EntityData data in _entitiesData)
             {
                 UpdatePositionBasedOnState(gameTime, data.Movement, data.State);
                 //update collision box

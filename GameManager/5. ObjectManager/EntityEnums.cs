@@ -1,7 +1,7 @@
 namespace ECS_Framework
 {
     /// <summary>
-    /// Enum that holds entity types
+    /// Entity types
     /// </summary>
     public enum EntityType
     {

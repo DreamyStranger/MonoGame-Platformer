@@ -9,16 +9,16 @@ namespace ECS_Framework
     /// </summary>
     public class ParallaxSystem : System
     {
-        private List<Entity> entities;
-        private List<ParallaxComponent> parallaxes;
+        private List<Entity> _entities;
+        private List<ParallaxComponent> _parallaxes;
 
         /// <summary>
         /// Initializes a new instance of the ParallaxSystem class.
         /// </summary>
         public ParallaxSystem()
         {
-            entities = new List<Entity>();
-            parallaxes = new List<ParallaxComponent>();
+            _entities = new List<Entity>();
+            _parallaxes = new List<ParallaxComponent>();
         }
 
         /// <summary>
@@ -33,8 +33,8 @@ namespace ECS_Framework
                 return;
             }
 
-            entities.Add(entity);
-            parallaxes.Add(parallax);
+            _entities.Add(entity);
+            _parallaxes.Add(parallax);
         }
 
         /// <summary>
@@ -43,11 +43,11 @@ namespace ECS_Framework
         /// <param name="entity">The entity to remove.</param>
         public override void RemoveEntity(Entity entity)
         {
-            int index = entities.IndexOf(entity);
+            int index = _entities.IndexOf(entity);
             if (index != -1)
             {
-                entities.RemoveAt(index);
-                parallaxes.RemoveAt(index);
+                _entities.RemoveAt(index);
+                _parallaxes.RemoveAt(index);
             }
         }
         
@@ -57,9 +57,9 @@ namespace ECS_Framework
         /// <param name="gameTime">The game time.</param>
         public override void Update(GameTime gameTime)
         {
-            for (int i = 0; i < parallaxes.Count; i++)
+            for (int i = 0; i < _parallaxes.Count; i++)
             {
-                parallaxes[i].Update(gameTime);
+                _parallaxes[i].Update(gameTime);
             }
         }
 
@@ -69,9 +69,9 @@ namespace ECS_Framework
         /// <param name="spriteBatch">The sprite batch used for drawing.</param>
         public override void Draw(SpriteBatch spriteBatch)
         {
-            for (int i = 0; i < parallaxes.Count; i++)
+            for (int i = 0; i < _parallaxes.Count; i++)
             {
-                parallaxes[i].Draw(spriteBatch);
+                _parallaxes[i].Draw(spriteBatch);
             }
         }
     }

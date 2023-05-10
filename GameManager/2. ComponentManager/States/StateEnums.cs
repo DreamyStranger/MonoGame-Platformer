@@ -1,7 +1,7 @@
 namespace ECS_Framework
 {
     /// <summary>
-    /// The possible interaptable States an object can be in.
+    /// Possible interaptable States an object can be in.
     /// </summary>
     public enum State
     {
@@ -14,7 +14,7 @@ namespace ECS_Framework
     }
 
     /// <summary>
-    /// The possible continuous SuperStates an object can be in.
+    /// Possible continuous SuperStates an object can be in.
     /// </summary>
     public enum SuperState
     {

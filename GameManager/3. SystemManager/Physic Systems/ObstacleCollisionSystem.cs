@@ -10,11 +10,11 @@ namespace ECS_Framework
     /// </summary>
     public class ObstacleCollisionSystem : System
     {
-        private List<EntityData> entitiesData;
+        private List<EntityData> _entitiesData;
         /// <summary>
         /// Dictionary containing the obstacle data for each layer in the game environment.
         /// </summary>
-        private Dictionary<string, List<Rectangle>> obstacles;
+        private Dictionary<string, List<Rectangle>> _obstacles;
 
         /// <summary>
         /// Initializes a new instance of the ObstacleColliderSystem class.
@@ -23,9 +23,9 @@ namespace ECS_Framework
 
         public ObstacleCollisionSystem(LevelID levelID)
         {
-            entitiesData = new List<EntityData>();
-            obstacles = new Dictionary<string, List<Rectangle>>();
-            obstacles = Loader.tiledHandler.objects[levelID.ToString()];
+            _entitiesData = new List<EntityData>();
+            _obstacles = new Dictionary<string, List<Rectangle>>();
+            _obstacles = Loader.tiledHandler.objects[levelID.ToString()];
 
             //Console.WriteLine($"Loaded obstacles for Levels: {levelID}"); // Debug message
             //Console.WriteLine($"Loaded obstacle layers: {string.Join(", ", obstacles.Keys)}"); // Debug message
@@ -46,7 +46,7 @@ namespace ECS_Framework
                 return;
             }
 
-            entitiesData.Add(new EntityData
+            _entitiesData.Add(new EntityData
             {
                 Entity = entity,
                 State = state,
@@ -61,7 +61,7 @@ namespace ECS_Framework
         /// <param name="entity">The entity to be removed.</param>
         public override void RemoveEntity(Entity entity)
         {
-            entitiesData.RemoveAll(data => data.Entity == entity);
+            _entitiesData.RemoveAll(data => data.Entity == entity);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace ECS_Framework
         /// <param name="gameTime">The current game time.</param>
         public override void Update(GameTime gameTime)
         {
-            foreach (EntityData data in entitiesData)
+            foreach (EntityData data in _entitiesData)
             {
                 data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
                 Rectangle box = data.CollisionBox.GetRectangle();
@@ -79,13 +79,13 @@ namespace ECS_Framework
                 data.State.CanMoveRight = true;
                 data.State.CanMoveLeft = true;
 
-                foreach (string key in obstacles.Keys)
+                foreach (string key in _obstacles.Keys)
                 {
                     if(key == "entity")
                     {
                         continue;
                     }
-                    foreach (Rectangle rect in obstacles[key])
+                    foreach (Rectangle rect in _obstacles[key])
                     {
                         if (!box.Intersects(rect))
                         {
@@ -257,7 +257,7 @@ namespace ECS_Framework
             {
                 return;
             }
-            foreach (EntityData data in entitiesData)
+            foreach (EntityData data in _entitiesData)
             {
                 Texture2D collisionBox = Loader.collisionBox;
 

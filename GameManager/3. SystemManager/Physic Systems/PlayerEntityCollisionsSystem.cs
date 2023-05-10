@@ -149,15 +149,49 @@ namespace ECS_Framework
             // If the player is falling, kill the enemy and set its state to idle
             if (player.State.CurrentSuperState == SuperState.IsFalling)
             {
-                enemy.State.CurrentSuperState = SuperState.IsDead;
-                enemy.State.CurrentState = State.Idle;
+                float positionX = player.Movement.Position.X;
+                float positionY = player.Movement.Position.Y;
+                bool properHit = HandleFallCollision(player, player.CollisionBox.GetRectangle(), enemy.CollisionBox.GetRectangle(), ref positionX, ref positionY);
+                if (properHit)
+                {
+                    enemy.State.CurrentSuperState = SuperState.IsDead;
+                    enemy.State.CurrentState = State.Idle;
+                    player.Movement.Position = new Vector2 (positionX, positionY);
+                    player.CollisionBox.UpdateBoxPosition(positionX, positionY, player.State.HorizontalDirection);
+                    player.Movement.Velocity = new Vector2(player.Movement.Velocity.X, player.Movement.Velocity.Y - 300);
+                    player.State.CurrentSuperState = SuperState.IsJumping;
+                    return;
+                }
             }
-            // Otherwise, kill the player and set its state to idle
-            else
+            player.State.CurrentSuperState = SuperState.IsDead;
+            player.State.CurrentState = State.Idle;
+        }
+
+        //Helper Methods
+        /// <summary>
+        /// Handles collision when the entity is in a falling state.
+        /// </summary>
+        /// <param name="data">The EntityData containing the entity's components.</param>
+        /// <param name="box">The entity's collision box.</param>
+        /// <param name="rect">The obstacle's rectangle.</param>
+        /// <param name="positionX">The entity's current X position.</param>
+        /// <param name="positionY">The entity's current Y position.</param>
+        private bool HandleFallCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY)
+        {
+            bool wasAbove = data.Movement.LastPosition.Y + data.CollisionBox.OriginalHeight - data.CollisionBox.VertBottomOffset <= rect.Top + 1;
+            bool collidesWithTopSide = box.Bottom > rect.Top && box.Top <= rect.Top;
+
+
+            if (collidesWithTopSide && wasAbove)
             {
-                player.State.CurrentSuperState = SuperState.IsDead;
-                player.State.CurrentState = State.Idle;
+                positionY = rect.Top - data.CollisionBox.OriginalHeight + data.CollisionBox.VertBottomOffset;
+                data.CollisionBox.SetGroundLocation(rect.Left, rect.Right);
+                data.State.CurrentSuperState = SuperState.IsOnGround;
+                data.Movement.Velocity = Vector2.Zero;
+                data.Movement.Acceleration = Vector2.Zero;
+                return true;
             }
+            return false;
         }
 
     }

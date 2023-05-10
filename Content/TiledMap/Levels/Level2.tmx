@@ -49,9 +49,9 @@
  <objectgroup id="4" name="entity">
   <object id="21" name="bg" x="16" y="16">
    <properties>
-    <property name="color" value="green"/>
-    <property name="velocityX" type="int" value="50"/>
-    <property name="velocityY" type="int" value="50"/>
+    <property name="color" value="yellow"/>
+    <property name="velocityX" type="int" value="-50"/>
+    <property name="velocityY" type="int" value="0"/>
    </properties>
   </object>
   <object id="22" name="player" x="48" y="64" width="32" height="32"/>

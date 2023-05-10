@@ -189,7 +189,6 @@ namespace ECS_Framework
             {
                 positionY = rect.Top - data.CollisionBox.OriginalHeight + data.CollisionBox.VertBottomOffset;
                 data.CollisionBox.SetGroundLocation(rect.Left, rect.Right);
-                data.State.CurrentSuperState = SuperState.IsOnGround;
                 data.Movement.Velocity = Vector2.Zero;
                 data.Movement.Acceleration = Vector2.Zero;
                 return true;

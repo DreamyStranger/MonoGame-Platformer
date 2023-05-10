@@ -46,6 +46,15 @@ namespace ECS_Framework
             AddTexture("player_slide", content, "Player", "Frog", "Wall Jump");
             AddTexture("player_death", content, "Player", "Frog", "Hit");
 
+            //Enemy
+            AddTexture("voodo_idle", content, "Enemies", "Voodo", "Idle");
+            AddTexture("voodo_walking", content, "Enemies", "Voodo", "Run");
+            AddTexture("voodo_jump", content, "Enemies", "Voodo", "Jump");
+            AddTexture("voodo_double_jump", content, "Enemies", "Voodo", "Double Jump");
+            AddTexture("voodo_fall", content, "Enemies", "Voodo", "Fall");
+            AddTexture("voodo_slide", content, "Enemies", "Voodo", "Wall Jump");
+            AddTexture("voodo_death", content, "Enemies", "Voodo", "Hit");
+
             //Collectables
             AddTexture("apple_idle", content, "Items", "Fruits", "Apple");
 

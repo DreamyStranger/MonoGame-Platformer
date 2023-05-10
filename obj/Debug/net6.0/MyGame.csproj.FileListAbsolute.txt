@@ -47,3 +47,10 @@
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/TiledMap/Textures/UI.xnb
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Audio/Background/FuriousFreak.ogg
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Audio/Background/FuriousFreak.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Double Jump.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Fall.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Hit.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Idle.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Jump.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Run.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Wall Jump.xnb

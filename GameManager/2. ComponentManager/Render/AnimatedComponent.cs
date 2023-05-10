@@ -84,20 +84,10 @@ namespace ECS_Framework
         /// <param name="direction">The horizontal direction the animation is facing.</param>
         public void Draw(SpriteBatch spriteBatch, Vector2 position, int direction = 1)
         {
-            if (CurrentAction == null)
-            {
-                Console.WriteLine("CurrentAction is null"); // Debug message
-                return;
-            }
             if (Animations.ContainsKey(CurrentAction))
             {
                 ActionAnimation currentAnimation = GetCurrentAnimation();
                 currentAnimation.Draw(spriteBatch, position, direction);
-                //Console.WriteLine($"Drawing: {CurrentAction}"); // Debug message
-            }
-            else
-            {
-                Console.WriteLine($"Incorrect Action to Draw: {CurrentAction}"); // Debug message
             }
         }
 

@@ -113,10 +113,9 @@ namespace ECS_Framework
 
             // Animations
             AnimatedComponent animation = new AnimatedComponent();
-            animation.AddAnimation("player_idle", "idle", 1, 11, 20);
-            animation.AddAnimation("player_walking", "walking", 1, 12, 20);
-            animation.AddAnimation("player_fall", "fall", 1, 1, 20);
-            animation.AddAnimation("player_death", "death", 1, 7, 20);
+            animation.AddAnimation("voodo_idle", "idle", 1, 11, 20);
+            animation.AddAnimation("voodo_walking", "walking", 1, 12, 20);
+            animation.AddAnimation("voodo_death", "death", 1, 7, 20);
             enemy.AddComponent(animation);
 
             // States

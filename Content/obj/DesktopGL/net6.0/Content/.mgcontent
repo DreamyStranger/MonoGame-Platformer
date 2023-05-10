@@ -7,6 +7,13 @@
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Audio/Background/FuriousFreak.mp3</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/BG_Green.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Background/BG_Yellow.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Enemies/Voodo/Double Jump.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Enemies/Voodo/Fall.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Enemies/Voodo/Hit.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Enemies/Voodo/Idle.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Enemies/Voodo/Jump.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Enemies/Voodo/Run.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Enemies/Voodo/Wall Jump.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Apple.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Bananas.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Cherries.png</File>
@@ -27,6 +34,13 @@
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/TiledMap/Textures/UI.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

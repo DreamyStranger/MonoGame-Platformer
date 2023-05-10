@@ -125,6 +125,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:ab291ef95716265418eb23acc437c7899"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#ab291ef95716265418eb23acc437c7899">ResolveWalkingEnemyCollision</a> (<a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> player, <a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> enemy)</td></tr>
 <tr class="memdesc:ab291ef95716265418eb23acc437c7899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves collisions between the player and a regular enemy that is walking on the ground.  <a href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#ab291ef95716265418eb23acc437c7899">More...</a><br /></td></tr>
 <tr class="separator:ab291ef95716265418eb23acc437c7899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4072ac15c63dcf533bbc9a71adfc67d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#af4072ac15c63dcf533bbc9a71adfc67d">HandleFallCollision</a> (<a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a> data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY)</td></tr>
+<tr class="memdesc:af4072ac15c63dcf533bbc9a71adfc67d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles collision when the entity is in a falling state.  <a href="classECS__Framework_1_1PlayerEntityCollisionSystem.html#af4072ac15c63dcf533bbc9a71adfc67d">More...</a><br /></td></tr>
+<tr class="separator:af4072ac15c63dcf533bbc9a71adfc67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -195,6 +198,73 @@ Private Attributes</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classECS__Framework_1_1System.html#a707d4bd1e14fa713cdd3a6179bcba2f7">ECS_Framework.System</a>.</p>
+
+</div>
+</div>
+<a id="af4072ac15c63dcf533bbc9a71adfc67d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4072ac15c63dcf533bbc9a71adfc67d">&#9670;&nbsp;</a></span>HandleFallCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ECS_Framework.PlayerEntityCollisionSystem.HandleFallCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structECS__Framework_1_1EntityData.html">EntityData</a>&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramname"><em>box</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref float&#160;</td>
+          <td class="paramname"><em>positionX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref float&#160;</td>
+          <td class="paramname"><em>positionY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles collision when the entity is in a falling state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The <a class="el" href="structECS__Framework_1_1EntityData.html" title="A struct that contains the most commonly used components.">EntityData</a> containing the entity's components.</td></tr>
+    <tr><td class="paramname">box</td><td>The entity's collision box.</td></tr>
+    <tr><td class="paramname">rect</td><td>The obstacle's rectangle.</td></tr>
+    <tr><td class="paramname">positionX</td><td>The entity's current X position.</td></tr>
+    <tr><td class="paramname">positionY</td><td>The entity's current Y position.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the entity collided with the top side of the obstacle.</dd></dl>
 
 </div>
 </div>

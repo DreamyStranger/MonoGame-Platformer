@@ -13,8 +13,8 @@ var searchData=
   ['component_2ecs_61',['Component.cs',['../Component_8cs.html',1,'']]],
   ['components_62',['components',['../classECS__Framework_1_1Entity.html#aa404d4bea20276a11425e6206a40ea92',1,'ECS_Framework::Entity']]],
   ['currentaction_63',['CurrentAction',['../classECS__Framework_1_1AnimatedComponent.html#aa2b60cd86502f27606771b2ee52e4847',1,'ECS_Framework::AnimatedComponent']]],
-  ['currentlevel_64',['CurrentLevel',['../classECS__Framework_1_1World.html#a95948045791e109e436043ecf588ca64',1,'ECS_Framework::World']]],
-  ['currentlevel_65',['currentLevel',['../classECS__Framework_1_1World.html#af4d7ae8615d189cc01b895a3dbb30c28',1,'ECS_Framework::World']]],
+  ['currentlevel_64',['currentLevel',['../classECS__Framework_1_1World.html#af4d7ae8615d189cc01b895a3dbb30c28',1,'ECS_Framework::World']]],
+  ['currentlevel_65',['CurrentLevel',['../classECS__Framework_1_1World.html#a95948045791e109e436043ecf588ca64',1,'ECS_Framework::World']]],
   ['currentstate_66',['CurrentState',['../classECS__Framework_1_1StateComponent.html#a93587bc38aaf0ae8ed4c7564967dd571',1,'ECS_Framework::StateComponent']]],
   ['currentsuperstate_67',['CurrentSuperState',['../classECS__Framework_1_1StateComponent.html#a677bd477d780ed21effee5b8896a8a16',1,'ECS_Framework::StateComponent']]]
 ];

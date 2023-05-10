@@ -157,7 +157,7 @@ namespace ECS_Framework
                 {
                     enemy.State.CurrentSuperState = SuperState.IsDead;
                     enemy.State.CurrentState = State.Idle;
-                    player.Movement.Position = new Vector2 (positionX, positionY);
+                    player.Movement.Position = new Vector2(positionX, positionY);
                     player.CollisionBox.UpdateBoxPosition(positionX, positionY, direction);
                     player.Movement.Velocity = new Vector2(GameConstants.SpeedXonCollision * direction, player.Movement.Velocity.Y - GameConstants.SpeedYonCollision);
                     player.State.CurrentSuperState = SuperState.IsJumping;
@@ -169,6 +169,7 @@ namespace ECS_Framework
         }
 
         //Helper Methods
+
         /// <summary>
         /// Handles collision when the entity is in a falling state.
         /// </summary>
@@ -177,6 +178,7 @@ namespace ECS_Framework
         /// <param name="rect">The obstacle's rectangle.</param>
         /// <param name="positionX">The entity's current X position.</param>
         /// <param name="positionY">The entity's current Y position.</param>
+        /// <returns>Returns true if the entity collided with the top side of the obstacle.</returns>
         private bool HandleFallCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY)
         {
             bool wasAbove = data.Movement.LastPosition.Y + data.CollisionBox.OriginalHeight - data.CollisionBox.VertBottomOffset <= rect.Top + 1;

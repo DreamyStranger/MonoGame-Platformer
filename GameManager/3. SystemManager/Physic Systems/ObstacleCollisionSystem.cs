@@ -139,13 +139,13 @@ namespace ECS_Framework
         /// <param name="positionY">The entity's current Y position.</param>
         private void HandleFallCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY)
         {
-            bool wasAbove = data.Movement.LastPosition.Y + data.CollisionBox.originalHeight - data.CollisionBox.vertBottomOffset <= rect.Top + 1;
+            bool wasAbove = data.Movement.LastPosition.Y + data.CollisionBox.OriginalHeight - data.CollisionBox.VertBottomOffset <= rect.Top + 1;
             bool collidesWithTopSide = box.Bottom > rect.Top && box.Top <= rect.Top;
 
 
             if (collidesWithTopSide && wasAbove)
             {
-                positionY = rect.Top - data.CollisionBox.originalHeight + data.CollisionBox.vertBottomOffset;
+                positionY = rect.Top - data.CollisionBox.OriginalHeight + data.CollisionBox.VertBottomOffset;
                 data.CollisionBox.SetGroundLocation(rect.Left, rect.Right);
                 data.State.CurrentSuperState = SuperState.IsOnGround;
                 data.Movement.Velocity = Vector2.Zero;
@@ -176,7 +176,7 @@ namespace ECS_Framework
             bool collidesWithBottomSide = box.Top < rect.Bottom && box.Bottom >= rect.Bottom;
             if (collidesWithBottomSide)
             {
-                positionY = rect.Bottom - data.CollisionBox.vertTopOffset;
+                positionY = rect.Bottom - data.CollisionBox.VertTopOffset;
                 data.State.CurrentSuperState = SuperState.IsFalling;
                 data.Movement.Velocity = Vector2.Zero;
                 //data.State.JumpsPerformed = 2;
@@ -206,12 +206,12 @@ namespace ECS_Framework
 
             if (data.Movement.Velocity.X > 0 && collidesWithLeftSide)
             {
-                positionX = rect.Left - data.CollisionBox.originalWidth + data.CollisionBox.horRightOffset;
+                positionX = rect.Left - data.CollisionBox.OriginalWidth + data.CollisionBox.HorRightOffset;
                 data.State.CanMoveRight = false;
             }
             else if (data.Movement.Velocity.X < 0 && collidesWithRightSide)
             {
-                positionX = rect.Right - data.CollisionBox.horRightOffset;
+                positionX = rect.Right - data.CollisionBox.HorRightOffset;
                 data.State.CanMoveLeft = false;
             }
         }
@@ -232,14 +232,14 @@ namespace ECS_Framework
             {
                 if (data.Movement.Velocity.X > 0 && box.Left <= rect.Left)
                 {
-                    positionX = rect.Left - data.CollisionBox.originalWidth + data.CollisionBox.horRightOffset;
+                    positionX = rect.Left - data.CollisionBox.OriginalWidth + data.CollisionBox.HorRightOffset;
                     data.State.CanMoveRight = false;
                     data.State.CurrentSuperState = SuperState.IsFalling;
                     data.Movement.Velocity = Vector2.Zero;
                 }
                 else if (data.Movement.Velocity.X < 0 && box.Right >= rect.Right)
                 {
-                    positionX = rect.Right - data.CollisionBox.horRightOffset;
+                    positionX = rect.Right - data.CollisionBox.HorRightOffset;
                     data.State.CanMoveLeft = false;
                     data.State.CurrentSuperState = SuperState.IsFalling;
                     data.Movement.Velocity = Vector2.Zero;

@@ -72,7 +72,7 @@ namespace ECS_Framework
             AddTexture("UI", content, "TiledMap", "Textures", "UI");
 
             //TileMaps
-            tiledHandler = new TileHandler(content);
+            tiledHandler = new TileHandler();
             foreach (LevelID level in LevelID.GetValues(typeof(LevelID)))
             {
                 string levelName = level.ToString();
@@ -146,6 +146,11 @@ namespace ECS_Framework
             return null;
         }
 
+        // <summary>
+        /// Plays a music file given its name.
+        /// </summary>
+        /// <param name="musicName">The name of the music file to play.</param>
+        /// <param name="loop">If set to true, the music will loop. Defaults to false.</param>
         public static void PlayMusic(string musicName, bool loop = false)
         {
             if (songs.ContainsKey(musicName))

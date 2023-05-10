@@ -20,8 +20,7 @@ namespace ECS_Framework
         /// <summary>
         /// Initializes a new instance of the TileHandler class.
         /// </summary>
-        /// <param name="contentManager">The ContentManager to load tile textures with.</param>
-        public TileHandler(ContentManager contentManager)
+        public TileHandler()
         {
             this._tiledMaps = new Dictionary<string, TiledMap>();
             this._tileSets = new Dictionary<string, Dictionary<int, TiledTileset>>();
@@ -45,13 +44,19 @@ namespace ECS_Framework
             _tileSets[levelID] = tilesets;
         }
 
+        /// <summary>
+        /// Retrieves a map given its LevelID.
+        /// </summary>
+        /// <param name="level">The LevelID of the map to retrieve.</param>
+        /// <returns>The loaded map, or null if the map was not found.</returns>
         public TiledMap GetMap(LevelID level)
         {
             return _tiledMaps[level.ToString()];
         }
 
         /// <summary>
-        /// Helper method for the All Bounds method below. Creates rectangles representing the objects of a specified layer.
+        /// Helper method for the All Objects method below. 
+        /// Creates rectangles representing the objects of a specified layer.
         /// </summary>
         /// <param name="layer">The layer to create bounds for.</param>
         /// <param name="mapName">The name of the map the layer belongs to.</param>
@@ -74,7 +79,8 @@ namespace ECS_Framework
         }
 
         /// <summary>
-        /// Creates rectangles that bound every Object Layer in every loaded Level. Useful for collision detection with Rectangle.Intersects() method.
+        /// Creates rectangles that bound every Object Layer in every loaded Level. 
+        /// Useful for collision detection with Rectangle.Intersects() method.
         /// </summary>
         public void GetLayersObjectsInMap()
         {

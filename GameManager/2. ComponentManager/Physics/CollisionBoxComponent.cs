@@ -12,20 +12,61 @@ namespace ECS_Framework
     /// </remarks>
     public class CollisionBoxComponent : Component
     {
-        // Collision box variables
-        private Rectangle entityCollisionBox;  // The collision box for the entity.
-        public int originalWidth { get; private set; }  // The original width of the collision box.
-        public int originalHeight { get; private set; }  // The original height of the collision box.
-        public int width { get; private set; }  // The current width of the collision box.
-        public int height { get; private set; }  // The current height of the collision box.
-        public int vertTopOffset { get; private set; }  // The vertical top offset of the collision box.
-        public int vertBottomOffset { get; private set; }  // The vertical bottom offset of the collision box.
-        public int horLeftOffset { get; private set; }  // The horizontal left offset of the collision box.
-        public int horRightOffset { get; private set; }  // The horizontal right offset of the collision box.
+        /// <summary>
+        /// The original width of the collision box.
+        /// </summary>
+        public int OriginalWidth { get; private set; }
 
-        // Variables to check if an entity is on a platform
-        private int groundLeft = 0;  // The left boundary of the platform.
-        private int groundRight = GameConstants.SCREEN_WIDTH;  // The right boundary of the platform.
+        /// <summary>
+        /// The original height of the collision box.
+        /// </summary>
+        public int OriginalHeight { get; private set; }
+
+        /// <summary>
+        /// The current width of the collision box.
+        /// </summary>
+        public int Width { get; private set; }
+
+        /// <summary>
+        /// The current height of the collision box.
+        /// </summary>
+        public int Height { get; private set; }
+
+        /// <summary>
+        /// The vertical top offset of the collision box.
+        /// </summary>
+        public int VertTopOffset { get; private set; }
+
+        /// <summary>
+        /// The vertical bottom offset of the collision box.
+        /// </summary>
+        public int VertBottomOffset { get; private set; }
+
+        /// <summary>
+        /// The horizontal left offset of the collision box.
+        /// </summary>
+        public int HorLeftOffset { get; private set; }
+
+        /// <summary>
+        /// The horizontal right offset of the collision box.
+        /// </summary>
+        public int HorRightOffset { get; private set; }
+
+        /// <summary>
+        /// The collision box for the entity.
+        /// </summary>
+        private Rectangle _entityCollisionBox;
+
+        /// <summary>
+        /// The left boundary of the platform the entity is currently standing on.
+        /// </summary>
+        private int _groundLeft = 0;
+
+        /// <summary>
+        /// // The right boundary of the platform entity currently standing on.
+        /// </summary>
+        private int _groundRight = GameConstants.SCREEN_WIDTH;
+
 
         /// <summary>
         /// Creates a new instance of the CollisionBoxComponent class.
@@ -40,15 +81,15 @@ namespace ECS_Framework
         public CollisionBoxComponent(Vector2 position, int width, int height,
                                 int vertTopOffset = 0, int vertBottomOffset = 0, int horLeftOffset = 0, int horRightOffset = 0)
         {
-            this.originalWidth = width;
-            this.originalHeight = height;
-            this.vertTopOffset = vertTopOffset;
-            this.vertBottomOffset = vertBottomOffset;
-            this.horLeftOffset = horLeftOffset;
-            this.horRightOffset = horRightOffset;
-            this.width = width - horLeftOffset - horRightOffset;
-            this.height = height - vertBottomOffset - vertTopOffset;
-            this.entityCollisionBox = new Rectangle((int)position.X + horLeftOffset, (int)position.Y + vertTopOffset, this.width, this.height);
+            this.OriginalWidth = width;
+            this.OriginalHeight = height;
+            this.VertTopOffset = vertTopOffset;
+            this.VertBottomOffset = vertBottomOffset;
+            this.HorLeftOffset = horLeftOffset;
+            this.HorRightOffset = horRightOffset;
+            this.Width = width - horLeftOffset - horRightOffset;
+            this.Height = height - vertBottomOffset - vertTopOffset;
+            this._entityCollisionBox = new Rectangle((int)position.X + horLeftOffset, (int)position.Y + vertTopOffset, this.Width, this.Height);
         }
 
         /// <summary>
@@ -62,15 +103,15 @@ namespace ECS_Framework
             switch (direction)
             {
                 case -1:
-                    entityCollisionBox.X = (int)positionX + horRightOffset;
+                    _entityCollisionBox.X = (int)positionX + HorRightOffset;
                     break;
 
                 case 1:
-                    entityCollisionBox.X = (int)positionX + horLeftOffset;
+                    _entityCollisionBox.X = (int)positionX + HorLeftOffset;
                     break;
             }
 
-            entityCollisionBox.Y = (int)positionY + vertTopOffset;
+            _entityCollisionBox.Y = (int)positionY + VertTopOffset;
 
         }
 
@@ -80,7 +121,7 @@ namespace ECS_Framework
         /// <returns>The collision box as a Rectangle object.</returns>
         public Rectangle GetRectangle()
         {
-            return entityCollisionBox;
+            return _entityCollisionBox;
         }
 
         /// <summary>
@@ -90,10 +131,10 @@ namespace ECS_Framework
         /// <param name="right">The right boundary of the platform.</param>
         public void SetGroundLocation(int left, int right)
         {
-            groundLeft = left;
-            groundRight = right;
+            _groundLeft = left;
+            _groundRight = right;
         }
-        
+
         /// <summary>
         /// Checks if the entity is in the air (not on the platform).
         /// </summary>
@@ -102,14 +143,14 @@ namespace ECS_Framework
         /// <returns>True if the entity is in the air, false otherwise.</returns>
         public bool checkIfInAir(float position, int direction)
         {
-            float left = position + horLeftOffset;
-            float right =  position - horRightOffset + originalWidth;
-            if(direction == -1)
+            float left = position + HorLeftOffset;
+            float right = position - HorRightOffset + OriginalWidth;
+            if (direction == -1)
             {
-                left = position + horRightOffset;
-                right = position - horLeftOffset + originalWidth;
+                left = position + HorRightOffset;
+                right = position - HorLeftOffset + OriginalWidth;
             }
-            return right < groundLeft || left  > groundRight;
+            return right < _groundLeft || left > _groundRight;
         }
     }
 }

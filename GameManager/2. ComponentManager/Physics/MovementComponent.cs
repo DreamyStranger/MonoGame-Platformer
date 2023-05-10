@@ -19,22 +19,22 @@ namespace ECS_Framework
         private Vector2 _acceleration;
 
         /// <summary>
-        /// Gets or sets the position of the entity.
+        /// Position of the entity.
         /// </summary>
         public Vector2 Position { get => _position; set => _position = value; }
 
         /// <summary>
-        /// Gets or sets the last position of the entity.
+        /// Last position of the entity.
         /// </summary>
         public Vector2 LastPosition { get => _lastPosition; set => _lastPosition = value; }
 
         /// <summary>
-        /// Gets or sets the velocity of the entity.
+        /// Velocity of the entity.
         /// </summary>
         public Vector2 Velocity { get => _velocity; set => _velocity = value; }
 
         /// <summary>
-        /// Gets or sets the acceleration of the entity.
+        /// Acceleration of the entity.
         /// </summary>
         public Vector2 Acceleration { get => _acceleration; set => _acceleration = value; }
 

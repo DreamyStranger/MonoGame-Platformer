@@ -15,7 +15,9 @@ namespace ECS_Framework
         private SuperState _currentSuperState;
         public SuperState previousSuperState { get; private set; }
 
-        // State ID used for identifying the current animation
+        /// <summary>
+        /// action ID used for identifying the current animation
+        /// </summary>
         public string stateID { get; private set; }
 
         // Jump Counter
@@ -79,7 +81,7 @@ namespace ECS_Framework
         }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity can move to the left.
+        /// Indicates whether the entity can move to the left.
         /// </summary>
         public bool CanMoveLeft
         {
@@ -96,7 +98,7 @@ namespace ECS_Framework
         }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity can move to the right.
+        /// Indicates whether the entity can move to the right.
         /// </summary>
         public bool CanMoveRight
         {
@@ -113,11 +115,13 @@ namespace ECS_Framework
         }
 
         /// <summary>
-        /// Gets or sets the horizontal direction of the entity.
+        /// Horizontal direction of the entity.
         /// </summary>
         public int HorizontalDirection { get => _horizontalDirection; set => _horizontalDirection = value; }
 
-        // State
+        /// <summary>
+        /// Interabtable state of the entity.
+        /// </summary>
         public State CurrentState
         {
             get => _currentState;
@@ -129,7 +133,9 @@ namespace ECS_Framework
             }
         }
 
-        // SuperState
+        /// <summary>
+        /// Continous state of the entity.
+        /// </summary>
         public SuperState CurrentSuperState
         {
             get => _currentSuperState;
@@ -142,4 +148,3 @@ namespace ECS_Framework
         }
     }
 }
-

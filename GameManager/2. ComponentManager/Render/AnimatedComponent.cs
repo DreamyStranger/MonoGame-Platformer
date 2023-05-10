@@ -123,15 +123,19 @@ namespace ECS_Framework
     /// </summary>
     public class ActionAnimation
     {
-        private Texture2D Texture;         // The texture containing the sprite sheet.
-        private int Rows;                  // The number of rows in the sprite sheet.
-        private int Columns;               // The number of columns in the sprite sheet.
-        private int CurrentFrame;          // The index of the current frame being displayed.
-        private int TotalFrames;           // The total number of frames in the sprite sheet.
-        private float FrameTime;           // The time between each frame in seconds.
-        private float ElapsedFrameTime;    // The time elapsed since the last frame change in seconds.
-        private Rectangle[] Frames;        // An array of rectangles defining each frame in the sprite sheet.
-        public bool IsFinished { get { return CurrentFrame >= TotalFrames - 1; } } // Tells if current animation was finished
+        private Texture2D _texture;         // The texture containing the sprite sheet.
+        private int _rows;                  // The number of rows in the sprite sheet.
+        private int _columns;               // The number of columns in the sprite sheet.
+        private int _currentFrame;          // The index of the current frame being displayed.
+        private int _totalFrames;           // The total number of frames in the sprite sheet.
+        private float _frameTime;           // The time between each frame in seconds.
+        private float _elapsedFrameTime;    // The time elapsed since the last frame change in seconds.
+        private Rectangle[] _frames;        // An array of rectangles defining each frame in the sprite sheet.
+
+        /// <summary>
+        /// Tells if current animation was finished
+        /// </summary>
+        public bool IsFinished { get { return _currentFrame >= _totalFrames - 1; } }
 
         /// <summary>
         /// Creates a new instance of the ActionAnimation class.
@@ -142,22 +146,22 @@ namespace ECS_Framework
         /// <param name="fps">The frame rate in frames per second.</param>
         public ActionAnimation(string sprite, int rows, int columns, float fps)
         {
-            Texture = Loader.GetTexture(sprite);
-            Rows = rows;
-            Columns = columns;
-            CurrentFrame = 0;
-            TotalFrames = Rows * Columns;
-            FrameTime = 1 / fps;
-            ElapsedFrameTime = 0;
+            _texture = Loader.GetTexture(sprite);
+            _rows = rows;
+            _columns = columns;
+            _currentFrame = 0;
+            _totalFrames = _rows * _columns;
+            _frameTime = 1 / fps;
+            _elapsedFrameTime = 0;
 
-            Frames = new Rectangle[TotalFrames];
-            int frameWidth = Texture.Width / Columns;
-            int frameHeight = Texture.Height / Rows;
-            for (int i = 0; i < TotalFrames; i++)
+            _frames = new Rectangle[_totalFrames];
+            int frameWidth = _texture.Width / _columns;
+            int frameHeight = _texture.Height / _rows;
+            for (int i = 0; i < _totalFrames; i++)
             {
-                int x = (i % Columns) * frameWidth;
-                int y = (i % Rows) * frameHeight;
-                Frames[i] = new Rectangle(x, y, frameWidth, frameHeight);
+                int x = (i % _columns) * frameWidth;
+                int y = (i % _rows) * frameHeight;
+                _frames[i] = new Rectangle(x, y, frameWidth, frameHeight);
             }
         }
 
@@ -167,19 +171,19 @@ namespace ECS_Framework
         /// <param name="gameTime">The elapsed game time.</param>
         public void Update(GameTime gameTime)
         {
-            if (Frames.Length == 1)
+            if (_frames.Length == 1)
             {
                 return;
             }
-            ElapsedFrameTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            if (ElapsedFrameTime >= FrameTime)
+            _elapsedFrameTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (_elapsedFrameTime >= _frameTime)
             {
-                CurrentFrame++;
-                if (CurrentFrame >= TotalFrames)
+                _currentFrame++;
+                if (_currentFrame >= _totalFrames)
                 {
-                    CurrentFrame = 0;
+                    _currentFrame = 0;
                 }
-                ElapsedFrameTime = 0;
+                _elapsedFrameTime = 0;
             }
         }
 
@@ -195,11 +199,11 @@ namespace ECS_Framework
             if (direction == -1)
                 isFacingLeft = true;
 
-            Rectangle currentFrame = Frames[CurrentFrame];
+            Rectangle currentFrame = _frames[_currentFrame];
 
             //Console.WriteLine($"Drawing frame {CurrentFrame}: X = {currentFrame.X}, Y = {currentFrame.Y}, Width = {currentFrame.Width}, Height = {currentFrame.Height}");
 
-            spriteBatch.Draw(Texture,
+            spriteBatch.Draw(_texture,
                      position,
                      sourceRectangle: currentFrame,
                      Color.White,
@@ -215,8 +219,8 @@ namespace ECS_Framework
         /// </summary>
         public void Reset()
         {
-            CurrentFrame = 0;
-            ElapsedFrameTime = 0;
+            _currentFrame = 0;
+            _elapsedFrameTime = 0;
         }
     }
 }

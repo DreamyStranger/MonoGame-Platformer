@@ -4,23 +4,29 @@ using Microsoft.Xna.Framework.Input;
 namespace ECS_Framework
 {
     /// <summary>
-    /// Component representing the input state of the player entity.
+    /// Component representing the movement state of a simple walking enemy entity.
     /// </summary>
     public class SimpleWalkingEnemyComponent : Component
     {
         /// <summary>
-        /// Indicates whether the enemy is moving left
+        /// Indicates whether the enemy is moving left.
+        /// </summary>
         public bool IsLeft { get; private set; }
 
         /// <summary>
-        /// Indicates whether the enemy is moving right
+        /// Indicates whether the enemy is moving right.
         /// </summary>
         public bool IsRight { get; private set; }
 
         private float _left;
         private float _right;
 
-
+        /// <summary>
+        /// Initializes a new instance of the SimpleWalkingEnemyComponent class.
+        /// </summary>
+        /// <param name="start">The starting position of the enemy on the x-axis.</param>
+        /// <param name="leftRange">The range the enemy can move to the left.</param>
+        /// <param name="rightRange">The range the enemy can move to the right.</param>
         public SimpleWalkingEnemyComponent(float start, float leftRange, float rightRange)
         {
             _left = start - leftRange;
@@ -28,9 +34,9 @@ namespace ECS_Framework
         }
 
         /// <summary>
-        /// Updates the component's input state based on the position
+        /// Updates the component's movement state based on the enemy's position.
         /// </summary>
-        /// <param name="gameTime">The current game time.</param>
+        /// <param name="positionX">The enemy's position on the x-axis.</param>
         public void Update(float positionX)
         {
             if (positionX <= _left)

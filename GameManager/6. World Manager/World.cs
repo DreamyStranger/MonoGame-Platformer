@@ -26,6 +26,7 @@ namespace ECS_Framework
 
             MessageBus.Subscribe<DestroyEntityMessage>(OnDestroyEntity);
             MessageBus.Subscribe<NextLevelMessage>(NextLevel);
+            MessageBus.Subscribe<PreviousLevelMessage>(PreviousLevel);
             MessageBus.Subscribe<ReloadLevelMessage>(ResetCurrentLevel);
 
             ChangeLevel(LevelID.Level1);
@@ -61,6 +62,7 @@ namespace ECS_Framework
             {
                 systems.Add(entity);
             }
+            Loader.PlayMusic("bg_music");
         }
 
         /// <summary>
@@ -85,7 +87,7 @@ namespace ECS_Framework
         /// <summary>
         /// Goes back to the previous level.
         /// </summary>
-        public void PreviousLevel()
+        public void PreviousLevel(PreviousLevelMessage message = null)
         {
             currentLevel = (LevelID)(((int)currentLevel - 1 + totalLevels) % totalLevels);
             LoadLevel();

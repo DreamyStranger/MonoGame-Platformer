@@ -28,13 +28,9 @@ namespace ECS_Framework
             return background;
         }
 
-        //Player
         /// <summary>
         /// Creates a player entity.
         /// </summary>
-        /// <remarks>
-        /// Player must be first Level entity to initialize to be first in PlayerEntityCollisionSystem.
-        /// </remarks>
         /// <param name="position">The initial position of the player.</param>
         /// <returns>The player entity.</returns>
         public static Entity CreatePlayer(Vector2 position)
@@ -76,23 +72,23 @@ namespace ECS_Framework
 
         public static Entity CreateFruit(Vector2 position, string fruitName)
         {
-            //Empty coin
+            // Create an empty coin entity
             Entity coin = new Entity();
             coin.AddComponent(new EntityTypeComponent(EntityType.Coin));
 
-            //Animations
+            // Add animations for the fruit
             AnimatedComponent animation = new AnimatedComponent();
             animation.AddAnimation(fruitName + "_idle", "idle", 1, 17, 20);
             animation.AddAnimation("fruits_death", "death", 1, 6, 20);
             coin.AddComponent(animation);
 
-            // States
+            // Add the current state and super state for the fruit
             coin.AddComponent(new StateComponent(State.Idle, SuperState.IsOnGround));
 
-            // Position and transforms
+            // Add movement component to set initial position
             coin.AddComponent(new MovementComponent(position));
 
-            // Collisions
+            // Add a collision box component to handle collisions
             coin.AddComponent(new CollisionBoxComponent(
                     position: position,
                     width: 32,
@@ -107,25 +103,25 @@ namespace ECS_Framework
 
         public static Entity CreateSimpleEnemy(Vector2 position, float leftRange, float rightRange, State initialDirection)
         {
-            //Empty Player
+            // Create an empty enemy entity
             Entity enemy = new Entity();
             enemy.AddComponent(new EntityTypeComponent(EntityType.RegularEnemy));
 
-            // Animations
+            // Add animations for the enemy
             AnimatedComponent animation = new AnimatedComponent();
             animation.AddAnimation("voodo_idle", "idle", 1, 11, 20);
             animation.AddAnimation("voodo_walking", "walking", 1, 12, 20);
             animation.AddAnimation("fruits_death", "death", 1, 6, 20);
             enemy.AddComponent(animation);
 
-            // States
+            // Add the current state and super state for the enemy
             enemy.AddComponent(new StateComponent(initialDirection));
             enemy.AddComponent(new SimpleWalkingEnemyComponent(position.X, leftRange, rightRange));
 
-            // Position and transforms
+            // Add movement component to set initial position
             enemy.AddComponent(new MovementComponent(position));
 
-            // Collisions
+            // Add a collision box component to handle collisions
             enemy.AddComponent(new CollisionBoxComponent(
                     position: position,
                     width: 32,

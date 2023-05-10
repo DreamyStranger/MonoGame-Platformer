@@ -10,10 +10,10 @@ namespace ECS_Framework
     /// </summary>
     public struct SystemManager
     {
-        private List<System> systems = new List<System>();
+        private List<System> _systems = new List<System>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SystemManager"/> class with a specified level ID.
+        /// Initializes a new instance of the <see cref="SystemManager"/> class.
         /// </summary>
         /// <param name="LevelID">The ID of the level.</param>
         public SystemManager(LevelID levelID)
@@ -21,18 +21,22 @@ namespace ECS_Framework
             ResetSystems(levelID);
         }
 
+        /// <summary>
+        /// Resets the system manager, used whenever a level is changed/reloaded
+        /// </summary>
+        /// <param name="LevelID">The ID of the level.</param>
         public void ResetSystems(LevelID levelID)
         {
-            systems = new List<System>();
-            systems.Add(new ParallaxSystem());
-            systems.Add(new LevelRenderSystem(levelID));
-            systems.Add(new PlayerInputSystem());
-            systems.Add(new SimpleWalkingEnemySystem());
-            systems.Add(new MovementSystem());
-            systems.Add(new ObstacleCollisionSystem(levelID));
-            systems.Add(new PlayerEntityCollisionSystem());
-            systems.Add(new AnimationRenderSystem());
-            systems.Add(new DeathEventSystem());
+            _systems = new List<System>();
+            _systems.Add(new ParallaxSystem());
+            _systems.Add(new LevelRenderSystem(levelID));
+            _systems.Add(new PlayerInputSystem());
+            _systems.Add(new SimpleWalkingEnemySystem());
+            _systems.Add(new MovementSystem());
+            _systems.Add(new ObstacleCollisionSystem(levelID));
+            _systems.Add(new PlayerEntityCollisionSystem());
+            _systems.Add(new AnimationRenderSystem());
+            _systems.Add(new DeathEventSystem());
         }
 
         /// <summary>
@@ -41,7 +45,7 @@ namespace ECS_Framework
         /// <param name="entity">The entity to be added.</param>
         public void Add(Entity entity)
         {
-            foreach (System system in systems)
+            foreach (System system in _systems)
             {
                 system.AddEntity(entity);
             }
@@ -52,7 +56,7 @@ namespace ECS_Framework
         /// <param name="entity">The entity to be removed.</param>
         public void Remove(Entity entity)
         {
-            foreach (System system in systems)
+            foreach (System system in _systems)
             {
                 system.RemoveEntity(entity);
             }
@@ -65,7 +69,7 @@ namespace ECS_Framework
         /// <param name="gameTime">The time since the last update.</param>
         public void Update(GameTime gameTime)
         {
-            foreach (System system in systems)
+            foreach (System system in _systems)
             {
                 system.Update(gameTime);
             }
@@ -77,7 +81,7 @@ namespace ECS_Framework
         /// <param name="spriteBatch">The sprite batch used to draw the entities.</param>
         public void Draw(SpriteBatch spriteBatch)
         {
-            foreach (System system in systems)
+            foreach (System system in _systems)
             {
                 system.Draw(spriteBatch);
             }

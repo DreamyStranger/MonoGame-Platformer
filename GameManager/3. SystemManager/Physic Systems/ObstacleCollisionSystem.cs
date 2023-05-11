@@ -107,6 +107,9 @@ namespace MonogameExamples
                                 HandleJumpCollision(data, box, rect, ref positionX, ref positionY, key);
                                 break;
 
+                            case SuperState.IsDead:
+                                return;
+                                
                             default:
                                 break;
                         }

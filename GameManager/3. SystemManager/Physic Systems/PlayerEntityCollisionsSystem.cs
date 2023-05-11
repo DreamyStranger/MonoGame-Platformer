@@ -158,6 +158,8 @@ namespace MonogameExamples
                 {
                     enemy.State.CurrentSuperState = SuperState.IsDead;
                     enemy.State.CurrentState = State.Idle;
+                    enemy.Movement.Velocity = new Vector2(0, -20);
+                    enemy.Movement.Acceleration = new Vector2(0, 100);
                     MessageBus.Publish(new EntityDiedMessage(enemy.Entity));
                     player.Movement.Position = new Vector2(positionX, positionY);
                     player.CollisionBox.UpdateBoxPosition(positionX, positionY, direction);
@@ -168,6 +170,8 @@ namespace MonogameExamples
             }
             player.State.CurrentSuperState = SuperState.IsDead;
             player.State.CurrentState = State.Idle;
+            player.Movement.Velocity = Vector2.Zero;
+            player.Movement.Acceleration = new Vector2(0, 100);
             MessageBus.Publish(new EntityDiedMessage(player.Entity));
         }
 

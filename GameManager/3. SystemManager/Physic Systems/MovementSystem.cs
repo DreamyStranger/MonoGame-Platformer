@@ -134,8 +134,6 @@ namespace MonogameExamples
                     break;
 
                 case SuperState.IsDead:
-                    movement.Velocity = Vector2.Zero;
-                    movement.Acceleration = Vector2.Zero;
                     return;
 
                 case SuperState.IsAppearing:
@@ -159,7 +157,7 @@ namespace MonogameExamples
         private void HorizontalMovement(StateComponent state, MovementComponent movement)
         {
             switch (state.CurrentState)
-            {
+            {   
                 case State.WalkLeft:
                     state.HorizontalDirection = -1;
                     movement.Velocity += new Vector2(-GameConstants.SpeedX, 0);
@@ -168,6 +166,9 @@ namespace MonogameExamples
                 case State.WalkRight:
                     state.HorizontalDirection = 1;
                     movement.Velocity += new Vector2(GameConstants.SpeedX, 0);
+                    break;
+
+                default:
                     break;
             }
         }

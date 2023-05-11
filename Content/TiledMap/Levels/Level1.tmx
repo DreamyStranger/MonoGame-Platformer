@@ -96,7 +96,6 @@
   </object>
   <object id="46" name="regularEnemy" x="96" y="160" width="32" height="32">
    <properties>
-    <property name="direction" type="int" value="1"/>
     <property name="left" type="int" value="16"/>
     <property name="right" type="int" value="16"/>
    </properties>

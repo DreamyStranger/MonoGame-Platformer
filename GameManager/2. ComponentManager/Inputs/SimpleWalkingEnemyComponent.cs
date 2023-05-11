@@ -6,7 +6,7 @@ namespace ECS_Framework
     /// <summary>
     /// Component representing the movement state of a simple walking enemy entity.
     /// </summary>
-    public class SimpleWalkingEnemyComponent : Component
+    public class RegularEnemyComponent : Component
     {
         /// <summary>
         /// Indicates whether the enemy is moving left.
@@ -27,7 +27,7 @@ namespace ECS_Framework
         /// <param name="start">The starting position of the enemy on the x-axis.</param>
         /// <param name="leftRange">The range the enemy can move to the left.</param>
         /// <param name="rightRange">The range the enemy can move to the right.</param>
-        public SimpleWalkingEnemyComponent(float start, float leftRange, float rightRange)
+        public RegularEnemyComponent(float start, float leftRange, float rightRange)
         {
             _left = start - leftRange;
             _right = start + rightRange;

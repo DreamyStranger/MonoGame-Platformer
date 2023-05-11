@@ -136,7 +136,7 @@ namespace ECS_Framework
             }
 
             // Create and return a new regular enemy entity with the specified position, movement range, and direction
-            return EntityFactory.CreateSimpleEnemy(position, leftRange, rightRange, direction);
+            return EntityFactory.CreateRegularEnemy(position, leftRange, rightRange, direction);
         }
 
         /// <summary>

@@ -103,7 +103,7 @@ namespace ECS_Framework
             return coin;
         }
 
-        public static Entity CreateSimpleEnemy(Vector2 position, float leftRange, float rightRange, State initialDirection)
+        public static Entity CreateRegularEnemy(Vector2 position, float leftRange, float rightRange, State initialDirection)
         {
             // Create an empty enemy entity
             Entity enemy = new Entity();
@@ -119,7 +119,7 @@ namespace ECS_Framework
 
             // Add the current state and super state for the enemy
             enemy.AddComponent(new StateComponent(initialDirection));
-            enemy.AddComponent(new SimpleWalkingEnemyComponent(position.X, leftRange, rightRange));
+            enemy.AddComponent(new RegularEnemyComponent(position.X, leftRange, rightRange));
 
             // Add movement component to set initial position
             enemy.AddComponent(new MovementComponent(position));

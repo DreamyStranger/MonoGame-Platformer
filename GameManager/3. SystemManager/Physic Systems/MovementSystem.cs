@@ -136,10 +136,10 @@ namespace ECS_Framework
                 case SuperState.IsDead:
                     movement.Velocity = Vector2.Zero;
                     movement.Acceleration = Vector2.Zero;
-                    break;
-                    
+                    return;
+
                 case SuperState.IsAppearing:
-                    break;
+                    return;
 
                 default:
                     movement.Acceleration = new Vector2(0, GameConstants.GRAVITY);
@@ -158,6 +158,10 @@ namespace ECS_Framework
         /// <param name="movement">The movement component of the entity.</param>
         private void HorizontalMovement(StateComponent state, MovementComponent movement)
         {
+            if(state.CurrentSuperState == SuperState.IsAppearing)
+            {
+                return;
+            }
             switch (state.CurrentState)
             {
                 case State.WalkLeft:

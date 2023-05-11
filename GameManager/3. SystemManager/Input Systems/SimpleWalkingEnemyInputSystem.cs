@@ -10,7 +10,7 @@ namespace ECS_Framework
     {
         private List<Entity> entities;
         private List<StateComponent> states;
-        private List<SimpleWalkingEnemyComponent> inputs;
+        private List<RegularEnemyComponent> inputs;
         private List<MovementComponent> movements;
 
 
@@ -21,7 +21,7 @@ namespace ECS_Framework
         {
             entities = new List<Entity>();
             states = new List<StateComponent>();
-            inputs = new List<SimpleWalkingEnemyComponent>();
+            inputs = new List<RegularEnemyComponent>();
             movements = new List<MovementComponent>();
         }
 
@@ -32,7 +32,7 @@ namespace ECS_Framework
         public override void AddEntity(Entity entity)
         {
             StateComponent state = entity.GetComponent<StateComponent>();
-            SimpleWalkingEnemyComponent input = entity.GetComponent<SimpleWalkingEnemyComponent>();
+            RegularEnemyComponent input = entity.GetComponent<RegularEnemyComponent>();
             MovementComponent movement = entity.GetComponent<MovementComponent>();
             if (state == null || input == null || movement == null)
             {
@@ -70,7 +70,7 @@ namespace ECS_Framework
             }
         }
 
-        private void UpdateEntityState(GameTime gameTime, SimpleWalkingEnemyComponent input, StateComponent state)
+        private void UpdateEntityState(GameTime gameTime, RegularEnemyComponent input, StateComponent state)
         {
             switch(state.CurrentSuperState)
             {

@@ -26,4 +26,16 @@ namespace MonogameExamples
         IsSliding,
         IsAppearing,
     }
+
+    public enum AnimationID
+    {
+        Idle,
+        Walk,
+        Jump,
+        DoubleJump,
+        Slide,
+        Fall,
+        Death,
+        Appear,
+    }
 }

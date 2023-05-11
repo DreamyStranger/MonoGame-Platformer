@@ -92,7 +92,7 @@ namespace MonogameExamples
         /// <param name="animations">The animated component of the entity.</param>
         private void GetAnimationForState(StateComponent state, AnimatedComponent animations)
         {
-            animations.SetCurrentAction(state.AnimationID);
+            animations.SetCurrentAction(state.AnimationState);
         }
     }
 }

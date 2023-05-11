@@ -17,20 +17,20 @@ namespace MonogameExamples
         /// <summary>
         /// A dictionary of all the animations for this component, indexed by action name.
         /// </summary>
-        public Dictionary<string, ActionAnimation> Animations { get; private set; }
+        public Dictionary<AnimationID, ActionAnimation> Animations { get; private set; }
 
         /// <summary>
         /// The name of the current animation action.
         /// </summary>
-        public string CurrentAction { get; private set; }
+        public AnimationID CurrentAction { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the AnimatedComponent class.
         /// </summary>
         public AnimatedComponent()
         {
-            Animations = new Dictionary<string, ActionAnimation>();
-            CurrentAction = "idle";
+            Animations = new Dictionary<AnimationID, ActionAnimation>();
+            CurrentAction = AnimationID.Idle;
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace MonogameExamples
         /// <param name="rows">The number of rows in the sprite sheet.</param>
         /// <param name="columns">The number of columns in the sprite sheet.</param>
         /// <param name="fps">The number of frames per second for the animation.</param>
-        public void AddAnimation(string sprite, string action, int rows, int columns, float fps)
+        public void AddAnimation(string sprite, AnimationID action, int rows, int columns, float fps)
         {
             Animations[action] = new ActionAnimation(sprite, rows, columns, fps);
         }
@@ -63,7 +63,7 @@ namespace MonogameExamples
                 Console.WriteLine($"Animation for action '{CurrentAction}' does not exist, playing default animation"); // Debug message
             }
 
-            return Animations.TryGetValue("idle", out ActionAnimation defaultAnimation) ? defaultAnimation : null;
+            return Animations.TryGetValue(AnimationID.Idle, out ActionAnimation defaultAnimation) ? defaultAnimation : null;
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace MonogameExamples
         /// Changes the current animation if a new action is given.
         /// </summary>
         /// <param name="action">The name of the new action.</param>
-        public void SetCurrentAction(string action)
+        public void SetCurrentAction(AnimationID action)
         {
             if (CurrentAction != action)
             {

@@ -25,7 +25,7 @@ namespace MonogameExamples
         /// <summary>
         /// Action ID used for identifying the current animation
         /// </summary>
-        public string AnimationID { get; private set; }
+        public AnimationID AnimationState { get; private set; }
 
         /// <summary>
         /// Default SuperState that entity should enter after certain actions (appearence, etc)
@@ -65,35 +65,35 @@ namespace MonogameExamples
             switch (_currentSuperState)
             {
                 case SuperState.IsOnGround:
-                    AnimationID = "idle";
+                    AnimationState = AnimationID.Idle;
                     if (_currentState == State.WalkLeft || _currentState == State.WalkRight)
                     {
-                        AnimationID = "walking";
+                        AnimationState = AnimationID.Walk;
                     }
                     break;
 
                 case SuperState.IsFalling:
-                    AnimationID = "fall";
+                    AnimationState = AnimationID.Fall;
                     if (_currentState == State.Slide)
                     {
-                        AnimationID = "slide";
+                        AnimationState = AnimationID.Slide;
                     }
                     break;
 
                 case SuperState.IsJumping:
-                    AnimationID = "jump";
+                    AnimationState = AnimationID.Jump;
                     break;
 
                 case SuperState.IsDoubleJumping:
-                    AnimationID = "double_jump";
+                    AnimationState = AnimationID.DoubleJump;
                     break;
 
                 case SuperState.IsDead:
-                    AnimationID = "death";
+                    AnimationState = AnimationID.Death;
                     break;
 
                 case SuperState.IsAppearing:
-                    AnimationID = "appear";
+                    AnimationState = AnimationID.Appear;
                     break;
 
                 default:

@@ -33,4 +33,32 @@ The keyboard controls for the product are as follows:
 
 Please ensure that the game window is active and in focus for the keyboard controls to work properly.
 
-Status: Active development
+## Navigating the Project
+
+When exploring the project, you will come across the following folders:
+
+1. ContentManager
+
+The "ContentManager" directory serves as the project's content management system. It is responsible for managing and loading various game assets such as graphics, audio files, and other resources. Additionally, the ContentManager also reads and creates entire levels from a Tiled map format, providing a convenient way to design and populate game levels.
+2. ESC base
+
+The "ESC base" directory contains the core components and systems of the Entity-Component System (ECS) framework. Here, you will find the essential building blocks for creating and managing entities, components, and systems.
+3. ComponentManager
+
+The "ComponentManager" directory refers to the folder that manages the components within the ECS framework. If any changes or updates are needed for the components, this is where you should make those modifications.
+4. SystemManager
+
+The "SystemManager" directory houses the system management functionality of the ECS framework. Any minor changes or adjustments to the systems should be implemented within this directory.
+5. EventManager
+
+The "EventManager" directory has been updated to utilize the MessageBus class for publishing messages. This directory handles event handling and manages the communication between various game components and systems through the MessageBus. Any modifications or additions related to event messaging should be made within this directory.
+6. ObjectManager
+
+The "ObjectManager" directory contains the Entity Factory, which serves as a central point for creating and managing entities in the game. If you need to add a new type of entity, this is where you should start. Modify the Entity Factory to include the creation logic for the new entity type, allowing for seamless integration into the game.
+7. WorldManager
+
+The "WorldManager" directory pertains to the management of the game world within the project. It handles aspects such as scene management, level loading, and other world-related functionalities.
+
+Feel free to explore these directories and make the necessary changes or updates to the corresponding files as required by your project's development.
+
+## Status: Active development

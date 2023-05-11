@@ -62,7 +62,7 @@ namespace ECS_Framework
             {
                 systems.Add(entity);
             }
-            Loader.PlayMusic("bg_music");
+            Loader.PlayMusic("bg_music", true);
         }
 
         /// <summary>

@@ -68,16 +68,23 @@ namespace ECS_Framework
             KeyboardState currentKeyboardState = Keyboard.GetState();
 
             if (currentKeyboardState.IsKeyDown(Keys.Escape))
+            {
+                MediaPlayer.Stop();
                 Exit();
+            }
 
             else if (currentKeyboardState.IsKeyDown(Keys.R) && previousKeyboardState.IsKeyUp(Keys.R))
+            {
                 MessageBus.Publish(new ReloadLevelMessage());
-
+            }
             else if (currentKeyboardState.IsKeyDown(Keys.P) && previousKeyboardState.IsKeyUp(Keys.P))
+            {
                 world.PreviousLevel();
-
+            }
             else if (currentKeyboardState.IsKeyDown(Keys.N) && previousKeyboardState.IsKeyUp(Keys.N))
+            {
                 MessageBus.Publish(new NextLevelMessage());
+            }
 
             previousKeyboardState = currentKeyboardState;
 

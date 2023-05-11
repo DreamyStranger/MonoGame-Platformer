@@ -31,8 +31,6 @@ The keyboard controls for the product are as follows:
   - Press **P** to go to the previous level.
   - Press **R** to reload the current level.
 
-Please ensure that the game window is active and in focus for the keyboard controls to work properly.
-
 ## Navigating the Project
 
 When exploring the project, you will come across the following folders:
@@ -65,4 +63,4 @@ When exploring the project, you will come across the following folders:
 
     The "WorldManager" directory pertains to the management of the game world within the project. It handles aspects such as scene management, level loading, and other world-related functionalities.
 
-## Status: Active Development
+## Status: Development

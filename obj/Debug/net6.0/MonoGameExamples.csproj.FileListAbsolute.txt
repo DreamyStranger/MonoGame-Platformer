@@ -1,0 +1,56 @@
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Audio/Background/FuriousFreak.ogg
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Audio/Background/FuriousFreak.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Background/BG_Green.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Background/BG_Yellow.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Double Jump.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Fall.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Hit.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Idle.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Jump.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Run.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Wall Jump.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Items/Fruits/Apple.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Items/Fruits/Bananas.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Items/Fruits/Cherries.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Items/Fruits/Collected.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Items/Fruits/Kiwi.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Items/Fruits/Melon.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Items/Fruits/Orange.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Items/Fruits/Pineapple.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Items/Fruits/Strawberry.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Player/Frog/Double Jump.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Player/Frog/Fall.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Player/Frog/Hit.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Player/Frog/Idle.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Player/Frog/Jump.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Player/Frog/Walking.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Player/Frog/Wall Jump.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/TiledMap/Terrain.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/TiledMap/Textures/Terrain.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/TiledMap/Textures/UI.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/MonoGameExamples
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/MonoGameExamples.deps.json
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/MonoGameExamples.runtimeconfig.json
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/MonoGameExamples.dll
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/ref/MonoGameExamples.dll
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/MonoGameExamples.pdb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/MonoGame.Framework.dll
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/TiledCS.dll
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/runtimes/linux-x64/native/libSDL2-2.0.so.0
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/runtimes/linux-x64/native/libopenal.so.1
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/runtimes/osx/native/libSDL2.dylib
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/runtimes/osx/native/libopenal.1.dylib
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/runtimes/win-x64/native/SDL2.dll
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/runtimes/win-x64/native/soft_oal.dll
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/runtimes/win-x86/native/SDL2.dll
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/runtimes/win-x86/native/soft_oal.dll
+/home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MonoGameExamples.csproj.AssemblyReference.cache
+/home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MonoGameExamples.GeneratedMSBuildEditorConfig.editorconfig
+/home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MonoGameExamples.AssemblyInfoInputs.cache
+/home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MonoGameExamples.AssemblyInfo.cs
+/home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MonoGameExamples.csproj.CoreCompileInputs.cache
+/home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MonoGameExamples.csproj.CopyComplete
+/home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MonoGameExamples.dll
+/home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/ref/MonoGameExamples.dll
+/home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MonoGameExamples.pdb
+/home/m/Documents/GitHub/ECS-MonoGame/obj/Debug/net6.0/MonoGameExamples.genruntimeconfig.cache

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fOErmDrVyuXRGyoX7+h7FsLNNfbpoUUh52v00UQ512HzgLXNjqMBidDZhM8ElgLJ7PWzejwrBS8d+JOYowTJuA==",
+  "dgSpecHash": "fJzPQ0lrQh135edwVos9JFedoD7RUBc2iE5rsHrUFm79mC2RZI4K5DAHKLLd7unbTUBUASn45uq2FxqqtaRpNA==",
   "success": true,
-  "projectFilePath": "/home/m/Documents/GitHub/ECS-MonoGame/MyGame.csproj",
+  "projectFilePath": "/home/m/Documents/GitHub/ECS-MonoGame/MonoGameExamples.csproj",
   "expectedPackageFiles": [
     "/home/m/.nuget/packages/monogame.content.builder.task/3.8.1.263/monogame.content.builder.task.3.8.1.263.nupkg.sha512",
     "/home/m/.nuget/packages/monogame.framework.desktopgl/3.8.1.263/monogame.framework.desktopgl.3.8.1.263.nupkg.sha512",

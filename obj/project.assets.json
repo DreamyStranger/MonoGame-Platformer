@@ -189,9 +189,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/m/Documents/GitHub/ECS-MonoGame/MyGame.csproj",
-      "projectName": "MyGame",
-      "projectPath": "/home/m/Documents/GitHub/ECS-MonoGame/MyGame.csproj",
+      "projectUniqueName": "/home/m/Documents/GitHub/ECS-MonoGame/MonoGameExamples.csproj",
+      "projectName": "MonoGameExamples",
+      "projectPath": "/home/m/Documents/GitHub/ECS-MonoGame/MonoGameExamples.csproj",
       "packagesPath": "/home/m/.nuget/packages/",
       "outputPath": "/home/m/Documents/GitHub/ECS-MonoGame/obj/",
       "projectStyle": "PackageReference",

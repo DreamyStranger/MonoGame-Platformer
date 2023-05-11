@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['tiledhandler_528',['tiledHandler',['../classECS__Framework_1_1Loader.html#a29da2db4587e34a498e36a4453e03f46',1,'ECS_Framework::Loader']]],
-  ['type_529',['Type',['../classECS__Framework_1_1EntityTypeComponent.html#a16144c5201af792d31c057332af69dbf',1,'ECS_Framework::EntityTypeComponent']]]
+  ['velocity_530',['Velocity',['../classECS__Framework_1_1MovementComponent.html#aa069da5eebd6499d46118a3c08b64a68',1,'ECS_Framework::MovementComponent']]],
+  ['vertbottomoffset_531',['VertBottomOffset',['../classECS__Framework_1_1CollisionBoxComponent.html#ae1e9b4134737086be5111f24d3c38f24',1,'ECS_Framework::CollisionBoxComponent']]],
+  ['verttopoffset_532',['VertTopOffset',['../classECS__Framework_1_1CollisionBoxComponent.html#aaeb00c32866e4113e1b477ebd5a73745',1,'ECS_Framework::CollisionBoxComponent']]]
 ];

@@ -10,9 +10,10 @@ var searchData=
   ['addtexture_45',['AddTexture',['../classECS__Framework_1_1Loader.html#aa4390773482a7aef66c225f41f47d306',1,'ECS_Framework::Loader']]],
   ['animatedcomponent_46',['AnimatedComponent',['../classECS__Framework_1_1AnimatedComponent.html#a4fe5b6f1cb19e3e43f4c923b1e6b85cc',1,'ECS_Framework.AnimatedComponent.AnimatedComponent()'],['../classECS__Framework_1_1AnimatedComponent.html',1,'ECS_Framework.AnimatedComponent']]],
   ['animatedcomponent_2ecs_47',['AnimatedComponent.cs',['../AnimatedComponent_8cs.html',1,'']]],
-  ['animationrendersystem_48',['AnimationRenderSystem',['../classECS__Framework_1_1AnimationRenderSystem.html#a7a0c751978f2ff41464e6275bfc2433b',1,'ECS_Framework.AnimationRenderSystem.AnimationRenderSystem()'],['../classECS__Framework_1_1AnimationRenderSystem.html',1,'ECS_Framework.AnimationRenderSystem']]],
-  ['animationrendersystem_2ecs_49',['AnimationRenderSystem.cs',['../AnimationRenderSystem_8cs.html',1,'']]],
-  ['animations_50',['Animations',['../structECS__Framework_1_1EntityData.html#a4a365152b298c9f4b45c7a875710e73e',1,'ECS_Framework.EntityData.Animations()'],['../classECS__Framework_1_1AnimatedComponent.html#ac1a6fead604c66d17fc7e7c14d135423',1,'ECS_Framework.AnimatedComponent.Animations()']]],
-  ['appearsystem_51',['AppearSystem',['../classECS__Framework_1_1AppearSystem.html#aa536d7965ec7fb4bc44f1fddf12c3f43',1,'ECS_Framework.AppearSystem.AppearSystem()'],['../classECS__Framework_1_1AppearSystem.html',1,'ECS_Framework.AppearSystem']]],
-  ['appearsystem_2ecs_52',['AppearSystem.cs',['../AppearSystem_8cs.html',1,'']]]
+  ['animationid_48',['AnimationID',['../classECS__Framework_1_1StateComponent.html#a815613ceb929d154ed142d02607140e6',1,'ECS_Framework::StateComponent']]],
+  ['animationrendersystem_49',['AnimationRenderSystem',['../classECS__Framework_1_1AnimationRenderSystem.html#a7a0c751978f2ff41464e6275bfc2433b',1,'ECS_Framework.AnimationRenderSystem.AnimationRenderSystem()'],['../classECS__Framework_1_1AnimationRenderSystem.html',1,'ECS_Framework.AnimationRenderSystem']]],
+  ['animationrendersystem_2ecs_50',['AnimationRenderSystem.cs',['../AnimationRenderSystem_8cs.html',1,'']]],
+  ['animations_51',['Animations',['../structECS__Framework_1_1EntityData.html#a4a365152b298c9f4b45c7a875710e73e',1,'ECS_Framework.EntityData.Animations()'],['../classECS__Framework_1_1AnimatedComponent.html#ac1a6fead604c66d17fc7e7c14d135423',1,'ECS_Framework.AnimatedComponent.Animations()']]],
+  ['appearsystem_52',['AppearSystem',['../classECS__Framework_1_1AppearSystem.html#aa536d7965ec7fb4bc44f1fddf12c3f43',1,'ECS_Framework.AppearSystem.AppearSystem()'],['../classECS__Framework_1_1AppearSystem.html',1,'ECS_Framework.AppearSystem']]],
+  ['appearsystem_2ecs_53',['AppearSystem.cs',['../AppearSystem_8cs.html',1,'']]]
 ];

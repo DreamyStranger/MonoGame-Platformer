@@ -4,7 +4,7 @@ Implementation of a mix of Entity-Component System (ECS) framework with object-o
 
 Assets Used: [Pixel Adventure 1](https://pixelfrog-assets.itch.io/pixel-adventure-1)
 
-Documentation: [ECS-MonoGame Documentation](https://dreamystranger.github.io/ECS-MonoGame/annotated.html)
+Documentation (Doxyfile): [ECS-MonoGame Documentation](https://dreamystranger.github.io/ECS-MonoGame/annotated.html)
 
 ## Running the Code
 

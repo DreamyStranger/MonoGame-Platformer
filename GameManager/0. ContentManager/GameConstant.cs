@@ -1,4 +1,5 @@
 using System.Reflection;
+using System.Collections.Generic;
 
 namespace MonogameExamples
 {
@@ -18,6 +19,17 @@ namespace MonogameExamples
         public static float SpeedXonCollision = -50f;
         public static float SpeedYonCollision = 300f;
 
+        //Obstacles and Entity
+        public static HashSet<string> OBSTACLES = new HashSet<string>()
+        {
+            "solid",
+            "float"
+        };
+
+        public static HashSet<string> ENTITIES = new HashSet<string>()
+        {
+            "entity"
+        };
 
         // Other game constants
         public static int SCREEN_WIDTH = 640;

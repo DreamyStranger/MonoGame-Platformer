@@ -55,7 +55,7 @@ namespace MonogameExamples
         }
 
         /// <summary>
-        /// Helper method for the All Objects method below. 
+        /// Helper method for getting object representing obstacles in a map method below. 
         /// Creates rectangles representing the objects of a specified layer.
         /// </summary>
         /// <param name="layer">The layer to create bounds for.</param>
@@ -79,10 +79,10 @@ namespace MonogameExamples
         }
 
         /// <summary>
-        /// Creates rectangles that bound every Object Layer in every loaded Level. 
+        /// Creates rectangles that bound every obstacle object on every layer in every loaded Level. 
         /// Useful for collision detection with Rectangle.Intersects() method.
         /// </summary>
-        public void GetLayersObjectsInMap()
+        public void GetLayersObstaclesInMap()
         {
             foreach (string mapName in _tiledMaps.Keys)
             {
@@ -90,7 +90,7 @@ namespace MonogameExamples
                 foreach (var layer in _tiledMaps[mapName].Layers)
                 {
                     string layerName = layer.name;
-                    if (layer.type != TiledLayerType.ObjectLayer)
+                    if (layer.type != TiledLayerType.ObjectLayer || !GameConstants.OBSTACLES.Contains(layer.name))
                     {
                         continue;
                     }
@@ -121,6 +121,7 @@ namespace MonogameExamples
                 {
                     continue;
                 }
+
                 for (int y = 0; y < layer.height; y++)
                 {
                     for (int x = 0; x < layer.width; x++)

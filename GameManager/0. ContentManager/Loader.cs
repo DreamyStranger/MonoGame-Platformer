@@ -83,7 +83,7 @@ namespace MonogameExamples
                 );
 
                 // Save collision boxes for each level
-                tiledHandler.GetLayersObjectsInMap();
+                tiledHandler.GetLayersObstaclesInMap();
             }
 
             //Box to debug Collisions

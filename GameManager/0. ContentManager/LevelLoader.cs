@@ -24,7 +24,7 @@ namespace MonogameExamples
             foreach (var layer in map.Layers)
             {
                 // Skip layers that are not entity layers
-                if (layer.name != "entity")
+                if (!GameConstants.ENTITIES.Contains(layer.name))
                 {
                     continue;
                 }

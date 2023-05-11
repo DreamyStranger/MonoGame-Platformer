@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['levelid_494',['LevelID',['../namespaceMonogameExamples.html#afd56fa38f5d453f22a846f0b37918961',1,'MonogameExamples']]]
+  ['backgroundmusic_518',['BackgroundMusic',['../namespaceMonogameExamples.html#a3224544d39bb3a77965925f2c6db661a',1,'MonogameExamples']]],
+  ['backgroundtexture_519',['BackgroundTexture',['../namespaceMonogameExamples.html#ad5216e49be10add347b413d91f9f8c70',1,'MonogameExamples']]]
 ];

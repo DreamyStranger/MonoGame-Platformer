@@ -64,7 +64,7 @@ namespace MonogameExamples
             {
                 systems.Add(entity);
             }
-            Loader.PlayMusic("bg_music", true);
+            Loader.PlayMusic(BackgroundMusic.Default, true);
         }
 
         /// <summary>

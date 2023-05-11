@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['doublejump_498',['DoubleJump',['../namespaceMonogameExamples.html#a5b44a03579b371a5309bc3188d8ba033a6bd5db223a35934e784d0b75a6d0d44e',1,'MonogameExamples']]]
+  ['coin_530',['Coin',['../namespaceMonogameExamples.html#a5f7ee7797ed3db5b373e6e6b8b88e802aff45bd9a024c61169a542316bd7b3b1a',1,'MonogameExamples']]],
+  ['collected_531',['Collected',['../namespaceMonogameExamples.html#acd0df66a507e393e4c7a31e635334eb5a81e91be8db96be69e372f0c715ec7444',1,'MonogameExamples']]]
 ];

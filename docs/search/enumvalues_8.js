@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['walkleft_514',['WalkLeft',['../namespaceMonogameExamples.html#a5b44a03579b371a5309bc3188d8ba033aa4018e883fed3c25fc3fbf8f0049d4a2',1,'MonogameExamples']]],
-  ['walkright_515',['WalkRight',['../namespaceMonogameExamples.html#a5b44a03579b371a5309bc3188d8ba033abf8da33b42b9930eb716b1b2386c3fdc',1,'MonogameExamples']]]
+  ['level1_547',['Level1',['../namespaceMonogameExamples.html#afd56fa38f5d453f22a846f0b37918961a63664aa8bee7544118de87bf48d529ee',1,'MonogameExamples']]],
+  ['level2_548',['Level2',['../namespaceMonogameExamples.html#afd56fa38f5d453f22a846f0b37918961a0cbbfd5a182368f83190bf23d2bd5fde',1,'MonogameExamples']]]
 ];

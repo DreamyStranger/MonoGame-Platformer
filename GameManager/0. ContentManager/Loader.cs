@@ -18,7 +18,7 @@ namespace MonogameExamples
         private static Dictionary<Enum, Texture2D> textures = new Dictionary<Enum, Texture2D>();
 
         // Music
-        private static Dictionary<string, Song> songs = new Dictionary<string, Song>();
+        private static Dictionary<Enum, Song> songs = new Dictionary<Enum, Song>();
 
         // TiledMap
         public static TileHandler tiledHandler { get; private set; }
@@ -33,7 +33,7 @@ namespace MonogameExamples
         public static void LoadContent(ContentManager content)
         {
             //Load music
-            AddMusic("bg_music", content, "Audio", "Background", "FuriousFreak");
+            AddMusic(BackgroundMusic.Default, content, "Audio", "Background", "FuriousFreak");
             // ... add more music here
 
             // Load textures
@@ -103,13 +103,13 @@ namespace MonogameExamples
         /// <summary>
         /// Adds a music file to the songs dictionary.
         /// </summary>
-        /// <param name="songName">The name of the music file, used as the key in the dictionary.</param>
+        /// <param name="musicKey">The name of the music file, used as the key in the dictionary.</param>
         /// <param name="content">The ContentManager to load assets with.</param>
         /// <param name="pathParts">An array of strings representing the path parts to the music file. These will be combined using Path.Combine.</param>
-        private static void AddMusic(string songName, ContentManager content, params string[] pathParts)
+        private static void AddMusic<T>(T musicKey, ContentManager content, params string[] pathParts) where T: Enum
         {
             string path = Path.Combine(pathParts);
-            songs.Add(songName, content.Load<Song>(path));
+            songs.Add(musicKey, content.Load<Song>(path));
         }
 
         public static Texture2D GetTexture<T>(T textureKey) where T : Enum
@@ -124,13 +124,13 @@ namespace MonogameExamples
         /// <summary>
         /// Retrieves a music file given its name.
         /// </summary>
-        /// <param name="songName">The name of the music file to retrieve.</param>
+        /// <param name="musicKey">The name of the music file to retrieve.</param>
         /// <returns>The loaded music, or null if the music file was not found.</returns>
-        public static Song GetMusic(string songName)
+        public static Song GetMusic(Enum musicKey)
         {
-            if (songs.ContainsKey(songName))
+            if (songs.ContainsKey(musicKey))
             {
-                return songs[songName];
+                return songs[musicKey];
             }
 
             return null;
@@ -139,14 +139,14 @@ namespace MonogameExamples
         // <summary>
         /// Plays a music file given its name.
         /// </summary>
-        /// <param name="musicName">The name of the music file to play.</param>
+        /// <param name="musicKey">The name of the music file to play.</param>
         /// <param name="loop">If set to true, the music will loop. Defaults to false.</param>
-        public static void PlayMusic(string musicName, bool loop = false)
+        public static void PlayMusic(Enum musicKey, bool loop = false)
         {
-            if (songs.ContainsKey(musicName))
+            if (songs.ContainsKey(musicKey))
             {
                 MediaPlayer.IsRepeating = loop;
-                MediaPlayer.Play(songs[musicName]);
+                MediaPlayer.Play(songs[musicKey]);
             }
         }
     }

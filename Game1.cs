@@ -32,6 +32,9 @@ namespace MonogameExamples
         /// </summary>
         protected override void Initialize()
         {
+            // Set the game window title
+            Window.Title = "NinjaFrog";
+
             // Change the resolution 
             _graphics.PreferredBackBufferWidth = GameConstants.SCREEN_WIDTH;
             _graphics.PreferredBackBufferHeight = GameConstants.SCREEN_HEIGHT;

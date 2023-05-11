@@ -14,8 +14,10 @@ namespace MonogameExamples
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private RenderTarget2D _renderTarget;
+        private KeyboardState _previousKeyboardState;
+
         public World world;
-        private KeyboardState previousKeyboardState;
 
         /// <summary>
         /// Initializes the Game1 class.
@@ -38,6 +40,15 @@ namespace MonogameExamples
             // Change the resolution 
             _graphics.PreferredBackBufferWidth = GameConstants.SCREEN_WIDTH;
             _graphics.PreferredBackBufferHeight = GameConstants.SCREEN_HEIGHT;
+
+            // Set fullscreen mode
+            _graphics.IsFullScreen = true;
+
+            // Set the hardware mode switch (optional)
+            // Set to false to use a borderless windowed fullscreen mode that scales your game resolution
+            // Set to true to use exclusive fullscreen mode that changes the screen resolution to match your game resolution
+            _graphics.HardwareModeSwitch = false; // or true, depending on your preference
+
             _graphics.ApplyChanges();
 
             // Limit FPS
@@ -53,6 +64,8 @@ namespace MonogameExamples
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            _renderTarget = new RenderTarget2D(GraphicsDevice, GameConstants.SCREEN_WIDTH, GameConstants.SCREEN_HEIGHT);
 
             // Load resources
             Loader.LoadContent(Content);
@@ -76,20 +89,20 @@ namespace MonogameExamples
                 Exit();
             }
 
-            else if (currentKeyboardState.IsKeyDown(Keys.R) && previousKeyboardState.IsKeyUp(Keys.R))
+            else if (currentKeyboardState.IsKeyDown(Keys.R) && _previousKeyboardState.IsKeyUp(Keys.R))
             {
                 MessageBus.Publish(new ReloadLevelMessage());
             }
-            else if (currentKeyboardState.IsKeyDown(Keys.P) && previousKeyboardState.IsKeyUp(Keys.P))
+            else if (currentKeyboardState.IsKeyDown(Keys.P) && _previousKeyboardState.IsKeyUp(Keys.P))
             {
                 world.PreviousLevel();
             }
-            else if (currentKeyboardState.IsKeyDown(Keys.N) && previousKeyboardState.IsKeyUp(Keys.N))
+            else if (currentKeyboardState.IsKeyDown(Keys.N) && _previousKeyboardState.IsKeyUp(Keys.N))
             {
                 MessageBus.Publish(new NextLevelMessage());
             }
 
-            previousKeyboardState = currentKeyboardState;
+            _previousKeyboardState = currentKeyboardState;
 
             world.Update(gameTime);
 
@@ -102,13 +115,34 @@ namespace MonogameExamples
         /// <param name="gameTime">The current game time.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            // Set the render target to draw the game content
+            GraphicsDevice.SetRenderTarget(_renderTarget);
 
+            // Draw the game content
+            GraphicsDevice.Clear(Color.CornflowerBlue);
             _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
             world.Draw(_spriteBatch);
             _spriteBatch.End();
 
+            // Reset the render target back to the default one
+            GraphicsDevice.SetRenderTarget(null);
+
+            // Calculate the scale factor and center the game on the screen
+            float scaleFactor = Math.Min((float)GraphicsDevice.Viewport.Width / GameConstants.SCREEN_WIDTH, (float)GraphicsDevice.Viewport.Height / GameConstants.SCREEN_HEIGHT);
+            int screenWidth = (int)(GameConstants.SCREEN_WIDTH * scaleFactor);
+            int screenHeight = (int)(GameConstants.SCREEN_HEIGHT * scaleFactor);
+            int offsetX = (GraphicsDevice.Viewport.Width - screenWidth) / 2;
+            int offsetY = (GraphicsDevice.Viewport.Height - screenHeight) / 2;
+            Rectangle destinationRectangle = new Rectangle(offsetX, offsetY, screenWidth, screenHeight);
+
+            // Draw the render target texture centered and scaled to the screen
+            GraphicsDevice.Clear(Color.Black);
+            _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
+            _spriteBatch.Draw(_renderTarget, destinationRectangle, Color.White);
+            _spriteBatch.End();
+
             base.Draw(gameTime);
         }
+
     }
 }

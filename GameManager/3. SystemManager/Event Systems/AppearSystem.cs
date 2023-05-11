@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using System;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// System that manages entity appearance events, triggering actions depending on the entity type.

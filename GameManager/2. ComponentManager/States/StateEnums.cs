@@ -1,4 +1,4 @@
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// Possible interaptable States an object can be in.

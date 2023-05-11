@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 using System.IO;
 using System;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// Handles loading and retrieval of game assets, including textures, tile maps, and music.

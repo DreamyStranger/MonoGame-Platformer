@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// Component that holds an entity type identifier for classification and management purposes.

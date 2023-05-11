@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// Represents an entity in the game world. An entity is a collection of components that define its behavior and appearance.

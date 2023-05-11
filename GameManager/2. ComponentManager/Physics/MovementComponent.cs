@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// <see cref="Component"/> that contains data related to the motion of an entity in the game.

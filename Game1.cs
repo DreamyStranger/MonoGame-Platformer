@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
 using System;
 
-namespace ECS_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// The main game class.

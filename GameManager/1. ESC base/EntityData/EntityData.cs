@@ -1,5 +1,5 @@
 using Microsoft.Xna.Framework;
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// A struct that contains the most commonly used components.

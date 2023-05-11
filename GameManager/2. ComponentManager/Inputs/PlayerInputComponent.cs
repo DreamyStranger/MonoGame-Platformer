@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// Component representing the input state of the player entity.

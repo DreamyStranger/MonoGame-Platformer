@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using TiledCS;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// Provides a static method for loading entities from a Tiled map.

@@ -3,7 +3,7 @@ using System;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// Represents the game world and manages loading and updating levels.

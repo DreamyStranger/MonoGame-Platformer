@@ -2,7 +2,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// <see cref="Component"/> that contains data and methods neccessary for a parallax effect for a 2D sprite.

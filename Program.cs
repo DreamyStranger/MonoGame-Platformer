@@ -1,3 +1,3 @@
 ﻿
-using var game = new ECS_Framework.Game1();
+using var game = new MonogameExamples.Game1();
 game.Run();

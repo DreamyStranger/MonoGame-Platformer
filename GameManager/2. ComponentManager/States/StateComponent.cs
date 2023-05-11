@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// Component that stores the current state and super state of an object, as well as its state ID, jump counter, and horizontal direction.

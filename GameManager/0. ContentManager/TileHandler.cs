@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TiledCS;
 using System;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// Handles loading and rendering of tile maps.

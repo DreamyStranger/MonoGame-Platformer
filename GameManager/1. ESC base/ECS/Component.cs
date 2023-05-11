@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// The base class for all components.

@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// An abstract base class for systems in the game.

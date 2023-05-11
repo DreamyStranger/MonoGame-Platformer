@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// Represents a message that can be published and subscribed to.

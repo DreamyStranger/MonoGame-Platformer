@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// Holds common game constants

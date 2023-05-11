@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using System;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// <see cref="Component"/>  responsible for managing entity animations.

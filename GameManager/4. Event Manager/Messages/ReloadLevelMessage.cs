@@ -1,4 +1,4 @@
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// Represents a message that indicates the current game level should be reloaded.

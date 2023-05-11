@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// Levels, should hold same name as corresponding tmx file

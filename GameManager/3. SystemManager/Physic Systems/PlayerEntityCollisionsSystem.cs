@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using System;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// Represents a system that handles collisions between the player entity and other entities.

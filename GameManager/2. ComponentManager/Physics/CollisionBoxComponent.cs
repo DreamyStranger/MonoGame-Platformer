@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// <see cref="Component"/> that contains data and methods related to collision box of an entity in the game.

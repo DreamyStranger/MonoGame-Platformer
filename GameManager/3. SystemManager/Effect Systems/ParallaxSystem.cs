@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace ECS_Framework
+namespace EC_Framework
 {
     /// <summary>
     /// <see cref="System"/> that manages parallax components and their related entities.

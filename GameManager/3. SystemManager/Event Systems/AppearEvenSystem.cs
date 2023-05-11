@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
+using System;
 
 namespace ECS_Framework
 {
@@ -29,6 +30,11 @@ namespace ECS_Framework
 
         public override void Update(GameTime gameTime)
         {
+            if(_entities.Count == 0)
+            {
+                //Console.WriteLine("IsEmpty!");  //Making sure the list is empty after entities appeared
+                return;
+            }
             for (int i = _entities.Count - 1; i >= 0; i--)
             {
                 Entity entity = _entities[i];

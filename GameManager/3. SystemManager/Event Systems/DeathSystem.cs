@@ -6,14 +6,14 @@ namespace ECS_Framework
     /// <summary>
     /// System that manages entity death events, triggering actions depending on the entity type.
     /// </summary>
-    public class DeathEventSystem : System
+    public class DeathSystem : System
     {
         private List<Entity> _entities;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DeathEventSystem"/> class.
+        /// Initializes a new instance of the <see cref="DeathSystem"/> class.
         /// </summary>
-        public DeathEventSystem()
+        public DeathSystem()
         {
             _entities = new List<Entity>();
         }

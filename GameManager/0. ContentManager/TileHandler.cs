@@ -151,7 +151,8 @@ namespace MonogameExamples
                         var source = new Rectangle(rect.x, rect.y, rect.width, rect.height);
                         var destination = new Rectangle(tileX, tileY, map.TileWidth, map.TileHeight);
                         // Retrieve texture used in the tileset
-                        var tilesetTexture = Loader.GetTexture(tileset.Name);
+                        Enum.TryParse(tileset.Name, out TiledTexture textureName);
+                        var tilesetTexture = Loader.GetTexture(textureName);
                         // Draw tile
                         spriteBatch.Draw(tilesetTexture, destination, source, Color.White);
                     }

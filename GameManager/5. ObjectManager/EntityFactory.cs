@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
+using System;
 
 namespace MonogameExamples
 {
@@ -24,7 +25,8 @@ namespace MonogameExamples
             int viewY = GameConstants.SCREEN_HEIGHT;
 
             //Parallax
-            background.AddComponent(new ParallaxComponent(texture, velocity, Vector2.Zero, viewX, viewY));
+            Enum.TryParse(texture, out BackgroundTexture textureKey);
+            background.AddComponent(new ParallaxComponent(textureKey, velocity, Vector2.Zero, viewX, viewY));
             return background;
         }
 
@@ -41,14 +43,14 @@ namespace MonogameExamples
 
             // Animations
             AnimatedComponent animation = new AnimatedComponent();
-            animation.AddAnimation("player_idle", AnimationID.Idle, 1, 11, 20);
-            animation.AddAnimation("player_walking", AnimationID.Walk, 1, 12, 20);
-            animation.AddAnimation("player_jump", AnimationID.Jump, 1, 1, 20);
-            animation.AddAnimation("player_double_jump", AnimationID.DoubleJump, 1, 6, 20);
-            animation.AddAnimation("player_fall", AnimationID.Fall, 1, 1, 20);
-            animation.AddAnimation("player_slide", AnimationID.Slide, 1, 5, 20);
-            animation.AddAnimation("player_death", AnimationID.Death, 1, 7, 20);
-            animation.AddAnimation("fruits_death", AnimationID.Appear, 1, 6, 20);
+            animation.AddAnimation(PlayerTexture.Idle, AnimationID.Idle, 1, 11, 20);
+            animation.AddAnimation(PlayerTexture.Walking, AnimationID.Walk, 1, 12, 20);
+            animation.AddAnimation(PlayerTexture.Jump, AnimationID.Jump, 1, 1, 20);
+            animation.AddAnimation(PlayerTexture.DoubleJump, AnimationID.DoubleJump, 1, 6, 20);
+            animation.AddAnimation(PlayerTexture.Fall, AnimationID.Fall, 1, 1, 20);
+            animation.AddAnimation(PlayerTexture.Slide, AnimationID.Slide, 1, 5, 20);
+            animation.AddAnimation(PlayerTexture.Hit, AnimationID.Death, 1, 7, 20);
+            animation.AddAnimation(FruitTexture.Collected, AnimationID.Appear, 1, 6, 20);
             player.AddComponent(animation);
 
             // States
@@ -71,7 +73,7 @@ namespace MonogameExamples
             return player;
         }
 
-        public static Entity CreateFruit(Vector2 position, string fruitName)
+        public static Entity CreateFruit(Vector2 position, string texture)
         {
             // Create an empty coin entity
             Entity coin = new Entity();
@@ -79,9 +81,10 @@ namespace MonogameExamples
 
             // Add animations for the fruit
             AnimatedComponent animation = new AnimatedComponent();
-            animation.AddAnimation(fruitName + "_idle", AnimationID.Idle, 1, 17, 20);
-            animation.AddAnimation("fruits_death", AnimationID.Death, 1, 6, 20);
-            animation.AddAnimation("fruits_death", AnimationID.Appear, 1, 6, 20);
+            Enum.TryParse(texture, out FruitTexture textureKey);
+            animation.AddAnimation(textureKey, AnimationID.Idle, 1, 17, 20);
+            animation.AddAnimation(FruitTexture.Collected, AnimationID.Death, 1, 6, 20);
+            animation.AddAnimation(FruitTexture.Collected, AnimationID.Appear, 1, 6, 20);
             coin.AddComponent(animation);
 
             // Add the current state and super state for the fruit
@@ -111,10 +114,10 @@ namespace MonogameExamples
 
             // Add animations for the enemy
             AnimatedComponent animation = new AnimatedComponent();
-            animation.AddAnimation("voodo_idle", AnimationID.Idle, 1, 11, 20);
-            animation.AddAnimation("voodo_walking", AnimationID.Walk, 1, 12, 20);
-            animation.AddAnimation("fruits_death", AnimationID.Death, 1, 6, 20);
-            animation.AddAnimation("fruits_death", AnimationID.Appear, 1, 6, 20);
+            animation.AddAnimation(MaskedEnemyTexture.Idle, AnimationID.Idle, 1, 11, 20);
+            animation.AddAnimation(MaskedEnemyTexture.Walking, AnimationID.Walk, 1, 12, 20);
+            animation.AddAnimation(MaskedEnemyTexture.Hit, AnimationID.Death, 1, 6, 20);
+            animation.AddAnimation(FruitTexture.Collected, AnimationID.Appear, 1, 6, 20);
             enemy.AddComponent(animation);
 
             // Add the current state and super state for the enemy

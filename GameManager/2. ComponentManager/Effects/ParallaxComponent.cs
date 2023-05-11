@@ -25,7 +25,7 @@ namespace MonogameExamples
         /// <param name="position">The starting position of the sprite.</param>
         /// <param name="viewX">The width of the parallax window.</param>
         /// <param name="viewY">The height of the parallax window.</param>
-        public ParallaxComponent(string sprite, Vector2 velocity, Vector2 position, int viewX, int viewY)
+        public ParallaxComponent(BackgroundTexture sprite, Vector2 velocity, Vector2 position, int viewX, int viewY)
         {
             _texture = Loader.GetTexture(sprite);
             _velocity = velocity;

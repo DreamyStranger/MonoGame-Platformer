@@ -15,7 +15,7 @@ namespace MonogameExamples
     public class Loader
     {
         // Textures
-        private static Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
+        private static Dictionary<Enum, Texture2D> textures = new Dictionary<Enum, Texture2D>();
 
         // Music
         private static Dictionary<string, Song> songs = new Dictionary<string, Song>();
@@ -38,38 +38,36 @@ namespace MonogameExamples
 
             // Load textures
             //Player
-            AddTexture("player_idle", content, "Player", "Frog", "Idle");
-            AddTexture("player_walking", content, "Player", "Frog", "Walking");
-            AddTexture("player_jump", content, "Player", "Frog", "Jump");
-            AddTexture("player_double_jump", content, "Player", "Frog", "Double Jump");
-            AddTexture("player_fall", content, "Player", "Frog", "Fall");
-            AddTexture("player_slide", content, "Player", "Frog", "Wall Jump");
-            AddTexture("player_death", content, "Player", "Frog", "Hit");
+            AddTexture(PlayerTexture.Idle, content, "Player", "Frog", "Idle");
+            AddTexture(PlayerTexture.Walking, content, "Player", "Frog", "Walking");
+            AddTexture(PlayerTexture.Jump, content, "Player", "Frog", "Jump");
+            AddTexture(PlayerTexture.DoubleJump, content, "Player", "Frog", "Double Jump");
+            AddTexture(PlayerTexture.Fall, content, "Player", "Frog", "Fall");
+            AddTexture(PlayerTexture.Slide, content, "Player", "Frog", "Wall Jump");
+            AddTexture(PlayerTexture.Hit, content, "Player", "Frog", "Hit");
 
             //Enemy
-            AddTexture("voodo_idle", content, "Enemies", "Voodo", "Idle");
-            AddTexture("voodo_walking", content, "Enemies", "Voodo", "Run");
-            AddTexture("voodo_jump", content, "Enemies", "Voodo", "Jump");
-            AddTexture("voodo_double_jump", content, "Enemies", "Voodo", "Double Jump");
-            AddTexture("voodo_fall", content, "Enemies", "Voodo", "Fall");
-            AddTexture("voodo_slide", content, "Enemies", "Voodo", "Wall Jump");
-            AddTexture("voodo_death", content, "Enemies", "Voodo", "Hit");
+            AddTexture(MaskedEnemyTexture.Idle, content, "Enemies", "Voodo", "Idle");
+            AddTexture(MaskedEnemyTexture.Walking, content, "Enemies", "Voodo", "Run");
+            AddTexture(MaskedEnemyTexture.Jump, content, "Enemies", "Voodo", "Jump");
+            AddTexture(MaskedEnemyTexture.DoubleJump, content, "Enemies", "Voodo", "Double Jump");
+            AddTexture(MaskedEnemyTexture.Fall, content, "Enemies", "Voodo", "Fall");
+            AddTexture(MaskedEnemyTexture.Slide, content, "Enemies", "Voodo", "Wall Jump");
+            AddTexture(MaskedEnemyTexture.Hit, content, "Enemies", "Voodo", "Hit");
 
             //Collectables
-            AddTexture("apple_idle", content, "Items", "Fruits", "Apple");
-
-            //Collectable collected
-            AddTexture("fruits_death", content, "Items", "Fruits", "Collected");
+            AddTexture(FruitTexture.Apple, content, "Items", "Fruits", "Apple");
+            AddTexture(FruitTexture.Collected, content, "Items", "Fruits", "Collected");
 
             //Background tile for parallax
-            AddTexture("bg_green", content, "Background", "BG_Green");
-            AddTexture("bg_yellow", content, "Background", "BG_Yellow");
+            AddTexture(BackgroundTexture.Green, content, "Background", "BG_Green");
+            AddTexture(BackgroundTexture.Yellow, content, "Background", "BG_Yellow");
             // ... add more textures here
 
             //Load TiledMaps
             //Tilesets' textures, key should be the same as respective tilesets's name
-            AddTexture("Terrain", content, "TiledMap", "Textures", "Terrain");
-            AddTexture("UI", content, "TiledMap", "Textures", "UI");
+            AddTexture(TiledTexture.Terrain, content, "TiledMap", "Textures", "Terrain");
+            AddTexture(TiledTexture.UI, content, "TiledMap", "Textures", "UI");
 
             //TileMaps
             tiledHandler = new TileHandler();
@@ -92,16 +90,14 @@ namespace MonogameExamples
             collisionBox.SetData(new[] { Color.White });
         }
 
-        /// <summary>
-        /// Adds a texture to the textures dictionary.
-        /// </summary>
-        /// <param name="textureName">The name of the texture, used as the key in the dictionary.</param>
-        /// <param name="content">The ContentManager to load assets with.</param>
-        /// <param name="pathParts">An array of strings representing the path parts to the texture file. These will be combined using Path.Combine.</param>
-        private static void AddTexture(string textureName, ContentManager content, params string[] pathParts)
+        public static void AddTexture<T>(T textureKey, ContentManager content, params string[] pathParts) where T : Enum
         {
             string path = Path.Combine(pathParts);
-            textures.Add(textureName, content.Load<Texture2D>(path));
+            Texture2D texture = content.Load<Texture2D>(path);
+            if (texture != null)
+            {
+                textures[textureKey] = texture;
+            }
         }
 
         /// <summary>
@@ -116,18 +112,12 @@ namespace MonogameExamples
             songs.Add(songName, content.Load<Song>(path));
         }
 
-        /// <summary>
-        /// Retrieves a texture given its name.
-        /// </summary>
-        /// <param name="textureName">The name of the texture to retrieve.</param>
-        /// <returns>The loaded texture, or null if the texture was not found.</returns>
-        public static Texture2D GetTexture(string textureName)
+        public static Texture2D GetTexture<T>(T textureKey) where T : Enum
         {
-            if (textures.ContainsKey(textureName))
+            if (textures.ContainsKey(textureKey))
             {
-                return textures[textureName];
+                return textures[textureKey];
             }
-
             return null;
         }
 

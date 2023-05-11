@@ -41,7 +41,7 @@ namespace MonogameExamples
         /// <param name="rows">The number of rows in the sprite sheet.</param>
         /// <param name="columns">The number of columns in the sprite sheet.</param>
         /// <param name="fps">The number of frames per second for the animation.</param>
-        public void AddAnimation(string sprite, AnimationID action, int rows, int columns, float fps)
+        public void AddAnimation(Enum sprite, AnimationID action, int rows, int columns, float fps)
         {
             Animations[action] = new ActionAnimation(sprite, rows, columns, fps);
         }
@@ -144,7 +144,7 @@ namespace MonogameExamples
         /// <param name="rows">The number of rows in the sprite sheet.</param>
         /// <param name="columns">The number of columns in the sprite sheet.</param>
         /// <param name="fps">The frame rate in frames per second.</param>
-        public ActionAnimation(string sprite, int rows, int columns, float fps)
+        public ActionAnimation(Enum sprite, int rows, int columns, float fps)
         {
             _texture = Loader.GetTexture(sprite);
             _rows = rows;

@@ -90,7 +90,7 @@ namespace MonogameExamples
                 }
                 if (property.name == "color")
                 {
-                    bg_name = "bg_" + property.value;
+                    bg_name = property.value;
                 }
             }
 

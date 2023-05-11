@@ -57,32 +57,32 @@
   <object id="22" name="player" x="48" y="64" width="32" height="32"/>
   <object id="23" name="fruit" x="216" y="41.5" width="32" height="32">
    <properties>
-    <property name="fruitType" value="apple"/>
+    <property name="fruitType" value="Apple"/>
    </properties>
   </object>
   <object id="24" name="fruit" x="297" y="137" width="32" height="32">
    <properties>
-    <property name="fruitType" value="apple"/>
+    <property name="fruitType" value="Apple"/>
    </properties>
   </object>
   <object id="25" name="fruit" x="469" y="103.5" width="32" height="32">
    <properties>
-    <property name="fruitType" value="apple"/>
+    <property name="fruitType" value="Apple"/>
    </properties>
   </object>
   <object id="26" name="fruit" x="407.5" y="181.5" width="32" height="32">
    <properties>
-    <property name="fruitType" value="apple"/>
+    <property name="fruitType" value="Apple"/>
    </properties>
   </object>
   <object id="27" name="fruit" x="575.5" y="148.5" width="32" height="32">
    <properties>
-    <property name="fruitType" value="apple"/>
+    <property name="fruitType" value="Apple"/>
    </properties>
   </object>
   <object id="28" name="fruit" x="169" y="286.5" width="32" height="32">
    <properties>
-    <property name="fruitType" value="apple"/>
+    <property name="fruitType" value="Apple"/>
    </properties>
   </object>
  </objectgroup>

@@ -22,6 +22,7 @@ namespace MonogameExamples
         // Other game constants
         public static int SCREEN_WIDTH = 640;
         public static int SCREEN_HEIGHT = 368;
+        public static bool FULL_SCREEN = false;
         public static float AnimationFPS = 20f;
         public static float FPS = 60f;
 

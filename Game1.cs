@@ -15,7 +15,7 @@ namespace MonogameExamples
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private RenderTarget2D _renderTarget;
-        private Rectangle _destinationRectangle = new Rectangle();
+        private Rectangle _destinationRenderRectangle = new Rectangle();
         private KeyboardState _previousKeyboardState;
 
         public World world;
@@ -43,7 +43,7 @@ namespace MonogameExamples
             _graphics.PreferredBackBufferHeight = GameConstants.SCREEN_HEIGHT;
 
             // Set fullscreen mode
-            _graphics.IsFullScreen = true;
+            _graphics.IsFullScreen = GameConstants.FULL_SCREEN;
 
             // Set the hardware mode switch (optional)
             // Set to false to use a borderless windowed fullscreen mode that scales your game resolution
@@ -115,26 +115,36 @@ namespace MonogameExamples
         /// <param name="gameTime">The current game time.</param>
         protected override void Draw(GameTime gameTime)
         {
-            // Set the render target to draw the game content
-            GraphicsDevice.SetRenderTarget(_renderTarget);
+            if (GameConstants.FULL_SCREEN)
+            {
+                // Set the render target to draw the game content
+                GraphicsDevice.SetRenderTarget(_renderTarget);
 
-            // Draw the game content
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-            _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
-            world.Draw(_spriteBatch);
-            _spriteBatch.End();
+                // Draw the game content
+                GraphicsDevice.Clear(Color.CornflowerBlue);
+                _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
+                world.Draw(_spriteBatch);
+                _spriteBatch.End();
 
-            // Reset the render target back to the default one
-            GraphicsDevice.SetRenderTarget(null);
+                // Reset the render target back to the default one
+                GraphicsDevice.SetRenderTarget(null);
+                //Scale window
+                UpdateScaling();
 
-            //Scale window
-            UpdateScaling();
-
-            // Draw the render target texture centered and scaled to the screen
-            GraphicsDevice.Clear(Color.Black);
-            _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
-            _spriteBatch.Draw(_renderTarget, _destinationRectangle, Color.White);
-            _spriteBatch.End();
+                // Draw the render target texture centered and scaled to the screen
+                GraphicsDevice.Clear(Color.Black);
+                _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
+                _spriteBatch.Draw(_renderTarget, _destinationRenderRectangle, Color.White);
+                _spriteBatch.End();
+            }
+            else
+            {
+                // Draw the game content
+                GraphicsDevice.Clear(Color.CornflowerBlue);
+                _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
+                world.Draw(_spriteBatch);
+                _spriteBatch.End();
+            }
 
             base.Draw(gameTime);
         }
@@ -148,7 +158,7 @@ namespace MonogameExamples
             int screenHeight = (int)(GameConstants.SCREEN_HEIGHT * scaleFactor);
             int offsetX = (GraphicsDevice.Viewport.Width - screenWidth) / 2;
             int offsetY = (GraphicsDevice.Viewport.Height - screenHeight) / 2;
-            _destinationRectangle = new Rectangle(offsetX, offsetY, screenWidth, screenHeight);
+            _destinationRenderRectangle = new Rectangle(offsetX, offsetY, screenWidth, screenHeight);
         }
     }
 }

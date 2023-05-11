@@ -78,6 +78,10 @@ namespace MonogameExamples
             }
         }
 
+        /// <summary>
+        /// Adds entities to the system
+        /// </summary>
+        /// <param name="message">The message containing the entity to add.</param>
         private void EntityDied(EntityDiedMessage message)
         {
             _entities.Add(message.Entity);

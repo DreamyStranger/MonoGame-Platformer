@@ -116,7 +116,7 @@ namespace MonogameExamples
             AnimatedComponent animation = new AnimatedComponent();
             animation.AddAnimation(MaskedEnemyTexture.Idle, AnimationID.Idle, 1, 11, 20);
             animation.AddAnimation(MaskedEnemyTexture.Walking, AnimationID.Walk, 1, 12, 20);
-            animation.AddAnimation(MaskedEnemyTexture.Hit, AnimationID.Death, 1, 6, 20);
+            animation.AddAnimation(MaskedEnemyTexture.Hit, AnimationID.Death, 1, 7, 20);
             animation.AddAnimation(FruitTexture.Collected, AnimationID.Appear, 1, 6, 20);
             enemy.AddComponent(animation);
 

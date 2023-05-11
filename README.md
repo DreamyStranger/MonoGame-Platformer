@@ -26,7 +26,7 @@ Please note that these instructions assume you have the necessary software and t
 The keyboard controls for the product are as follows:
 
 - Use the **A** and **D** keys to move left and right, respectively.
-- Press the **SPACE** bar to perform an action.
+- Press the **SPACE** bar to perform a jump.
 - To navigate between levels, use the following keys:
 - Press **N** to go to the next level.
 - Press **P** to go to the previous level.

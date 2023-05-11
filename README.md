@@ -14,7 +14,7 @@ To run the code, please follow the instructions below:
 2. Open the project in Visual Studio Code (VS Code).
 3. Make sure you have C# installed in your VS Code environment.
 4. Install the MonoGame Templates by opening the terminal in VS Code (`View -> Terminal`) and entering the following command: (`dotnet new --install MonoGame.Templates.CSharp`)
-5. You can install C$ in the similar manner, using the following command: (`code --install-extension ms-dotnettools.csharp`)
+5. You can install C# in the similar manner, using the following command: (`code --install-extension ms-dotnettools.csharp`)
 6. Ensure that you have the .NET 6 SDK installed. If you are using Windows, it may already be installed by default. If you are using Linux or Mac, please install the .NET 6 SDK.
 7. Once the above prerequisites are met, you can now run the code successfully.
 

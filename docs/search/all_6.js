@@ -1,17 +1,19 @@
 var searchData=
 [
-  ['ecs_5fframework_80',['ECS_Framework',['../namespaceECS__Framework.html',1,'']]],
-  ['entities_81',['entities',['../classECS__Framework_1_1PlayerInputSystem.html#a91ac0293ef92e9d1f2bbd71a647ef449',1,'ECS_Framework.PlayerInputSystem.entities()'],['../classECS__Framework_1_1RegularEnemyInputSystem.html#a3892a89e720230bcbbd6d5e27ca5d8e3',1,'ECS_Framework.RegularEnemyInputSystem.entities()']]],
-  ['entitiestodestroy_82',['entitiesToDestroy',['../classECS__Framework_1_1World.html#a4aa5131621903fc8b4488155c7df7c15',1,'ECS_Framework::World']]],
-  ['entity_83',['Entity',['../classECS__Framework_1_1Entity.html',1,'ECS_Framework.Entity'],['../classECS__Framework_1_1Entity.html#a413ce6987a06449ff86b366fd6220aca',1,'ECS_Framework.Entity.Entity()'],['../classECS__Framework_1_1DestroyEntityMessage.html#a3b3c2ca6d0e297df951287614ef26a14',1,'ECS_Framework.DestroyEntityMessage.Entity()'],['../structECS__Framework_1_1EntityData.html#a4f873d71ead9438df38eb9f9b9542c0b',1,'ECS_Framework.EntityData.Entity()']]],
-  ['entity_2ecs_84',['Entity.cs',['../Entity_8cs.html',1,'']]],
-  ['entitydata_85',['EntityData',['../structECS__Framework_1_1EntityData.html',1,'ECS_Framework']]],
-  ['entitydata_2ecs_86',['EntityData.cs',['../EntityData_8cs.html',1,'']]],
-  ['entityenums_2ecs_87',['EntityEnums.cs',['../EntityEnums_8cs.html',1,'']]],
-  ['entityfactory_2ecs_88',['EntityFactory.cs',['../EntityFactory_8cs.html',1,'']]],
-  ['entitytype_89',['EntityType',['../namespaceECS__Framework.html#a03ae648f8a4ed11f6cdc325765068971',1,'ECS_Framework']]],
-  ['entitytypecomponent_90',['EntityTypeComponent',['../classECS__Framework_1_1EntityTypeComponent.html',1,'ECS_Framework.EntityTypeComponent'],['../classECS__Framework_1_1EntityTypeComponent.html#a08eb7a42fa830f27112f04c20f040d71',1,'ECS_Framework.EntityTypeComponent.EntityTypeComponent()']]],
-  ['entitytypecomponent_2ecs_91',['EntityTypeComponent.cs',['../EntityTypeComponent_8cs.html',1,'']]],
-  ['exitgamemessage_92',['ExitGameMessage',['../classECS__Framework_1_1ExitGameMessage.html',1,'ECS_Framework.ExitGameMessage'],['../classECS__Framework_1_1ExitGameMessage.html#a3a9c8c4bc0e86bb2c11ff96eccceaa18',1,'ECS_Framework.ExitGameMessage.ExitGameMessage()']]],
-  ['exitgamemessage_2ecs_93',['ExitGameMessage.cs',['../ExitGameMessage_8cs.html',1,'']]]
+  ['entities_83',['entities',['../classMonogameExamples_1_1RegularEnemyInputSystem.html#a4dda4c741459e64cc069527a7acac599',1,'MonogameExamples.RegularEnemyInputSystem.entities()'],['../classMonogameExamples_1_1PlayerInputSystem.html#af3731a7d85d6fb4a0e36a11f3ef4e280',1,'MonogameExamples.PlayerInputSystem.entities()']]],
+  ['entitiestodestroy_84',['entitiesToDestroy',['../classMonogameExamples_1_1World.html#a51b7f9cd1cd93b17f375ca7e04269d16',1,'MonogameExamples::World']]],
+  ['entity_85',['Entity',['../classMonogameExamples_1_1Entity.html#a645638743802b0a16a0df43ec044a412',1,'MonogameExamples.Entity.Entity()'],['../classMonogameExamples_1_1EntityDiedMessage.html#ac55d87cfd4b8da9844aad5340c6dc0d6',1,'MonogameExamples.EntityDiedMessage.Entity()'],['../classMonogameExamples_1_1DestroyEntityMessage.html#ad26bc53aac709fd8831bde4cbff41fa1',1,'MonogameExamples.DestroyEntityMessage.Entity()'],['../structMonogameExamples_1_1EntityData.html#a460f4331745def644f0635ac441b8378',1,'MonogameExamples.EntityData.Entity()'],['../classMonogameExamples_1_1Entity.html',1,'MonogameExamples.Entity']]],
+  ['entity_2ecs_86',['Entity.cs',['../Entity_8cs.html',1,'']]],
+  ['entitydata_87',['EntityData',['../structMonogameExamples_1_1EntityData.html',1,'MonogameExamples']]],
+  ['entitydata_2ecs_88',['EntityData.cs',['../EntityData_8cs.html',1,'']]],
+  ['entitydied_89',['EntityDied',['../classMonogameExamples_1_1DeathSystem.html#a6a48e575f8e589fc1f8b983df98d6629',1,'MonogameExamples::DeathSystem']]],
+  ['entitydiedmessage_90',['EntityDiedMessage',['../classMonogameExamples_1_1EntityDiedMessage.html#a2d098a05b3c0cf75611c6ce9f2e469b8',1,'MonogameExamples.EntityDiedMessage.EntityDiedMessage()'],['../classMonogameExamples_1_1EntityDiedMessage.html',1,'MonogameExamples.EntityDiedMessage']]],
+  ['entitydiedmessage_2ecs_91',['EntityDiedMessage.cs',['../EntityDiedMessage_8cs.html',1,'']]],
+  ['entityenums_2ecs_92',['EntityEnums.cs',['../EntityEnums_8cs.html',1,'']]],
+  ['entityfactory_2ecs_93',['EntityFactory.cs',['../EntityFactory_8cs.html',1,'']]],
+  ['entitytype_94',['EntityType',['../namespaceMonogameExamples.html#a5f7ee7797ed3db5b373e6e6b8b88e802',1,'MonogameExamples']]],
+  ['entitytypecomponent_95',['EntityTypeComponent',['../classMonogameExamples_1_1EntityTypeComponent.html#a813bc2e13ed1098e4c0f501f6563f457',1,'MonogameExamples.EntityTypeComponent.EntityTypeComponent()'],['../classMonogameExamples_1_1EntityTypeComponent.html',1,'MonogameExamples.EntityTypeComponent']]],
+  ['entitytypecomponent_2ecs_96',['EntityTypeComponent.cs',['../EntityTypeComponent_8cs.html',1,'']]],
+  ['exitgamemessage_97',['ExitGameMessage',['../classMonogameExamples_1_1ExitGameMessage.html#aebf28406555dff2ea8f2d4ff5e3ea8ff',1,'MonogameExamples.ExitGameMessage.ExitGameMessage()'],['../classMonogameExamples_1_1ExitGameMessage.html',1,'MonogameExamples.ExitGameMessage']]],
+  ['exitgamemessage_2ecs_98',['ExitGameMessage.cs',['../ExitGameMessage_8cs.html',1,'']]]
 ];

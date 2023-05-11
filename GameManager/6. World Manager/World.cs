@@ -56,7 +56,9 @@ namespace MonogameExamples
         private void LoadLevel()
         {
             MediaPlayer.Stop();
+            systems.Unsubscribe();
             systems.ResetSystems(CurrentLevel);
+            systems.Subscribe();
             List<Entity> objects = LevelLoader.GetObjects(CurrentLevel);
             foreach (Entity entity in objects)
             {

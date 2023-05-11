@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['setcurrentaction_403',['SetCurrentAction',['../classECS__Framework_1_1AnimatedComponent.html#a2f9e7e26f080fcab9cfa504828e9cc4f',1,'ECS_Framework::AnimatedComponent']]],
-  ['setgroundlocation_404',['SetGroundLocation',['../classECS__Framework_1_1CollisionBoxComponent.html#a9180909e2ebc2d9a75e0ed8e1a77a17d',1,'ECS_Framework::CollisionBoxComponent']]],
-  ['statecomponent_405',['StateComponent',['../classECS__Framework_1_1StateComponent.html#ab425395a8cdb1b0c7baa177f8638ff0c',1,'ECS_Framework::StateComponent']]],
-  ['subscribe_3c_20t_20_3e_406',['Subscribe&lt; T &gt;',['../classECS__Framework_1_1MessageBus.html#abfd347de17ccf5cb88ecf5a19294b2b3',1,'ECS_Framework::MessageBus']]],
-  ['systemmanager_407',['SystemManager',['../structECS__Framework_1_1SystemManager.html#ab68a066944d5797a54d5553d855d77f0',1,'ECS_Framework::SystemManager']]]
+  ['setcurrentaction_415',['SetCurrentAction',['../classMonogameExamples_1_1AnimatedComponent.html#a2f1a722b03ea320f47b42bc4a75f08d7',1,'MonogameExamples::AnimatedComponent']]],
+  ['setgroundlocation_416',['SetGroundLocation',['../classMonogameExamples_1_1CollisionBoxComponent.html#a858b4a81c2bf1201880577ca2e20b686',1,'MonogameExamples::CollisionBoxComponent']]],
+  ['statecomponent_417',['StateComponent',['../classMonogameExamples_1_1StateComponent.html#ab3b39eb280403acff25c2c1d6e599f53',1,'MonogameExamples::StateComponent']]],
+  ['subscribe_418',['Subscribe',['../classMonogameExamples_1_1System.html#ae1960950ed5a28d66235559ac0b6dab6',1,'MonogameExamples.System.Subscribe()'],['../classMonogameExamples_1_1DeathSystem.html#af3a91bae9a19dc53dac99f75156d4514',1,'MonogameExamples.DeathSystem.Subscribe()'],['../structMonogameExamples_1_1SystemManager.html#a8eed7fade22bc69b0bd44c5fa4ae4f97',1,'MonogameExamples.SystemManager.Subscribe()']]],
+  ['subscribe_3c_20t_20_3e_419',['Subscribe&lt; T &gt;',['../classMonogameExamples_1_1MessageBus.html#a1fefb9f136d0ce055f5cea7900e3d515',1,'MonogameExamples::MessageBus']]],
+  ['systemmanager_420',['SystemManager',['../structMonogameExamples_1_1SystemManager.html#ae7bef07e30eb5d8eb97d1532a7cc2069',1,'MonogameExamples::SystemManager']]]
 ];

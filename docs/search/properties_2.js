@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['defaultstate_508',['DefaultState',['../classECS__Framework_1_1StateComponent.html#a9ba1cbe0792e7a0886bfbc7a1ab5d1a4',1,'ECS_Framework::StateComponent']]],
-  ['defaultsuperstate_509',['DefaultSuperState',['../classECS__Framework_1_1StateComponent.html#aa5d7688079e6a0db9b17cc7f4199533e',1,'ECS_Framework::StateComponent']]]
+  ['defaultstate_525',['DefaultState',['../classMonogameExamples_1_1StateComponent.html#a83de183b32fd26cce5f44f62cf43ea45',1,'MonogameExamples::StateComponent']]],
+  ['defaultsuperstate_526',['DefaultSuperState',['../classMonogameExamples_1_1StateComponent.html#a3768c24e5e8cf1085d2b6c00151716b1',1,'MonogameExamples::StateComponent']]]
 ];

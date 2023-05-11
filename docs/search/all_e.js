@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['nextlevel_162',['NextLevel',['../classECS__Framework_1_1World.html#a28c2e864cfcbfda362f750a160fff339',1,'ECS_Framework::World']]],
-  ['nextlevelmessage_163',['NextLevelMessage',['../classECS__Framework_1_1NextLevelMessage.html',1,'ECS_Framework.NextLevelMessage'],['../classECS__Framework_1_1NextLevelMessage.html#afe5fd793fd4901a4cf62d8472d0a57a0',1,'ECS_Framework.NextLevelMessage.NextLevelMessage()']]],
-  ['nextlevelmessage_2ecs_164',['NextLevelMessage.cs',['../NextLevelMessage_8cs.html',1,'']]]
+  ['nextlevel_168',['NextLevel',['../classMonogameExamples_1_1World.html#ab546a5f1637f4f0b09345e15f0dc9e09',1,'MonogameExamples::World']]],
+  ['nextlevelmessage_169',['NextLevelMessage',['../classMonogameExamples_1_1NextLevelMessage.html',1,'MonogameExamples.NextLevelMessage'],['../classMonogameExamples_1_1NextLevelMessage.html#a6a82e65c1b88f339901f37f825e71cf9',1,'MonogameExamples.NextLevelMessage.NextLevelMessage()']]],
+  ['nextlevelmessage_2ecs_170',['NextLevelMessage.cs',['../NextLevelMessage_8cs.html',1,'']]]
 ];

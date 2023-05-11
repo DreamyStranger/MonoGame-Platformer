@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="ECS_Framework.Loader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classECS__Framework_1_1Loader.html",tooltip="Handles loading and retrieval of game assets, including textures, tile maps, and music."];
+  Node0 [label="MonogameExamples.Loader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMonogameExamples_1_1Loader.html",tooltip="Handles loading and retrieval of game assets, including textures, tile maps, and music."];
 }

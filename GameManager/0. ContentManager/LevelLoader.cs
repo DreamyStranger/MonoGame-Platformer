@@ -92,7 +92,6 @@ namespace MonogameExamples
                 {
                     bg_name = "bg_" + property.value;
                 }
-
             }
 
             return EntityFactory.CreateParallaxBackground(bg_name, new Vector2(velocityX, velocityY));
@@ -135,7 +134,7 @@ namespace MonogameExamples
                 }
             }
 
-            // Create and return a new regular enemy entity with the specified position, movement range, and direction
+            // Create and return a new regular enemy
             return EntityFactory.CreateRegularEnemy(position, leftRange, rightRange, direction);
         }
 

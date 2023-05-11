@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
+using System;
 
 namespace MonogameExamples
 {
@@ -16,18 +17,7 @@ namespace MonogameExamples
         public DeathSystem()
         {
             _entities = new List<Entity>();
-        }
-
-        /// <summary>
-        /// Adds an entity to the system if it has both a StateComponent and an AnimatedComponent.
-        /// </summary>
-        /// <param name="entity">The entity to be added.</param>
-        public override void AddEntity(Entity entity)
-        {
-            if (entity.GetComponent<StateComponent>() != null && entity.GetComponent<AnimatedComponent>() != null)
-            {
-                _entities.Add(entity);
-            }
+            MessageBus.Subscribe<EntityDiedMessage>(EntityDied);
         }
 
         /// <summary>
@@ -37,6 +27,15 @@ namespace MonogameExamples
         public override void RemoveEntity(Entity entity)
         {
             _entities.Remove(entity);
+        }
+
+        public override void Subscribe()
+        {
+             MessageBus.Subscribe<EntityDiedMessage>(EntityDied);
+        }
+        public override void Unsubscribe()
+        {
+            MessageBus.Unsubscribe<EntityDiedMessage>(EntityDied);
         }
 
         /// <summary>
@@ -71,6 +70,11 @@ namespace MonogameExamples
                     }
                 }
             }
+        }
+
+        private void EntityDied(EntityDiedMessage message)
+        {
+            _entities.Add(message.Entity);
         }
     }
 }

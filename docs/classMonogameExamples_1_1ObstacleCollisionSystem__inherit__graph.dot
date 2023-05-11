@@ -1,0 +1,9 @@
+digraph "MonogameExamples.ObstacleCollisionSystem"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="MonogameExamples.Obstacle\lCollisionSystem",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="System that manages collision detection and resolution between entities and level obstacles."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="System",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMonogameExamples_1_1System.html",tooltip="An abstract base class for systems in the game."];
+}

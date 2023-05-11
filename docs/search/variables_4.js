@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inputs_462',['inputs',['../classECS__Framework_1_1PlayerInputSystem.html#aa2bd1c12556d3c33420b4ec32f7f99d5',1,'ECS_Framework.PlayerInputSystem.inputs()'],['../classECS__Framework_1_1RegularEnemyInputSystem.html#a54b6dfdc373a76637e203255d25583a3',1,'ECS_Framework.RegularEnemyInputSystem.inputs()']]]
+  ['inputs_480',['inputs',['../classMonogameExamples_1_1PlayerInputSystem.html#a0dc86c824bf502b1cead60e0706e7e62',1,'MonogameExamples.PlayerInputSystem.inputs()'],['../classMonogameExamples_1_1RegularEnemyInputSystem.html#aa0412cbfec3a96649867e50c8ba1db13',1,'MonogameExamples.RegularEnemyInputSystem.inputs()']]]
 ];

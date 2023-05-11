@@ -51,8 +51,9 @@ namespace MonogameExamples
                 system.AddEntity(entity);
             }
         }
+
         /// <summary>
-        /// Removes an entity from the system.
+        /// Removes an entity from all systems.
         /// </summary>
         /// <param name="entity">The entity to be removed.</param>
         public void Remove(Entity entity)
@@ -63,6 +64,27 @@ namespace MonogameExamples
             }
         }
 
+        /// <summary>
+        /// Subscribes all systems to their MessageBus events.
+        /// </summary>
+        public void Subscribe()
+        {
+            foreach (System system in _systems)
+            {
+                system.Subscribe();
+            }
+        }
+
+        /// <summary>
+        /// Unsubscribes all systems from their MessageBus events.
+        /// </summary>
+        public void Unsubscribe()
+        {
+            foreach (System system in _systems)
+            {
+                system.Unsubscribe();
+            }
+        }
 
         /// <summary>
         /// Updates all the systems with the specified <see cref="GameTime"/>.

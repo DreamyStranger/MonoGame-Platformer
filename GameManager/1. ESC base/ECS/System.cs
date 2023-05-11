@@ -23,9 +23,24 @@ namespace MonogameExamples
         /// <param name="entity">The entity to remove.</param>
         public virtual void RemoveEntity(Entity entity)
         {
-            
+
         }
 
+        /// <summary>
+        /// Subscribes system to the MessageBus events.
+        /// </summary>
+        public virtual void Subscribe()
+        {
+
+        }
+
+        /// <summary>
+        /// Unsubscribes system from the MessageBus events.
+        /// </summary>
+        public virtual void Unsubscribe()
+        {
+
+        }
 
         /// <summary>
         /// Updates the system.
@@ -44,5 +59,6 @@ namespace MonogameExamples
         {
 
         }
+
     }
 }

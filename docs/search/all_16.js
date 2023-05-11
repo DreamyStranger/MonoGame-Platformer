@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['walkleft_244',['WalkLeft',['../namespaceECS__Framework.html#a1d0644bc18b04d7f02cb424124b843f1aa4018e883fed3c25fc3fbf8f0049d4a2',1,'ECS_Framework']]],
-  ['walkright_245',['WalkRight',['../namespaceECS__Framework.html#a1d0644bc18b04d7f02cb424124b843f1abf8da33b42b9930eb716b1b2386c3fdc',1,'ECS_Framework']]],
-  ['width_246',['Width',['../classECS__Framework_1_1CollisionBoxComponent.html#a1ac79952c238a97cbb7cfda1beb1c7a9',1,'ECS_Framework::CollisionBoxComponent']]],
-  ['world_247',['World',['../classECS__Framework_1_1World.html',1,'ECS_Framework.World'],['../classECS__Framework_1_1World.html#a0e9c233747d5602ea5f5563d725a55d4',1,'ECS_Framework.World.World()']]],
-  ['world_248',['world',['../classECS__Framework_1_1Game1.html#a41f723a449f8c634c5a28f955bb9cdb2',1,'ECS_Framework::Game1']]],
-  ['world_2ecs_249',['World.cs',['../World_8cs.html',1,'']]]
+  ['walkleft_252',['WalkLeft',['../namespaceMonogameExamples.html#a5b44a03579b371a5309bc3188d8ba033aa4018e883fed3c25fc3fbf8f0049d4a2',1,'MonogameExamples']]],
+  ['walkright_253',['WalkRight',['../namespaceMonogameExamples.html#a5b44a03579b371a5309bc3188d8ba033abf8da33b42b9930eb716b1b2386c3fdc',1,'MonogameExamples']]],
+  ['width_254',['Width',['../classMonogameExamples_1_1CollisionBoxComponent.html#a29812c166c994382e41a6f7b480dc100',1,'MonogameExamples::CollisionBoxComponent']]],
+  ['world_255',['World',['../classMonogameExamples_1_1World.html',1,'MonogameExamples.World'],['../classMonogameExamples_1_1World.html#aa0350409af817c3809f65d5db83f25f9',1,'MonogameExamples.World.World()']]],
+  ['world_256',['world',['../classMonogameExamples_1_1Game1.html#a71939fbbeab48c7f819ed259d1c6fed4',1,'MonogameExamples::Game1']]],
+  ['world_2ecs_257',['World.cs',['../World_8cs.html',1,'']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['obstaclecollisionsystem_377',['ObstacleCollisionSystem',['../classECS__Framework_1_1ObstacleCollisionSystem.html#adfd999bcc58cb6c9246de9f18b9bbc8f',1,'ECS_Framework::ObstacleCollisionSystem']]],
-  ['ondestroyentity_378',['OnDestroyEntity',['../classECS__Framework_1_1World.html#a8213318593db476d1512983913fcb0a9',1,'ECS_Framework::World']]]
+  ['obstaclecollisionsystem_389',['ObstacleCollisionSystem',['../classMonogameExamples_1_1ObstacleCollisionSystem.html#a6ec79ae105db52cf7be269b93262f0bb',1,'MonogameExamples::ObstacleCollisionSystem']]],
+  ['ondestroyentity_390',['OnDestroyEntity',['../classMonogameExamples_1_1World.html#a1064539ef829923e73c3338344ef5384',1,'MonogameExamples::World']]]
 ];

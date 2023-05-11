@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initialize_368',['Initialize',['../classECS__Framework_1_1Game1.html#ae256e76f75a0cc7b4d80acc65c8b6d07',1,'ECS_Framework::Game1']]]
+  ['initialize_380',['Initialize',['../classMonogameExamples_1_1Game1.html#a2a1d6b8d8e959f59dbc44958d4a32688',1,'MonogameExamples::Game1']]]
 ];

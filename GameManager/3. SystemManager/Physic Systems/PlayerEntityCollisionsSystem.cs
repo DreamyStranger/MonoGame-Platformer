@@ -114,6 +114,7 @@ namespace MonogameExamples
             // Mark the coin as dead and set its state to idle
             coinData.State.CurrentSuperState = SuperState.IsDead;
             coinData.State.CurrentState = State.Idle;
+            MessageBus.Publish(new EntityDiedMessage(coinData.Entity));
         }
 
         /// <summary>
@@ -157,6 +158,7 @@ namespace MonogameExamples
                 {
                     enemy.State.CurrentSuperState = SuperState.IsDead;
                     enemy.State.CurrentState = State.Idle;
+                    MessageBus.Publish(new EntityDiedMessage(enemy.Entity));
                     player.Movement.Position = new Vector2(positionX, positionY);
                     player.CollisionBox.UpdateBoxPosition(positionX, positionY, direction);
                     player.Movement.Velocity = new Vector2(GameConstants.SpeedXonCollision * direction, player.Movement.Velocity.Y - GameConstants.SpeedYonCollision);
@@ -166,6 +168,7 @@ namespace MonogameExamples
             }
             player.State.CurrentSuperState = SuperState.IsDead;
             player.State.CurrentState = State.Idle;
+            MessageBus.Publish(new EntityDiedMessage(player.Entity));
         }
 
         //Helper Methods

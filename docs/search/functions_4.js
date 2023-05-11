@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['entity_347',['Entity',['../classECS__Framework_1_1Entity.html#a413ce6987a06449ff86b366fd6220aca',1,'ECS_Framework::Entity']]],
-  ['entitytypecomponent_348',['EntityTypeComponent',['../classECS__Framework_1_1EntityTypeComponent.html#a08eb7a42fa830f27112f04c20f040d71',1,'ECS_Framework::EntityTypeComponent']]],
-  ['exitgamemessage_349',['ExitGameMessage',['../classECS__Framework_1_1ExitGameMessage.html#a3a9c8c4bc0e86bb2c11ff96eccceaa18',1,'ECS_Framework::ExitGameMessage']]]
+  ['entity_357',['Entity',['../classMonogameExamples_1_1Entity.html#a645638743802b0a16a0df43ec044a412',1,'MonogameExamples::Entity']]],
+  ['entitydied_358',['EntityDied',['../classMonogameExamples_1_1DeathSystem.html#a6a48e575f8e589fc1f8b983df98d6629',1,'MonogameExamples::DeathSystem']]],
+  ['entitydiedmessage_359',['EntityDiedMessage',['../classMonogameExamples_1_1EntityDiedMessage.html#a2d098a05b3c0cf75611c6ce9f2e469b8',1,'MonogameExamples::EntityDiedMessage']]],
+  ['entitytypecomponent_360',['EntityTypeComponent',['../classMonogameExamples_1_1EntityTypeComponent.html#a813bc2e13ed1098e4c0f501f6563f457',1,'MonogameExamples::EntityTypeComponent']]],
+  ['exitgamemessage_361',['ExitGameMessage',['../classMonogameExamples_1_1ExitGameMessage.html#aebf28406555dff2ea8f2d4ff5e3ea8ff',1,'MonogameExamples::ExitGameMessage']]]
 ];

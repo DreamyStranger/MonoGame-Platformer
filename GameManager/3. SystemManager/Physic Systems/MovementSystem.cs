@@ -137,6 +137,9 @@ namespace ECS_Framework
                     movement.Velocity = Vector2.Zero;
                     movement.Acceleration = Vector2.Zero;
                     break;
+                    
+                case SuperState.IsAppearing:
+                    break;
 
                 default:
                     movement.Acceleration = new Vector2(0, GameConstants.GRAVITY);

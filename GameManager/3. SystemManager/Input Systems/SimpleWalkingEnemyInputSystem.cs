@@ -4,9 +4,9 @@ using Microsoft.Xna.Framework;
 namespace ECS_Framework
 {
     /// <summary>
-    /// <see cref="System"/> that updates the state of entities based on keyboard input.
+    /// <see cref="System"/> that updates the state of Regular Enemies.
     /// </summary>
-    public class SimpleWalkingEnemySystem : System
+    public class RegularEnemyInputSystem : System
     {
         private List<Entity> entities;
         private List<StateComponent> states;
@@ -15,9 +15,9 @@ namespace ECS_Framework
 
 
         /// <summary>
-        /// Initializes a new instance of the PlayerInputSystem class.
+        /// Initializes a new instance of RegularEnemyInputSystem class.
         /// </summary>
-        public SimpleWalkingEnemySystem()
+        public RegularEnemyInputSystem()
         {
             entities = new List<Entity>();
             states = new List<StateComponent>();
@@ -72,9 +72,16 @@ namespace ECS_Framework
 
         private void UpdateEntityState(GameTime gameTime, SimpleWalkingEnemyComponent input, StateComponent state)
         {
-            if (state.CurrentSuperState != SuperState.IsOnGround)
+            switch(state.CurrentSuperState)
             {
-                return;
+                case SuperState.IsOnGround:
+                    break;
+
+                case SuperState.IsAppearing:
+                    return;
+
+                default:
+                    return;
             }
             switch (state.CurrentState)
             {

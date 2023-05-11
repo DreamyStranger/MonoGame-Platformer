@@ -24,5 +24,6 @@ namespace ECS_Framework
         IsDoubleJumping,
         IsDead,
         IsSliding,
+        IsAppearing,
     }
 }

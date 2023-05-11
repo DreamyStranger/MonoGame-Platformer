@@ -7,6 +7,8 @@ namespace ECS_Framework
     /// </summary>
     public class StateComponent : Component
     {
+        public SuperState DefaultSuperState { get; private set; }
+
         // Object state and previous state
         private State _currentState;
         public State previousState { get; private set; }
@@ -35,7 +37,8 @@ namespace ECS_Framework
         public StateComponent(State currentState = State.Idle, SuperState currentSuperState = SuperState.IsFalling)
         {
             _currentState = currentState;
-            _currentSuperState = currentSuperState;
+            _currentSuperState = SuperState.IsAppearing;
+            DefaultSuperState = currentSuperState;
             UpdateStateID();
             _canMoveRight = true;
             _canMoveLeft = true;
@@ -72,9 +75,15 @@ namespace ECS_Framework
                 case SuperState.IsDoubleJumping:
                     stateID = "double_jump";
                     break;
+
                 case SuperState.IsDead:
                     stateID = "death";
                     break;
+
+                case SuperState.IsAppearing:
+                    stateID = "appear";
+                    break;
+
                 default:
                     break;
             }

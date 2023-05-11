@@ -30,8 +30,9 @@ namespace ECS_Framework
             _systems = new List<System>();
             _systems.Add(new ParallaxSystem());
             _systems.Add(new LevelRenderSystem(levelID));
+            _systems.Add(new AppearSystem());
             _systems.Add(new PlayerInputSystem());
-            _systems.Add(new SimpleWalkingEnemySystem());
+            _systems.Add(new RegularEnemyInputSystem());
             _systems.Add(new MovementSystem());
             _systems.Add(new ObstacleCollisionSystem(levelID));
             _systems.Add(new PlayerEntityCollisionSystem());

@@ -76,7 +76,7 @@ namespace ECS_Framework
         /// <param name="state">The state component for the entity.</param>
         private void UpdateEntityState(GameTime gameTime, PlayerInputComponent input, StateComponent state)
         {
-            if(state.CurrentSuperState == SuperState.IsDead)
+            if(state.CurrentSuperState == SuperState.IsDead || state.CurrentSuperState == SuperState.IsAppearing)
             {
                 return;
             }

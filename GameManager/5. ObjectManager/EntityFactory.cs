@@ -48,6 +48,7 @@ namespace ECS_Framework
             animation.AddAnimation("player_fall", "fall", 1, 1, 20);
             animation.AddAnimation("player_slide", "slide", 1, 5, 20);
             animation.AddAnimation("player_death", "death", 1, 7, 20);
+            animation.AddAnimation("fruits_death", "appear", 1, 6, 20);
             player.AddComponent(animation);
 
             // States
@@ -80,6 +81,7 @@ namespace ECS_Framework
             AnimatedComponent animation = new AnimatedComponent();
             animation.AddAnimation(fruitName + "_idle", "idle", 1, 17, 20);
             animation.AddAnimation("fruits_death", "death", 1, 6, 20);
+            animation.AddAnimation("fruits_death", "appear", 1, 6, 20);
             coin.AddComponent(animation);
 
             // Add the current state and super state for the fruit
@@ -112,6 +114,7 @@ namespace ECS_Framework
             animation.AddAnimation("voodo_idle", "idle", 1, 11, 20);
             animation.AddAnimation("voodo_walking", "walking", 1, 12, 20);
             animation.AddAnimation("fruits_death", "death", 1, 6, 20);
+            animation.AddAnimation("fruits_death", "appear", 1, 6, 20);
             enemy.AddComponent(animation);
 
             // Add the current state and super state for the enemy

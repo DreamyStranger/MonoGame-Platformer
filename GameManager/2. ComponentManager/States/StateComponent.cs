@@ -8,6 +8,7 @@ namespace ECS_Framework
     public class StateComponent : Component
     {
         public SuperState DefaultSuperState { get; private set; }
+        public State DefaultState { get; private set; }
 
         // Object state and previous state
         private State _currentState;
@@ -36,9 +37,10 @@ namespace ECS_Framework
         /// </summary>
         public StateComponent(State currentState = State.Idle, SuperState currentSuperState = SuperState.IsFalling)
         {
-            _currentState = currentState;
+            _currentState = State.Idle;
             _currentSuperState = SuperState.IsAppearing;
             DefaultSuperState = currentSuperState;
+            DefaultState = currentState;
             UpdateStateID();
             _canMoveRight = true;
             _canMoveLeft = true;

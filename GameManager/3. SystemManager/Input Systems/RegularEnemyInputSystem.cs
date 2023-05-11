@@ -75,11 +75,8 @@ namespace ECS_Framework
             switch(state.CurrentSuperState)
             {
                 case SuperState.IsOnGround:
-                    break;
-
                 case SuperState.IsAppearing:
-                    return;
-
+                    break;
                 default:
                     return;
             }

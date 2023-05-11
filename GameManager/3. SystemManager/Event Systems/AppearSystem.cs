@@ -49,7 +49,7 @@ namespace ECS_Framework
                     {
                         _destroy.Add(entity);
                         stateComponent.CurrentSuperState = stateComponent.DefaultSuperState;
-                        stateComponent.CurrentState = State.Idle;
+                        stateComponent.CurrentState = stateComponent.DefaultState;
                     }
                 }
             }

@@ -158,10 +158,6 @@ namespace ECS_Framework
         /// <param name="movement">The movement component of the entity.</param>
         private void HorizontalMovement(StateComponent state, MovementComponent movement)
         {
-            if(state.CurrentSuperState == SuperState.IsAppearing)
-            {
-                return;
-            }
             switch (state.CurrentState)
             {
                 case State.WalkLeft:

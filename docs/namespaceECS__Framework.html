@@ -104,8 +104,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1PlayerInputComponent.html">PlayerInputComponent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classECS__Framework_1_1Component.html" title="The base class for all components.">Component</a> representing the input state of the player entity.  <a href="classECS__Framework_1_1PlayerInputComponent.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1SimpleWalkingEnemyComponent.html">SimpleWalkingEnemyComponent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classECS__Framework_1_1Component.html" title="The base class for all components.">Component</a> representing the movement state of a simple walking enemy entity.  <a href="classECS__Framework_1_1SimpleWalkingEnemyComponent.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1RegularEnemyComponent.html">RegularEnemyComponent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classECS__Framework_1_1Component.html" title="The base class for all components.">Component</a> representing the movement state of a simple walking enemy entity.  <a href="classECS__Framework_1_1RegularEnemyComponent.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1CollisionBoxComponent.html">CollisionBoxComponent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classECS__Framework_1_1Component.html" title="The base class for all components.">Component</a> that contains data and methods related to collision box of an entity in the game.  <a href="classECS__Framework_1_1CollisionBoxComponent.html#details">More...</a><br /></td></tr>
@@ -128,14 +128,16 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1ParallaxSystem.html">ParallaxSystem</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages parallax components and their related entities.  <a href="classECS__Framework_1_1ParallaxSystem.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1DeathEventSystem.html">DeathEventSystem</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages entity death events, triggering actions depending on the entity type.  <a href="classECS__Framework_1_1DeathEventSystem.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1AppearSystem.html">AppearSystem</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1DeathSystem.html">DeathSystem</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages entity death events, triggering actions depending on the entity type.  <a href="classECS__Framework_1_1DeathSystem.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1PlayerInputSystem.html">PlayerInputSystem</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> that updates the state of entities based on keyboard input.  <a href="classECS__Framework_1_1PlayerInputSystem.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1SimpleWalkingEnemySystem.html">SimpleWalkingEnemySystem</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> that updates the state of entities based on keyboard input.  <a href="classECS__Framework_1_1SimpleWalkingEnemySystem.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1RegularEnemyInputSystem.html">RegularEnemyInputSystem</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> that updates the state of Regular Enemies.  <a href="classECS__Framework_1_1RegularEnemyInputSystem.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECS__Framework_1_1MovementSystem.html">MovementSystem</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classECS__Framework_1_1System.html" title="An abstract base class for systems in the game.">System</a> responsible for handling the movement of entities in the game.  <a href="classECS__Framework_1_1MovementSystem.html#details">More...</a><br /></td></tr>
@@ -205,6 +207,7 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="namespaceECS__Framework.html#af9d01d5477ca5135063c7d2aeb03b2cba12a66a0b0b263f7412b0433db19f54b0">IsDead</a>
 , <a class="el" href="namespaceECS__Framework.html#af9d01d5477ca5135063c7d2aeb03b2cbaebd98812a40eadd347ed73f39e9dab98">IsSliding</a>
+, <a class="el" href="namespaceECS__Framework.html#af9d01d5477ca5135063c7d2aeb03b2cba2f090debae7df14c804aa8bdc6d7ccc7">IsAppearing</a>
 <br />
  }</td></tr>
 <tr class="memdesc:af9d01d5477ca5135063c7d2aeb03b2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possible continuous SuperStates an object can be in.  <a href="namespaceECS__Framework.html#af9d01d5477ca5135063c7d2aeb03b2cb">More...</a><br /></td></tr>
@@ -341,6 +344,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="af9d01d5477ca5135063c7d2aeb03b2cba9e4db82d1449472d1dd0eecc689896c3"></a>IsDoubleJumping&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="af9d01d5477ca5135063c7d2aeb03b2cba12a66a0b0b263f7412b0433db19f54b0"></a>IsDead&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="af9d01d5477ca5135063c7d2aeb03b2cbaebd98812a40eadd347ed73f39e9dab98"></a>IsSliding&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af9d01d5477ca5135063c7d2aeb03b2cba2f090debae7df14c804aa8bdc6d7ccc7"></a>IsAppearing&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

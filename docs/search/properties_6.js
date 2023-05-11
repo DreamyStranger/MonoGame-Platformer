@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['objects_508',['objects',['../classECS__Framework_1_1TileHandler.html#a312b534e2fc33d5336da163bf1675f3f',1,'ECS_Framework::TileHandler']]],
-  ['originalheight_509',['OriginalHeight',['../classECS__Framework_1_1CollisionBoxComponent.html#aed6c4efc517d2ca518f5f539003ac058',1,'ECS_Framework::CollisionBoxComponent']]],
-  ['originalwidth_510',['OriginalWidth',['../classECS__Framework_1_1CollisionBoxComponent.html#a710ec6d720eb61aa156996bd9567f248',1,'ECS_Framework::CollisionBoxComponent']]]
+  ['lastposition_520',['LastPosition',['../classECS__Framework_1_1MovementComponent.html#a7d54c555c05f7db58592b765486c6f03',1,'ECS_Framework::MovementComponent']]]
 ];

@@ -75,7 +75,6 @@ namespace ECS_Framework
             switch(state.CurrentSuperState)
             {
                 case SuperState.IsOnGround:
-                case SuperState.IsAppearing:
                     break;
                 default:
                     return;
@@ -83,7 +82,7 @@ namespace ECS_Framework
             switch (state.CurrentState)
             {
                 case State.Idle:
-                    state.CurrentState = State.WalkRight;
+                    state.CurrentState = state.DefaultState;
                     break;
                 case State.WalkLeft:
                     if (input.IsRight)

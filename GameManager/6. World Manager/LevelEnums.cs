@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// Levels, should hold same name as corresponding tmx file

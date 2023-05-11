@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// A factory class for creating entities.

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// <see cref="System"/> that manages parallax components and their related entities.

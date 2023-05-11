@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 using System.IO;
 using System;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// Handles loading and retrieval of game assets, including textures, tile maps, and music.

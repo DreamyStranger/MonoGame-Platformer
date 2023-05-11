@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// <see cref="Component"/> that contains data related to the motion of an entity in the game.

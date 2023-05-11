@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using System;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// Represents a system that handles collisions between the player entity and other entities.

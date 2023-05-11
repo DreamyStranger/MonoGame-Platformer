@@ -3,7 +3,7 @@ using System;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// Represents the game world and manages loading and updating levels.

@@ -1,4 +1,4 @@
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// Possible interaptable States an object can be in.

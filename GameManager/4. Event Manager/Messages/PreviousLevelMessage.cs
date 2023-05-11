@@ -1,4 +1,4 @@
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// Represents a message that indicates the game should revert to the previous level.

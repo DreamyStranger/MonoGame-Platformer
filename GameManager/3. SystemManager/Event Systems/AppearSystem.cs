@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using System;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// System that manages entity appearance events, triggering actions depending on the entity type.

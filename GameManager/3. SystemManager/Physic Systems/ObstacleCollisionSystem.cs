@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using System;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// <see cref="System"/> that manages collision detection and resolution between entities and level obstacles.

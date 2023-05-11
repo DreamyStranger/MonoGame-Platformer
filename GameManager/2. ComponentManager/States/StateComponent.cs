@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// Component that stores the current state and super state of an object, as well as its state ID, jump counter, and horizontal direction.

@@ -1,4 +1,4 @@
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// Entity types

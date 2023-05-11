@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using System;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// <see cref="System"/> responsible for rendering the entities in the game.

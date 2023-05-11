@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// An abstract base class for systems in the game.

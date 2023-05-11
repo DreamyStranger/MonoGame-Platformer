@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// Holds common game constants

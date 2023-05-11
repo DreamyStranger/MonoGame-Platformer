@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TiledCS;
 using System;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// Handles loading and rendering of tile maps.

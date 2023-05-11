@@ -1,5 +1,5 @@
 using Microsoft.Xna.Framework;
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// A struct that contains the most commonly used components.

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// <see cref="System"/> that updates the state of entities based on keyboard input.

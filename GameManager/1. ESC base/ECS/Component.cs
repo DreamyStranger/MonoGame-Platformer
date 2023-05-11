@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// The base class for all components.

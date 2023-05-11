@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using TiledCS;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// Provides a static method for loading entities from a Tiled map.

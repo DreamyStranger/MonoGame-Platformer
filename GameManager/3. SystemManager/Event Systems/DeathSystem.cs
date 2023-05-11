@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// System that manages entity death events, triggering actions depending on the entity type.

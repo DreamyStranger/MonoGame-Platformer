@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// Represents a message that can be published and subscribed to.

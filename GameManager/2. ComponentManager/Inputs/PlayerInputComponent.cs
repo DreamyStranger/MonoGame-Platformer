@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace EC_Framework
+namespace MonogameExamples
 {
     /// <summary>
     /// Component representing the input state of the player entity.

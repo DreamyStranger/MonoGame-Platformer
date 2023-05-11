@@ -15,6 +15,7 @@ namespace MonogameExamples
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private RenderTarget2D _renderTarget;
+        private Rectangle _destinationRectangle = new Rectangle();
         private KeyboardState _previousKeyboardState;
 
         public World world;
@@ -74,7 +75,6 @@ namespace MonogameExamples
             world = new World();
         }
 
-
         /// <summary>
         /// Updates the game.
         /// </summary>
@@ -127,22 +127,28 @@ namespace MonogameExamples
             // Reset the render target back to the default one
             GraphicsDevice.SetRenderTarget(null);
 
-            // Calculate the scale factor and center the game on the screen
-            float scaleFactor = Math.Min((float)GraphicsDevice.Viewport.Width / GameConstants.SCREEN_WIDTH, (float)GraphicsDevice.Viewport.Height / GameConstants.SCREEN_HEIGHT);
-            int screenWidth = (int)(GameConstants.SCREEN_WIDTH * scaleFactor);
-            int screenHeight = (int)(GameConstants.SCREEN_HEIGHT * scaleFactor);
-            int offsetX = (GraphicsDevice.Viewport.Width - screenWidth) / 2;
-            int offsetY = (GraphicsDevice.Viewport.Height - screenHeight) / 2;
-            Rectangle destinationRectangle = new Rectangle(offsetX, offsetY, screenWidth, screenHeight);
+            //Scale window
+            UpdateScaling();
 
             // Draw the render target texture centered and scaled to the screen
             GraphicsDevice.Clear(Color.Black);
             _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
-            _spriteBatch.Draw(_renderTarget, destinationRectangle, Color.White);
+            _spriteBatch.Draw(_renderTarget, _destinationRectangle, Color.White);
             _spriteBatch.End();
 
             base.Draw(gameTime);
         }
 
+        private void UpdateScaling()
+        {
+            float scaleX = (float)GraphicsDevice.Viewport.Width / GameConstants.SCREEN_WIDTH;
+            float scaleY = (float)GraphicsDevice.Viewport.Height / GameConstants.SCREEN_HEIGHT;
+            float scaleFactor = Math.Min(scaleX, scaleY);
+            int screenWidth = (int)(GameConstants.SCREEN_WIDTH * scaleFactor);
+            int screenHeight = (int)(GameConstants.SCREEN_HEIGHT * scaleFactor);
+            int offsetX = (GraphicsDevice.Viewport.Width - screenWidth) / 2;
+            int offsetY = (GraphicsDevice.Viewport.Height - screenHeight) / 2;
+            _destinationRectangle = new Rectangle(offsetX, offsetY, screenWidth, screenHeight);
+        }
     }
 }

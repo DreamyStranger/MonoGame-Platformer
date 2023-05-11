@@ -27,11 +27,15 @@ namespace ECS_Framework
         /// <param name="entity">The entity to be added.</param>
         public override void AddEntity(Entity entity)
         {
-            if (entity.GetComponent<StateComponent>() == null || entity.GetComponent<AnimatedComponent>() == null)
+            StateComponent state = entity.GetComponent<StateComponent>();
+            if (state == null || entity.GetComponent<AnimatedComponent>() == null)
             {
                 return;
             }
-            _entities.Add(entity);
+            if(state.CurrentSuperState == SuperState.IsAppearing)
+            {
+                _entities.Add(entity);
+            }
         }
 
         /// <summary>

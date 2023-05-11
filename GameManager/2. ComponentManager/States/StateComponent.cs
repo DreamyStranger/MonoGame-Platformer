@@ -7,9 +7,7 @@ namespace ECS_Framework
     /// </summary>
     public class StateComponent : Component
     {
-        public SuperState DefaultSuperState { get; private set; }
-        public State DefaultState { get; private set; }
-
+    
         // Object state and previous state
         private State _currentState;
         public State previousState { get; private set; }
@@ -18,14 +16,6 @@ namespace ECS_Framework
         private SuperState _currentSuperState;
         public SuperState previousSuperState { get; private set; }
 
-        /// <summary>
-        /// action ID used for identifying the current animation
-        /// </summary>
-        public string stateID { get; private set; }
-
-        // Jump Counter
-        public int JumpsPerformed = 0;
-
         // Flags for movement restrictions
         private bool _canMoveLeft, _canMoveRight;
 
@@ -33,14 +23,34 @@ namespace ECS_Framework
         private int _horizontalDirection = 1;
 
         /// <summary>
+        /// Action ID used for identifying the current animation
+        /// </summary>
+        public string AnimationID { get; private set; }
+
+        /// <summary>
+        /// Default SuperState that entity should enter after certain actions (appearence, etc)
+        /// </summary>
+        public SuperState DefaultSuperState { get; private set; }
+        
+        /// <summary>
+        /// Default State that entity should enter after certain actions (appearence, etc)
+        /// </summary>
+        public State DefaultState { get; private set; }
+
+        /// <summary>
+        /// Jumps performed by given entity
+        /// </summary>
+        public int JumpsPerformed = 0;
+
+        /// <summary>
         /// Initializes a new instance of the StateComponent class with the default state and super state.
         /// </summary>
-        public StateComponent(State currentState = State.Idle, SuperState currentSuperState = SuperState.IsFalling)
+        public StateComponent(State defaultState = State.Idle, SuperState defaultSuperState = SuperState.IsFalling, State currentState = State.Idle, SuperState currentSuperState = SuperState.IsAppearing)
         {
-            _currentState = State.Idle;
-            _currentSuperState = SuperState.IsAppearing;
-            DefaultSuperState = currentSuperState;
-            DefaultState = currentState;
+            _currentState = currentState;
+            _currentSuperState = currentSuperState;
+            DefaultSuperState = defaultSuperState;
+            DefaultState = defaultState;
             UpdateStateID();
             _canMoveRight = true;
             _canMoveLeft = true;
@@ -55,35 +65,35 @@ namespace ECS_Framework
             switch (_currentSuperState)
             {
                 case SuperState.IsOnGround:
-                    stateID = "idle";
+                    AnimationID = "idle";
                     if (_currentState == State.WalkLeft || _currentState == State.WalkRight)
                     {
-                        stateID = "walking";
+                        AnimationID = "walking";
                     }
                     break;
 
                 case SuperState.IsFalling:
-                    stateID = "fall";
+                    AnimationID = "fall";
                     if (_currentState == State.Slide)
                     {
-                        stateID = "slide";
+                        AnimationID = "slide";
                     }
                     break;
 
                 case SuperState.IsJumping:
-                    stateID = "jump";
+                    AnimationID = "jump";
                     break;
 
                 case SuperState.IsDoubleJumping:
-                    stateID = "double_jump";
+                    AnimationID = "double_jump";
                     break;
 
                 case SuperState.IsDead:
-                    stateID = "death";
+                    AnimationID = "death";
                     break;
 
                 case SuperState.IsAppearing:
-                    stateID = "appear";
+                    AnimationID = "appear";
                     break;
 
                 default:

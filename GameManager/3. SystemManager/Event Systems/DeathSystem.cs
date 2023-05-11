@@ -17,7 +17,6 @@ namespace MonogameExamples
         public DeathSystem()
         {
             _entities = new List<Entity>();
-            MessageBus.Subscribe<EntityDiedMessage>(EntityDied);
         }
 
         /// <summary>

@@ -28,10 +28,17 @@ namespace MonogameExamples
             _entities.Remove(entity);
         }
 
+        /// <summary>
+        /// Subscribes to appropriate messages
+        /// </summary>
         public override void Subscribe()
         {
              MessageBus.Subscribe<EntityDiedMessage>(EntityDied);
         }
+
+        /// <summary>
+        /// Unsubscribes from all of the messages
+        /// </summary>
         public override void Unsubscribe()
         {
             MessageBus.Unsubscribe<EntityDiedMessage>(EntityDied);

@@ -113,8 +113,7 @@ namespace MonogameExamples
             enemy.AddComponent(new EntityTypeComponent(EntityType.RegularEnemy));
 
             // Add animations for the enemy
-            AnimatedComponent animation = new AnimatedComponent();
-            animation.AddAnimation(MaskedEnemyTexture.Idle, AnimationID.Idle, 1, 11, 20);
+            AnimatedComponent animation = new AnimatedComponent(AnimationID.Walk);
             animation.AddAnimation(MaskedEnemyTexture.Walking, AnimationID.Walk, 1, 12, 20);
             animation.AddAnimation(MaskedEnemyTexture.Hit, AnimationID.Death, 1, 7, 20);
             animation.AddAnimation(FruitTexture.Collected, AnimationID.Appear, 1, 6, 20);

@@ -49,7 +49,7 @@
  <objectgroup id="4" name="entity">
   <object id="21" name="bg" x="16" y="16">
    <properties>
-    <property name="color" value="yellow"/>
+    <property name="color" value="Yellow"/>
     <property name="velocityX" type="int" value="-50"/>
     <property name="velocityY" type="int" value="0"/>
    </properties>

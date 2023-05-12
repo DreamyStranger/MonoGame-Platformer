@@ -17,20 +17,23 @@ namespace MonogameExamples
         /// <summary>
         /// A dictionary of all the animations for this component, indexed by action name.
         /// </summary>
-        public Dictionary<AnimationID, ActionAnimation> Animations { get; private set; }
+        private Dictionary<AnimationID, ActionAnimation> _animations;
 
         /// <summary>
         /// The name of the current animation action.
         /// </summary>
-        public AnimationID CurrentAction { get; private set; }
+        private AnimationID _currentAction;
+        private AnimationID _defaultAction;
 
         /// <summary>
         /// Initializes a new instance of the AnimatedComponent class.
         /// </summary>
-        public AnimatedComponent()
+        public AnimatedComponent(AnimationID defaultAction = AnimationID.Idle)
         {
-            Animations = new Dictionary<AnimationID, ActionAnimation>();
-            CurrentAction = AnimationID.Idle;
+            _animations = new Dictionary<AnimationID, ActionAnimation>();
+            _defaultAction = defaultAction;
+            _currentAction = defaultAction;
+
         }
 
         /// <summary>
@@ -43,7 +46,7 @@ namespace MonogameExamples
         /// <param name="fps">The number of frames per second for the animation.</param>
         public void AddAnimation(Enum sprite, AnimationID action, int rows, int columns, float fps)
         {
-            Animations[action] = new ActionAnimation(sprite, rows, columns, fps);
+            _animations[action] = new ActionAnimation(sprite, rows, columns, fps);
         }
 
         // <summary>
@@ -53,17 +56,13 @@ namespace MonogameExamples
         /// <returns>The current animation associated with the component, or the default "idle" animation if the current action does not have an animation associated with it.</returns>
         public ActionAnimation GetCurrentAnimation()
         {
-            if (Animations.ContainsKey(CurrentAction))
-            {
-                return Animations[CurrentAction];
-            }
 
-            if (GameConstants.AnimationDebugMessages)
+            if (!_animations.ContainsKey(_currentAction))
             {
-                Console.WriteLine($"Animation for action '{CurrentAction}' does not exist, playing default animation"); // Debug message
+                //Console.WriteLine($"Animation for action '{_currentAction}' does not exist, playing default animation"); // Debug message
+                _currentAction = _defaultAction;
             }
-
-            return Animations.TryGetValue(AnimationID.Idle, out ActionAnimation defaultAnimation) ? defaultAnimation : null;
+            return _animations[_currentAction];
         }
 
         /// <summary>
@@ -84,7 +83,7 @@ namespace MonogameExamples
         /// <param name="direction">The horizontal direction the animation is facing.</param>
         public void Draw(SpriteBatch spriteBatch, Vector2 position, int direction = 1)
         {
-            if (Animations.ContainsKey(CurrentAction))
+            if (_animations.ContainsKey(_currentAction))
             {
                 ActionAnimation currentAnimation = GetCurrentAnimation();
                 currentAnimation.Draw(spriteBatch, position, direction);
@@ -97,13 +96,13 @@ namespace MonogameExamples
         /// <param name="action">The name of the new action.</param>
         public void SetCurrentAction(AnimationID action)
         {
-            if (CurrentAction != action)
+            if (_currentAction != action)
             {
                 if (GameConstants.AnimationDebugMessages)
                 {
-                    Console.WriteLine($"Animation {CurrentAction} changes to Animation {action}");
+                    Console.WriteLine($"Animation {_currentAction} changes to Animation {action}");
                 }
-                CurrentAction = action;
+                _currentAction = action;
                 ResetCurrentAnimation();
             }
         }
@@ -201,7 +200,7 @@ namespace MonogameExamples
 
             Rectangle currentFrame = _frames[_currentFrame];
 
-            //Console.WriteLine($"Drawing frame {CurrentFrame}: X = {currentFrame.X}, Y = {currentFrame.Y}, Width = {currentFrame.Width}, Height = {currentFrame.Height}");
+            //Console.WriteLine($"Drawing frame {_currentFrame}: X = {currentFrame.X}, Y = {currentFrame.Y}, Width = {currentFrame.Width}, Height = {currentFrame.Height}");
 
             spriteBatch.Draw(_texture,
                      position,

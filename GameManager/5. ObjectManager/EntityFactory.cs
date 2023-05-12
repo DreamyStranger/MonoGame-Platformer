@@ -16,7 +16,7 @@ namespace MonogameExamples
         /// <param name="texture">The texture to use for the background.</param>
         /// <param name="velocity">The velocity of the background.</param>
         /// <returns>The parallax background entity.</returns>
-        public static Entity CreateParallaxBackground(string texture, Vector2 velocity)
+        public static void CreateParallaxBackground(string texture, Vector2 velocity)
         {
             Entity background = new Entity();
 
@@ -27,7 +27,7 @@ namespace MonogameExamples
             //Parallax
             Enum.TryParse(texture, out BackgroundTexture textureKey);
             background.AddComponent(new ParallaxComponent(textureKey, velocity, Vector2.Zero, viewX, viewY));
-            return background;
+            MessageBus.Publish(new AddEntityMessage(background));
         }
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace MonogameExamples
         /// </summary>
         /// <param name="position">The initial position of the player.</param>
         /// <returns>The player entity.</returns>
-        public static Entity CreatePlayer(Vector2 position)
+        public static void CreatePlayer(Vector2 position)
         {
             //Empty Player
             Entity player = new Entity();
@@ -70,10 +70,10 @@ namespace MonogameExamples
                     horLeftOffset: 4,
                     horRightOffset: 6));
 
-            return player;
+            MessageBus.Publish(new AddEntityMessage(player));
         }
 
-        public static Entity CreateFruit(Vector2 position, string texture)
+        public static void CreateFruit(Vector2 position, string texture)
         {
             // Create an empty coin entity
             Entity coin = new Entity();
@@ -103,10 +103,10 @@ namespace MonogameExamples
                     horLeftOffset: 10,
                     horRightOffset: 10));
 
-            return coin;
+            MessageBus.Publish(new AddEntityMessage(coin));
         }
 
-        public static Entity CreateRegularEnemy(Vector2 position, float leftRange, float rightRange, State initialDirection)
+        public static void CreateRegularEnemy(Vector2 position, float leftRange, float rightRange, State initialDirection)
         {
             // Create an empty enemy entity
             Entity enemy = new Entity();
@@ -136,7 +136,7 @@ namespace MonogameExamples
                     horLeftOffset: 4,
                     horRightOffset: 6));
 
-            return enemy;
+            MessageBus.Publish(new AddEntityMessage(enemy));
         }
     }
 }

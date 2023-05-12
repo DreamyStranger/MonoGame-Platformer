@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using System;
 
 namespace MonogameExamples
 {
@@ -79,24 +80,33 @@ namespace MonogameExamples
                 default:
                     return;
             }
+            
             switch (state.CurrentState)
             {
-                case State.Idle:
-                    state.CurrentState = state.DefaultState;
-                    break;
                 case State.WalkLeft:
-                    if (input.IsRight)
+                    if (input.IsRight || !state.CanMoveLeft)
                     {
                         state.CurrentState = State.WalkRight;
                     }
                     break;
+
                 case State.WalkRight:
-                    if (input.IsLeft)
+                    if (input.IsLeft || !state.CanMoveRight)
                     {
                         state.CurrentState = State.WalkLeft;
                     }
                     break;
+
                 default:
+                    state.CurrentState = state.DefaultState;
+                    if(!state.CanMoveLeft)
+                    {
+                        state.CurrentState = State.WalkRight;
+                    }
+                    if(!state.CanMoveRight)
+                    {
+                        state.CurrentState = State.WalkLeft;
+                    }
                     break;
             }
         }

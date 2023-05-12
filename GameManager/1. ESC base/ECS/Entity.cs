@@ -40,11 +40,10 @@ namespace MonogameExamples
         /// Removes a component from the entity.
         /// </summary>
         /// <typeparam name="T">The type of the component to remove.</typeparam>
-        /// <param name="component">The component to remove.</param>
-        public void RemoveComponent<T>(T component) where T : Component
+        public void RemoveComponent<T>() where T : Component
         {
             Type type = typeof(T);
-            if (components.ContainsKey(type) && components[type] == component)
+            if (components.ContainsKey(type))
             {
                 components.Remove(type);
             }

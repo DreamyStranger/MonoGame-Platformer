@@ -13,10 +13,8 @@ namespace MonogameExamples
         /// </summary>
         /// <param name="level">The level to load entities for.</param>
         /// <returns>A list of entities loaded from the level's Tiled map.</returns>
-        public static List<Entity> GetObjects(LevelID level)
+        public static void GetObjects(LevelID level)
         {
-            List<Entity> objects = new List<Entity>();
-
             var objectDictionary = Loader.tiledHandler.objects[level.ToString()];
 
             TiledMap map = Loader.tiledHandler.GetMap(level);
@@ -36,19 +34,19 @@ namespace MonogameExamples
                     switch (obj.name)
                     {
                         case "bg":
-                            objects.Add(Background(obj));
+                            Background(obj);
                             break;
 
                         case "player":
-                            objects.Add(EntityFactory.CreatePlayer(position));
+                            EntityFactory.CreatePlayer(position);
                             break;
 
                         case "regularEnemy":
-                            objects.Add(RegularEnemy(obj, position));
+                            RegularEnemy(obj, position);
                             break;
 
                         case "fruit":
-                            objects.Add(Fruit(obj, position));
+                            Fruit(obj, position);
                             break;
 
                         default:
@@ -56,8 +54,6 @@ namespace MonogameExamples
                     }
                 }
             }
-
-            return objects;
         }
 
         /// <summary>
@@ -65,7 +61,7 @@ namespace MonogameExamples
         /// </summary>
         /// <param name="obj">The Tiled object representing the background.</param>
         /// <returns>A new parallax background entity.</returns>
-        private static Entity Background(TiledObject obj)
+        private static void Background(TiledObject obj)
         {
             string bg_name = "bg_yellow";
             int velocityX = 0;
@@ -94,7 +90,7 @@ namespace MonogameExamples
                 }
             }
 
-            return EntityFactory.CreateParallaxBackground(bg_name, new Vector2(velocityX, velocityY));
+            EntityFactory.CreateParallaxBackground(bg_name, new Vector2(velocityX, velocityY));
         }
 
         /// <summary>
@@ -103,7 +99,7 @@ namespace MonogameExamples
         /// <param name="obj">The TiledObject representing the enemy.</param>
         /// <param name="position">The position of the enemy in the game world.</param>
         /// <returns>A new regular enemy entity.</returns>
-        private static Entity RegularEnemy(TiledObject obj, Vector2 position)
+        private static void RegularEnemy(TiledObject obj, Vector2 position)
         {
             // Set default values for left and right movement range, and initial direction
             int leftRange = 40;
@@ -135,7 +131,7 @@ namespace MonogameExamples
             }
 
             // Create and return a new regular enemy
-            return EntityFactory.CreateRegularEnemy(position, leftRange, rightRange, direction);
+            EntityFactory.CreateRegularEnemy(position, leftRange, rightRange, direction);
         }
 
         /// <summary>
@@ -144,7 +140,7 @@ namespace MonogameExamples
         /// <param name="obj">The TiledObject containing the fruit properties.</param>
         /// <param name="position">The position of the fruit.</param>
         /// <returns>The created fruit entity.</returns>
-        private static Entity Fruit(TiledObject obj, Vector2 position)
+        private static void Fruit(TiledObject obj, Vector2 position)
         {
             string fruitType = "apple";
             foreach (var property in obj.properties)
@@ -158,7 +154,7 @@ namespace MonogameExamples
             }
 
             // Create and return the fruit entity
-            return EntityFactory.CreateFruit(position, fruitType);
+            EntityFactory.CreateFruit(position, fruitType);
         }
     }
 }

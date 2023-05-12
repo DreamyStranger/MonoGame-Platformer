@@ -10,20 +10,24 @@ namespace MonogameExamples
     /// </summary>
     public class World
     {
-        private LevelID currentLevel;
-        private SystemManager systems;
-        private int totalLevels = Enum.GetValues(typeof(LevelID)).Length;
+        private LevelID _currentLevel;
+        private SystemManager _systems;
+        private int _totalLevels = Enum.GetValues(typeof(LevelID)).Length;
 
-        private readonly Queue<Entity> entitiesToDestroy;
+        private readonly Queue<Entity> _entitiesToDestroy;
+        private readonly Queue<Entity> _entitiesToAdd;
+        private bool _levelNeedsChanging;
 
         /// <summary>
         /// Initializes a new instance of the World class.
         /// </summary>
         public World()
         {
-            systems = new SystemManager(CurrentLevel);
-            entitiesToDestroy = new Queue<Entity>();
+            _systems = new SystemManager(CurrentLevel);
+            _entitiesToDestroy = new Queue<Entity>();
+            _entitiesToAdd  = new Queue<Entity>();
 
+            MessageBus.Subscribe<AddEntityMessage>(OnCreateEntity);
             MessageBus.Subscribe<DestroyEntityMessage>(OnDestroyEntity);
             MessageBus.Subscribe<NextLevelMessage>(NextLevel);
             MessageBus.Subscribe<PreviousLevelMessage>(PreviousLevel);
@@ -37,7 +41,7 @@ namespace MonogameExamples
         /// </summary>
         public LevelID CurrentLevel
         {
-            get { return currentLevel; }
+            get { return _currentLevel; }
         }
 
         /// <summary>
@@ -46,8 +50,8 @@ namespace MonogameExamples
         /// <param name="level">The level to change to.</param>
         private void ChangeLevel(LevelID level)
         {
-            currentLevel = level;
-            LoadLevel();
+            _currentLevel = level;
+            _levelNeedsChanging = true;
         }
 
         /// <summary>
@@ -56,14 +60,10 @@ namespace MonogameExamples
         private void LoadLevel()
         {
             MediaPlayer.Stop();
-            systems.Unsubscribe();
-            systems.ResetSystems(CurrentLevel);
-            systems.Subscribe();
-            List<Entity> objects = LevelLoader.GetObjects(CurrentLevel);
-            foreach (Entity entity in objects)
-            {
-                systems.Add(entity);
-            }
+            _systems.Unsubscribe();
+            _systems.ResetSystems(CurrentLevel);
+            _systems.Subscribe();
+            LevelLoader.GetObjects(CurrentLevel);
             Loader.PlayMusic(BackgroundMusic.Default, true);
         }
 
@@ -73,7 +73,7 @@ namespace MonogameExamples
         /// <param name="message">Optional message parameter.</param>
         public void ResetCurrentLevel(ReloadLevelMessage message = null)
         {
-            LoadLevel();
+            _levelNeedsChanging = true; 
         }
 
         /// <summary>
@@ -82,8 +82,8 @@ namespace MonogameExamples
         /// <param name="message">Optional message parameter.</param>
         public void NextLevel(NextLevelMessage message = null)
         {
-            currentLevel = (LevelID)(((int)currentLevel + 1 + totalLevels) % totalLevels);
-            LoadLevel();
+            _currentLevel = (LevelID)(((int)_currentLevel + 1 + _totalLevels) % _totalLevels);
+            _levelNeedsChanging = true;
         }
 
         /// <summary>
@@ -91,8 +91,17 @@ namespace MonogameExamples
         /// </summary>
         public void PreviousLevel(PreviousLevelMessage message = null)
         {
-            currentLevel = (LevelID)(((int)currentLevel - 1 + totalLevels) % totalLevels);
-            LoadLevel();
+            _currentLevel = (LevelID)(((int)_currentLevel - 1 + _totalLevels) % _totalLevels);
+            _levelNeedsChanging = true;
+        }
+
+        /// <summary>
+        /// Handles addition of entities to systems.
+        /// </summary>
+        /// <param name="message">The message containing an entity to add.</param>
+        private void OnCreateEntity(AddEntityMessage message) // Add this method
+        {
+            _entitiesToAdd.Enqueue(message.Entity);
         }
 
         /// <summary>
@@ -101,7 +110,7 @@ namespace MonogameExamples
         /// <param name="message">The message containing the entity to destroy.</param>
         private void OnDestroyEntity(DestroyEntityMessage message)
         {
-            entitiesToDestroy.Enqueue(message.Entity);
+            _entitiesToDestroy.Enqueue(message.Entity);
         }
 
         /// <summary>
@@ -110,11 +119,24 @@ namespace MonogameExamples
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public void Update(GameTime gameTime)
         {
-            systems.Update(gameTime);
-            while (entitiesToDestroy.Count > 0)
+            if(_levelNeedsChanging)
             {
-                Entity entity = entitiesToDestroy.Dequeue();
-                systems.Remove(entity);
+                LoadLevel();
+                _levelNeedsChanging = false;
+            }
+
+            while (_entitiesToAdd.Count > 0)
+            {
+                Entity entity = _entitiesToAdd.Dequeue();
+                _systems.Add(entity);
+            }
+
+            _systems.Update(gameTime);
+
+            while (_entitiesToDestroy.Count > 0)
+            {
+                Entity entity = _entitiesToDestroy.Dequeue();
+                _systems.Remove(entity);
             }
         }
 
@@ -124,7 +146,7 @@ namespace MonogameExamples
         /// <param name="spriteBatch">The SpriteBatch to draw with.</param>
         public void Draw(SpriteBatch spriteBatch)
         {
-            systems.Draw(spriteBatch);
+            _systems.Draw(spriteBatch);
         }
     }
 }

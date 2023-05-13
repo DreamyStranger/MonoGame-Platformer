@@ -76,6 +76,7 @@ namespace MonogameExamples
                         else if(canBeRespawned != null)
                         {
                             entity.IsActive = false;
+                            deathAnimation.Reset();
                             canBeRespawned.StartRespawn();
                         }
                         else

@@ -66,7 +66,7 @@ namespace MonogameExamples
         {
             for (int i = 0; i < inputs.Count; i++)
             {
-                if(!entities[i].IsActive)
+                if (!entities[i].IsActive)
                 {
                     continue;
                 }
@@ -77,14 +77,16 @@ namespace MonogameExamples
 
         private void UpdateEntityState(GameTime gameTime, RegularEnemyComponent input, StateComponent state)
         {
-            switch(state.CurrentSuperState)
+            //Console.WriteLine($"Entity state before update: {state.CurrentState}");
+
+            switch (state.CurrentSuperState)
             {
                 case SuperState.IsOnGround:
                     break;
                 default:
                     return;
             }
-            
+
             switch (state.CurrentState)
             {
                 case State.WalkLeft:
@@ -98,16 +100,18 @@ namespace MonogameExamples
                     if (input.IsLeft || !state.CanMoveRight)
                     {
                         state.CurrentState = State.WalkLeft;
+                        
                     }
                     break;
 
                 default:
                     state.CurrentState = state.DefaultState;
-                    if(!state.CanMoveLeft)
+
+                    if (!state.CanMoveLeft)
                     {
                         state.CurrentState = State.WalkRight;
                     }
-                    if(!state.CanMoveRight)
+                    if (!state.CanMoveRight)
                     {
                         state.CurrentState = State.WalkLeft;
                     }

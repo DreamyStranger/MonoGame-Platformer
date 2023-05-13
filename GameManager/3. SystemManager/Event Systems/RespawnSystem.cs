@@ -58,21 +58,26 @@ namespace MonogameExamples
                         StateComponent state = entity.GetComponent<StateComponent>();
                         AnimatedComponent animations = entity.GetComponent<AnimatedComponent>();
                         MovementComponent movement =  entity.GetComponent<MovementComponent>();
+                        CollisionBoxComponent collision = entity.GetComponent<CollisionBoxComponent>();
 
                         // Make the entity active again
                         state.CurrentSuperState = SuperState.IsAppearing;
-                        state.CurrentState = State.Idle;
                         if(animations != null)
                         {
                             ActionAnimation appearAnimation = animations.GetCurrentAnimation();
                             appearAnimation.Reset();
                         }
 
-                        entity.IsActive = true;
                         if(movement != null)
                         {
                             movement.Position = respawn.position;
+                            if(collision != null)
+                            {
+                                collision.UpdateBoxPosition(respawn.position.X, respawn.position.Y, state.DefaultHorizontalDirection);
+                            }
                         }
+
+                        entity.IsActive = true;
                         MessageBus.Publish(new EntityReAppearsMessage(entity));
                     }
                 }

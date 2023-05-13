@@ -102,7 +102,11 @@ namespace MonogameExamples
                     if (appearAnimation.IsFinished)
                     {
                         _destroy.Add(entity);
+                        stateComponent.HorizontalDirection = stateComponent.DefaultHorizontalDirection;
                         stateComponent.CurrentSuperState = stateComponent.DefaultSuperState;
+                        stateComponent.CurrentState = stateComponent.DefaultState;
+                        stateComponent.CanMoveLeft = true;
+                        stateComponent.CanMoveRight = true;
                     }
                 }
             }

@@ -38,6 +38,11 @@ namespace MonogameExamples
         public State DefaultState { get; private set; }
 
         /// <summary>
+        /// Default horizontal direction
+        /// </summary>
+        public int DefaultHorizontalDirection { get; private set; }
+
+        /// <summary>
         /// Jumps performed by given entity
         /// </summary>
         public int JumpsPerformed = 0;
@@ -51,6 +56,11 @@ namespace MonogameExamples
             _currentSuperState = currentSuperState;
             DefaultSuperState = defaultSuperState;
             DefaultState = defaultState;
+            DefaultHorizontalDirection = 1;
+            if(defaultState == State.WalkLeft)
+            {
+                DefaultHorizontalDirection = -1;
+            }
             UpdateStateID();
             _canMoveRight = true;
             _canMoveLeft = true;

@@ -73,7 +73,7 @@ namespace MonogameExamples
             MessageBus.Publish(new AddEntityMessage(player));
         }
 
-        public static void CreateFruit(Vector2 position, string texture)
+        public static void CreateFruit(Vector2 position, string texture, float respawnTime  = 5)
         {
             // Create an empty coin entity
             Entity coin = new Entity();
@@ -104,12 +104,12 @@ namespace MonogameExamples
                     horRightOffset: 10));
 
             //Add respawn component
-            coin.AddComponent(new RespawnComponent(5, position));
+            coin.AddComponent(new RespawnComponent(position, respawnTime));
 
             MessageBus.Publish(new AddEntityMessage(coin));
         }
 
-        public static void CreateRegularEnemy(Vector2 position, float leftRange, float rightRange, State initialDirection)
+        public static void CreateRegularEnemy(Vector2 position, float leftRange, float rightRange, State initialDirection, float respawnTime  = 5)
         {
             // Create an empty enemy entity
             Entity enemy = new Entity();
@@ -140,7 +140,7 @@ namespace MonogameExamples
                     horRightOffset: 6));
 
             //Add respawn component
-            enemy.AddComponent(new RespawnComponent(5, position));
+            enemy.AddComponent(new RespawnComponent(position, respawnTime));
             MessageBus.Publish(new AddEntityMessage(enemy));
         }
     }

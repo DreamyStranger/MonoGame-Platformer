@@ -17,6 +17,7 @@ namespace MonogameExamples
         private RenderTarget2D _renderTarget;
         private Rectangle _destinationRenderRectangle = new Rectangle();
         private KeyboardState _previousKeyboardState;
+        private bool _isPaused = false;
 
         public World world;
 
@@ -83,28 +84,38 @@ namespace MonogameExamples
         {
             KeyboardState currentKeyboardState = Keyboard.GetState();
 
-            if (currentKeyboardState.IsKeyDown(Keys.Escape))
+            if (currentKeyboardState.IsKeyDown(Keys.Escape) && _previousKeyboardState.IsKeyUp(Keys.Escape))
             {
-                MediaPlayer.Stop();
-                Exit();
+                if (_isPaused)
+                {
+                    ResumeGame();
+                }
+                else
+                {
+                    PauseGame();
+                }
             }
 
-            else if (currentKeyboardState.IsKeyDown(Keys.R) && _previousKeyboardState.IsKeyUp(Keys.R))
+            if (!_isPaused)
             {
-                MessageBus.Publish(new ReloadLevelMessage());
-            }
-            else if (currentKeyboardState.IsKeyDown(Keys.P) && _previousKeyboardState.IsKeyUp(Keys.P))
-            {
-                world.PreviousLevel();
-            }
-            else if (currentKeyboardState.IsKeyDown(Keys.N) && _previousKeyboardState.IsKeyUp(Keys.N))
-            {
-                MessageBus.Publish(new NextLevelMessage());
+                // Process game input and update game logic
+                if (currentKeyboardState.IsKeyDown(Keys.R) && _previousKeyboardState.IsKeyUp(Keys.R))
+                {
+                    MessageBus.Publish(new ReloadLevelMessage());
+                }
+                else if (currentKeyboardState.IsKeyDown(Keys.P) && _previousKeyboardState.IsKeyUp(Keys.P))
+                {
+                    world.PreviousLevel();
+                }
+                else if (currentKeyboardState.IsKeyDown(Keys.N) && _previousKeyboardState.IsKeyUp(Keys.N))
+                {
+                    MessageBus.Publish(new NextLevelMessage());
+                }
+
+                world.Update(gameTime);
             }
 
             _previousKeyboardState = currentKeyboardState;
-
-            world.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -115,6 +126,10 @@ namespace MonogameExamples
         /// <param name="gameTime">The current game time.</param>
         protected override void Draw(GameTime gameTime)
         {
+            if (_isPaused)
+            {
+                return;
+            }
             if (GameConstants.FULL_SCREEN)
             {
                 // Set the render target to draw the game content
@@ -159,6 +174,18 @@ namespace MonogameExamples
             int offsetX = (GraphicsDevice.Viewport.Width - screenWidth) / 2;
             int offsetY = (GraphicsDevice.Viewport.Height - screenHeight) / 2;
             _destinationRenderRectangle = new Rectangle(offsetX, offsetY, screenWidth, screenHeight);
+        }
+
+        private void PauseGame()
+        {
+            _isPaused = true;
+            MediaPlayer.Pause();
+        }
+
+        private void ResumeGame()
+        {
+            _isPaused = false;
+            MediaPlayer.Resume();
         }
     }
 }

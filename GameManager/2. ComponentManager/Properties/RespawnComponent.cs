@@ -26,7 +26,7 @@ namespace MonogameExamples
         /// Initializes a new instance of the RespawnComponent class with the specified respawn timer.
         /// </summary>
         /// <param name="respawnTimer">The duration in seconds for the entity to respawn.</param>
-        public RespawnComponent(float respawnTimer, Vector2 respawnPosition)
+        public RespawnComponent(Vector2 respawnPosition, float respawnTimer = 5)
         {
             _respawnTimer = respawnTimer;
             _currentTimer = 0f;

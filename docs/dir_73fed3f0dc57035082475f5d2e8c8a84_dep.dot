@@ -1,0 +1,11 @@
+digraph "GameManager/3. SystemManager/Physic Systems"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_2bdb31a7249336a8253fbe94df0b2807 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", style="filled,dashed,", label="3. SystemManager", fontname="Helvetica", fontsize="10", URL="dir_2bdb31a7249336a8253fbe94df0b2807.html"]
+  dir_73fed3f0dc57035082475f5d2e8c8a84 [shape=box, label="Physic Systems", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_73fed3f0dc57035082475f5d2e8c8a84.html"];
+  }
+}

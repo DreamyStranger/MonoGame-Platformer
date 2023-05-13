@@ -1,0 +1,19 @@
+digraph "GameManager/3. SystemManager"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_817a577288e337d86d0e77a0eb2b5f08 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,dashed,", label="GameManager", fontname="Helvetica", fontsize="10", URL="dir_817a577288e337d86d0e77a0eb2b5f08.html"]
+  subgraph clusterdir_2bdb31a7249336a8253fbe94df0b2807 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,bold,", label="", fontname="Helvetica", fontsize="10", URL="dir_2bdb31a7249336a8253fbe94df0b2807.html"]
+    dir_2bdb31a7249336a8253fbe94df0b2807 [shape=plaintext, label="3. SystemManager"];
+  dir_18e7fcdfd54f601dc66d7941de4555aa [shape=box, label="Effect Systems", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_18e7fcdfd54f601dc66d7941de4555aa.html"];
+  dir_e5fbd552ac17a98dd9fcba4421199e98 [shape=box, label="Event Systems", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_e5fbd552ac17a98dd9fcba4421199e98.html"];
+  dir_a88cbd3e266a24c98d5f68e5e4cc154d [shape=box, label="Input Systems", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_a88cbd3e266a24c98d5f68e5e4cc154d.html"];
+  dir_73fed3f0dc57035082475f5d2e8c8a84 [shape=box, label="Physic Systems", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_73fed3f0dc57035082475f5d2e8c8a84.html"];
+  dir_a3c8e8010501531a79582fdfec6ba8d7 [shape=box, label="Render Systems", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_a3c8e8010501531a79582fdfec6ba8d7.html"];
+  }
+  }
+}

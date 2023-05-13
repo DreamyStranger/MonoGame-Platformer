@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="MonogameExamples.EntityData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structMonogameExamples_1_1EntityData.html",tooltip="A struct that contains the most commonly used components."];
+  Node0 [label="MonogameExamples.Entity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMonogameExamples_1_1Entity.html",tooltip="Represents an entity in the game world. An entity is a collection of components that define its behav..."];
 }

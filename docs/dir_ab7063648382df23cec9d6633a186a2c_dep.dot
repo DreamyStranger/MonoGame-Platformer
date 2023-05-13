@@ -1,0 +1,16 @@
+digraph "GameManager/1. ESC base"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_817a577288e337d86d0e77a0eb2b5f08 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,dashed,", label="GameManager", fontname="Helvetica", fontsize="10", URL="dir_817a577288e337d86d0e77a0eb2b5f08.html"]
+  subgraph clusterdir_ab7063648382df23cec9d6633a186a2c {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,bold,", label="", fontname="Helvetica", fontsize="10", URL="dir_ab7063648382df23cec9d6633a186a2c.html"]
+    dir_ab7063648382df23cec9d6633a186a2c [shape=plaintext, label="1. ESC base"];
+  dir_48069aa17d6b109e95b60f7c532608c2 [shape=box, label="ECS", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_48069aa17d6b109e95b60f7c532608c2.html"];
+  dir_c50f6ffa4021b0c7ed6df45ba1300d94 [shape=box, label="EntityData", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_c50f6ffa4021b0c7ed6df45ba1300d94.html"];
+  }
+  }
+}

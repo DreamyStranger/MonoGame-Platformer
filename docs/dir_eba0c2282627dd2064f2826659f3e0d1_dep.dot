@@ -1,0 +1,11 @@
+digraph "GameManager/6. WorldManager"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_817a577288e337d86d0e77a0eb2b5f08 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,dashed,", label="GameManager", fontname="Helvetica", fontsize="10", URL="dir_817a577288e337d86d0e77a0eb2b5f08.html"]
+  dir_eba0c2282627dd2064f2826659f3e0d1 [shape=box, label="6. WorldManager", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_eba0c2282627dd2064f2826659f3e0d1.html"];
+  }
+}

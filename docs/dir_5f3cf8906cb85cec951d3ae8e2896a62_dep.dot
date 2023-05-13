@@ -1,0 +1,11 @@
+digraph "GameManager/2. ComponentManager/States"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_97ac1eb834d42f03dd41cae34e6b05fd {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", style="filled,dashed,", label="2. ComponentManager", fontname="Helvetica", fontsize="10", URL="dir_97ac1eb834d42f03dd41cae34e6b05fd.html"]
+  dir_5f3cf8906cb85cec951d3ae8e2896a62 [shape=box, label="States", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_5f3cf8906cb85cec951d3ae8e2896a62.html"];
+  }
+}

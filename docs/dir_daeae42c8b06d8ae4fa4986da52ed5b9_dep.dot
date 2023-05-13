@@ -1,0 +1,11 @@
+digraph "GameManager/4. Event Manager/Messages"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_33a5991916931404965aadc2d058852a {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", style="filled,dashed,", label="4. Event Manager", fontname="Helvetica", fontsize="10", URL="dir_33a5991916931404965aadc2d058852a.html"]
+  dir_daeae42c8b06d8ae4fa4986da52ed5b9 [shape=box, label="Messages", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_daeae42c8b06d8ae4fa4986da52ed5b9.html"];
+  }
+}

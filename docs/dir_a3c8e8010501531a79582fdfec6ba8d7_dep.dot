@@ -1,0 +1,11 @@
+digraph "GameManager/3. SystemManager/Render Systems"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_2bdb31a7249336a8253fbe94df0b2807 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", style="filled,dashed,", label="3. SystemManager", fontname="Helvetica", fontsize="10", URL="dir_2bdb31a7249336a8253fbe94df0b2807.html"]
+  dir_a3c8e8010501531a79582fdfec6ba8d7 [shape=box, label="Render Systems", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_a3c8e8010501531a79582fdfec6ba8d7.html"];
+  }
+}

@@ -64,3 +64,5 @@ When exploring the project, you will come across the following folders:
     The "WorldManager" directory pertains to the management of the game world within the project. It handles aspects such as scene management, level loading, and other world-related functionalities.
 
 ## Status: Development
+
+I am currently working on this project during my free time and planning to continue doint that at least throughout the grad school.

@@ -66,7 +66,7 @@ namespace MonogameExamples
         {
             foreach (EntityData data in _entitiesData)
             {
-                if (!data.Entity.IsActive)
+                if (!data.Entity.IsActive || data.State.CurrentSuperState == SuperState.IsAppearing)
                 {
                     continue;
                 }
@@ -90,13 +90,6 @@ namespace MonogameExamples
         {
             // Motion variables
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-            if (state.CurrentSuperState == SuperState.IsAppearing)
-            {
-                movement.Acceleration = Vector2.Zero;
-                movement.Velocity = Vector2.Zero;
-                return;
-            }
 
             VerticalMovement(state, movement);
             HorizontalMovement(state, movement);

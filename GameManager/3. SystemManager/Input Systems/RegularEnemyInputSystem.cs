@@ -70,6 +70,7 @@ namespace MonogameExamples
                 {
                     continue;
                 }
+
                 inputs[i].Update(movements[i].Position.X);
                 UpdateEntityState(gameTime, inputs[i], states[i]);
             }

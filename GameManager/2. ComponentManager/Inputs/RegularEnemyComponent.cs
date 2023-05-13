@@ -39,15 +39,16 @@ namespace MonogameExamples
         /// <param name="positionX">The enemy's position on the x-axis.</param>
         public void Update(float positionX)
         {
+            IsLeft = false;
+            IsRight = false;
+
             if (positionX <= _left)
             {
                 IsRight = true;
-                IsLeft = false;
             }
             else if (positionX >= _right)
             {
                 IsLeft = true;
-                IsRight = false;
             }
         }
     }

@@ -22,6 +22,22 @@ namespace MonogameExamples
         }
 
         /// <summary>
+        /// Subscribes to appropriate messages
+        /// </summary>
+        public override void Subscribe()
+        {
+            MessageBus.Subscribe<EntityReAppearsMessage>(EntityAppeared);
+        }
+
+        /// <summary>
+        /// Unsubscribes from all of the messages
+        /// </summary>
+        public override void Unsubscribe()
+        {
+            MessageBus.Unsubscribe<EntityReAppearsMessage>(EntityAppeared);
+        }
+
+        /// <summary>
         /// Adds an entity to the system if it has both a StateComponent and an AnimatedComponent.
         /// </summary>
         /// <param name="entity">The entity to be added.</param>
@@ -32,10 +48,19 @@ namespace MonogameExamples
             {
                 return;
             }
-            if(state.CurrentSuperState == SuperState.IsAppearing)
+            if (state.CurrentSuperState == SuperState.IsAppearing)
             {
                 _entities.Add(entity);
             }
+        }
+
+        /// <summary>
+        /// Handles addition of re-appearing entity to the system.
+        /// </summary>
+        /// <param name="message">The message containing an entity to add.</param>
+        public void EntityAppeared(EntityReAppearsMessage message)
+        {
+            AddEntity(message.Entity);
         }
 
         /// <summary>
@@ -61,6 +86,10 @@ namespace MonogameExamples
             for (int i = _entities.Count - 1; i >= 0; i--)
             {
                 Entity entity = _entities[i];
+                if (!entity.IsActive)
+                {
+                    continue;
+                }
                 StateComponent stateComponent = entity.GetComponent<StateComponent>();
                 AnimatedComponent animatedComponent = entity.GetComponent<AnimatedComponent>();
 

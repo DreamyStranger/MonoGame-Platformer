@@ -38,6 +38,7 @@ namespace MonogameExamples
             _systems.Add(new PlayerEntityCollisionSystem());
             _systems.Add(new AnimationRenderSystem());
             _systems.Add(new DeathSystem());
+            _systems.Add(new RespawnSystem());
         }
 
         /// <summary>

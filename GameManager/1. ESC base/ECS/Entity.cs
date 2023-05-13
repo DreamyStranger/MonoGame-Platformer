@@ -10,13 +10,16 @@ namespace MonogameExamples
     {
         // Stores a dictionary where the key is the Type of the Component and the value is the Component instance.
         private Dictionary<Type, Component> components;
+        
+        public bool IsActive;
 
         /// <summary>
         /// Initializes a new instance of the Entity class.
         /// </summary>
-        public Entity()
+        public Entity(bool isActive = true)
         {
             components = new Dictionary<Type, Component>();
+            IsActive = isActive;
         }
 
         /// <summary>

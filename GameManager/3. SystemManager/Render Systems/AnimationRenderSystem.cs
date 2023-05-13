@@ -67,6 +67,10 @@ namespace MonogameExamples
         {
             foreach (EntityData data in _entitiesData)
             {
+                if(!data.Entity.IsActive)
+                {
+                    continue;
+                }
                 // Get the appropriate animation for the current state
                 GetAnimationForState(data.State, data.Animations);
                 data.Animations.Update(gameTime);
@@ -81,6 +85,10 @@ namespace MonogameExamples
         {
             foreach (var data in _entitiesData)
             {
+                if(!data.Entity.IsActive)
+                {
+                    continue;
+                }
                 data.Animations.Draw(spriteBatch, data.Movement.Position, data.State.HorizontalDirection);
             }
         }

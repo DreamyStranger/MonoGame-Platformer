@@ -70,7 +70,7 @@ namespace MonogameExamples
 
             foreach (EntityData data in _entitiesData)
             {
-                if (data.Entity == _playerData.Entity)
+                if (data.Entity == _playerData.Entity || !data.Entity.IsActive || data.State.CurrentSuperState == SuperState.IsAppearing)
                 {
                     continue;
                 }

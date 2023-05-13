@@ -66,6 +66,10 @@ namespace MonogameExamples
         {
             foreach (EntityData data in _entitiesData)
             {
+                if(!data.Entity.IsActive)
+                {
+                    continue;
+                }
                 UpdatePositionBasedOnState(gameTime, data.Movement, data.State);
                 //update collision box
                 CollisionBoxComponent collisionBox = data.Entity.GetComponent<CollisionBoxComponent>();
@@ -137,6 +141,8 @@ namespace MonogameExamples
                     return;
 
                 case SuperState.IsAppearing:
+                    movement.Acceleration = Vector2.Zero;
+                    movement.Velocity = Vector2.Zero;
                     return;
 
                 default:

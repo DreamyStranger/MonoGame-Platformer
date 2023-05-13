@@ -53,8 +53,13 @@ namespace MonogameExamples
             for (int i = _entities.Count - 1; i >= 0; i--)
             {
                 Entity entity = _entities[i];
+                if(!entity.IsActive)
+                {
+                    continue;
+                }
                 StateComponent stateComponent = entity.GetComponent<StateComponent>();
                 AnimatedComponent animatedComponent = entity.GetComponent<AnimatedComponent>();
+                RespawnComponent canBeRespawned = entity.GetComponent<RespawnComponent>();
 
                 if (stateComponent.CurrentSuperState == SuperState.IsDead)
                 {
@@ -67,6 +72,11 @@ namespace MonogameExamples
                         {
                             MessageBus.Publish(new DestroyEntityMessage(entity));
                             MessageBus.Publish(new ReloadLevelMessage());
+                        }
+                        else if(canBeRespawned != null)
+                        {
+                            entity.IsActive = false;
+                            canBeRespawned.StartRespawn();
                         }
                         else
                         {

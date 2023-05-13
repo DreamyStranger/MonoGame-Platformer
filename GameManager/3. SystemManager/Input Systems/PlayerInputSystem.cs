@@ -63,6 +63,10 @@ namespace MonogameExamples
         {
             for (int i = 0; i < inputs.Count; i++)
             {
+                if(!entities[i].IsActive)
+                {
+                    continue;
+                }
                 inputs[i].Update(gameTime);
                 UpdateEntityState(gameTime, inputs[i], states[i]);
             }

@@ -72,6 +72,10 @@ namespace MonogameExamples
         {
             foreach (EntityData data in _entitiesData)
             {
+                if(!data.Entity.IsActive)
+                {
+                    continue;
+                }
                 data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
                 Rectangle box = data.CollisionBox.GetRectangle();
                 float positionX = data.Movement.Position.X;
@@ -108,6 +112,9 @@ namespace MonogameExamples
                                 break;
 
                             case SuperState.IsDead:
+                                return;
+
+                            case SuperState.IsAppearing:
                                 return;
                                 
                             default:

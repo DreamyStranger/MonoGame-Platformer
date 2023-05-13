@@ -93,7 +93,7 @@ namespace MonogameExamples
             // Add movement component to set initial position
             coin.AddComponent(new MovementComponent(position));
 
-            // Add a collision box component to handle collisions
+            // Add collision box component to handle collisions
             coin.AddComponent(new CollisionBoxComponent(
                     position: position,
                     width: 32,
@@ -102,6 +102,9 @@ namespace MonogameExamples
                     vertBottomOffset: 11,
                     horLeftOffset: 10,
                     horRightOffset: 10));
+
+            //Add respawn component
+            coin.AddComponent(new RespawnComponent(1, position));
 
             MessageBus.Publish(new AddEntityMessage(coin));
         }
@@ -126,7 +129,7 @@ namespace MonogameExamples
             // Add movement component to set initial position
             enemy.AddComponent(new MovementComponent(position));
 
-            // Add a collision box component to handle collisions
+            // Add collision box component to handle collisions
             enemy.AddComponent(new CollisionBoxComponent(
                     position: position,
                     width: 32,
@@ -136,6 +139,8 @@ namespace MonogameExamples
                     horLeftOffset: 4,
                     horRightOffset: 6));
 
+            //Add respawn component
+            enemy.AddComponent(new RespawnComponent(5, position));
             MessageBus.Publish(new AddEntityMessage(enemy));
         }
     }

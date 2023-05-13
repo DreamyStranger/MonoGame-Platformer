@@ -61,7 +61,7 @@ namespace MonogameExamples
 
                         // Make the entity active again
                         state.CurrentSuperState = SuperState.IsAppearing;
-
+                        state.CurrentState = State.Idle;
                         if(animations != null)
                         {
                             ActionAnimation appearAnimation = animations.GetCurrentAnimation();

@@ -104,7 +104,7 @@ namespace MonogameExamples
                     horRightOffset: 10));
 
             //Add respawn component
-            coin.AddComponent(new RespawnComponent(1, position));
+            coin.AddComponent(new RespawnComponent(5, position));
 
             MessageBus.Publish(new AddEntityMessage(coin));
         }

@@ -66,7 +66,7 @@ namespace MonogameExamples
         {
             foreach (EntityData data in _entitiesData)
             {
-                if(!data.Entity.IsActive)
+                if (!data.Entity.IsActive)
                 {
                     continue;
                 }
@@ -90,6 +90,13 @@ namespace MonogameExamples
         {
             // Motion variables
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            if (state.CurrentSuperState == SuperState.IsAppearing)
+            {
+                movement.Acceleration = Vector2.Zero;
+                movement.Velocity = Vector2.Zero;
+                return;
+            }
 
             VerticalMovement(state, movement);
             HorizontalMovement(state, movement);
@@ -140,11 +147,6 @@ namespace MonogameExamples
                 case SuperState.IsDead:
                     return;
 
-                case SuperState.IsAppearing:
-                    movement.Acceleration = Vector2.Zero;
-                    movement.Velocity = Vector2.Zero;
-                    return;
-
                 default:
                     movement.Acceleration = new Vector2(0, GameConstants.GRAVITY);
                     if (movement.Velocity.Y > 0)
@@ -163,7 +165,7 @@ namespace MonogameExamples
         private void HorizontalMovement(StateComponent state, MovementComponent movement)
         {
             switch (state.CurrentState)
-            {   
+            {
                 case State.WalkLeft:
                     state.HorizontalDirection = -1;
                     movement.Velocity += new Vector2(-GameConstants.SpeedX, 0);

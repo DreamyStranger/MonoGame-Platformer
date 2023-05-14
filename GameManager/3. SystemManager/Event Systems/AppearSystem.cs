@@ -78,12 +78,13 @@ namespace MonogameExamples
         /// <param name="gameTime">The current game time.</param>
         public override void Update(GameTime gameTime)
         {
-            if (_entities.Count == 0)
+            int n = _entities.Count -1;
+            if (n == -1)
             {
                 //Console.WriteLine("IsEmpty!");  //Making sure the list is empty after entities appeared
                 return;
             }
-            for (int i = _entities.Count - 1; i >= 0; i--)
+            for (int i = n; i >= 0; i--)
             {
                 Entity entity = _entities[i];
                 if (!entity.IsActive)
@@ -103,10 +104,10 @@ namespace MonogameExamples
                     {
                         _destroy.Add(entity);
                         stateComponent.HorizontalDirection = stateComponent.DefaultHorizontalDirection;
-                        stateComponent.CurrentSuperState = stateComponent.DefaultSuperState;
-                        stateComponent.CurrentState = stateComponent.DefaultState;
                         stateComponent.CanMoveLeft = true;
                         stateComponent.CanMoveRight = true;
+                        stateComponent.CurrentSuperState = stateComponent.DefaultSuperState;
+                        stateComponent.CurrentState = stateComponent.DefaultState;
                     }
                 }
             }

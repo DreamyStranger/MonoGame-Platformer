@@ -78,6 +78,13 @@ namespace MonogameExamples
                 {
                     continue;
                 }
+
+                //Update Collision Boxes
+                /*
+                _playerData.CollisionBox.UpdateBoxPosition(_playerData.Movement.Position.X, _playerData.Movement.Position.Y, _playerData.State.HorizontalDirection);
+                data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
+                */
+
                 // Check if the two entities are colliding
                 if (_playerData.CollisionBox.GetRectangle().Intersects(data.CollisionBox.GetRectangle()))
                 {
@@ -98,6 +105,10 @@ namespace MonogameExamples
                         default:
                             break;
                     }
+
+                    //Update Collision Boxes
+                    _playerData.CollisionBox.UpdateBoxPosition(_playerData.Movement.Position.X, _playerData.Movement.Position.Y, _playerData.State.HorizontalDirection);
+                    data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
                 }
             }
         }

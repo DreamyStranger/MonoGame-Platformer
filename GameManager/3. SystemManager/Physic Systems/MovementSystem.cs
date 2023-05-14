@@ -71,12 +71,6 @@ namespace MonogameExamples
                     continue;
                 }
                 UpdatePositionBasedOnState(gameTime, data.Movement, data.State);
-                //update collision box
-                CollisionBoxComponent collisionBox = data.Entity.GetComponent<CollisionBoxComponent>();
-                if (collisionBox != null)
-                {
-                    collisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
-                }
             }
         }
 
@@ -172,7 +166,7 @@ namespace MonogameExamples
                     state.HorizontalDirection = 1;
                     movement.Velocity += new Vector2(GameConstants.SpeedX, 0);
                     break;
-                    
+
                 default:
                     break;
             }

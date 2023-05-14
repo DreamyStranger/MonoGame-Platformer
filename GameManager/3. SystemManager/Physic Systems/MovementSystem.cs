@@ -129,6 +129,10 @@ namespace MonogameExamples
 
                 case SuperState.IsFalling:
                     movement.Acceleration = new Vector2(0, GameConstants.GRAVITY);
+                    if(state.CurrentState == State.Slide)
+                    {
+                        movement.Acceleration = new Vector2(0, GameConstants.GRAVITY/10);
+                    }
                     if (state.CurrentState == State.DoubleJump)
                     {
                         movement.Velocity += new Vector2(0, GameConstants.SpeedY);

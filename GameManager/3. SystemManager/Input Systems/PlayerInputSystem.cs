@@ -91,22 +91,32 @@ namespace MonogameExamples
 
             switch (state.CurrentState)
             {
+                case State.Slide:
+                    if (bothKeysDown || bothKeysUp)
+                    {
+                        break;
+                    }
+                    else if(input.IsLeftKeyDown && state.HorizontalDirection == 1)
+                    {
+                        state.CurrentState = State.WalkLeft;
+                    }
+                    else if(input.IsRightKeyDown && state.HorizontalDirection == -1)
+                    {
+                        state.CurrentState = State.WalkRight;
+                    }
+                    break;
                 default:
                     if (bothKeysDown || bothKeysUp)
                     {
                         state.CurrentState = State.Idle;
                     }
-                    else if (input.IsLeftKeyDown && state.CanMoveLeft)
+                    else if (input.IsLeftKeyDown)
                     {
                         state.CurrentState = State.WalkLeft;
                     }
-                    else if (input.IsRightKeyDown && state.CanMoveRight)
+                    else if (input.IsRightKeyDown)
                     {
                         state.CurrentState = State.WalkRight;
-                    }
-                    else if(!state.CanMoveLeft || !state.CanMoveRight)
-                    {
-                        state.CurrentState = State.Slide;
                     }
                     break;
             }
@@ -125,7 +135,7 @@ namespace MonogameExamples
                 case SuperState.IsFalling:
                     if (state.CurrentState == State.Slide)
                     {
-                        state.JumpsPerformed = 2;
+                        state.JumpsPerformed = 1;
                     }
                     else if (input.IsJumpKeyDown && !bothKeysDown)
                     {

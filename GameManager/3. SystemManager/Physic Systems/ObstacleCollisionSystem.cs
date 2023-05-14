@@ -72,7 +72,7 @@ namespace MonogameExamples
         {
             foreach (EntityData data in _entitiesData)
             {
-                if(!data.Entity.IsActive || data.State.CurrentSuperState == SuperState.IsAppearing || data.State.CurrentSuperState == SuperState.IsDead)
+                if (!data.Entity.IsActive || data.State.CurrentSuperState == SuperState.IsAppearing || data.State.CurrentSuperState == SuperState.IsDead)
                 {
                     continue;
                 }
@@ -85,7 +85,7 @@ namespace MonogameExamples
 
                 foreach (string key in _obstacles.Keys)
                 {
-                    if(key == "entity")
+                    if (key == "entity")
                     {
                         continue;
                     }
@@ -110,7 +110,7 @@ namespace MonogameExamples
                             case SuperState.IsDoubleJumping:
                                 HandleJumpCollision(data, box, rect, ref positionX, ref positionY, key);
                                 break;
-                                
+
                             default:
                                 break;
                         }
@@ -120,14 +120,20 @@ namespace MonogameExamples
                         data.Movement.Position = new Vector2(positionX, positionY);
                         data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
                     }
-
-                    //Check if entity still on a platform
-                    if (data.CollisionBox.checkIfInAir(data.Movement.Position.X, data.State.HorizontalDirection))
+                }
+                //Check if entity still on a platform
+                if (data.CollisionBox.CheckIfInAir(data.Movement.Position.X, data.State.HorizontalDirection))
+                {
+                    if (data.State.CurrentSuperState == SuperState.IsOnGround)
                     {
-                        if (data.State.CurrentSuperState == SuperState.IsOnGround)
-                        {
-                            data.State.CurrentSuperState = SuperState.IsFalling;
-                        }
+                        data.State.CurrentSuperState = SuperState.IsFalling;
+                    }
+                }
+                if (data.CollisionBox.CheckIfbelow(data.Movement.Position.Y))
+                {
+                    if (data.State.CurrentState == State.Slide)
+                    {
+                        data.State.CurrentState = State.Idle;
                     }
                 }
             }
@@ -152,6 +158,10 @@ namespace MonogameExamples
                 positionY = rect.Top - data.CollisionBox.OriginalHeight + data.CollisionBox.VertBottomOffset;
                 data.CollisionBox.SetGroundLocation(rect.Left, rect.Right);
                 data.State.CurrentSuperState = SuperState.IsOnGround;
+                if (data.State.CurrentState == State.Slide)
+                {
+                    data.State.CurrentState = State.Idle;
+                }
                 data.Movement.Velocity = Vector2.Zero;
                 data.Movement.Acceleration = Vector2.Zero;
             }
@@ -203,11 +213,6 @@ namespace MonogameExamples
             bool collidesWithRightSide = box.Left < rect.Right && box.Right >= rect.Right;
             bool collidesWithLeftSide = box.Right > rect.Left && box.Left <= rect.Left;
 
-            if (data.State.CurrentState == State.Slide)
-            {
-                data.State.CurrentState = State.Idle;
-            }
-
             if (data.Movement.Velocity.X > 0 && collidesWithLeftSide)
             {
                 positionX = rect.Left - data.CollisionBox.OriginalWidth + data.CollisionBox.HorRightOffset;
@@ -217,6 +222,11 @@ namespace MonogameExamples
             {
                 positionX = rect.Right - data.CollisionBox.HorRightOffset;
                 data.State.CanMoveLeft = false;
+            }
+
+            if (data.State.CurrentState == State.Slide)
+            {
+                data.State.CurrentState = State.Idle;
             }
         }
 
@@ -238,6 +248,7 @@ namespace MonogameExamples
                 {
                     positionX = rect.Left - data.CollisionBox.OriginalWidth + data.CollisionBox.HorRightOffset;
                     data.State.CanMoveRight = false;
+                    data.CollisionBox.SetSlidingLocation(rect.Bottom);
                     data.State.CurrentSuperState = SuperState.IsFalling;
                     data.Movement.Velocity = Vector2.Zero;
                 }
@@ -245,6 +256,7 @@ namespace MonogameExamples
                 {
                     positionX = rect.Right - data.CollisionBox.HorRightOffset;
                     data.State.CanMoveLeft = false;
+                    data.CollisionBox.SetSlidingLocation(rect.Bottom);
                     data.State.CurrentSuperState = SuperState.IsFalling;
                     data.Movement.Velocity = Vector2.Zero;
                 }

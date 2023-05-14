@@ -67,6 +67,11 @@ namespace MonogameExamples
         /// </summary>
         private int _groundRight = GameConstants.SCREEN_WIDTH;
 
+        /// <summary>
+        /// // The bottom boundary of the platform entity currently standing on.
+        /// </summary>
+        private int _groundBottom = GameConstants.SCREEN_HEIGHT;
+
 
         /// <summary>
         /// Creates a new instance of the CollisionBoxComponent class.
@@ -136,12 +141,21 @@ namespace MonogameExamples
         }
 
         /// <summary>
+        /// Sets the boundaries of the platform for checking if the entity is on the ground.
+        /// </summary>
+        /// <param name="left">The left boundary of the platform.</param>
+        /// <param name="right">The right boundary of the platform.</param>
+        public void SetSlidingLocation(int bottom)
+        {
+            _groundBottom = bottom;
+        }
+
+        /// <summary>
         /// Checks if the entity is in the air (not on the platform).
         /// </summary>
         /// <param name="left">The left boundary of the entity.</param>
-        /// <param name="right">The right boundary of the entity.</param>
         /// <returns>True if the entity is in the air, false otherwise.</returns>
-        public bool checkIfInAir(float position, int direction)
+        public bool CheckIfInAir(float position, int direction)
         {
             float left = position + HorLeftOffset;
             float right = position - HorRightOffset + OriginalWidth;
@@ -151,6 +165,18 @@ namespace MonogameExamples
                 right = position - HorLeftOffset + OriginalWidth;
             }
             return right < _groundLeft || left > _groundRight;
+        }
+
+        /// <summary>
+        /// Checks if the entity is below platform when sliding.
+        /// </summary>
+        /// <param name="position">The top boundary of the entity.</param>
+        /// <returns>True if the entity is in the air, false otherwise.</returns>
+        public bool CheckIfbelow(float position)
+        {
+
+            float top = position + VertTopOffset + 5;
+            return top > _groundBottom;
         }
     }
 }

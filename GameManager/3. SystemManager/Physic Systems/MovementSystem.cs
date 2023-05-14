@@ -100,6 +100,11 @@ namespace MonogameExamples
             // Update Position
             movement.LastPosition = movement.Position;
             movement.Position += movement.Velocity * deltaTime;
+
+            if(movement.Position.Y >= GameConstants.SCREEN_HEIGHT)
+            {
+                MessageBus.Publish(new ReloadLevelMessage());
+            }
         }
 
         /// <summary>

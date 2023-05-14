@@ -61,14 +61,20 @@ namespace MonogameExamples
         /// <param name="gameTime">The current game time.</param>
         public override void Update(GameTime gameTime)
         {
-            for (int i = 0; i < inputs.Count; i++)
+            int n = inputs.Count;
+            for (int i = 0; i < n; i++)
             {
-                if(!entities[i].IsActive)
+                Entity entity = entities[i];
+                StateComponent state = states[i];
+                PlayerInputComponent input = inputs[i];
+
+                if (!entity.IsActive || state.CurrentSuperState == SuperState.IsDead || state.CurrentSuperState == SuperState.IsAppearing)
                 {
                     continue;
                 }
-                inputs[i].Update(gameTime);
-                UpdateEntityState(gameTime, inputs[i], states[i]);
+
+                input.Update(gameTime);
+                UpdateEntityState(gameTime, input, state);
             }
         }
 
@@ -80,34 +86,27 @@ namespace MonogameExamples
         /// <param name="state">The state component for the entity.</param>
         private void UpdateEntityState(GameTime gameTime, PlayerInputComponent input, StateComponent state)
         {
-            if(state.CurrentSuperState == SuperState.IsDead || state.CurrentSuperState == SuperState.IsAppearing)
-            {
-                return;
-            }
-
-            bool isNotBothKeys = !(input.IsLeftKeyDown && input.IsRightKeyDown);
+            bool bothKeysDown = input.IsLeftKeyDown && input.IsRightKeyDown;
             bool bothKeysUp = !input.IsLeftKeyDown && !input.IsRightKeyDown;
 
             switch (state.CurrentState)
             {
                 default:
-                    if (input.IsLeftKeyDown && isNotBothKeys)
-                    {
-                        if (state.CanMoveLeft)
-                        {
-                            state.CurrentState = State.WalkLeft;
-                        }
-                    }
-                    else if (input.IsRightKeyDown && isNotBothKeys)
-                    {
-                        if (state.CanMoveRight)
-                        {
-                            state.CurrentState = State.WalkRight;
-                        }
-                    }
-                    else if (bothKeysUp)
+                    if (bothKeysDown || bothKeysUp)
                     {
                         state.CurrentState = State.Idle;
+                    }
+                    else if (input.IsLeftKeyDown && state.CanMoveLeft)
+                    {
+                        state.CurrentState = State.WalkLeft;
+                    }
+                    else if (input.IsRightKeyDown && state.CanMoveRight)
+                    {
+                        state.CurrentState = State.WalkRight;
+                    }
+                    else if(!state.CanMoveLeft || !state.CanMoveRight)
+                    {
+                        state.CurrentState = State.Slide;
                     }
                     break;
             }
@@ -116,7 +115,7 @@ namespace MonogameExamples
             {
                 case SuperState.IsOnGround:
                     state.JumpsPerformed = 0;
-                    if (input.IsJumpKeyDown && isNotBothKeys)
+                    if (input.IsJumpKeyDown && !bothKeysDown)
                     {
                         state.JumpsPerformed = 1;
                         state.CurrentState = State.Jump;
@@ -128,22 +127,19 @@ namespace MonogameExamples
                     {
                         state.JumpsPerformed = 2;
                     }
-                    if (input.IsJumpKeyDown && isNotBothKeys)
+                    else if (input.IsJumpKeyDown && !bothKeysDown)
                     {
                         if (state.JumpsPerformed == 0)
                         {
                             state.CurrentState = State.Jump;
                             state.JumpsPerformed = 1;
                         }
-                        if (state.JumpsPerformed == 1)
+                        else if (state.JumpsPerformed == 1)
                         {
                             state.CurrentState = State.DoubleJump;
                             state.JumpsPerformed = 2;
                         }
                     }
-                    break;
-
-                case SuperState.IsDead:
                     break;
 
                 default:

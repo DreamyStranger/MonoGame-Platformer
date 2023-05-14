@@ -153,21 +153,24 @@ namespace MonogameExamples
                 bool properHit = HandleFallCollision(player, player.CollisionBox.GetRectangle(), enemy.CollisionBox.GetRectangle(), ref positionX, ref positionY);
                 if (properHit)
                 {
-                    enemy.State.CurrentSuperState = SuperState.IsDead;
-                    enemy.State.CurrentState = State.Idle;
                     enemy.Movement.Velocity = new Vector2(0, -20);
                     enemy.Movement.Acceleration = new Vector2(0, 100);
-                    MessageBus.Publish(new EntityDiedMessage(enemy.Entity));
+                    enemy.State.CurrentSuperState = SuperState.IsDead;
+                    enemy.State.CurrentState = State.Idle;
+
                     player.Movement.Position = new Vector2(positionX, positionY);
                     player.CollisionBox.UpdateBoxPosition(positionX, positionY, direction);
                     player.Movement.Velocity = new Vector2(GameConstants.SpeedXonCollision * direction, player.Movement.Velocity.Y - GameConstants.SpeedYonCollision);
                     player.State.CurrentSuperState = SuperState.IsJumping;
+                    player.State.CurrentState = State.Idle;
                     player.State.JumpsPerformed = 1;
+
+                    MessageBus.Publish(new EntityDiedMessage(enemy.Entity));
                     return;
                 }
             }
-            player.State.CurrentState = State.Idle;
             player.State.CurrentSuperState = SuperState.IsDead;
+            player.State.CurrentState = State.Idle;
             player.Movement.Velocity = new Vector2(0, -200);
             player.Movement.Acceleration = new Vector2(0, 1000);
             MessageBus.Publish(new EntityDiedMessage(player.Entity));

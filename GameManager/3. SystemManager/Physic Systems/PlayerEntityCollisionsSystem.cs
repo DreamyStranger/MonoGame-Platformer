@@ -70,7 +70,11 @@ namespace MonogameExamples
 
             foreach (EntityData data in _entitiesData)
             {
-                if (data.Entity == _playerData.Entity || !data.Entity.IsActive || data.State.CurrentSuperState == SuperState.IsAppearing)
+                if(_playerData.State.CurrentSuperState == SuperState.IsDead)
+                {
+                    return;
+                }
+                if (data.Entity == _playerData.Entity || !data.Entity.IsActive || data.State.CurrentSuperState == SuperState.IsAppearing || data.State.CurrentSuperState == SuperState.IsDead)
                 {
                     continue;
                 }
@@ -105,12 +109,6 @@ namespace MonogameExamples
         /// <param name="coinData">The data for the coin entity.</param>
         private void ResolveCoinCollision(EntityData playerData, EntityData coinData)
         {
-            // If the coin is already dead, do nothing
-            if (coinData.State.CurrentSuperState == SuperState.IsDead)
-            {
-                return;
-            }
-
             // Mark the coin as dead and set its state to idle
             coinData.State.CurrentSuperState = SuperState.IsDead;
             coinData.State.CurrentState = State.Idle;
@@ -124,12 +122,6 @@ namespace MonogameExamples
         /// <param name="portalData">The data for the portal entity.</param>
         private void ResolveNextLevelCollision(EntityData playerData, EntityData portalData)
         {
-            // If the player is already dead, do nothing
-            if (playerData.State.CurrentSuperState == SuperState.IsDead)
-            {
-                return;
-            }
-
             // Publish a message indicating that the player has reached the next level
             MessageBus.Publish(new NextLevelMessage());
         }
@@ -141,12 +133,6 @@ namespace MonogameExamples
         /// <param name="enemy">The data for the enemy entity.</param>
         private void ResolveWalkingEnemyCollision(EntityData player, EntityData enemy)
         {
-            // If the enemy is already dead, do nothing
-            if (enemy.State.CurrentSuperState == SuperState.IsDead)
-            {
-                return;
-            }
-
             // If the player is falling, kill the enemy and set its state to idle
             if (player.State.CurrentSuperState == SuperState.IsFalling)
             {
@@ -168,8 +154,8 @@ namespace MonogameExamples
                     return;
                 }
             }
-            player.State.CurrentSuperState = SuperState.IsDead;
             player.State.CurrentState = State.Idle;
+            player.State.CurrentSuperState = SuperState.IsDead;
             player.Movement.Velocity = Vector2.Zero;
             player.Movement.Acceleration = new Vector2(0, 100);
             MessageBus.Publish(new EntityDiedMessage(player.Entity));

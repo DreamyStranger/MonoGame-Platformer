@@ -126,10 +126,6 @@ namespace MonogameExamples
         /// <param name="gameTime">The current game time.</param>
         protected override void Draw(GameTime gameTime)
         {
-            if (_isPaused)
-            {
-                return;
-            }
             if (GameConstants.FULL_SCREEN)
             {
                 // Set the render target to draw the game content

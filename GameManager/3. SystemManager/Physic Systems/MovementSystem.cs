@@ -141,6 +141,10 @@ namespace MonogameExamples
                     return;
 
                 default:
+                    if(state.CurrentSuperState == SuperState.IsDead)
+                    {
+                        return;
+                    }
                     movement.Acceleration = new Vector2(0, GameConstants.GRAVITY);
                     if (movement.Velocity.Y > 0)
                     {

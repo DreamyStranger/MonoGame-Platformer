@@ -162,6 +162,7 @@ namespace MonogameExamples
                     player.CollisionBox.UpdateBoxPosition(positionX, positionY, direction);
                     player.Movement.Velocity = new Vector2(GameConstants.SpeedXonCollision * direction, player.Movement.Velocity.Y - GameConstants.SpeedYonCollision);
                     player.State.CurrentSuperState = SuperState.IsJumping;
+                    player.State.JumpsPerformed = 1;
                     return;
                 }
             }

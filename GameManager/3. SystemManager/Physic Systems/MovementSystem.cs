@@ -138,18 +138,18 @@ namespace MonogameExamples
                     break;
 
                 case SuperState.IsDead:
-                    return;
+                    break;
 
-                default:
-                    if(state.CurrentSuperState == SuperState.IsDead)
-                    {
-                        return;
-                    }
+                case SuperState.IsJumping:
+                case SuperState.IsDoubleJumping:
                     movement.Acceleration = new Vector2(0, GameConstants.GRAVITY);
                     if (movement.Velocity.Y > 0)
                     {
                         state.CurrentSuperState = SuperState.IsFalling;
                     }
+                    break;
+
+                default:
                     break;
             }
         }
@@ -172,7 +172,7 @@ namespace MonogameExamples
                     state.HorizontalDirection = 1;
                     movement.Velocity += new Vector2(GameConstants.SpeedX, 0);
                     break;
-
+                    
                 default:
                     break;
             }

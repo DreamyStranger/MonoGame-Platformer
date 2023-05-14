@@ -72,7 +72,7 @@ namespace MonogameExamples
         {
             foreach (EntityData data in _entitiesData)
             {
-                if(!data.Entity.IsActive)
+                if(!data.Entity.IsActive || data.State.CurrentSuperState == SuperState.IsAppearing || data.State.CurrentSuperState == SuperState.IsDead)
                 {
                     continue;
                 }
@@ -110,12 +110,6 @@ namespace MonogameExamples
                             case SuperState.IsDoubleJumping:
                                 HandleJumpCollision(data, box, rect, ref positionX, ref positionY, key);
                                 break;
-
-                            case SuperState.IsDead:
-                                return;
-
-                            case SuperState.IsAppearing:
-                                return;
                                 
                             default:
                                 break;

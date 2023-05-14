@@ -70,7 +70,7 @@ namespace MonogameExamples
 
             foreach (EntityData data in _entitiesData)
             {
-                if(_playerData.State.CurrentSuperState == SuperState.IsDead)
+                if (_playerData.State.CurrentSuperState == SuperState.IsDead)
                 {
                     return;
                 }
@@ -156,8 +156,8 @@ namespace MonogameExamples
             }
             player.State.CurrentState = State.Idle;
             player.State.CurrentSuperState = SuperState.IsDead;
-            player.Movement.Velocity = Vector2.Zero;
-            player.Movement.Acceleration = new Vector2(0, 100);
+            player.Movement.Velocity = new Vector2(0, -200);
+            player.Movement.Acceleration = new Vector2(0, 1000);
             MessageBus.Publish(new EntityDiedMessage(player.Entity));
         }
 

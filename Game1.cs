@@ -55,7 +55,7 @@ namespace MonogameExamples
 
             // Limit FPS
             IsFixedTimeStep = true;
-            TargetElapsedTime = TimeSpan.FromSeconds(1 / GameConstants.FPS);
+            TargetElapsedTime = TimeSpan.FromSeconds(1 / GameConstants.PhysicFPS);
 
             base.Initialize();
         }

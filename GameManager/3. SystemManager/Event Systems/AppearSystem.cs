@@ -5,12 +5,11 @@ using System;
 namespace MonogameExamples
 {
     /// <summary>
-    /// System that manages entity appearance events, triggering actions depending on the entity type.
+    /// <see cref="System"/> that manages entity appearance events.
     /// </summary>
     public class AppearSystem : System
     {
         private List<Entity> _entities;
-        private HashSet<Entity> _destroy;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AppearSystem"/> class.
@@ -18,7 +17,6 @@ namespace MonogameExamples
         public AppearSystem()
         {
             _entities = new List<Entity>();
-            _destroy = new HashSet<Entity>();
         }
 
         /// <summary>
@@ -38,13 +36,13 @@ namespace MonogameExamples
         }
 
         /// <summary>
-        /// Adds an entity to the system if it has both a StateComponent and an AnimatedComponent.
+        /// Adds an entity to the system.
         /// </summary>
         /// <param name="entity">The entity to be added.</param>
         public override void AddEntity(Entity entity)
         {
             StateComponent state = entity.GetComponent<StateComponent>();
-            if (state == null || entity.GetComponent<AnimatedComponent>() == null)
+            if (state == null || entity.GetComponent<AnimationComponent>() == null)
             {
                 return;
             }
@@ -91,35 +89,26 @@ namespace MonogameExamples
                 {
                     continue;
                 }
-                StateComponent stateComponent = entity.GetComponent<StateComponent>();
-                AnimatedComponent animatedComponent = entity.GetComponent<AnimatedComponent>();
+                StateComponent state = entity.GetComponent<StateComponent>();
+                AnimationComponent animations = entity.GetComponent<AnimationComponent>();
 
                 // Check if the entity is in the IsAppearing state
-                if (stateComponent.CurrentSuperState == SuperState.IsAppearing)
+                if (state.CurrentSuperState == SuperState.IsAppearing)
                 {
-                    ActionAnimation appearAnimation = animatedComponent.GetCurrentAnimation();
+                    ActionAnimation appearAnimation = animations.GetCurrentAnimation();
 
                     // Check if the animation has completed
                     if (appearAnimation.IsFinished)
                     {
-                        _destroy.Add(entity);
-                        stateComponent.HorizontalDirection = stateComponent.DefaultHorizontalDirection;
-                        stateComponent.CanMoveLeft = true;
-                        stateComponent.CanMoveRight = true;
-                        stateComponent.CurrentSuperState = stateComponent.DefaultSuperState;
-                        stateComponent.CurrentState = stateComponent.DefaultState;
+                        state.CanMoveLeft = true;
+                        state.CanMoveRight = true;
+                        state.CurrentSuperState = state.DefaultSuperState;
+                        state.CurrentState = state.DefaultState;
+
+                        RemoveEntity(entity);
                     }
                 }
             }
-
-            // Remove entities that have already appeared
-            foreach (Entity entity in _destroy)
-            {
-                RemoveEntity(entity);
-            }
-
-            // Clear out the destroy HashSet
-            _destroy.Clear();
         }
     }
 }

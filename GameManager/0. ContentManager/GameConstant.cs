@@ -19,13 +19,14 @@ namespace MonogameExamples
         public static float SpeedXonCollision = -50f;
         public static float SpeedYonCollision = 300f;
 
-        //Obstacles and Entity
+        // Obstacles
         public static HashSet<string> OBSTACLES = new HashSet<string>()
         {
             "solid",
             "float"
         };
 
+        // Entities
         public static HashSet<string> ENTITIES = new HashSet<string>()
         {
             "entity"
@@ -36,11 +37,17 @@ namespace MonogameExamples
         public static int SCREEN_HEIGHT = 368;
         public static bool FULL_SCREEN = false;
         public static float AnimationFPS = 20f;
-        public static float FPS = 60f;
+        public static float PhysicFPS = 60f;
+
+        // Keyboard
+        public const Keys LEFT_KEY = Keys.A;
+        public const Keys RIGHT_KEY = Keys.D;
+        public const Keys JUMP_KEY = Keys.Space;
 
         //Debug
         public static bool DisplayCollisionBoxes = false;
         public static bool AnimationDebugMessages = false;
+        public static bool EntityDebugMessages = false;
 
         /// <summary>
         /// Updates the value of a game constant field.

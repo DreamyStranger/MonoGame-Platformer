@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 namespace MonogameExamples
 {
     /// <summary>
-    /// <see cref="System"/> that manages parallax components and their related entities.
+    /// <see cref="System"/> that manages parallax components and their related entities to create parallax effect.
     /// </summary>
     public class ParallaxSystem : System
     {
@@ -13,7 +13,7 @@ namespace MonogameExamples
         private List<ParallaxComponent> _parallaxes;
 
         /// <summary>
-        /// Initializes a new instance of the ParallaxSystem class.
+        /// Initializes a new instance of the <see cref = "ParallaxSystem "/> class.
         /// </summary>
         public ParallaxSystem()
         {

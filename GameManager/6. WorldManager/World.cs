@@ -19,7 +19,7 @@ namespace MonogameExamples
         private bool _levelNeedsChanging;
 
         /// <summary>
-        /// Initializes a new instance of the World class.
+        /// Initializes a new instance of the <see cref="World"> class.
         /// </summary>
         public World()
         {

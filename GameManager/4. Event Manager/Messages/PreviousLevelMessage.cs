@@ -7,7 +7,7 @@ namespace MonogameExamples
     public class PreviousLevelMessage : IMessage
     {
         /// <summary>
-        /// Initializes a new instance of the PreviousLevelMessage class.
+        /// Initializes a new instance of the <see cref="PreviousLevelMessage"/> class.
         /// </summary>
         public PreviousLevelMessage()
         {

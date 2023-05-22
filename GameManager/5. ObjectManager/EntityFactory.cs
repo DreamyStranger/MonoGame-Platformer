@@ -42,7 +42,7 @@ namespace MonogameExamples
             player.AddComponent(new EntityTypeComponent(EntityType.Player));
 
             // Animations
-            AnimatedComponent animation = new AnimatedComponent();
+            AnimationComponent animation = new AnimationComponent();
             animation.AddAnimation(PlayerTexture.Idle, AnimationID.Idle, 1, 11, 20);
             animation.AddAnimation(PlayerTexture.Walking, AnimationID.Walk, 1, 12, 20);
             animation.AddAnimation(PlayerTexture.Jump, AnimationID.Jump, 1, 1, 20);
@@ -80,7 +80,7 @@ namespace MonogameExamples
             coin.AddComponent(new EntityTypeComponent(EntityType.Coin));
 
             // Add animations for the fruit
-            AnimatedComponent animation = new AnimatedComponent();
+            AnimationComponent animation = new AnimationComponent();
             Enum.TryParse(texture, out FruitTexture textureKey);
             animation.AddAnimation(textureKey, AnimationID.Idle, 1, 17, 20);
             animation.AddAnimation(FruitTexture.Collected, AnimationID.Death, 1, 6, 20);
@@ -116,7 +116,7 @@ namespace MonogameExamples
             enemy.AddComponent(new EntityTypeComponent(EntityType.RegularEnemy));
 
             // Add animations for the enemy
-            AnimatedComponent animation = new AnimatedComponent(AnimationID.Walk);
+            AnimationComponent animation = new AnimationComponent(AnimationID.Walk);
             animation.AddAnimation(MaskedEnemyTexture.Walking, AnimationID.Walk, 1, 12, 20);
             animation.AddAnimation(MaskedEnemyTexture.Hit, AnimationID.Death, 1, 7, 20);
             animation.AddAnimation(FruitTexture.Collected, AnimationID.Appear, 1, 6, 20);

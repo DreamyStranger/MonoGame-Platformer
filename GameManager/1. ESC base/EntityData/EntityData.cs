@@ -10,6 +10,6 @@ namespace MonogameExamples
         public MovementComponent Movement;
         public StateComponent State;
         public CollisionBoxComponent CollisionBox;
-        public AnimatedComponent Animations;
+        public AnimationComponent Animations;
     }
 }

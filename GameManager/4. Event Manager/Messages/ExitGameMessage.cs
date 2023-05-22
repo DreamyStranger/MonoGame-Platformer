@@ -7,7 +7,7 @@ namespace MonogameExamples
     public class ExitGameMessage : IMessage
     {
         /// <summary>
-        /// Initializes a new instance of the ExitGameMessage class.
+        /// Initializes a new instance of the <see cref="ExitGameMessage"/> class.
         /// </summary>
         public ExitGameMessage()
         {

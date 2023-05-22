@@ -12,7 +12,7 @@ namespace MonogameExamples
         public Entity Entity { get; }
 
         /// <summary>
-        /// Initializes a new instance of the DestroyEntityMessage class.
+        /// Initializes a new instance of the <see cref="DestroyEntityMessage"/> class.
         /// </summary>
         /// <param name="entity">The entity that should be destroyed.</param>
         public DestroyEntityMessage(Entity entity)

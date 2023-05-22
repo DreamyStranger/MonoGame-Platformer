@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classMonogameExamples_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages entity appearance events, triggering actions depending on the entity type.  
+<p><a class="el" href="classMonogameExamples_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages entity appearance events.  
  <a href="classMonogameExamples_1_1AppearSystem.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for MonogameExamples.AppearSystem:</div>
@@ -90,11 +90,20 @@ Collaboration diagram for MonogameExamples.AppearSystem:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a80d7933d822e31dbf23c287b27b21096"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1AppearSystem.html#a80d7933d822e31dbf23c287b27b21096">AppearSystem</a> ()</td></tr>
-<tr class="memdesc:a80d7933d822e31dbf23c287b27b21096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="classMonogameExamples_1_1AppearSystem.html" title="System that manages entity appearance events, triggering actions depending on the entity type.">AppearSystem</a> class.  <a href="classMonogameExamples_1_1AppearSystem.html#a80d7933d822e31dbf23c287b27b21096">More...</a><br /></td></tr>
+<tr class="memdesc:a80d7933d822e31dbf23c287b27b21096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="classMonogameExamples_1_1AppearSystem.html" title="System that manages entity appearance events.">AppearSystem</a> class.  <a href="classMonogameExamples_1_1AppearSystem.html#a80d7933d822e31dbf23c287b27b21096">More...</a><br /></td></tr>
 <tr class="separator:a80d7933d822e31dbf23c287b27b21096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec2e36877c9469faf0b677502a80ffd"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1AppearSystem.html#afec2e36877c9469faf0b677502a80ffd">Subscribe</a> ()</td></tr>
+<tr class="memdesc:afec2e36877c9469faf0b677502a80ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribes to appropriate messages  <a href="classMonogameExamples_1_1AppearSystem.html#afec2e36877c9469faf0b677502a80ffd">More...</a><br /></td></tr>
+<tr class="separator:afec2e36877c9469faf0b677502a80ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a925e6ee08030cc037ade84e2c036c78b"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1AppearSystem.html#a925e6ee08030cc037ade84e2c036c78b">Unsubscribe</a> ()</td></tr>
+<tr class="memdesc:a925e6ee08030cc037ade84e2c036c78b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribes from all of the messages  <a href="classMonogameExamples_1_1AppearSystem.html#a925e6ee08030cc037ade84e2c036c78b">More...</a><br /></td></tr>
+<tr class="separator:a925e6ee08030cc037ade84e2c036c78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a682a227c47c81c0d9ee19806d356800a"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1AppearSystem.html#a682a227c47c81c0d9ee19806d356800a">AddEntity</a> (<a class="el" href="classMonogameExamples_1_1Entity.html">Entity</a> entity)</td></tr>
-<tr class="memdesc:a682a227c47c81c0d9ee19806d356800a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an entity to the system if it has both a <a class="el" href="classMonogameExamples_1_1StateComponent.html" title="Component that stores the current state and super state of an object, as well as its state ID,...">StateComponent</a> and an <a class="el" href="classMonogameExamples_1_1AnimatedComponent.html" title="Component responsible for managing entity animations.">AnimatedComponent</a>.  <a href="classMonogameExamples_1_1AppearSystem.html#a682a227c47c81c0d9ee19806d356800a">More...</a><br /></td></tr>
+<tr class="memdesc:a682a227c47c81c0d9ee19806d356800a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an entity to the system.  <a href="classMonogameExamples_1_1AppearSystem.html#a682a227c47c81c0d9ee19806d356800a">More...</a><br /></td></tr>
 <tr class="separator:a682a227c47c81c0d9ee19806d356800a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a970dc4120109240f82e1885dcf30440b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1AppearSystem.html#a970dc4120109240f82e1885dcf30440b">EntityAppeared</a> (<a class="el" href="classMonogameExamples_1_1EntityReAppearsMessage.html">EntityReAppearsMessage</a> message)</td></tr>
+<tr class="memdesc:a970dc4120109240f82e1885dcf30440b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles addition of re-appearing entity to the system.  <a href="classMonogameExamples_1_1AppearSystem.html#a970dc4120109240f82e1885dcf30440b">More...</a><br /></td></tr>
+<tr class="separator:a970dc4120109240f82e1885dcf30440b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5da2d1f3c621e65a84dfbb1e3d9f6b0a"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1AppearSystem.html#a5da2d1f3c621e65a84dfbb1e3d9f6b0a">RemoveEntity</a> (<a class="el" href="classMonogameExamples_1_1Entity.html">Entity</a> entity)</td></tr>
 <tr class="memdesc:a5da2d1f3c621e65a84dfbb1e3d9f6b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an entity from the system.  <a href="classMonogameExamples_1_1AppearSystem.html#a5da2d1f3c621e65a84dfbb1e3d9f6b0a">More...</a><br /></td></tr>
 <tr class="separator:a5da2d1f3c621e65a84dfbb1e3d9f6b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,11 +134,9 @@ Public Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ad0a439ca9728eaf14755b7d348d91afb"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classMonogameExamples_1_1Entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1AppearSystem.html#ad0a439ca9728eaf14755b7d348d91afb">_entities</a></td></tr>
 <tr class="separator:ad0a439ca9728eaf14755b7d348d91afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3a30567228ac4f5469562268d20c95d"><td class="memItemLeft" align="right" valign="top">HashSet&lt; <a class="el" href="classMonogameExamples_1_1Entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1AppearSystem.html#af3a30567228ac4f5469562268d20c95d">_destroy</a></td></tr>
-<tr class="separator:af3a30567228ac4f5469562268d20c95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p ><a class="el" href="classMonogameExamples_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages entity appearance events, triggering actions depending on the entity type. </p>
+<div class="textblock"><p ><a class="el" href="classMonogameExamples_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages entity appearance events. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a80d7933d822e31dbf23c287b27b21096" name="a80d7933d822e31dbf23c287b27b21096"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a80d7933d822e31dbf23c287b27b21096">&#9670;&nbsp;</a></span>AppearSystem()</h2>
@@ -154,7 +161,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Initializes a new instance of the <a class="el" href="classMonogameExamples_1_1AppearSystem.html" title="System that manages entity appearance events, triggering actions depending on the entity type.">AppearSystem</a> class. </p>
+<p>Initializes a new instance of the <a class="el" href="classMonogameExamples_1_1AppearSystem.html" title="System that manages entity appearance events.">AppearSystem</a> class. </p>
 
 </div>
 </div>
@@ -183,7 +190,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Adds an entity to the system if it has both a <a class="el" href="classMonogameExamples_1_1StateComponent.html" title="Component that stores the current state and super state of an object, as well as its state ID,...">StateComponent</a> and an <a class="el" href="classMonogameExamples_1_1AnimatedComponent.html" title="Component responsible for managing entity animations.">AnimatedComponent</a>. </p>
+<p>Adds an entity to the system. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">entity</td><td>The entity to be added.</td></tr>
@@ -192,6 +199,40 @@ Private Attributes</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classMonogameExamples_1_1System.html#af90b766ba0547cc8f93636b2364fb247">MonogameExamples.System</a>.</p>
+
+</div>
+</div>
+<a id="a970dc4120109240f82e1885dcf30440b" name="a970dc4120109240f82e1885dcf30440b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a970dc4120109240f82e1885dcf30440b">&#9670;&nbsp;</a></span>EntityAppeared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MonogameExamples.AppearSystem.EntityAppeared </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMonogameExamples_1_1EntityReAppearsMessage.html">EntityReAppearsMessage</a>&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles addition of re-appearing entity to the system. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The message containing an entity to add.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -228,6 +269,64 @@ Private Attributes</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classMonogameExamples_1_1System.html#adb2487da2f1eb4ef943655a209028fdb">MonogameExamples.System</a>.</p>
+
+</div>
+</div>
+<a id="afec2e36877c9469faf0b677502a80ffd" name="afec2e36877c9469faf0b677502a80ffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afec2e36877c9469faf0b677502a80ffd">&#9670;&nbsp;</a></span>Subscribe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MonogameExamples.AppearSystem.Subscribe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subscribes to appropriate messages </p>
+
+<p>Reimplemented from <a class="el" href="classMonogameExamples_1_1System.html#ae1960950ed5a28d66235559ac0b6dab6">MonogameExamples.System</a>.</p>
+
+</div>
+</div>
+<a id="a925e6ee08030cc037ade84e2c036c78b" name="a925e6ee08030cc037ade84e2c036c78b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a925e6ee08030cc037ade84e2c036c78b">&#9670;&nbsp;</a></span>Unsubscribe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MonogameExamples.AppearSystem.Unsubscribe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unsubscribes from all of the messages </p>
+
+<p>Reimplemented from <a class="el" href="classMonogameExamples_1_1System.html#a6b51ff98077148e0955093b85622f23f">MonogameExamples.System</a>.</p>
 
 </div>
 </div>
@@ -268,28 +367,6 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="af3a30567228ac4f5469562268d20c95d" name="af3a30567228ac4f5469562268d20c95d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3a30567228ac4f5469562268d20c95d">&#9670;&nbsp;</a></span>_destroy</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">HashSet&lt;<a class="el" href="classMonogameExamples_1_1Entity.html">Entity</a>&gt; MonogameExamples.AppearSystem._destroy</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ad0a439ca9728eaf14755b7d348d91afb" name="ad0a439ca9728eaf14755b7d348d91afb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0a439ca9728eaf14755b7d348d91afb">&#9670;&nbsp;</a></span>_entities</h2>
 

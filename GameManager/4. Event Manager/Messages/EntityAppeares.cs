@@ -12,7 +12,7 @@ namespace MonogameExamples
         public Entity Entity { get; }
 
         /// <summary>
-        /// Initializes a new instance of the EntityReAppearsMessage class.
+        /// Initializes a new instance of the <see cref="EntityReAppearsMessage"/> class.
         /// </summary>
         /// <param name="entity">entity that should re-appear.</param>
         public EntityReAppearsMessage(Entity entity)

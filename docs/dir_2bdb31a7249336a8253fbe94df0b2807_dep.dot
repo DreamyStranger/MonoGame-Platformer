@@ -14,6 +14,7 @@ digraph "GameManager/3. SystemManager"
   dir_a88cbd3e266a24c98d5f68e5e4cc154d [shape=box, label="Input Systems", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_a88cbd3e266a24c98d5f68e5e4cc154d.html"];
   dir_73fed3f0dc57035082475f5d2e8c8a84 [shape=box, label="Physic Systems", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_73fed3f0dc57035082475f5d2e8c8a84.html"];
   dir_a3c8e8010501531a79582fdfec6ba8d7 [shape=box, label="Render Systems", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_a3c8e8010501531a79582fdfec6ba8d7.html"];
+  dir_77f55f53fe5ada89e6231c834f841df3 [shape=box, label="UiSystems", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_77f55f53fe5ada89e6231c834f841df3.html"];
   }
   }
 }

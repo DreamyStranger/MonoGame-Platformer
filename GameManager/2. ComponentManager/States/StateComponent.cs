@@ -3,42 +3,41 @@ using Microsoft.Xna.Framework;
 namespace MonogameExamples
 {
     /// <summary>
-    /// Component that stores the current state and super state of an object, as well as its state ID, jump counter, and horizontal direction.
+    /// <see cref="Component"/> that stores information about states of an entity.
     /// </summary>
     public class StateComponent : Component
     {
-    
-        // Object state and previous state
+        // Object state and previous state.
         private State _currentState;
         public State previousState { get; private set; }
 
-        // Super state and previous super state
+        // Super state and previous super state.
         private SuperState _currentSuperState;
         public SuperState previousSuperState { get; private set; }
 
-        // Flags for movement restrictions
+        // Flags for movement restrictions.
         private bool _canMoveLeft, _canMoveRight;
 
-        // Horizontal direction
+        // Horizontal direction, 1 is right, -1 is left.
         private int _horizontalDirection = 1;
 
         /// <summary>
-        /// Action ID used for identifying the current animation
+        /// Action ID used for identifying the current animation.
         /// </summary>
         public AnimationID AnimationState { get; private set; }
 
         /// <summary>
-        /// Default SuperState that entity should enter after certain actions (appearence, etc)
+        /// Default SuperState that entity should enter after certain actions (appearence, etc).
         /// </summary>
         public SuperState DefaultSuperState { get; private set; }
         
         /// <summary>
-        /// Default State that entity should enter after certain actions (appearence, etc)
+        /// Default State that entity should enter after certain actions (appearence, etc).
         /// </summary>
         public State DefaultState { get; private set; }
 
         /// <summary>
-        /// Default horizontal direction
+        /// Default horizontal direction, -1 is left, 1 is right.
         /// </summary>
         public int DefaultHorizontalDirection { get; private set; }
 
@@ -61,9 +60,10 @@ namespace MonogameExamples
             {
                 DefaultHorizontalDirection = -1;
             }
-            UpdateStateID();
             _canMoveRight = true;
             _canMoveLeft = true;
+
+            UpdateStateID();
         }
 
         /// <summary>
@@ -120,10 +120,11 @@ namespace MonogameExamples
             set
             {
                 _canMoveLeft = value;
+
+                //if don't want a slide mechanic, delete this
                 if (!_canMoveLeft)
                 {
                     CurrentState = State.Slide;
-                    JumpsPerformed = 2;
                 }
             }
         }
@@ -137,10 +138,11 @@ namespace MonogameExamples
             set
             {
                 _canMoveRight = value;
+                
+                //if don't want a slide mechanic, delete this
                 if (!_canMoveRight)
                 {
                     CurrentState = State.Slide;
-                    JumpsPerformed = 2;
                 }
             }
         }

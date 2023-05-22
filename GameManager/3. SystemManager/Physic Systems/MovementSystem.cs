@@ -12,7 +12,7 @@ namespace MonogameExamples
         private List<EntityData> _entitiesData;
 
         /// <summary>
-        /// Initializes a new instance of the MovementSystem class and creates an empty list of EntityData.
+        /// Initializes a new instance of the <see cref="MovementSystem"> class.
         /// </summary>
         public MovementSystem()
         {
@@ -70,7 +70,14 @@ namespace MonogameExamples
                 {
                     continue;
                 }
+
                 UpdatePositionBasedOnState(gameTime, data.Movement, data.State);
+                
+                CollisionBoxComponent collisionBox = data.Entity.GetComponent<CollisionBoxComponent>();
+                if(collisionBox != null)
+                {
+                    collisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
+                }
             }
         }
 
@@ -98,7 +105,6 @@ namespace MonogameExamples
             }
 
             // Update Position
-            movement.LastPosition = movement.Position;
             movement.Position += movement.Velocity * deltaTime;
 
             if(movement.Position.Y >= GameConstants.SCREEN_HEIGHT)

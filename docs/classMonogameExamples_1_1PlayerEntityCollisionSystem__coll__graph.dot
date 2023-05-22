@@ -4,7 +4,7 @@ digraph "MonogameExamples.PlayerEntityCollisionSystem"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="MonogameExamples.PlayerEntity\lCollisionSystem",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Represents a system that handles collisions between the player entity and other entities."];
+  Node1 [label="MonogameExamples.PlayerEntity\lCollisionSystem",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="System that handles collisions between the player entity and other entities."];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="System",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMonogameExamples_1_1System.html",tooltip="An abstract base class for systems in the game."];
   Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _playerData" ,fontname="Helvetica"];
@@ -16,12 +16,12 @@ digraph "MonogameExamples.PlayerEntityCollisionSystem"
   Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="Component",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMonogameExamples_1_1Component.html",tooltip="The base class for all components."];
   Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" State" ,fontname="Helvetica"];
-  Node7 [label="MonogameExamples.StateComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMonogameExamples_1_1StateComponent.html",tooltip="Component that stores the current state and super state of an object, as well as its state ID,..."];
+  Node7 [label="MonogameExamples.StateComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMonogameExamples_1_1StateComponent.html",tooltip="Component that stores information about states of an entity."];
   Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node8 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" CollisionBox" ,fontname="Helvetica"];
   Node8 [label="MonogameExamples.Collision\lBoxComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMonogameExamples_1_1CollisionBoxComponent.html",tooltip="Component that contains data and methods related to collision box of an entity in the game."];
   Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node9 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Animations" ,fontname="Helvetica"];
-  Node9 [label="MonogameExamples.Animated\lComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMonogameExamples_1_1AnimatedComponent.html",tooltip="Component responsible for managing entity animations."];
+  Node9 [label="MonogameExamples.Animation\lComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMonogameExamples_1_1AnimationComponent.html",tooltip="Component responsible for managing entity animations."];
   Node6 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

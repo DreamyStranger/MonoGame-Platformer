@@ -72,18 +72,22 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1ActionAnimation.html">ActionAnimation</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an individual animation composed of multiple frames, each of which is a rectangle in a sprite sheet.  <a href="classMonogameExamples_1_1ActionAnimation.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper class that represents an individual animation composed of multiple frames, each of which is a rectangle in a sprite sheet.  <a href="classMonogameExamples_1_1ActionAnimation.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1AddEntityMessage.html">AddEntityMessage</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a message for adding an entity.  <a href="classMonogameExamples_1_1AddEntityMessage.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1AnimatedComponent.html">AnimatedComponent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> responsible for managing entity animations.  <a href="classMonogameExamples_1_1AnimatedComponent.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1AnimationComponent.html">AnimationComponent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> responsible for managing entity animations.  <a href="classMonogameExamples_1_1AnimationComponent.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1AnimationRenderSystem.html">AnimationRenderSystem</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1System.html" title="An abstract base class for systems in the game.">System</a> responsible for rendering the entities in the game.  <a href="classMonogameExamples_1_1AnimationRenderSystem.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1AppearSystem.html">AppearSystem</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages entity appearance events, triggering actions depending on the entity type.  <a href="classMonogameExamples_1_1AppearSystem.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages entity appearance events.  <a href="classMonogameExamples_1_1AppearSystem.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1CoinComponent.html">CoinComponent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> that keeps track of coins.  <a href="classMonogameExamples_1_1CoinComponent.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1CollisionBoxComponent.html">CollisionBoxComponent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> that contains data and methods related to collision box of an entity in the game.  <a href="classMonogameExamples_1_1CollisionBoxComponent.html#details">More...</a><br /></td></tr>
@@ -109,8 +113,11 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>EntityFactory</b></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A factory class for creating entities. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1EntityReAppearsMessage.html">EntityReAppearsMessage</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Messages that given <a class="el" href="classMonogameExamples_1_1Entity.html" title="Represents an entity in the game world. An entity is a collection of components that define its behav...">Entity</a> has died. Implements the <a class="el" href="interfaceMonogameExamples_1_1IMessage.html" title="Represents a message that can be published and subscribed to.">IMessage</a> interface for use with the <a class="el" href="classMonogameExamples_1_1MessageBus.html" title="Provides a message bus implementation for decoupled communication between components using a publish-...">MessageBus</a>.  <a href="classMonogameExamples_1_1EntityReAppearsMessage.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1EntityTypeComponent.html">EntityTypeComponent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> that holds an entity type identifier for classification and management purposes.  <a href="classMonogameExamples_1_1EntityTypeComponent.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> that holds an entity type identifier for classification and management purposes. Can be replaced by Tag component if game requires it.  <a href="classMonogameExamples_1_1EntityTypeComponent.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1ExitGameMessage.html">ExitGameMessage</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a message that indicates the game should exit. Implements the <a class="el" href="interfaceMonogameExamples_1_1IMessage.html" title="Represents a message that can be published and subscribed to.">IMessage</a> interface for use with the <a class="el" href="classMonogameExamples_1_1MessageBus.html" title="Provides a message bus implementation for decoupled communication between components using a publish-...">MessageBus</a>.  <a href="classMonogameExamples_1_1ExitGameMessage.html#details">More...</a><br /></td></tr>
@@ -120,6 +127,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>GameConstants</b></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds common game constants <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1HealthComponent.html">HealthComponent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> tgat represents the health of an entity.  <a href="classMonogameExamples_1_1HealthComponent.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceMonogameExamples_1_1IMessage.html">IMessage</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a message that can be published and subscribed to.  <a href="interfaceMonogameExamples_1_1IMessage.html#details">More...</a><br /></td></tr>
@@ -152,13 +162,13 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> that contains data and methods neccessary for a parallax effect for a 2D sprite.  <a href="classMonogameExamples_1_1ParallaxComponent.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1ParallaxSystem.html">ParallaxSystem</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages parallax components and their related entities.  <a href="classMonogameExamples_1_1ParallaxSystem.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages parallax components and their related entities to create parallax effect.  <a href="classMonogameExamples_1_1ParallaxSystem.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1PlayerEntityCollisionSystem.html">PlayerEntityCollisionSystem</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a system that handles collisions between the player entity and other entities.  <a href="classMonogameExamples_1_1PlayerEntityCollisionSystem.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1System.html" title="An abstract base class for systems in the game.">System</a> that handles collisions between the player entity and other entities.  <a href="classMonogameExamples_1_1PlayerEntityCollisionSystem.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1PlayerInputComponent.html">PlayerInputComponent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> representing the input state of the player entity.  <a href="classMonogameExamples_1_1PlayerInputComponent.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> taht represents the input state of the player entity.  <a href="classMonogameExamples_1_1PlayerInputComponent.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1PlayerInputSystem.html">PlayerInputSystem</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1System.html" title="An abstract base class for systems in the game.">System</a> that updates the state of entities based on keyboard input.  <a href="classMonogameExamples_1_1PlayerInputSystem.html#details">More...</a><br /></td></tr>
@@ -167,7 +177,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a message that indicates the game should revert to the previous level. Implements the <a class="el" href="interfaceMonogameExamples_1_1IMessage.html" title="Represents a message that can be published and subscribed to.">IMessage</a> interface for use with the <a class="el" href="classMonogameExamples_1_1MessageBus.html" title="Provides a message bus implementation for decoupled communication between components using a publish-...">MessageBus</a>.  <a href="classMonogameExamples_1_1PreviousLevelMessage.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1RegularEnemyComponent.html">RegularEnemyComponent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> representing the movement state of a simple walking enemy entity.  <a href="classMonogameExamples_1_1RegularEnemyComponent.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> responsible for controlling a regular enemy's movement within a specified range. It decides the direction of movement based on the enemy's current position.  <a href="classMonogameExamples_1_1RegularEnemyComponent.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1RegularEnemyInputSystem.html">RegularEnemyInputSystem</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1System.html" title="An abstract base class for systems in the game.">System</a> that updates the state of Regular Enemies.  <a href="classMonogameExamples_1_1RegularEnemyInputSystem.html#details">More...</a><br /></td></tr>
@@ -175,14 +185,20 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1ReloadLevelMessage.html">ReloadLevelMessage</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a message that indicates the current game level should be reloaded. Implements the <a class="el" href="interfaceMonogameExamples_1_1IMessage.html" title="Represents a message that can be published and subscribed to.">IMessage</a> interface for use with the <a class="el" href="classMonogameExamples_1_1MessageBus.html" title="Provides a message bus implementation for decoupled communication between components using a publish-...">MessageBus</a>.  <a href="classMonogameExamples_1_1ReloadLevelMessage.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1RespawnComponent.html">RespawnComponent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> that represents a respawn timer for an entity.  <a href="classMonogameExamples_1_1RespawnComponent.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1RespawnSystem.html">RespawnSystem</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1System.html" title="An abstract base class for systems in the game.">System</a> that manages entity respawning based on the <a class="el" href="classMonogameExamples_1_1RespawnComponent.html" title="Component that represents a respawn timer for an entity.">RespawnComponent</a>.  <a href="classMonogameExamples_1_1RespawnSystem.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1StateComponent.html">StateComponent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> that stores the current state and super state of an object, as well as its state ID, jump counter, and horizontal direction.  <a href="classMonogameExamples_1_1StateComponent.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> that stores information about states of an entity.  <a href="classMonogameExamples_1_1StateComponent.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1System.html">System</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An abstract base class for systems in the game.  <a href="classMonogameExamples_1_1System.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMonogameExamples_1_1SystemManager.html">SystemManager</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages a collection of systems and provides methods to add, remove, update and draw entities through them.  <a href="structMonogameExamples_1_1SystemManager.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages a collection of <a class="el" href="classMonogameExamples_1_1System.html" title="An abstract base class for systems in the game.">System</a> classes and provides methods to add, remove, update and draw entities through them.  <a href="structMonogameExamples_1_1SystemManager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1TileHandler.html">TileHandler</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles loading and rendering of tile maps.  <a href="classMonogameExamples_1_1TileHandler.html#details">More...</a><br /></td></tr>
@@ -195,6 +211,7 @@ Classes</h2></td></tr>
 Enumerations</h2></td></tr>
 <tr class="memitem:a3224544d39bb3a77965925f2c6db661a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMonogameExamples.html#a3224544d39bb3a77965925f2c6db661a">BackgroundMusic</a> { <a class="el" href="namespaceMonogameExamples.html#a3224544d39bb3a77965925f2c6db661aa7a1920d61156abc05a60135aefe8bc67">Default</a>
  }</td></tr>
+<tr class="memdesc:a3224544d39bb3a77965925f2c6db661a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum representing the different types of background music in the game. Each enum value corresponds to a specific music track.  <a href="namespaceMonogameExamples.html#a3224544d39bb3a77965925f2c6db661a">More...</a><br /></td></tr>
 <tr class="separator:a3224544d39bb3a77965925f2c6db661a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd117db1d9db55bbcfb87b7dd8f0c6e2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMonogameExamples.html#acd117db1d9db55bbcfb87b7dd8f0c6e2">PlayerTexture</a> { <br />
 &#160;&#160;<a class="el" href="namespaceMonogameExamples.html#acd117db1d9db55bbcfb87b7dd8f0c6e2ae599161956d626eda4cb0a5ffb85271c">Idle</a>
@@ -207,6 +224,7 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespaceMonogameExamples.html#acd117db1d9db55bbcfb87b7dd8f0c6e2aebfe5e1791db03c4cd6ab95801e0977d">Hit</a>
 <br />
  }</td></tr>
+<tr class="memdesc:acd117db1d9db55bbcfb87b7dd8f0c6e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration representing the different states of player animation textures.  <a href="namespaceMonogameExamples.html#acd117db1d9db55bbcfb87b7dd8f0c6e2">More...</a><br /></td></tr>
 <tr class="separator:acd117db1d9db55bbcfb87b7dd8f0c6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8faad06ccc0b1219e694e3480b2a7e72"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMonogameExamples.html#a8faad06ccc0b1219e694e3480b2a7e72">MaskedEnemyTexture</a> { <br />
 &#160;&#160;<a class="el" href="namespaceMonogameExamples.html#a8faad06ccc0b1219e694e3480b2a7e72ae599161956d626eda4cb0a5ffb85271c">Idle</a>
@@ -219,18 +237,22 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespaceMonogameExamples.html#a8faad06ccc0b1219e694e3480b2a7e72aebfe5e1791db03c4cd6ab95801e0977d">Hit</a>
 <br />
  }</td></tr>
+<tr class="memdesc:a8faad06ccc0b1219e694e3480b2a7e72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration representing the different states of masked enemy animation textures.  <a href="namespaceMonogameExamples.html#a8faad06ccc0b1219e694e3480b2a7e72">More...</a><br /></td></tr>
 <tr class="separator:a8faad06ccc0b1219e694e3480b2a7e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5216e49be10add347b413d91f9f8c70"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMonogameExamples.html#ad5216e49be10add347b413d91f9f8c70">BackgroundTexture</a> { <a class="el" href="namespaceMonogameExamples.html#ad5216e49be10add347b413d91f9f8c70ad382816a3cbeed082c9e216e7392eed1">Green</a>
 , <a class="el" href="namespaceMonogameExamples.html#ad5216e49be10add347b413d91f9f8c70a51e6cd92b6c45f9affdc158ecca2b8b8">Yellow</a>
  }</td></tr>
+<tr class="memdesc:ad5216e49be10add347b413d91f9f8c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration representing the different types of background textures.  <a href="namespaceMonogameExamples.html#ad5216e49be10add347b413d91f9f8c70">More...</a><br /></td></tr>
 <tr class="separator:ad5216e49be10add347b413d91f9f8c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd0df66a507e393e4c7a31e635334eb5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMonogameExamples.html#acd0df66a507e393e4c7a31e635334eb5">FruitTexture</a> { <a class="el" href="namespaceMonogameExamples.html#acd0df66a507e393e4c7a31e635334eb5a9f6290f4436e5a2351f12e03b6433c3c">Apple</a>
 , <a class="el" href="namespaceMonogameExamples.html#acd0df66a507e393e4c7a31e635334eb5a81e91be8db96be69e372f0c715ec7444">Collected</a>
  }</td></tr>
+<tr class="memdesc:acd0df66a507e393e4c7a31e635334eb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration representing the different types of fruit textures.  <a href="namespaceMonogameExamples.html#acd0df66a507e393e4c7a31e635334eb5">More...</a><br /></td></tr>
 <tr class="separator:acd0df66a507e393e4c7a31e635334eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b589080af16acf02b21c3eab6de35ea"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMonogameExamples.html#a9b589080af16acf02b21c3eab6de35ea">TiledTexture</a> { <a class="el" href="namespaceMonogameExamples.html#a9b589080af16acf02b21c3eab6de35eaa4ccfea7a25fae3c1d31555f0856d2b42">Terrain</a>
 , <a class="el" href="namespaceMonogameExamples.html#a9b589080af16acf02b21c3eab6de35eaa71ff71526d15db86eb50fcac245d183b">UI</a>
  }</td></tr>
+<tr class="memdesc:a9b589080af16acf02b21c3eab6de35ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration representing the different types of Tiled textures.  <a href="namespaceMonogameExamples.html#a9b589080af16acf02b21c3eab6de35ea">More...</a><br /></td></tr>
 <tr class="separator:a9b589080af16acf02b21c3eab6de35ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b44a03579b371a5309bc3188d8ba033"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMonogameExamples.html#a5b44a03579b371a5309bc3188d8ba033">State</a> { <br />
 &#160;&#160;<a class="el" href="namespaceMonogameExamples.html#a5b44a03579b371a5309bc3188d8ba033ae599161956d626eda4cb0a5ffb85271c">Idle</a>
@@ -269,6 +291,7 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespaceMonogameExamples.html#afc7a7aec70d6a50eda94124b2a82b368a90fca44a1a2ebabd6e55ceb1537e2bc9">Appear</a>
 <br />
  }</td></tr>
+<tr class="memdesc:afc7a7aec70d6a50eda94124b2a82b368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possible animation states an object can be in.  <a href="namespaceMonogameExamples.html#afc7a7aec70d6a50eda94124b2a82b368">More...</a><br /></td></tr>
 <tr class="separator:afc7a7aec70d6a50eda94124b2a82b368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f7ee7797ed3db5b373e6e6b8b88e802"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMonogameExamples.html#a5f7ee7797ed3db5b373e6e6b8b88e802">EntityType</a> { <a class="el" href="namespaceMonogameExamples.html#a5f7ee7797ed3db5b373e6e6b8b88e802a636da1d35e805b00eae0fcd8333f9234">Player</a>
 , <a class="el" href="namespaceMonogameExamples.html#a5f7ee7797ed3db5b373e6e6b8b88e802aff45bd9a024c61169a542316bd7b3b1a">Coin</a>
@@ -280,7 +303,7 @@ Enumerations</h2></td></tr>
 <tr class="memitem:afd56fa38f5d453f22a846f0b37918961"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMonogameExamples.html#afd56fa38f5d453f22a846f0b37918961">LevelID</a> { <a class="el" href="namespaceMonogameExamples.html#afd56fa38f5d453f22a846f0b37918961a63664aa8bee7544118de87bf48d529ee">Level1</a>
 , <a class="el" href="namespaceMonogameExamples.html#afd56fa38f5d453f22a846f0b37918961a0cbbfd5a182368f83190bf23d2bd5fde">Level2</a>
  }</td></tr>
-<tr class="memdesc:afd56fa38f5d453f22a846f0b37918961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Levels, should hold same name as corresponding tmx file  <a href="namespaceMonogameExamples.html#afd56fa38f5d453f22a846f0b37918961">More...</a><br /></td></tr>
+<tr class="memdesc:afd56fa38f5d453f22a846f0b37918961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Levels, should hold same name as corresponding tmx file.  <a href="namespaceMonogameExamples.html#afd56fa38f5d453f22a846f0b37918961">More...</a><br /></td></tr>
 <tr class="separator:afd56fa38f5d453f22a846f0b37918961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -295,6 +318,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Possible animation states an object can be in. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afc7a7aec70d6a50eda94124b2a82b368ae599161956d626eda4cb0a5ffb85271c" name="afc7a7aec70d6a50eda94124b2a82b368ae599161956d626eda4cb0a5ffb85271c"></a>Idle&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="afc7a7aec70d6a50eda94124b2a82b368a7a16a854f32231a8df9326136b09ee62" name="afc7a7aec70d6a50eda94124b2a82b368a7a16a854f32231a8df9326136b09ee62"></a>Walk&#160;</td><td class="fielddoc"></td></tr>
@@ -319,8 +344,12 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum representing the different types of background music in the game. Each enum value corresponds to a specific music track. </p>
+<p >The current implementation only contains a default track. This can be expanded to include additional tracks as needed. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3224544d39bb3a77965925f2c6db661aa7a1920d61156abc05a60135aefe8bc67" name="a3224544d39bb3a77965925f2c6db661aa7a1920d61156abc05a60135aefe8bc67"></a>Default&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3224544d39bb3a77965925f2c6db661aa7a1920d61156abc05a60135aefe8bc67" name="a3224544d39bb3a77965925f2c6db661aa7a1920d61156abc05a60135aefe8bc67"></a>Default&#160;</td><td class="fielddoc"><p >Represents the default background music track. </p>
+</td></tr>
 </table>
 
 </div>
@@ -336,9 +365,13 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enumeration representing the different types of background textures. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad5216e49be10add347b413d91f9f8c70ad382816a3cbeed082c9e216e7392eed1" name="ad5216e49be10add347b413d91f9f8c70ad382816a3cbeed082c9e216e7392eed1"></a>Green&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad5216e49be10add347b413d91f9f8c70a51e6cd92b6c45f9affdc158ecca2b8b8" name="ad5216e49be10add347b413d91f9f8c70a51e6cd92b6c45f9affdc158ecca2b8b8"></a>Yellow&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad5216e49be10add347b413d91f9f8c70ad382816a3cbeed082c9e216e7392eed1" name="ad5216e49be10add347b413d91f9f8c70ad382816a3cbeed082c9e216e7392eed1"></a>Green&#160;</td><td class="fielddoc"><p >Green background texture. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad5216e49be10add347b413d91f9f8c70a51e6cd92b6c45f9affdc158ecca2b8b8" name="ad5216e49be10add347b413d91f9f8c70a51e6cd92b6c45f9affdc158ecca2b8b8"></a>Yellow&#160;</td><td class="fielddoc"><p >Yellow background texture. </p>
+</td></tr>
 </table>
 
 </div>
@@ -376,9 +409,13 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enumeration representing the different types of fruit textures. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="acd0df66a507e393e4c7a31e635334eb5a9f6290f4436e5a2351f12e03b6433c3c" name="acd0df66a507e393e4c7a31e635334eb5a9f6290f4436e5a2351f12e03b6433c3c"></a>Apple&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="acd0df66a507e393e4c7a31e635334eb5a81e91be8db96be69e372f0c715ec7444" name="acd0df66a507e393e4c7a31e635334eb5a81e91be8db96be69e372f0c715ec7444"></a>Collected&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="acd0df66a507e393e4c7a31e635334eb5a9f6290f4436e5a2351f12e03b6433c3c" name="acd0df66a507e393e4c7a31e635334eb5a9f6290f4436e5a2351f12e03b6433c3c"></a>Apple&#160;</td><td class="fielddoc"><p >Apple fruit texture. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acd0df66a507e393e4c7a31e635334eb5a81e91be8db96be69e372f0c715ec7444" name="acd0df66a507e393e4c7a31e635334eb5a81e91be8db96be69e372f0c715ec7444"></a>Collected&#160;</td><td class="fielddoc"><p >Collected fruit texture. </p>
+</td></tr>
 </table>
 
 </div>
@@ -395,7 +432,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Levels, should hold same name as corresponding tmx file </p>
+<p>Levels, should hold same name as corresponding tmx file. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afd56fa38f5d453f22a846f0b37918961a63664aa8bee7544118de87bf48d529ee" name="afd56fa38f5d453f22a846f0b37918961a63664aa8bee7544118de87bf48d529ee"></a>Level1&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="afd56fa38f5d453f22a846f0b37918961a0cbbfd5a182368f83190bf23d2bd5fde" name="afd56fa38f5d453f22a846f0b37918961a0cbbfd5a182368f83190bf23d2bd5fde"></a>Level2&#160;</td><td class="fielddoc"></td></tr>
@@ -414,14 +451,23 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enumeration representing the different states of masked enemy animation textures. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8faad06ccc0b1219e694e3480b2a7e72ae599161956d626eda4cb0a5ffb85271c" name="a8faad06ccc0b1219e694e3480b2a7e72ae599161956d626eda4cb0a5ffb85271c"></a>Idle&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8faad06ccc0b1219e694e3480b2a7e72adb6ea77c7cd8a86b17014c3b688fd1a1" name="a8faad06ccc0b1219e694e3480b2a7e72adb6ea77c7cd8a86b17014c3b688fd1a1"></a>Walking&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8faad06ccc0b1219e694e3480b2a7e72a101f693f72287a2819a364f64ca1c0ed" name="a8faad06ccc0b1219e694e3480b2a7e72a101f693f72287a2819a364f64ca1c0ed"></a>Jump&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8faad06ccc0b1219e694e3480b2a7e72a6bd5db223a35934e784d0b75a6d0d44e" name="a8faad06ccc0b1219e694e3480b2a7e72a6bd5db223a35934e784d0b75a6d0d44e"></a>DoubleJump&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8faad06ccc0b1219e694e3480b2a7e72a58fa788345ab5ac21c2cef38907d4580" name="a8faad06ccc0b1219e694e3480b2a7e72a58fa788345ab5ac21c2cef38907d4580"></a>Fall&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8faad06ccc0b1219e694e3480b2a7e72a6160a53ece50ce6d4f5ef4452549835e" name="a8faad06ccc0b1219e694e3480b2a7e72a6160a53ece50ce6d4f5ef4452549835e"></a>Slide&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8faad06ccc0b1219e694e3480b2a7e72aebfe5e1791db03c4cd6ab95801e0977d" name="a8faad06ccc0b1219e694e3480b2a7e72aebfe5e1791db03c4cd6ab95801e0977d"></a>Hit&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8faad06ccc0b1219e694e3480b2a7e72ae599161956d626eda4cb0a5ffb85271c" name="a8faad06ccc0b1219e694e3480b2a7e72ae599161956d626eda4cb0a5ffb85271c"></a>Idle&#160;</td><td class="fielddoc"><p >Enemy idle state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8faad06ccc0b1219e694e3480b2a7e72adb6ea77c7cd8a86b17014c3b688fd1a1" name="a8faad06ccc0b1219e694e3480b2a7e72adb6ea77c7cd8a86b17014c3b688fd1a1"></a>Walking&#160;</td><td class="fielddoc"><p >Enemy walking state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8faad06ccc0b1219e694e3480b2a7e72a101f693f72287a2819a364f64ca1c0ed" name="a8faad06ccc0b1219e694e3480b2a7e72a101f693f72287a2819a364f64ca1c0ed"></a>Jump&#160;</td><td class="fielddoc"><p >Enemy jump state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8faad06ccc0b1219e694e3480b2a7e72a6bd5db223a35934e784d0b75a6d0d44e" name="a8faad06ccc0b1219e694e3480b2a7e72a6bd5db223a35934e784d0b75a6d0d44e"></a>DoubleJump&#160;</td><td class="fielddoc"><p >Enemy double jump state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8faad06ccc0b1219e694e3480b2a7e72a58fa788345ab5ac21c2cef38907d4580" name="a8faad06ccc0b1219e694e3480b2a7e72a58fa788345ab5ac21c2cef38907d4580"></a>Fall&#160;</td><td class="fielddoc"><p >Enemy falling state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8faad06ccc0b1219e694e3480b2a7e72a6160a53ece50ce6d4f5ef4452549835e" name="a8faad06ccc0b1219e694e3480b2a7e72a6160a53ece50ce6d4f5ef4452549835e"></a>Slide&#160;</td><td class="fielddoc"><p >Enemy sliding state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8faad06ccc0b1219e694e3480b2a7e72aebfe5e1791db03c4cd6ab95801e0977d" name="a8faad06ccc0b1219e694e3480b2a7e72aebfe5e1791db03c4cd6ab95801e0977d"></a>Hit&#160;</td><td class="fielddoc"><p >Enemy hit state. </p>
+</td></tr>
 </table>
 
 </div>
@@ -437,14 +483,23 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enumeration representing the different states of player animation textures. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="acd117db1d9db55bbcfb87b7dd8f0c6e2ae599161956d626eda4cb0a5ffb85271c" name="acd117db1d9db55bbcfb87b7dd8f0c6e2ae599161956d626eda4cb0a5ffb85271c"></a>Idle&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="acd117db1d9db55bbcfb87b7dd8f0c6e2adb6ea77c7cd8a86b17014c3b688fd1a1" name="acd117db1d9db55bbcfb87b7dd8f0c6e2adb6ea77c7cd8a86b17014c3b688fd1a1"></a>Walking&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="acd117db1d9db55bbcfb87b7dd8f0c6e2a101f693f72287a2819a364f64ca1c0ed" name="acd117db1d9db55bbcfb87b7dd8f0c6e2a101f693f72287a2819a364f64ca1c0ed"></a>Jump&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="acd117db1d9db55bbcfb87b7dd8f0c6e2a6bd5db223a35934e784d0b75a6d0d44e" name="acd117db1d9db55bbcfb87b7dd8f0c6e2a6bd5db223a35934e784d0b75a6d0d44e"></a>DoubleJump&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="acd117db1d9db55bbcfb87b7dd8f0c6e2a58fa788345ab5ac21c2cef38907d4580" name="acd117db1d9db55bbcfb87b7dd8f0c6e2a58fa788345ab5ac21c2cef38907d4580"></a>Fall&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="acd117db1d9db55bbcfb87b7dd8f0c6e2a6160a53ece50ce6d4f5ef4452549835e" name="acd117db1d9db55bbcfb87b7dd8f0c6e2a6160a53ece50ce6d4f5ef4452549835e"></a>Slide&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="acd117db1d9db55bbcfb87b7dd8f0c6e2aebfe5e1791db03c4cd6ab95801e0977d" name="acd117db1d9db55bbcfb87b7dd8f0c6e2aebfe5e1791db03c4cd6ab95801e0977d"></a>Hit&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="acd117db1d9db55bbcfb87b7dd8f0c6e2ae599161956d626eda4cb0a5ffb85271c" name="acd117db1d9db55bbcfb87b7dd8f0c6e2ae599161956d626eda4cb0a5ffb85271c"></a>Idle&#160;</td><td class="fielddoc"><p >Player idle state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acd117db1d9db55bbcfb87b7dd8f0c6e2adb6ea77c7cd8a86b17014c3b688fd1a1" name="acd117db1d9db55bbcfb87b7dd8f0c6e2adb6ea77c7cd8a86b17014c3b688fd1a1"></a>Walking&#160;</td><td class="fielddoc"><p >Player walking state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acd117db1d9db55bbcfb87b7dd8f0c6e2a101f693f72287a2819a364f64ca1c0ed" name="acd117db1d9db55bbcfb87b7dd8f0c6e2a101f693f72287a2819a364f64ca1c0ed"></a>Jump&#160;</td><td class="fielddoc"><p >Player jump state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acd117db1d9db55bbcfb87b7dd8f0c6e2a6bd5db223a35934e784d0b75a6d0d44e" name="acd117db1d9db55bbcfb87b7dd8f0c6e2a6bd5db223a35934e784d0b75a6d0d44e"></a>DoubleJump&#160;</td><td class="fielddoc"><p >Player double jump state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acd117db1d9db55bbcfb87b7dd8f0c6e2a58fa788345ab5ac21c2cef38907d4580" name="acd117db1d9db55bbcfb87b7dd8f0c6e2a58fa788345ab5ac21c2cef38907d4580"></a>Fall&#160;</td><td class="fielddoc"><p >Player falling state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acd117db1d9db55bbcfb87b7dd8f0c6e2a6160a53ece50ce6d4f5ef4452549835e" name="acd117db1d9db55bbcfb87b7dd8f0c6e2a6160a53ece50ce6d4f5ef4452549835e"></a>Slide&#160;</td><td class="fielddoc"><p >Player sliding state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acd117db1d9db55bbcfb87b7dd8f0c6e2aebfe5e1791db03c4cd6ab95801e0977d" name="acd117db1d9db55bbcfb87b7dd8f0c6e2aebfe5e1791db03c4cd6ab95801e0977d"></a>Hit&#160;</td><td class="fielddoc"><p >Player hit state. </p>
+</td></tr>
 </table>
 
 </div>
@@ -509,9 +564,13 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enumeration representing the different types of Tiled textures. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9b589080af16acf02b21c3eab6de35eaa4ccfea7a25fae3c1d31555f0856d2b42" name="a9b589080af16acf02b21c3eab6de35eaa4ccfea7a25fae3c1d31555f0856d2b42"></a>Terrain&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9b589080af16acf02b21c3eab6de35eaa71ff71526d15db86eb50fcac245d183b" name="a9b589080af16acf02b21c3eab6de35eaa71ff71526d15db86eb50fcac245d183b"></a>UI&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9b589080af16acf02b21c3eab6de35eaa4ccfea7a25fae3c1d31555f0856d2b42" name="a9b589080af16acf02b21c3eab6de35eaa4ccfea7a25fae3c1d31555f0856d2b42"></a>Terrain&#160;</td><td class="fielddoc"><p >Terrain Tiled texture. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b589080af16acf02b21c3eab6de35eaa71ff71526d15db86eb50fcac245d183b" name="a9b589080af16acf02b21c3eab6de35eaa71ff71526d15db86eb50fcac245d183b"></a>UI&#160;</td><td class="fielddoc"><p >UI Tiled texture. </p>
+</td></tr>
 </table>
 
 </div>

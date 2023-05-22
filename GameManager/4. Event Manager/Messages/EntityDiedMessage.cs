@@ -12,7 +12,7 @@ namespace MonogameExamples
         public Entity Entity { get; }
 
         /// <summary>
-        /// Initializes a new instance of the EntityDiedMessage class.
+        /// Initializes a new instance of the <see cref="EntityDiedMessage"/> class.
         /// </summary>
         /// <param name="entity">The entity that died.</param>
         public EntityDiedMessage(Entity entity)

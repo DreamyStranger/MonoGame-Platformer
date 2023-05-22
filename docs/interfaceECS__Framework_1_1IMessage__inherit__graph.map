@@ -1,7 +1,0 @@
-<map id="ECS_Framework.IMessage" name="ECS_Framework.IMessage">
-<area shape="rect" id="node1" title="Represents a message that can be published and subscribed to." alt="" coords="5,97,199,123"/>
-<area shape="rect" id="node2" href="$classECS__Framework_1_1DestroyEntityMessage.html" title="Represents a message that indicates an entity should be destroyed. Implements the IMessage interface ..." alt="" coords="264,5,484,47"/>
-<area shape="rect" id="node3" href="$classECS__Framework_1_1ExitGameMessage.html" title="Represents a message that indicates the game should exit. Implements the IMessage interface for use w..." alt="" coords="247,71,501,98"/>
-<area shape="rect" id="node4" href="$classECS__Framework_1_1NextLevelMessage.html" title="Represents a message that indicates the game should proceed to the next level. Implements the IMessag..." alt="" coords="247,122,501,149"/>
-<area shape="rect" id="node5" href="$classECS__Framework_1_1ReloadLevelMessage.html" title="Represents a message that indicates the current game level should be reloaded. Implements the IMessag..." alt="" coords="269,173,479,215"/>
-</map>

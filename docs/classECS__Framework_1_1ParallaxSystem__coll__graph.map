@@ -1,4 +1,0 @@
-<map id="ECS_Framework.ParallaxSystem" name="ECS_Framework.ParallaxSystem">
-<area shape="rect" id="node1" title="System that manages parallax components and their related entities." alt="" coords="5,80,237,107"/>
-<area shape="rect" id="node2" href="$classECS__Framework_1_1System.html" title="An abstract base class for systems in the game." alt="" coords="86,5,157,32"/>
-</map>

@@ -11,7 +11,7 @@ namespace MonogameExamples
         private List<Entity> _entities;
 
         /// <summary>
-        /// Initializes a new instance of the RespawnSystem class.
+        /// Initializes a new instance of the <see cref="RespawnSystem"/> class.
         /// </summary>
         public RespawnSystem()
         {
@@ -49,39 +49,39 @@ namespace MonogameExamples
             {
                 RespawnComponent respawn = entity.GetComponent<RespawnComponent>();
 
-                if (respawn.IsRespawning && !entity.IsActive)
+                if (!respawn.IsRespawning || entity.IsActive)
                 {
-                    respawn.Update(gameTime);
+                    continue;
+                }
 
-                    if (!respawn.IsRespawning)
+                respawn.Update(gameTime);
+
+                if (respawn.IsRespawning)
+                {
+                    continue;
+                }
+
+                StateComponent state = entity.GetComponent<StateComponent>();
+                MovementComponent movement = entity.GetComponent<MovementComponent>();
+                CollisionBoxComponent collision = entity.GetComponent<CollisionBoxComponent>();
+
+                // for any entity, state component should always exist
+                state.CurrentSuperState = SuperState.IsAppearing;
+                state.HorizontalDirection = state.DefaultHorizontalDirection;
+
+                if (movement != null)
+                {
+                    movement.Position = respawn.Position;
+                    if (collision != null)
                     {
-                        StateComponent state = entity.GetComponent<StateComponent>();
-                        AnimatedComponent animations = entity.GetComponent<AnimatedComponent>();
-                        MovementComponent movement =  entity.GetComponent<MovementComponent>();
-                        CollisionBoxComponent collision = entity.GetComponent<CollisionBoxComponent>();
-
-                        // Make the entity active again
-                        state.CurrentSuperState = SuperState.IsAppearing;
-                        if(animations != null)
-                        {
-                            ActionAnimation appearAnimation = animations.GetCurrentAnimation();
-                            appearAnimation.Reset();
-                        }
-
-                        if(movement != null)
-                        {
-                            movement.Position = respawn.position;
-                            if(collision != null)
-                            {
-                                collision.UpdateBoxPosition(respawn.position.X, respawn.position.Y, state.DefaultHorizontalDirection);
-                            }
-                        }
-
-                        entity.IsActive = true;
-                        MessageBus.Publish(new EntityReAppearsMessage(entity));
+                        collision.UpdateBoxPosition(respawn.Position.X, respawn.Position.Y, state.HorizontalDirection);
                     }
                 }
+
+                entity.IsActive = true;
+                MessageBus.Publish(new EntityReAppearsMessage(entity));
             }
         }
+
     }
 }

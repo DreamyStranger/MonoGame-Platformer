@@ -13,7 +13,7 @@ namespace MonogameExamples
         private List<EntityData> _entitiesData;
 
         /// <summary>
-        /// Initializes a new instance of the RenderSystem class and creates an empty list of EntityData.
+        /// Initializes a new instance of the <see cref="AnimationRenderSystem"/> class.
         /// </summary>
         public AnimationRenderSystem()
         {
@@ -27,7 +27,7 @@ namespace MonogameExamples
         public override void AddEntity(Entity entity)
         {
             StateComponent state = entity.GetComponent<StateComponent>();
-            AnimatedComponent animations = entity.GetComponent<AnimatedComponent>();
+            AnimationComponent animations = entity.GetComponent<AnimationComponent>();
             MovementComponent movement = entity.GetComponent<MovementComponent>();
 
             if (state == null || animations == null || movement == null)
@@ -98,7 +98,7 @@ namespace MonogameExamples
         /// </summary>
         /// <param name="state">The state component of the entity.</param>
         /// <param name="animations">The animated component of the entity.</param>
-        private void GetAnimationForState(StateComponent state, AnimatedComponent animations)
+        private void GetAnimationForState(StateComponent state, AnimationComponent animations)
         {
             animations.SetCurrentAction(state.AnimationState);
         }

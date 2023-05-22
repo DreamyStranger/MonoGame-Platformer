@@ -57,19 +57,13 @@ namespace MonogameExamples
         /// </summary>
         private Rectangle _entityCollisionBox;
 
-        /// <summary>
-        /// The left boundary of the platform the entity is currently standing on.
-        /// </summary>
+        // The left boundary of the platform the entity is currently standing on.
         private int _groundLeft = 0;
 
-        /// <summary>
-        /// // The right boundary of the platform entity currently standing on.
-        /// </summary>
+        // The right boundary of the platform entity currently standing on.
         private int _groundRight = GameConstants.SCREEN_WIDTH;
 
-        /// <summary>
-        /// // The bottom boundary of the platform entity currently standing on.
-        /// </summary>
+        // The bottom boundary of the platform entity currently standing on.
         private int _groundBottom = GameConstants.SCREEN_HEIGHT;
 
 
@@ -111,7 +105,7 @@ namespace MonogameExamples
                     _entityCollisionBox.X = (int)positionX + HorRightOffset;
                     break;
 
-                case 1:
+                default:
                     _entityCollisionBox.X = (int)positionX + HorLeftOffset;
                     break;
             }
@@ -141,10 +135,9 @@ namespace MonogameExamples
         }
 
         /// <summary>
-        /// Sets the boundaries of the platform for checking if the entity is on the ground.
+        /// Sets the bottom of the platform for checking if the entity is sliding.
         /// </summary>
-        /// <param name="left">The left boundary of the platform.</param>
-        /// <param name="right">The right boundary of the platform.</param>
+        /// <param name="bottom">The bottom boundary of the platform.</param>
         public void SetSlidingLocation(int bottom)
         {
             _groundBottom = bottom;
@@ -153,7 +146,7 @@ namespace MonogameExamples
         /// <summary>
         /// Checks if the entity is in the air (not on the platform).
         /// </summary>
-        /// <param name="left">The left boundary of the entity.</param>
+        /// <param name="position">The left boundary of the entity (x-axis).</param>
         /// <returns>True if the entity is in the air, false otherwise.</returns>
         public bool CheckIfInAir(float position, int direction)
         {
@@ -170,9 +163,9 @@ namespace MonogameExamples
         /// <summary>
         /// Checks if the entity is below platform when sliding.
         /// </summary>
-        /// <param name="position">The top boundary of the entity.</param>
-        /// <returns>True if the entity is in the air, false otherwise.</returns>
-        public bool CheckIfbelow(float position)
+        /// <param name="position">The top boundary of the entity (y-axis).</param>
+        /// <returns>True if the entity is in the air (not sliding), false otherwise.</returns>
+        public bool CheckIfBelow(float position)
         {
 
             float top = position + VertTopOffset + 5;

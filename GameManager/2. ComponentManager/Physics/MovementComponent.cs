@@ -12,21 +12,28 @@ namespace MonogameExamples
     {
         //Position
         private Vector2 _position;
-        private Vector2 _lastPosition;
 
         //Motion
         private Vector2 _velocity;
         private Vector2 _acceleration;
 
         /// <summary>
-        /// Position of the entity.
+        /// Previous position of the entity.
         /// </summary>
-        public Vector2 Position { get => _position; set => _position = value; }
+        public Vector2 LastPosition { get; private set;}
 
         /// <summary>
-        /// Last position of the entity.
+        /// Position of the entity.
         /// </summary>
-        public Vector2 LastPosition { get => _lastPosition; set => _lastPosition = value; }
+        public Vector2 Position
+        {
+            get => _position;
+            set
+            {
+                LastPosition = _position;
+                _position = value;
+            }
+        }
 
         /// <summary>
         /// Velocity of the entity.
@@ -44,7 +51,7 @@ namespace MonogameExamples
         /// <param name="initialPosition">The initial position of the entity.</param>
         public MovementComponent(Vector2 initialPosition)
         {
-            this._position = initialPosition;
+            _position = initialPosition;
             _velocity = Vector2.Zero;
             _acceleration = Vector2.Zero;
         }

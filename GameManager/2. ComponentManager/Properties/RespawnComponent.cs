@@ -3,19 +3,14 @@ using Microsoft.Xna.Framework;
 namespace MonogameExamples
 {
     /// <summary>
-    /// Represents a respawn component for an entity.
+    /// <see cref="Component"/> that represents a respawn timer for an entity.
     /// </summary>
     public class RespawnComponent : Component
     {
-        public Vector2 position { get; private set; }
+
         private readonly float _respawnTimer;
         private float _currentTimer;
         private bool _isRespawning;
-
-        /// <summary>
-        /// Gets or sets the remaining time until the entity respawns.
-        /// </summary>
-        public float RemainingTime => _respawnTimer - _currentTimer;
 
         /// <summary>
         /// Gets a value indicating whether the entity is currently respawning.
@@ -23,7 +18,12 @@ namespace MonogameExamples
         public bool IsRespawning => _isRespawning;
 
         /// <summary>
-        /// Initializes a new instance of the RespawnComponent class with the specified respawn timer.
+        /// Gets and sets respawn position for the entity.
+        /// </summary>
+        public Vector2 Position { get; private set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RespawnComponent"/> class with the specified respawn timer.
         /// </summary>
         /// <param name="respawnTimer">The duration in seconds for the entity to respawn.</param>
         public RespawnComponent(Vector2 respawnPosition, float respawnTimer = 5)
@@ -31,7 +31,7 @@ namespace MonogameExamples
             _respawnTimer = respawnTimer;
             _currentTimer = 0f;
             _isRespawning = false;
-            this.position = respawnPosition;
+            Position = respawnPosition;
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace MonogameExamples
 
                 if (_currentTimer >= _respawnTimer)
                 {
-                    // Respawn the entity
+                    // Respawned
                     _isRespawning = false;
                 }
             }

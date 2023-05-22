@@ -105,6 +105,7 @@ namespace MonogameExamples
                         state.CurrentState = State.WalkRight;
                     }
                     break;
+
                 default:
                     if (bothKeysDown || bothKeysUp)
                     {
@@ -142,13 +143,12 @@ namespace MonogameExamples
                         if (state.JumpsPerformed == 0)
                         {
                             state.CurrentState = State.Jump;
-                            state.JumpsPerformed = 1;
                         }
                         else if (state.JumpsPerformed == 1)
                         {
                             state.CurrentState = State.DoubleJump;
-                            state.JumpsPerformed = 2;
                         }
+                        state.JumpsPerformed += 1;
                     }
                     break;
 

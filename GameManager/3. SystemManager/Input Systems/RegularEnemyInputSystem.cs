@@ -35,6 +35,7 @@ namespace MonogameExamples
             StateComponent state = entity.GetComponent<StateComponent>();
             RegularEnemyComponent input = entity.GetComponent<RegularEnemyComponent>();
             MovementComponent movement = entity.GetComponent<MovementComponent>();
+
             if (state == null || input == null || movement == null)
             {
                 return;
@@ -64,7 +65,8 @@ namespace MonogameExamples
 
         public override void Update(GameTime gameTime)
         {
-            for (int i = 0; i < inputs.Count; i++)
+            int n = inputs.Count;
+            for (int i = 0; i < n; i++)
             {
                 if (!entities[i].IsActive)
                 {
@@ -112,7 +114,7 @@ namespace MonogameExamples
                     {
                         state.CurrentState = State.WalkRight;
                     }
-                    if (!state.CanMoveRight)
+                    else if (!state.CanMoveRight)
                     {
                         state.CurrentState = State.WalkLeft;
                     }

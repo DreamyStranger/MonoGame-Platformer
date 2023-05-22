@@ -17,7 +17,7 @@ namespace MonogameExamples
         private Dictionary<string, List<Rectangle>> _obstacles;
 
         /// <summary>
-        /// Initializes a new instance of the ObstacleColliderSystem class.
+        /// Initializes a new instance of the <see cref= "ObstacleCollisionSystem"/> class.
         /// </summary>
         /// <param name="LevelID">The identifier for the level's obstacle data.</param>
 
@@ -29,7 +29,6 @@ namespace MonogameExamples
 
             //Console.WriteLine($"Loaded obstacles for Levels: {levelID}"); // Debug message
             //Console.WriteLine($"Loaded obstacle layers: {string.Join(", ", obstacles.Keys)}"); // Debug message
-
         }
         /// <summary>
         /// Adds an entity to the system.
@@ -76,7 +75,10 @@ namespace MonogameExamples
                 {
                     continue;
                 }
-                data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
+
+                //Should not be needed if collision box was updated after any movements beforehand
+                //data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
+
                 Rectangle box = data.CollisionBox.GetRectangle();
                 float positionX = data.Movement.Position.X;
                 float positionY = data.Movement.Position.Y;
@@ -85,10 +87,6 @@ namespace MonogameExamples
 
                 foreach (string key in _obstacles.Keys)
                 {
-                    if (key == "entity")
-                    {
-                        continue;
-                    }
                     foreach (Rectangle rect in _obstacles[key])
                     {
                         if (!box.Intersects(rect))
@@ -99,7 +97,7 @@ namespace MonogameExamples
                         switch (data.State.CurrentSuperState)
                         {
                             case SuperState.IsFalling:
-                                HandleFallCollision(data, box, rect, ref positionX, ref positionY);
+                                HandleFallCollision(data, box, rect, ref positionX, ref positionY, key);
                                 break;
 
                             case SuperState.IsOnGround:
@@ -108,7 +106,12 @@ namespace MonogameExamples
 
                             case SuperState.IsJumping:
                             case SuperState.IsDoubleJumping:
-                                HandleJumpCollision(data, box, rect, ref positionX, ref positionY, key);
+                                if (key == "float")
+                                {
+                                    break;
+                                }
+
+                                HandleJumpCollision(data, box, rect, ref positionX, ref positionY);
                                 break;
 
                             default:
@@ -121,7 +124,8 @@ namespace MonogameExamples
                         data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
                     }
                 }
-                //Check if entity still on a platform
+
+                //Check if entity is not on platform anymore
                 if (data.CollisionBox.CheckIfInAir(data.Movement.Position.X, data.State.HorizontalDirection))
                 {
                     if (data.State.CurrentSuperState == SuperState.IsOnGround)
@@ -129,7 +133,8 @@ namespace MonogameExamples
                         data.State.CurrentSuperState = SuperState.IsFalling;
                     }
                 }
-                if (data.CollisionBox.CheckIfbelow(data.Movement.Position.Y))
+                //Check if entity is not sliding anymore
+                if (data.CollisionBox.CheckIfBelow(data.Movement.Position.Y))
                 {
                     if (data.State.CurrentState == State.Slide)
                     {
@@ -147,7 +152,7 @@ namespace MonogameExamples
         /// <param name="rect">The obstacle's rectangle.</param>
         /// <param name="positionX">The entity's current X position.</param>
         /// <param name="positionY">The entity's current Y position.</param>
-        private void HandleFallCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY)
+        private void HandleFallCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY, string key)
         {
             bool wasAbove = data.Movement.LastPosition.Y + data.CollisionBox.OriginalHeight - data.CollisionBox.VertBottomOffset <= rect.Top + 1;
             bool collidesWithTopSide = box.Bottom > rect.Top && box.Top <= rect.Top;
@@ -165,7 +170,7 @@ namespace MonogameExamples
                 data.Movement.Velocity = Vector2.Zero;
                 data.Movement.Acceleration = Vector2.Zero;
             }
-            else
+            else if (key != "float")
             {
                 HandleHorizontalInAirCollision(data, box, rect, ref positionX);
             }
@@ -180,12 +185,8 @@ namespace MonogameExamples
         /// <param name="positionX">The entity's current X position.</param>
         /// <param name="positionY">The entity's current Y position.</param>
         /// <param name="key">The key indicating the current layer being checked.</param>
-        private void HandleJumpCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY, string key)
+        private void HandleJumpCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY)
         {
-            if (key == "float")
-            {
-                return;
-            }
             //bool wasBelow = data.Movement.LastPosition.Y - data.CollisionBox.vertTopOffset >= rect.Top;
             bool collidesWithBottomSide = box.Top < rect.Bottom && box.Bottom >= rect.Bottom;
             if (collidesWithBottomSide)
@@ -218,7 +219,7 @@ namespace MonogameExamples
                 positionX = rect.Left - data.CollisionBox.OriginalWidth + data.CollisionBox.HorRightOffset;
                 data.State.CanMoveRight = false;
             }
-            else if (data.Movement.Velocity.X < 0 && collidesWithRightSide)
+            if (data.Movement.Velocity.X < 0 && collidesWithRightSide)
             {
                 positionX = rect.Right - data.CollisionBox.HorRightOffset;
                 data.State.CanMoveLeft = false;
@@ -252,7 +253,7 @@ namespace MonogameExamples
                     data.State.CurrentSuperState = SuperState.IsFalling;
                     data.Movement.Velocity = Vector2.Zero;
                 }
-                else if (data.Movement.Velocity.X < 0 && box.Right >= rect.Right)
+                if (data.Movement.Velocity.X < 0 && box.Right >= rect.Right)
                 {
                     positionX = rect.Right - data.CollisionBox.HorRightOffset;
                     data.State.CanMoveLeft = false;

@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 namespace MonogameExamples
 {
     /// <summary>
-    /// Represents the health of an entity.
+    /// <see cref="Component"/> tgat represents the health of an entity.
     /// </summary>
     public class HealthComponent : Component
     {
@@ -29,7 +29,7 @@ namespace MonogameExamples
         }
 
         /// <summary>
-        /// Initializes a new instance of the HealthComponent class with the specified max health value.
+        /// Initializes a new instance of the <see cref="HealthComponent"/> class with the specified max health value.
         /// </summary>
         /// <param name="maxHealth">The maximum health value.</param>
         public HealthComponent(int maxHealth)

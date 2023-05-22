@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> that stores the current state and super state of an object, as well as its state ID, jump counter, and horizontal direction.  
+<p><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> that stores information about states of an entity.  
  <a href="classMonogameExamples_1_1StateComponent.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for MonogameExamples.StateComponent:</div>
@@ -92,7 +92,7 @@ Collaboration diagram for MonogameExamples.StateComponent:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab3b39eb280403acff25c2c1d6e599f53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1StateComponent.html#ab3b39eb280403acff25c2c1d6e599f53">StateComponent</a> (<a class="el" href="namespaceMonogameExamples.html#a5b44a03579b371a5309bc3188d8ba033">State</a> defaultState=<a class="el" href="namespaceMonogameExamples.html#a5b44a03579b371a5309bc3188d8ba033ae599161956d626eda4cb0a5ffb85271c">State.Idle</a>, <a class="el" href="namespaceMonogameExamples.html#a4d950f16f2e27e710e8c1ae896528774">SuperState</a> defaultSuperState=<a class="el" href="namespaceMonogameExamples.html#a4d950f16f2e27e710e8c1ae896528774aa77faf0e393e7428251923b28b0637b5">SuperState.IsFalling</a>, <a class="el" href="namespaceMonogameExamples.html#a5b44a03579b371a5309bc3188d8ba033">State</a> currentState=<a class="el" href="namespaceMonogameExamples.html#a5b44a03579b371a5309bc3188d8ba033ae599161956d626eda4cb0a5ffb85271c">State.Idle</a>, <a class="el" href="namespaceMonogameExamples.html#a4d950f16f2e27e710e8c1ae896528774">SuperState</a> currentSuperState=<a class="el" href="namespaceMonogameExamples.html#a4d950f16f2e27e710e8c1ae896528774a2f090debae7df14c804aa8bdc6d7ccc7">SuperState.IsAppearing</a>)</td></tr>
-<tr class="memdesc:ab3b39eb280403acff25c2c1d6e599f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="classMonogameExamples_1_1StateComponent.html" title="Component that stores the current state and super state of an object, as well as its state ID,...">StateComponent</a> class with the default state and super state.  <a href="classMonogameExamples_1_1StateComponent.html#ab3b39eb280403acff25c2c1d6e599f53">More...</a><br /></td></tr>
+<tr class="memdesc:ab3b39eb280403acff25c2c1d6e599f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="classMonogameExamples_1_1StateComponent.html" title="Component that stores information about states of an entity.">StateComponent</a> class with the default state and super state.  <a href="classMonogameExamples_1_1StateComponent.html#ab3b39eb280403acff25c2c1d6e599f53">More...</a><br /></td></tr>
 <tr class="separator:ab3b39eb280403acff25c2c1d6e599f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8349a106f4196523cf25e50e8f450904"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1StateComponent.html#a8349a106f4196523cf25e50e8f450904">UpdateStateID</a> ()</td></tr>
 <tr class="memdesc:a8349a106f4196523cf25e50e8f450904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the state ID based on the current state and super state. Used for identifying the current animation.  <a href="classMonogameExamples_1_1StateComponent.html#a8349a106f4196523cf25e50e8f450904">More...</a><br /></td></tr>
@@ -111,14 +111,17 @@ Properties</h2></td></tr>
 <tr class="memitem:a47d9ca4c5e0b30312880ff37eb120277"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceMonogameExamples.html#a4d950f16f2e27e710e8c1ae896528774">SuperState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1StateComponent.html#a47d9ca4c5e0b30312880ff37eb120277">previousSuperState</a><code> [get, private set]</code></td></tr>
 <tr class="separator:a47d9ca4c5e0b30312880ff37eb120277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a404b09edecefe6a32245cb6d253d5ee5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceMonogameExamples.html#afc7a7aec70d6a50eda94124b2a82b368">AnimationID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1StateComponent.html#a404b09edecefe6a32245cb6d253d5ee5">AnimationState</a><code> [get, private set]</code></td></tr>
-<tr class="memdesc:a404b09edecefe6a32245cb6d253d5ee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Action ID used for identifying the current animation  <a href="classMonogameExamples_1_1StateComponent.html#a404b09edecefe6a32245cb6d253d5ee5">More...</a><br /></td></tr>
+<tr class="memdesc:a404b09edecefe6a32245cb6d253d5ee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Action ID used for identifying the current animation.  <a href="classMonogameExamples_1_1StateComponent.html#a404b09edecefe6a32245cb6d253d5ee5">More...</a><br /></td></tr>
 <tr class="separator:a404b09edecefe6a32245cb6d253d5ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3768c24e5e8cf1085d2b6c00151716b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceMonogameExamples.html#a4d950f16f2e27e710e8c1ae896528774">SuperState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1StateComponent.html#a3768c24e5e8cf1085d2b6c00151716b1">DefaultSuperState</a><code> [get, private set]</code></td></tr>
-<tr class="memdesc:a3768c24e5e8cf1085d2b6c00151716b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default SuperState that entity should enter after certain actions (appearence, etc)  <a href="classMonogameExamples_1_1StateComponent.html#a3768c24e5e8cf1085d2b6c00151716b1">More...</a><br /></td></tr>
+<tr class="memdesc:a3768c24e5e8cf1085d2b6c00151716b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default SuperState that entity should enter after certain actions (appearence, etc).  <a href="classMonogameExamples_1_1StateComponent.html#a3768c24e5e8cf1085d2b6c00151716b1">More...</a><br /></td></tr>
 <tr class="separator:a3768c24e5e8cf1085d2b6c00151716b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83de183b32fd26cce5f44f62cf43ea45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceMonogameExamples.html#a5b44a03579b371a5309bc3188d8ba033">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1StateComponent.html#a83de183b32fd26cce5f44f62cf43ea45">DefaultState</a><code> [get, private set]</code></td></tr>
-<tr class="memdesc:a83de183b32fd26cce5f44f62cf43ea45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default State that entity should enter after certain actions (appearence, etc)  <a href="classMonogameExamples_1_1StateComponent.html#a83de183b32fd26cce5f44f62cf43ea45">More...</a><br /></td></tr>
+<tr class="memdesc:a83de183b32fd26cce5f44f62cf43ea45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default State that entity should enter after certain actions (appearence, etc).  <a href="classMonogameExamples_1_1StateComponent.html#a83de183b32fd26cce5f44f62cf43ea45">More...</a><br /></td></tr>
 <tr class="separator:a83de183b32fd26cce5f44f62cf43ea45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac67deeb8e1c36f7400e4c9430588e16e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1StateComponent.html#ac67deeb8e1c36f7400e4c9430588e16e">DefaultHorizontalDirection</a><code> [get, private set]</code></td></tr>
+<tr class="memdesc:ac67deeb8e1c36f7400e4c9430588e16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default horizontal direction, -1 is left, 1 is right.  <a href="classMonogameExamples_1_1StateComponent.html#ac67deeb8e1c36f7400e4c9430588e16e">More...</a><br /></td></tr>
+<tr class="separator:ac67deeb8e1c36f7400e4c9430588e16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f3cada96e38dfc38015575d6626f525"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1StateComponent.html#a8f3cada96e38dfc38015575d6626f525">CanMoveLeft</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a8f3cada96e38dfc38015575d6626f525"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the entity can move to the left.  <a href="classMonogameExamples_1_1StateComponent.html#a8f3cada96e38dfc38015575d6626f525">More...</a><br /></td></tr>
 <tr class="separator:a8f3cada96e38dfc38015575d6626f525"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,7 +152,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a37099903993f4c23bc4426be2feb025c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p ><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> that stores the current state and super state of an object, as well as its state ID, jump counter, and horizontal direction. </p>
+<div class="textblock"><p ><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> that stores information about states of an entity. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab3b39eb280403acff25c2c1d6e599f53" name="ab3b39eb280403acff25c2c1d6e599f53"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3b39eb280403acff25c2c1d6e599f53">&#9670;&nbsp;</a></span>StateComponent()</h2>
@@ -197,7 +200,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Initializes a new instance of the <a class="el" href="classMonogameExamples_1_1StateComponent.html" title="Component that stores the current state and super state of an object, as well as its state ID,...">StateComponent</a> class with the default state and super state. </p>
+<p>Initializes a new instance of the <a class="el" href="classMonogameExamples_1_1StateComponent.html" title="Component that stores information about states of an entity.">StateComponent</a> class with the default state and super state. </p>
 
 </div>
 </div>
@@ -377,7 +380,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Action ID used for identifying the current animation </p>
+<p>Action ID used for identifying the current animation. </p>
 
 </div>
 </div>
@@ -477,6 +480,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ac67deeb8e1c36f7400e4c9430588e16e" name="ac67deeb8e1c36f7400e4c9430588e16e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac67deeb8e1c36f7400e4c9430588e16e">&#9670;&nbsp;</a></span>DefaultHorizontalDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MonogameExamples.StateComponent.DefaultHorizontalDirection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default horizontal direction, -1 is left, 1 is right. </p>
+
+</div>
+</div>
 <a id="a83de183b32fd26cce5f44f62cf43ea45" name="a83de183b32fd26cce5f44f62cf43ea45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a83de183b32fd26cce5f44f62cf43ea45">&#9670;&nbsp;</a></span>DefaultState</h2>
 
@@ -497,7 +524,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Default State that entity should enter after certain actions (appearence, etc) </p>
+<p>Default State that entity should enter after certain actions (appearence, etc). </p>
 
 </div>
 </div>
@@ -521,7 +548,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Default SuperState that entity should enter after certain actions (appearence, etc) </p>
+<p>Default SuperState that entity should enter after certain actions (appearence, etc). </p>
 
 </div>
 </div>

@@ -6,7 +6,7 @@ namespace MonogameExamples
 {
 
     /// <summary>
-    /// Manages a collection of systems and provides methods to add, remove, update and draw entities through them.
+    /// Manages a collection of <see cref="System"/> classes and provides methods to add, remove, update and draw entities through them.
     /// </summary>
     public struct SystemManager
     {

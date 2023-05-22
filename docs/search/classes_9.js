@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['obstaclecollisionsystem_0',['ObstacleCollisionSystem',['../classMonogameExamples_1_1ObstacleCollisionSystem.html',1,'MonogameExamples']]]
+  ['nextlevelmessage_0',['NextLevelMessage',['../classMonogameExamples_1_1NextLevelMessage.html',1,'MonogameExamples']]]
 ];

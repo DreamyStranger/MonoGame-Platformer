@@ -4,28 +4,24 @@ using Microsoft.Xna.Framework.Input;
 namespace MonogameExamples
 {
     /// <summary>
-    /// Component representing the input state of the player entity.
+    /// <see cref="Component"/> taht represents the input state of the player entity.
     /// </summary>
     public class PlayerInputComponent : Component
     {
         /// <summary>
-        /// Indicates whether the left key is currently pressed.
+        /// Gets a value indicating whether the key for moving the player to the left is currently being pressed.
         /// </summary>
         public bool IsLeftKeyDown { get; private set; }
-        
+
         /// <summary>
-        /// Indicates whether the right key is currently pressed.
+        /// Gets a value indicating whether the key for moving the player to the right is currently being pressed.
         /// </summary>
         public bool IsRightKeyDown { get; private set; }
-        
+
         /// <summary>
-        /// Indicates whether the jump key is currently pressed.
+        /// Gets a value indicating whether the key for making the player jump is currently being pressed.
         /// </summary>
         public bool IsJumpKeyDown { get; private set; }
-
-        public PlayerInputComponent()
-        {
-        }
 
         /// <summary>
         /// Updates the component's input state based on the current keyboard state.
@@ -35,9 +31,9 @@ namespace MonogameExamples
         {
             KeyboardState keyboardState = Keyboard.GetState();
 
-            IsLeftKeyDown = keyboardState.IsKeyDown(Keys.A);
-            IsRightKeyDown = keyboardState.IsKeyDown(Keys.D);
-            IsJumpKeyDown = keyboardState.IsKeyDown(Keys.Space);
+            IsLeftKeyDown = keyboardState.IsKeyDown(GameConstants.LEFT_KEY);
+            IsRightKeyDown = keyboardState.IsKeyDown(GameConstants.RIGHT_KEY);
+            IsJumpKeyDown = keyboardState.IsKeyDown(GameConstants.JUMP_KEY);
         }
     }
 }

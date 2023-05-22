@@ -1,4 +1,0 @@
-<map id="ECS_Framework.ObstacleCollisionSystem" name="ECS_Framework.ObstacleCollisionSystem">
-<area shape="rect" id="node1" title="System that manages collision detection and resolution between entities and level obstacles." alt="" coords="5,80,249,121"/>
-<area shape="rect" id="node2" href="$classECS__Framework_1_1System.html" title="An abstract base class for systems in the game." alt="" coords="92,5,163,32"/>
-</map>

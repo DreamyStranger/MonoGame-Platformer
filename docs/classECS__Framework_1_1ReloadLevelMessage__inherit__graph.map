@@ -1,4 +1,0 @@
-<map id="ECS_Framework.ReloadLevelMessage" name="ECS_Framework.ReloadLevelMessage">
-<area shape="rect" id="node1" title="Represents a message that indicates the current game level should be reloaded. Implements the IMessag..." alt="" coords="5,80,216,121"/>
-<area shape="rect" id="node2" href="$interfaceECS__Framework_1_1IMessage.html" title="Represents a message that can be published and subscribed to." alt="" coords="69,5,153,32"/>
-</map>

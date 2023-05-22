@@ -4,7 +4,8 @@ using System.Collections.Generic;
 namespace MonogameExamples
 {
     /// <summary>
-    /// Component that holds an entity type identifier for classification and management purposes.
+    /// <see cref="Component"/> that holds an entity type identifier for classification and management purposes.
+    /// Can be replaced by Tag component if game requires it.
     /// </summary>
     public class EntityTypeComponent : Component
     {

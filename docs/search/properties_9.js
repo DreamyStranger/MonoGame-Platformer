@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['tiledhandler_0',['tiledHandler',['../classMonogameExamples_1_1Loader.html#a4ee8db6a30f87fbfbd4789e5afb3841c',1,'MonogameExamples::Loader']]],
-  ['type_1',['Type',['../classMonogameExamples_1_1EntityTypeComponent.html#a3f9715e8b2f15c26f0b3b7d66069871a',1,'MonogameExamples::EntityTypeComponent']]]
+  ['position_0',['Position',['../classMonogameExamples_1_1MovementComponent.html#a61110dee5e6463265432e85e42736e34',1,'MonogameExamples.MovementComponent.Position()'],['../classMonogameExamples_1_1RespawnComponent.html#a042078eb0c9b99561b93012d5f57789d',1,'MonogameExamples.RespawnComponent.Position()']]],
+  ['previousstate_1',['previousState',['../classMonogameExamples_1_1StateComponent.html#a34c13378d44cd83f3b5037e7178b5d92',1,'MonogameExamples::StateComponent']]],
+  ['previoussuperstate_2',['previousSuperState',['../classMonogameExamples_1_1StateComponent.html#a47d9ca4c5e0b30312880ff37eb120277',1,'MonogameExamples::StateComponent']]]
 ];

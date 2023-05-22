@@ -7,7 +7,7 @@ namespace MonogameExamples
     public class ReloadLevelMessage : IMessage
     {
         /// <summary>
-        /// Initializes a new instance of the ReloadLevelMessage class.
+        /// Initializes a new instance of the <see cref="ReloadLevelMessage"/> class.
         /// </summary>
         public ReloadLevelMessage()
         {

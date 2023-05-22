@@ -28,6 +28,12 @@ namespace MonogameExamples
         public ParallaxComponent(BackgroundTexture sprite, Vector2 velocity, Vector2 position, int viewX, int viewY)
         {
             _texture = Loader.GetTexture(sprite);
+            // Check if the texture is null.
+            if (_texture == null)
+            {
+                return;
+            }
+
             _velocity = velocity;
             _position = position;
             _position2 = position;

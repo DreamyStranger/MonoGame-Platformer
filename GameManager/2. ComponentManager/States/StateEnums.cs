@@ -27,6 +27,9 @@ namespace MonogameExamples
         IsAppearing,
     }
 
+    /// <summary>
+    /// Possible animation states an object can be in.
+    /// </summary>
     public enum AnimationID
     {
         Idle,

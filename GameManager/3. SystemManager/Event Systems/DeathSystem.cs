@@ -5,7 +5,7 @@ using System;
 namespace MonogameExamples
 {
     /// <summary>
-    /// System that manages entity death events, triggering actions depending on the entity type.
+    /// <see cref="System"/> that manages entity death events, triggering actions depending on the entity type.
     /// </summary>
     public class DeathSystem : System
     {
@@ -33,7 +33,7 @@ namespace MonogameExamples
         /// </summary>
         public override void Subscribe()
         {
-             MessageBus.Subscribe<EntityDiedMessage>(EntityDied);
+            MessageBus.Subscribe<EntityDiedMessage>(EntityDied);
         }
 
         /// <summary>
@@ -50,41 +50,46 @@ namespace MonogameExamples
         /// <param name="gameTime">The current game time.</param>
         public override void Update(GameTime gameTime)
         {
-            for (int i = _entities.Count - 1; i >= 0; i--)
+            int n = _entities.Count - 1;
+            for (int i = n; i >= 0; i--)
             {
                 Entity entity = _entities[i];
-                if(!entity.IsActive)
+                if (!entity.IsActive)
                 {
                     continue;
                 }
-                StateComponent stateComponent = entity.GetComponent<StateComponent>();
-                AnimatedComponent animatedComponent = entity.GetComponent<AnimatedComponent>();
+
+                StateComponent stateComponent = entity.GetComponent<StateComponent>(); //can't be null
+                AnimationComponent animatedComponent = entity.GetComponent<AnimationComponent>(); //can't be null
                 RespawnComponent canBeRespawned = entity.GetComponent<RespawnComponent>();
+                EntityTypeComponent entityType = entity.GetComponent<EntityTypeComponent>();
 
-                if (stateComponent.CurrentSuperState == SuperState.IsDead)
+                if (stateComponent.CurrentSuperState != SuperState.IsDead)
                 {
-                    ActionAnimation deathAnimation = animatedComponent.GetCurrentAnimation();
+                    continue;
+                }
 
-                    // Check if the animation has completed
-                    if (deathAnimation.IsFinished)
-                    {
-                        if (entity.GetComponent<EntityTypeComponent>().Type == EntityType.Player)
-                        {
-                            MessageBus.Publish(new DestroyEntityMessage(entity));
-                            MessageBus.Publish(new ReloadLevelMessage());
-                        }
-                        else if(canBeRespawned != null)
-                        {
-                            entity.IsActive = false;
-                            deathAnimation.Reset();
-                            canBeRespawned.StartRespawn();
-                        }
-                        else
-                        {
-                            // Remove the entity
-                            MessageBus.Publish(new DestroyEntityMessage(entity));
-                        }
-                    }
+                ActionAnimation deathAnimation = animatedComponent.GetCurrentAnimation();
+                if (!deathAnimation.IsFinished)
+                {
+                    continue;
+                }
+
+                // Trigger death event
+                if (entityType != null && entityType.Type == EntityType.Player)
+                {
+                    MessageBus.Publish(new DestroyEntityMessage(entity));
+                    MessageBus.Publish(new ReloadLevelMessage());
+                }
+                else if (canBeRespawned != null)
+                {
+                    entity.IsActive = false;
+                    deathAnimation.Reset();
+                    canBeRespawned.StartRespawn();
+                }
+                else
+                {
+                    MessageBus.Publish(new DestroyEntityMessage(entity));
                 }
             }
         }

@@ -22,9 +22,9 @@ namespace MonogameExamples
         /// </summary>
         public TileHandler()
         {
-            this._tiledMaps = new Dictionary<string, TiledMap>();
-            this._tileSets = new Dictionary<string, Dictionary<int, TiledTileset>>();
-            this.objects = new Dictionary<string, Dictionary<string, List<Rectangle>>>();
+            _tiledMaps = new Dictionary<string, TiledMap>();
+            _tileSets = new Dictionary<string, Dictionary<int, TiledTileset>>();
+            objects = new Dictionary<string, Dictionary<string, List<Rectangle>>>();
         }
 
         /// <summary>
@@ -36,12 +36,19 @@ namespace MonogameExamples
         /// <param name="textureName">The name to give the loaded tileset texture.</param>
         public void Load(string pathToMap, string pathToFolder, string levelID)
         {
-            // Load the tileset using TiledCS
-            TiledMap map = new TiledMap(pathToMap);
-            var tilesets = map.GetTiledTilesets(pathToFolder);
+            try
+            {
+                TiledMap map = new TiledMap(pathToMap);
+                var tilesets = map.GetTiledTilesets(pathToFolder);
 
-            _tiledMaps[levelID] = map;
-            _tileSets[levelID] = tilesets;
+                _tiledMaps[levelID] = map ?? throw new Exception("Map file was not found or could not be loaded.");
+                _tileSets[levelID] = tilesets ?? throw new Exception("Tileset could not be loaded.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error while loading the map or its tilesets: {ex.Message}");
+                throw;
+            }
         }
 
         /// <summary>
@@ -59,12 +66,10 @@ namespace MonogameExamples
         /// Creates rectangles representing the objects of a specified layer.
         /// </summary>
         /// <param name="layer">The layer to create bounds for.</param>
-        /// <param name="mapName">The name of the map the layer belongs to.</param>
         /// <returns>A list of rectangles representing the layer's bounds.</returns>
-        public List<Rectangle> GetLayerObjects(TiledLayer layer, string mapName)
+        public List<Rectangle> GetLayerObjects(TiledLayer layer)
         {
             List<Rectangle> layerBounds = new List<Rectangle>();
-            TiledMap map = _tiledMaps[mapName];
 
             foreach (var obj in layer.objects)
             {
@@ -94,7 +99,7 @@ namespace MonogameExamples
                     {
                         continue;
                     }
-                    List<Rectangle> layerBounds = GetLayerObjects(layer, mapName);
+                    List<Rectangle> layerBounds = GetLayerObjects(layer);
                     if (!layerBoundsMap.ContainsKey(layerName))
                     {
                         layerBoundsMap[layerName] = new List<Rectangle>();

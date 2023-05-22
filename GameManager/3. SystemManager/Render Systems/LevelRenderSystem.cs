@@ -14,7 +14,7 @@ namespace MonogameExamples
         private string _levelID;
 
         /// <summary>
-        /// Initializes a new instance of the LevelRenderSystem class and creates an empty list of EntityData.
+        /// Initializes a new instance of the <see cref="LevelRenderSystem"/> class.
         /// </summary>
         public LevelRenderSystem(LevelID levelID)
         {
@@ -28,16 +28,6 @@ namespace MonogameExamples
         public override void Draw(SpriteBatch spriteBatch)
         {
             Loader.tiledHandler.Draw(_levelID, spriteBatch);
-        }
-
-        /// <summary>
-        /// Sets the current animation for an entity based on its current state.
-        /// </summary>
-        /// <param name="state">The state component of the entity.</param>
-        /// <param name="animations">The animated component of the entity.</param>
-        private void GetAnimationForState(StateComponent state, AnimatedComponent animations)
-        {
-            animations.SetCurrentAction(state.AnimationState);
         }
     }
 }

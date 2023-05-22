@@ -102,9 +102,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a858b4a81c2bf1201880577ca2e20b686"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1CollisionBoxComponent.html#a858b4a81c2bf1201880577ca2e20b686">SetGroundLocation</a> (int left, int right)</td></tr>
 <tr class="memdesc:a858b4a81c2bf1201880577ca2e20b686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the boundaries of the platform for checking if the entity is on the ground.  <a href="classMonogameExamples_1_1CollisionBoxComponent.html#a858b4a81c2bf1201880577ca2e20b686">More...</a><br /></td></tr>
 <tr class="separator:a858b4a81c2bf1201880577ca2e20b686"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2df8976f1d702a1fb7534371c410458"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1CollisionBoxComponent.html#ad2df8976f1d702a1fb7534371c410458">checkIfInAir</a> (float position, int direction)</td></tr>
-<tr class="memdesc:ad2df8976f1d702a1fb7534371c410458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the entity is in the air (not on the platform).  <a href="classMonogameExamples_1_1CollisionBoxComponent.html#ad2df8976f1d702a1fb7534371c410458">More...</a><br /></td></tr>
-<tr class="separator:ad2df8976f1d702a1fb7534371c410458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78015ae4f85044f6b4bb68855b6c90a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1CollisionBoxComponent.html#a78015ae4f85044f6b4bb68855b6c90a5">SetSlidingLocation</a> (int bottom)</td></tr>
+<tr class="memdesc:a78015ae4f85044f6b4bb68855b6c90a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the bottom of the platform for checking if the entity is sliding.  <a href="classMonogameExamples_1_1CollisionBoxComponent.html#a78015ae4f85044f6b4bb68855b6c90a5">More...</a><br /></td></tr>
+<tr class="separator:a78015ae4f85044f6b4bb68855b6c90a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a3f269f26a26c2bce915cb3c48c6213"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1CollisionBoxComponent.html#a6a3f269f26a26c2bce915cb3c48c6213">CheckIfInAir</a> (float position, int direction)</td></tr>
+<tr class="memdesc:a6a3f269f26a26c2bce915cb3c48c6213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the entity is in the air (not on the platform).  <a href="classMonogameExamples_1_1CollisionBoxComponent.html#a6a3f269f26a26c2bce915cb3c48c6213">More...</a><br /></td></tr>
+<tr class="separator:a6a3f269f26a26c2bce915cb3c48c6213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd694e632660a3b9df45c63f6519721"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1CollisionBoxComponent.html#acdd694e632660a3b9df45c63f6519721">CheckIfBelow</a> (float position)</td></tr>
+<tr class="memdesc:acdd694e632660a3b9df45c63f6519721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the entity is below platform when sliding.  <a href="classMonogameExamples_1_1CollisionBoxComponent.html#acdd694e632660a3b9df45c63f6519721">More...</a><br /></td></tr>
+<tr class="separator:acdd694e632660a3b9df45c63f6519721"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -139,11 +145,11 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a916cd2e5fbb72e6b61ae660173824bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The collision box for the entity.  <a href="classMonogameExamples_1_1CollisionBoxComponent.html#a916cd2e5fbb72e6b61ae660173824bad">More...</a><br /></td></tr>
 <tr class="separator:a916cd2e5fbb72e6b61ae660173824bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fba4e8b97b6bfc0155f510b7560842f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1CollisionBoxComponent.html#a0fba4e8b97b6bfc0155f510b7560842f">_groundLeft</a> = 0</td></tr>
-<tr class="memdesc:a0fba4e8b97b6bfc0155f510b7560842f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The left boundary of the platform the entity is currently standing on.  <a href="classMonogameExamples_1_1CollisionBoxComponent.html#a0fba4e8b97b6bfc0155f510b7560842f">More...</a><br /></td></tr>
 <tr class="separator:a0fba4e8b97b6bfc0155f510b7560842f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace18f22e0f69334e971cf5730349dc57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1CollisionBoxComponent.html#ace18f22e0f69334e971cf5730349dc57">_groundRight</a> = GameConstants.SCREEN_WIDTH</td></tr>
-<tr class="memdesc:ace18f22e0f69334e971cf5730349dc57"><td class="mdescLeft">&#160;</td><td class="mdescRight">// The right boundary of the platform entity currently standing on.  <a href="classMonogameExamples_1_1CollisionBoxComponent.html#ace18f22e0f69334e971cf5730349dc57">More...</a><br /></td></tr>
 <tr class="separator:ace18f22e0f69334e971cf5730349dc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c789a46ae96f735f6bc0c10b74cb9a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonogameExamples_1_1CollisionBoxComponent.html#a0c789a46ae96f735f6bc0c10b74cb9a4">_groundBottom</a> = GameConstants.SCREEN_HEIGHT</td></tr>
+<tr class="separator:a0c789a46ae96f735f6bc0c10b74cb9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="classMonogameExamples_1_1Component.html" title="The base class for all components.">Component</a> that contains data and methods related to collision box of an entity in the game. </p>
@@ -230,8 +236,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad2df8976f1d702a1fb7534371c410458" name="ad2df8976f1d702a1fb7534371c410458"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2df8976f1d702a1fb7534371c410458">&#9670;&nbsp;</a></span>checkIfInAir()</h2>
+<a id="acdd694e632660a3b9df45c63f6519721" name="acdd694e632660a3b9df45c63f6519721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdd694e632660a3b9df45c63f6519721">&#9670;&nbsp;</a></span>CheckIfBelow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,7 +246,42 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool MonogameExamples.CollisionBoxComponent.checkIfInAir </td>
+          <td class="memname">bool MonogameExamples.CollisionBoxComponent.CheckIfBelow </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the entity is below platform when sliding. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The top boundary of the entity (y-axis).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the entity is in the air (not sliding), false otherwise.</dd></dl>
+
+</div>
+</div>
+<a id="a6a3f269f26a26c2bce915cb3c48c6213" name="a6a3f269f26a26c2bce915cb3c48c6213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a3f269f26a26c2bce915cb3c48c6213">&#9670;&nbsp;</a></span>CheckIfInAir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MonogameExamples.CollisionBoxComponent.CheckIfInAir </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>position</em>, </td>
@@ -267,8 +308,7 @@ Private Attributes</h2></td></tr>
 <p>Checks if the entity is in the air (not on the platform). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">left</td><td>The left boundary of the entity.</td></tr>
-    <tr><td class="paramname">right</td><td>The right boundary of the entity.</td></tr>
+    <tr><td class="paramname">position</td><td>The left boundary of the entity (x-axis).</td></tr>
   </table>
   </dd>
 </dl>
@@ -343,6 +383,40 @@ Private Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">left</td><td>The left boundary of the platform.</td></tr>
     <tr><td class="paramname">right</td><td>The right boundary of the platform.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a78015ae4f85044f6b4bb68855b6c90a5" name="a78015ae4f85044f6b4bb68855b6c90a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78015ae4f85044f6b4bb68855b6c90a5">&#9670;&nbsp;</a></span>SetSlidingLocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MonogameExamples.CollisionBoxComponent.SetSlidingLocation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bottom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the bottom of the platform for checking if the entity is sliding. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bottom</td><td>The bottom boundary of the platform.</td></tr>
   </table>
   </dd>
 </dl>
@@ -426,6 +500,28 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0c789a46ae96f735f6bc0c10b74cb9a4" name="a0c789a46ae96f735f6bc0c10b74cb9a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c789a46ae96f735f6bc0c10b74cb9a4">&#9670;&nbsp;</a></span>_groundBottom</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MonogameExamples.CollisionBoxComponent._groundBottom = GameConstants.SCREEN_HEIGHT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0fba4e8b97b6bfc0155f510b7560842f" name="a0fba4e8b97b6bfc0155f510b7560842f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0fba4e8b97b6bfc0155f510b7560842f">&#9670;&nbsp;</a></span>_groundLeft</h2>
 
@@ -445,8 +541,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>The left boundary of the platform the entity is currently standing on. </p>
 
 </div>
 </div>
@@ -469,8 +563,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>// The right boundary of the platform entity currently standing on. </p>
 
 </div>
 </div>

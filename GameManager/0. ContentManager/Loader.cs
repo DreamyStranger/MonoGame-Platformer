@@ -62,6 +62,7 @@ namespace MonogameExamples
             //Background tile for parallax
             AddTexture(BackgroundTexture.Green, content, "Background", "BG_Green");
             AddTexture(BackgroundTexture.Yellow, content, "Background", "BG_Yellow");
+
             // ... add more textures here
 
             //Load TiledMaps
@@ -90,6 +91,13 @@ namespace MonogameExamples
             collisionBox.SetData(new[] { Color.White });
         }
 
+        /// <summary>
+        /// Loads a texture into memory and associates it with a key in the textures dictionary. 
+        /// </summary>
+        /// <param name="textureKey">The key with which the texture will be associated in the dictionary. It should be a value from an Enum.</param>
+        /// <param name="content">ContentManager instance that is used for loading the texture.</param>
+        /// <param name="pathParts">An array of strings that represent parts of the path to the texture file. They will be combined to form the full path.</param>
+        /// <typeparam name="T">An Enum type that is used as the key in the dictionary.</typeparam>
         public static void AddTexture<T>(T textureKey, ContentManager content, params string[] pathParts) where T : Enum
         {
             string path = Path.Combine(pathParts);
@@ -106,12 +114,19 @@ namespace MonogameExamples
         /// <param name="musicKey">The name of the music file, used as the key in the dictionary.</param>
         /// <param name="content">The ContentManager to load assets with.</param>
         /// <param name="pathParts">An array of strings representing the path parts to the music file. These will be combined using Path.Combine.</param>
-        private static void AddMusic<T>(T musicKey, ContentManager content, params string[] pathParts) where T: Enum
+        private static void AddMusic<T>(T musicKey, ContentManager content, params string[] pathParts) where T : Enum
         {
             string path = Path.Combine(pathParts);
             songs.Add(musicKey, content.Load<Song>(path));
         }
 
+
+        /// <summary>
+        /// Retrieves a texture from the textures dictionary using the provided key. 
+        /// </summary>
+        /// <param name="textureKey">The key associated with the texture to retrieve. It should be a value from an Enum.</param>
+        /// <returns>The Texture2D associated with the key. If the key is not found in the dictionary, the method returns null.</returns>
+        /// <typeparam name="T">An Enum type that is used as the key in the dictionary.</typeparam>
         public static Texture2D GetTexture<T>(T textureKey) where T : Enum
         {
             if (textures.ContainsKey(textureKey))

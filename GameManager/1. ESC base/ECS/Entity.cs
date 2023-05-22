@@ -8,17 +8,23 @@ namespace MonogameExamples
     /// </summary>
     public class Entity
     {
-        // Stores a dictionary where the key is the Type of the Component and the value is the Component instance.
-        private Dictionary<Type, Component> components;
-        
+        /// <summary>
+        /// Stores a dictionary where the key is the Type of the Component and the value is the Component instance.
+        /// </summary>
+        private Dictionary<Type, Component> _components;
+
+        /// <summary>
+        /// Tells if the Entity is active.
+        /// </summary>
         public bool IsActive;
 
         /// <summary>
         /// Initializes a new instance of the Entity class.
         /// </summary>
+        /// <param name="isActive">Determines if the entity is active or not. Default is true.</param>
         public Entity(bool isActive = true)
         {
-            components = new Dictionary<Type, Component>();
+            _components = new Dictionary<Type, Component>();
             IsActive = isActive;
         }
 
@@ -29,11 +35,11 @@ namespace MonogameExamples
         public void AddComponent(Component component)
         {
             Type type = component.GetType();
-            if (!components.ContainsKey(type))
+            if (!_components.ContainsKey(type))
             {
-                components.Add(type, component);
+                _components.Add(type, component);
             }
-            else
+            else if(GameConstants.EntityDebugMessages)
             {
                 Console.WriteLine($"Component of type {type} already exists!");
             }
@@ -46,11 +52,11 @@ namespace MonogameExamples
         public void RemoveComponent<T>() where T : Component
         {
             Type type = typeof(T);
-            if (components.ContainsKey(type))
+            if (_components.ContainsKey(type))
             {
-                components.Remove(type);
+                _components.Remove(type);
             }
-            else
+            else if(GameConstants.EntityDebugMessages)
             {
                 Console.WriteLine("Tried to remove a component that doesn't exist!");
             }
@@ -64,9 +70,13 @@ namespace MonogameExamples
         public T GetComponent<T>() where T : Component
         {
             Type type = typeof(T);
-            if (components.TryGetValue(type, out Component component) && component is T tComponent)
+            if (_components.TryGetValue(type, out Component component) && component is T tComponent)
             {
                 return tComponent;
+            }
+            else if(GameConstants.EntityDebugMessages)
+            {
+                Console.WriteLine("Tried to get a component that doesn't exist!");
             }
             return null;
         }
@@ -77,7 +87,7 @@ namespace MonogameExamples
         /// <returns>A list of all the components of the entity.</returns>
         public List<Component> GetAllComponents()
         {
-            List<Component> componentList = new List<Component>(components.Values);
+            List<Component> componentList = new List<Component>(_components.Values);
             return componentList;
         }
     }

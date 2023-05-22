@@ -12,13 +12,12 @@ namespace MonogameExamples
         /// Loads entities from the specified level's Tiled map.
         /// </summary>
         /// <param name="level">The level to load entities for.</param>
-        /// <returns>A list of entities loaded from the level's Tiled map.</returns>
         public static void GetObjects(LevelID level)
         {
-            var objectDictionary = Loader.tiledHandler.objects[level.ToString()];
-
+            // Fetch the TiledMap for the given level
             TiledMap map = Loader.tiledHandler.GetMap(level);
 
+            // Iterate over each layer in the map
             foreach (var layer in map.Layers)
             {
                 // Skip layers that are not entity layers
@@ -27,10 +26,13 @@ namespace MonogameExamples
                     continue;
                 }
 
+                // Iterate over each object in the layer
                 foreach (var obj in layer.objects)
                 {
+                    // Create position vector from object coordinates
                     Vector2 position = new Vector2((float)obj.x, (float)obj.y);
 
+                    // Handle object creation based on object name
                     switch (obj.name)
                     {
                         case "bg":
@@ -60,17 +62,20 @@ namespace MonogameExamples
         /// Creates a parallax background entity from the specified Tiled object.
         /// </summary>
         /// <param name="obj">The Tiled object representing the background.</param>
-        /// <returns>A new parallax background entity.</returns>
         private static void Background(TiledObject obj)
         {
+            // Set default values for background color and velocities
             string bg_name = "bg_yellow";
             int velocityX = 0;
             int velocityY = 0;
+
+            // Iterate over properties to update values as needed
             foreach (var property in obj.properties)
             {
                 switch (property.name)
                 {
                     case "color":
+                        bg_name = property.value;
                         break;
 
                     case "velocityX":
@@ -78,18 +83,18 @@ namespace MonogameExamples
                         break;
 
                     case "velocityY":
-                        int.TryParse(property.value, out velocityY);
+                        if (int.TryParse(property.value, out int tempVelocity))
+                        {
+                            velocityY = tempVelocity;
+                        }
                         break;
 
                     default:
                         break;
                 }
-                if (property.name == "color")
-                {
-                    bg_name = property.value;
-                }
             }
 
+            // Create the background entity
             EntityFactory.CreateParallaxBackground(bg_name, new Vector2(velocityX, velocityY));
         }
 
@@ -98,31 +103,35 @@ namespace MonogameExamples
         /// </summary>
         /// <param name="obj">The TiledObject representing the enemy.</param>
         /// <param name="position">The position of the enemy in the game world.</param>
-        /// <returns>A new regular enemy entity.</returns>
         private static void RegularEnemy(TiledObject obj, Vector2 position)
         {
-            // Set default values for left and right movement range, and initial direction
+            // Set default values for enemy movement range and initial direction
             int leftRange = 40;
             int rightRange = 40;
             State direction = State.WalkLeft;
 
-            // Loop through object properties and update values if necessary
+            // Iterate over object properties and update values if necessary
             foreach (var property in obj.properties)
             {
                 switch (property.name)
                 {
                     case "left":
-                        int.TryParse(property.value, out leftRange);
+                        if (int.TryParse(property.value, out int tempLeftRange))
+                        {
+                            leftRange = tempLeftRange;
+                        }
                         break;
 
                     case "right":
-                        int.TryParse(property.value, out rightRange);
+                        if (int.TryParse(property.value, out int tempRightRange))
+                        {
+                            rightRange = tempRightRange;
+                        }
                         break;
 
                     case "direction":
-                        int result = 0;
-                        int.TryParse(property.value, out result);
-                        if (result == 1)
+                        // If "direction" value is 1, enemy is set to walk right
+                        if (int.TryParse(property.value, out int result) && result == 1)
                         {
                             direction = State.WalkRight;
                         }
@@ -130,7 +139,7 @@ namespace MonogameExamples
                 }
             }
 
-            // Create and return a new regular enemy
+            // Create a regular enemy with the parsed properties
             EntityFactory.CreateRegularEnemy(position, leftRange, rightRange, direction);
         }
 
@@ -139,10 +148,12 @@ namespace MonogameExamples
         /// </summary>
         /// <param name="obj">The TiledObject containing the fruit properties.</param>
         /// <param name="position">The position of the fruit.</param>
-        /// <returns>The created fruit entity.</returns>
         private static void Fruit(TiledObject obj, Vector2 position)
         {
+            // Set default fruit type
             string fruitType = "apple";
+
+            // Iterate over object properties and update values if necessary
             foreach (var property in obj.properties)
             {
                 switch (property.name)
@@ -153,7 +164,7 @@ namespace MonogameExamples
                 }
             }
 
-            // Create and return the fruit entity
+            // Create fruit entity with the parsed properties
             EntityFactory.CreateFruit(position, fruitType);
         }
     }

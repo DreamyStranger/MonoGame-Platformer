@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['velocity_0',['Velocity',['../classMonogameExamples_1_1MovementComponent.html#a88c894cdd1f1c79dc4984b3cc3f19477',1,'MonogameExamples::MovementComponent']]],
-  ['vertbottomoffset_1',['VertBottomOffset',['../classMonogameExamples_1_1CollisionBoxComponent.html#a9f53e5d318f61bef13644b8296c14e58',1,'MonogameExamples::CollisionBoxComponent']]],
-  ['verttopoffset_2',['VertTopOffset',['../classMonogameExamples_1_1CollisionBoxComponent.html#a3d5f19f21421b06054df64c48c89dc40',1,'MonogameExamples::CollisionBoxComponent']]]
+  ['tiledhandler_0',['tiledHandler',['../classMonogameExamples_1_1Loader.html#a4ee8db6a30f87fbfbd4789e5afb3841c',1,'MonogameExamples::Loader']]],
+  ['type_1',['Type',['../classMonogameExamples_1_1EntityTypeComponent.html#a3f9715e8b2f15c26f0b3b7d66069871a',1,'MonogameExamples::EntityTypeComponent']]]
 ];

@@ -1,4 +1,0 @@
-<map id="ECS_Framework.DestroyEntityMessage" name="ECS_Framework.DestroyEntityMessage">
-<area shape="rect" id="node1" title="Represents a message that indicates an entity should be destroyed. Implements the IMessage interface ..." alt="" coords="5,80,225,121"/>
-<area shape="rect" id="node2" href="$interfaceECS__Framework_1_1IMessage.html" title="Represents a message that can be published and subscribed to." alt="" coords="73,5,157,32"/>
-</map>

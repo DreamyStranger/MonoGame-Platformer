@@ -3,18 +3,19 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonogameExamples
 {
-    /// <summary>
-    /// Component representing the movement state of a simple walking enemy entity.
+    //// <summary>
+    /// <see cref="Component"/> responsible for controlling a regular enemy's movement within a specified range. 
+    /// It decides the direction of movement based on the enemy's current position.
     /// </summary>
     public class RegularEnemyComponent : Component
     {
         /// <summary>
-        /// Indicates whether the enemy is moving left.
+        /// Gets a value indicating whether the enemy should move to the left.
         /// </summary>
         public bool IsLeft { get; private set; }
 
         /// <summary>
-        /// Indicates whether the enemy is moving right.
+        /// Gets a value indicating whether the enemy should move to the right.
         /// </summary>
         public bool IsRight { get; private set; }
 
@@ -22,11 +23,11 @@ namespace MonogameExamples
         private float _right;
 
         /// <summary>
-        /// Initializes a new instance of the SimpleWalkingEnemyComponent class.
+        /// Initializes a new instance of the RegularEnemyComponent class with a specific starting position and movement range.
         /// </summary>
         /// <param name="start">The starting position of the enemy on the x-axis.</param>
-        /// <param name="leftRange">The range the enemy can move to the left.</param>
-        /// <param name="rightRange">The range the enemy can move to the right.</param>
+        /// <param name="leftRange">The distance the enemy is allowed to move to the left from the start position.</param>
+        /// <param name="rightRange">The distance the enemy is allowed to move to the right from the start position.</param>
         public RegularEnemyComponent(float start, float leftRange, float rightRange)
         {
             _left = start - leftRange;
@@ -34,9 +35,9 @@ namespace MonogameExamples
         }
 
         /// <summary>
-        /// Updates the component's movement state based on the enemy's position.
+        /// Updates the enemy's movement direction based on its current position.
         /// </summary>
-        /// <param name="positionX">The enemy's position on the x-axis.</param>
+        /// <param name="positionX">The enemy's current position on the x-axis.</param>
         public void Update(float positionX)
         {
             IsLeft = false;

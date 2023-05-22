@@ -6,12 +6,16 @@ using Microsoft.Xna.Framework.Graphics;
 namespace MonogameExamples
 {
     /// <summary>
-    /// Represents a system that handles collisions between the player entity and other entities.
+    /// <see cref="System"/> that handles collisions between the player entity and other entities.
     /// </summary>
     public class PlayerEntityCollisionSystem : System
     {
         private List<EntityData> _entitiesData;
         private EntityData _playerData;
+
+        /// <summary>
+        /// Creates an instance of <see cref="PlayerEntityCollisionSystem"/> class.
+        /// </summary>
         public PlayerEntityCollisionSystem()
         {
             _entitiesData = new List<EntityData>();
@@ -41,10 +45,13 @@ namespace MonogameExamples
                 Movement = movement,
             };
 
-            _entitiesData.Add(data);
             if (entity.GetComponent<EntityTypeComponent>().Type == EntityType.Player)
             {
                 _playerData = data;
+            }
+            else
+            {
+                _entitiesData.Add(data);
             }
         }
 
@@ -54,7 +61,14 @@ namespace MonogameExamples
         /// <param name="entity">The entity to be removed.</param>
         public override void RemoveEntity(Entity entity)
         {
-            _entitiesData.RemoveAll(data => data.Entity == entity);
+            if (entity.GetComponent<EntityTypeComponent>().Type == EntityType.Player)
+            {
+                _playerData = new EntityData();
+            }
+            else
+            {
+                _entitiesData.RemoveAll(data => data.Entity == entity);
+            }
         }
 
         /// <summary>
@@ -63,23 +77,18 @@ namespace MonogameExamples
         /// <param name="gameTime">The current game time.</param>
         public override void Update(GameTime gameTime)
         {
-            if (_entitiesData.Count <= 1 || _playerData.Entity == null)
-            {
-                return;
-            }
-
             foreach (EntityData data in _entitiesData)
             {
-                if (_playerData.State.CurrentSuperState == SuperState.IsDead)
+                if (_playerData.State.CurrentSuperState == SuperState.IsDead || _playerData.State.CurrentSuperState == SuperState.IsAppearing || !_playerData.Entity.IsActive)
                 {
                     return;
                 }
-                if (data.Entity == _playerData.Entity || !data.Entity.IsActive || data.State.CurrentSuperState == SuperState.IsAppearing || data.State.CurrentSuperState == SuperState.IsDead)
+                if (!data.Entity.IsActive || data.State.CurrentSuperState == SuperState.IsAppearing || data.State.CurrentSuperState == SuperState.IsDead)
                 {
                     continue;
                 }
 
-                //Update Collision Boxes
+                //Update Collision Boxes, should have done at any system manipulating movements before
                 /*
                 _playerData.CollisionBox.UpdateBoxPosition(_playerData.Movement.Position.X, _playerData.Movement.Position.Y, _playerData.State.HorizontalDirection);
                 data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
@@ -96,7 +105,7 @@ namespace MonogameExamples
                             ResolveCoinCollision(_playerData, data);
                             break;
                         case EntityType.RegularEnemy:
-                            ResolveWalkingEnemyCollision(_playerData, data);
+                            ResolveRegularEnemyCollision(_playerData, data);
                             break;
                         case EntityType.PortalToNextLevel:
                             ResolveNextLevelCollision(_playerData, data);
@@ -120,9 +129,8 @@ namespace MonogameExamples
         /// <param name="coinData">The data for the coin entity.</param>
         private void ResolveCoinCollision(EntityData playerData, EntityData coinData)
         {
-            // Mark the coin as dead and set its state to idle
+            // Mark the coin as dead
             coinData.State.CurrentSuperState = SuperState.IsDead;
-            coinData.State.CurrentState = State.Idle;
             MessageBus.Publish(new EntityDiedMessage(coinData.Entity));
         }
 
@@ -142,38 +150,46 @@ namespace MonogameExamples
         /// </summary>
         /// <param name="player">The data for the player entity.</param>
         /// <param name="enemy">The data for the enemy entity.</param>
-        private void ResolveWalkingEnemyCollision(EntityData player, EntityData enemy)
+        private void ResolveRegularEnemyCollision(EntityData player, EntityData enemy)
         {
+
             // If the player is falling, kill the enemy and set its state to idle
-            if (player.State.CurrentSuperState == SuperState.IsFalling)
+            switch (player.State.CurrentSuperState)
             {
-                int direction = player.State.HorizontalDirection;
-                float positionX = player.Movement.Position.X;
-                float positionY = player.Movement.Position.Y;
-                bool properHit = HandleFallCollision(player, player.CollisionBox.GetRectangle(), enemy.CollisionBox.GetRectangle(), ref positionX, ref positionY);
-                if (properHit)
-                {
+                case SuperState.IsFalling:
+                    int direction = player.State.HorizontalDirection;
+                    float positionX = player.Movement.Position.X;
+                    float positionY = player.Movement.Position.Y;
+
+                    bool properHit = HandleFallCollision(player, player.CollisionBox.GetRectangle(), enemy.CollisionBox.GetRectangle(), ref positionX, ref positionY);
+                    if (!properHit)
+                    {
+                        break;
+                    }
+
                     enemy.Movement.Velocity = new Vector2(0, -20);
                     enemy.Movement.Acceleration = new Vector2(0, 100);
                     enemy.State.CurrentSuperState = SuperState.IsDead;
                     enemy.State.CurrentState = State.Idle;
 
                     player.Movement.Position = new Vector2(positionX, positionY);
-                    player.CollisionBox.UpdateBoxPosition(positionX, positionY, direction);
                     player.Movement.Velocity = new Vector2(GameConstants.SpeedXonCollision * direction, player.Movement.Velocity.Y - GameConstants.SpeedYonCollision);
                     player.State.CurrentSuperState = SuperState.IsJumping;
                     player.State.CurrentState = State.Idle;
                     player.State.JumpsPerformed = 1;
 
                     MessageBus.Publish(new EntityDiedMessage(enemy.Entity));
-                    return;
-                }
+                    break;
+
+                default:
+                    player.State.CurrentSuperState = SuperState.IsDead;
+                    player.State.CurrentState = State.Idle;
+                    player.Movement.Velocity = new Vector2(0, -200);
+                    player.Movement.Acceleration = new Vector2(0, 1000);
+
+                    MessageBus.Publish(new EntityDiedMessage(player.Entity));
+                    break;
             }
-            player.State.CurrentSuperState = SuperState.IsDead;
-            player.State.CurrentState = State.Idle;
-            player.Movement.Velocity = new Vector2(0, -200);
-            player.Movement.Acceleration = new Vector2(0, 1000);
-            MessageBus.Publish(new EntityDiedMessage(player.Entity));
         }
 
         //Helper Methods
@@ -196,8 +212,6 @@ namespace MonogameExamples
             if (collidesWithTopSide && wasAbove)
             {
                 positionY = rect.Top - data.CollisionBox.OriginalHeight + data.CollisionBox.VertBottomOffset;
-                // I will leave it be in case I find usage for this later
-                data.CollisionBox.SetGroundLocation(rect.Left, rect.Right);
                 data.Movement.Velocity = Vector2.Zero;
                 data.Movement.Acceleration = Vector2.Zero;
                 return true;

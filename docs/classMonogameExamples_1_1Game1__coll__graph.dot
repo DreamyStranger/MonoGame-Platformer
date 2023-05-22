@@ -9,5 +9,5 @@ digraph "MonogameExamples.Game1"
   Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" world" ,fontname="Helvetica"];
   Node3 [label="MonogameExamples.World",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMonogameExamples_1_1World.html",tooltip="Represents the game world and manages loading and updating levels."];
   Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _systems" ,fontname="Helvetica"];
-  Node4 [label="MonogameExamples.SystemManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structMonogameExamples_1_1SystemManager.html",tooltip="Manages a collection of systems and provides methods to add, remove, update and draw entities through..."];
+  Node4 [label="MonogameExamples.SystemManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structMonogameExamples_1_1SystemManager.html",tooltip="Manages a collection of System classes and provides methods to add, remove, update and draw entities ..."];
 }

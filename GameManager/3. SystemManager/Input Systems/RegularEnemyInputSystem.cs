@@ -68,13 +68,14 @@ namespace MonogameExamples
             int n = inputs.Count;
             for (int i = 0; i < n; i++)
             {
-                if (!entities[i].IsActive)
+                StateComponent state = states[i];
+                if (!entities[i].IsActive || state.CurrentSuperState == SuperState.IsAppearing || state.CurrentSuperState == SuperState.IsDead)
                 {
                     continue;
                 }
 
                 inputs[i].Update(movements[i].Position.X);
-                UpdateEntityState(gameTime, inputs[i], states[i]);
+                UpdateEntityState(gameTime, inputs[i], state);
             }
         }
 

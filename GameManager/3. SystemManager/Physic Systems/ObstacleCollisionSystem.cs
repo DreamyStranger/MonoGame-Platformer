@@ -118,12 +118,12 @@ namespace MonogameExamples
                                 break;
                         }
                         //Console.WriteLine($"Obstacle: {rect.ToString()}, StateID: {data.State.stateID}"); //Debug Message
-
-                        //Update entity's position and collisionBox
-                        data.Movement.Position = new Vector2(positionX, positionY);
-                        data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
                     }
                 }
+
+                //Update entity's position and collisionBox
+                data.Movement.Position = new Vector2(positionX, positionY);
+                data.CollisionBox.UpdateBoxPosition(data.Movement.Position.X, data.Movement.Position.Y, data.State.HorizontalDirection);
 
                 //Check if entity is not on platform anymore
                 if (data.CollisionBox.CheckIfInAir(data.Movement.Position.X, data.State.HorizontalDirection))

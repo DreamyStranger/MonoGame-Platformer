@@ -184,8 +184,8 @@ namespace MonogameExamples
                 default:
                     player.State.CurrentSuperState = SuperState.IsDead;
                     player.State.CurrentState = State.Idle;
-                    player.Movement.Velocity = new Vector2(0, GameConstants.SpeedY/2);
-                    player.Movement.Acceleration = new Vector2(0, GameConstants.GRAVITY/2);
+                    player.Movement.Velocity = new Vector2(0, GameConstants.SpeedY / 2);
+                    player.Movement.Acceleration = new Vector2(0, GameConstants.GRAVITY / 2);
 
                     MessageBus.Publish(new EntityDiedMessage(player.Entity));
                     break;
@@ -206,17 +206,15 @@ namespace MonogameExamples
         private bool HandleFallCollision(EntityData data, Rectangle box, Rectangle rect, ref float positionX, ref float positionY)
         {
             bool wasAbove = data.Movement.LastPosition.Y + data.CollisionBox.OriginalHeight - data.CollisionBox.VertBottomOffset <= rect.Top + 1;
-            bool collidesWithTopSide = box.Bottom > rect.Top && box.Top <= rect.Top;
-
-
-            if (collidesWithTopSide && wasAbove)
+            if (!wasAbove)
             {
-                positionY = rect.Top - data.CollisionBox.OriginalHeight + data.CollisionBox.VertBottomOffset;
-                data.Movement.Velocity = Vector2.Zero;
-                data.Movement.Acceleration = Vector2.Zero;
-                return true;
+                return false;
             }
-            return false;
+
+            positionY = rect.Top - data.CollisionBox.OriginalHeight + data.CollisionBox.VertBottomOffset - 0.1f;
+            data.Movement.Velocity = Vector2.Zero;
+            data.Movement.Acceleration = Vector2.Zero;
+            return true;
         }
 
     }

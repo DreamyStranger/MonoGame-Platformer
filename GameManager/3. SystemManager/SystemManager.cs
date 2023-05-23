@@ -35,8 +35,8 @@ namespace MonogameExamples
             _systems.Add(new PlayerInputSystem());
             _systems.Add(new RegularEnemyInputSystem());
             _systems.Add(new MovementSystem());
-            _systems.Add(new ObstacleCollisionSystem(levelID));
             _systems.Add(new PlayerEntityCollisionSystem());
+            _systems.Add(new ObstacleCollisionSystem(levelID));
             _systems.Add(new AnimationRenderSystem());
             _systems.Add(new DeathSystem());
             _systems.Add(new TimerSystem());

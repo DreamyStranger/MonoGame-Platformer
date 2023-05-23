@@ -143,5 +143,12 @@ namespace MonogameExamples
             enemy.AddComponent(new RespawnComponent(position, respawnTime));
             MessageBus.Publish(new AddEntityMessage(enemy));
         }
+
+        public static void CreateTimer(Vector2 position, int duration, bool isActive)
+        {
+            // Create an empty timer entity
+            Entity timer = new Entity(isActive);
+            MessageBus.Publish(new GameTimerMessage(timer, duration, position));
+        }
     }
 }

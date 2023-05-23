@@ -51,6 +51,9 @@ namespace MonogameExamples
                             Fruit(obj, position);
                             break;
 
+                        case "timer":
+                            break;
+
                         default:
                             break;
                     }
@@ -166,6 +169,45 @@ namespace MonogameExamples
 
             // Create fruit entity with the parsed properties
             EntityFactory.CreateFruit(position, fruitType);
+        }
+
+        /// <summary>
+        /// Creates a timer entity based on the given TiledObject and position.
+        /// </summary>
+        /// <param name="obj">The TiledObject containing the timer properties.</param>
+        /// <param name="position">The position of the fruit.</param>
+        private static void Timer(TiledObject obj, Vector2 position)
+        {
+            // Set default timer duration, in seconds
+            int timer = 188;
+            bool isActive = true;
+
+            // Iterate over object properties and update values if necessary
+            foreach (var property in obj.properties)
+            {
+                switch (property.name)
+                {
+                    case "time":
+                        if (int.TryParse(property.value, out int tempTimer))
+                        {
+                            timer = tempTimer;
+                        }
+                        break;
+
+                    case "active":
+                        if (bool.TryParse(property.value, out bool temp))
+                        {
+                            isActive = temp;
+                        }
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+
+            // Create fruit entity with the parsed properties
+            EntityFactory.CreateTimer(position, timer, isActive);
         }
     }
 }

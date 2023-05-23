@@ -28,18 +28,25 @@ namespace MonogameExamples
         public void ResetSystems(LevelID levelID)
         {
             _systems = new List<System>();
-            _systems.Add(new ParallaxSystem());
-            _systems.Add(new LevelRenderSystem(levelID));
-            _systems.Add(new RespawnSystem());
-            _systems.Add(new AppearSystem());
+
+            // Input Systems
             _systems.Add(new PlayerInputSystem());
             _systems.Add(new RegularEnemyInputSystem());
+
+            // Game Logic Systems
             _systems.Add(new MovementSystem());
             _systems.Add(new PlayerEntityCollisionSystem());
             _systems.Add(new ObstacleCollisionSystem(levelID));
-            _systems.Add(new AnimationRenderSystem());
+            _systems.Add(new RespawnSystem());
+            _systems.Add(new AppearSystem());
             _systems.Add(new DeathSystem());
             _systems.Add(new TimerSystem());
+
+            // Render Systems
+            _systems.Add(new ParallaxSystem());
+            _systems.Add(new LevelRenderSystem(levelID));
+            _systems.Add(new AnimationRenderSystem());
+
         }
 
 

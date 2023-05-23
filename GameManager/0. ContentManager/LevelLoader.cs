@@ -52,6 +52,7 @@ namespace MonogameExamples
                             break;
 
                         case "timer":
+                            Timer(obj, position);
                             break;
 
                         default:

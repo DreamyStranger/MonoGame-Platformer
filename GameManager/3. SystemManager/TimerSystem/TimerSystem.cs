@@ -93,7 +93,7 @@ namespace MonogameExamples
                 int seconds = (int)_timer % 60;
                 string timerText = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-                spriteBatch.DrawString(font, timerText, _position, Color.White);
+                spriteBatch.DrawString(font, timerText, _position, Color.Black);
             }
         }
 

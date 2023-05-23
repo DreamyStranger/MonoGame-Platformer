@@ -19,6 +19,9 @@ namespace MonogameExamples
 
         // Music
         private static Dictionary<Enum, Song> songs = new Dictionary<Enum, Song>();
+        // Fonts
+        private static Dictionary<string, SpriteFont> fonts = new Dictionary<string, SpriteFont>();
+
 
         // TiledMap
         public static TileHandler tiledHandler { get; private set; }
@@ -32,6 +35,9 @@ namespace MonogameExamples
         /// <param name="content">The ContentManager to load assets with.</param>
         public static void LoadContent(ContentManager content)
         {
+            // Load fonts
+            AddFont("GameFont", content, "Fonts", "font");
+
             //Load music
             AddMusic(BackgroundMusic.Default, content, "Audio", "Background", "FuriousFreak");
             // ... add more music here
@@ -92,6 +98,22 @@ namespace MonogameExamples
         }
 
         /// <summary>
+        /// Loads a font into memory and associates it with a key in the fonts dictionary. 
+        /// </summary>
+        /// <param name="fontKey">The key with which the font will be associated in the dictionary.</param>
+        /// <param name="content">ContentManager instance that is used for loading the font.</param>
+        /// <param name="path">Path to the .spritefont file in the content project.</param>
+        public static void AddFont(string fontKey, ContentManager content, params string[] pathParts)
+        {
+            string path = Path.Combine(pathParts);
+            SpriteFont font = content.Load<SpriteFont>(path);
+            if (font != null)
+            {
+                fonts[fontKey] = font;
+            }
+        }
+
+        /// <summary>
         /// Loads a texture into memory and associates it with a key in the textures dictionary. 
         /// </summary>
         /// <param name="textureKey">The key with which the texture will be associated in the dictionary. It should be a value from an Enum.</param>
@@ -132,6 +154,20 @@ namespace MonogameExamples
             if (textures.ContainsKey(textureKey))
             {
                 return textures[textureKey];
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Retrieves a font from the fonts dictionary using the provided key. 
+        /// </summary>
+        /// <param name="fontKey">The key associated with the font to retrieve.</param>
+        /// <returns>The SpriteFont associated with the key. If the key is not found in the dictionary, the method returns null.</returns>
+        public static SpriteFont GetFont(string fontKey)
+        {
+            if (fonts.ContainsKey(fontKey))
+            {
+                return fonts[fontKey];
             }
             return null;
         }

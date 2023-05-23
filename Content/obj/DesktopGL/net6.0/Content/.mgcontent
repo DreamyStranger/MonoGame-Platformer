@@ -14,6 +14,7 @@
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Enemies/Voodo/Jump.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Enemies/Voodo/Run.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Enemies/Voodo/Wall Jump.png</File>
+    <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Fonts/font.spritefont</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Apple.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Bananas.png</File>
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/Items/Fruits/Cherries.png</File>
@@ -34,6 +35,7 @@
     <File>/home/m/Documents/GitHub/ECS-MonoGame/Content/TiledMap/Textures/UI.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

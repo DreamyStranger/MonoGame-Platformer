@@ -184,8 +184,8 @@ namespace MonogameExamples
                 default:
                     player.State.CurrentSuperState = SuperState.IsDead;
                     player.State.CurrentState = State.Idle;
-                    player.Movement.Velocity = new Vector2(0, -200);
-                    player.Movement.Acceleration = new Vector2(0, 1000);
+                    player.Movement.Velocity = new Vector2(0, GameConstants.SpeedY/2);
+                    player.Movement.Acceleration = new Vector2(0, GameConstants.GRAVITY/2);
 
                     MessageBus.Publish(new EntityDiedMessage(player.Entity));
                     break;

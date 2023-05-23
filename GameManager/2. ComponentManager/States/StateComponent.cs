@@ -125,6 +125,7 @@ namespace MonogameExamples
                 if (!_canMoveLeft)
                 {
                     CurrentState = State.Slide;
+                    HorizontalDirection = -1;
                 }
             }
         }
@@ -143,6 +144,7 @@ namespace MonogameExamples
                 if (!_canMoveRight)
                 {
                     CurrentState = State.Slide;
+                    HorizontalDirection = 1;
                 }
             }
         }

@@ -9,6 +9,7 @@
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Jump.xnb
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Run.xnb
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Enemies/Voodo/Wall Jump.xnb
+/home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Fonts/font.xnb
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Items/Fruits/Apple.xnb
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Items/Fruits/Bananas.xnb
 /home/m/Documents/GitHub/ECS-MonoGame/bin/Debug/net6.0/Content/Items/Fruits/Cherries.xnb

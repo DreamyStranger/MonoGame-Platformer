@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>/home/m/Documents/GitHub/ECS-MonoGame/Content/Enemies/Voodo/Idle.png</SourceFile>
-  <SourceTime>2019-08-22T13:39:36-04:00</SourceTime>
+  <SourceTime>2023-05-14T09:40:38.2489188-04:00</SourceTime>
   <DestFile>/home/m/Documents/GitHub/ECS-MonoGame/Content/bin/DesktopGL/Enemies/Voodo/Idle.xnb</DestFile>
-  <DestTime>2023-05-09T20:16:46.8631504-04:00</DestTime>
+  <DestTime>2023-05-22T21:25:15.5978864-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

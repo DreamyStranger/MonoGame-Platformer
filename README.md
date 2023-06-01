@@ -65,4 +65,4 @@ When exploring the project, you will come across the following folders:
 
 ## Status: Development
 
-I am currently working on this project during my free time and planning to continue doint that at least throughout the grad school.
+I am currently working on this project during my free time and planning to continue doing that at least throughout the grad school.

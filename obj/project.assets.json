@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Cyotek.Drawing.BitmapFont/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Cyotek.Drawing.BitmapFont.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Cyotek.Drawing.BitmapFont.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MonoGame.Content.Builder.Task/3.8.1.263": {
         "type": "package",
         "build": {
@@ -58,6 +71,38 @@
           }
         }
       },
+      "SpriteFontPlus/0.9.2": {
+        "type": "package",
+        "dependencies": {
+          "Cyotek.Drawing.BitmapFont": "2.0.1",
+          "StbImageSharp": "2.22.4",
+          "StbTrueTypeSharp": "1.24.7"
+        },
+        "compile": {
+          "lib/netstandard2.0/SpriteFontPlus.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SpriteFontPlus.dll": {}
+        }
+      },
+      "StbImageSharp/2.22.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
+        }
+      },
+      "StbTrueTypeSharp/1.24.7": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/StbTrueTypeSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/StbTrueTypeSharp.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -70,15 +115,55 @@
       "TiledCS/3.3.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/TiledCS.dll": {}
+          "lib/netstandard2.0/TiledCS.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/TiledCS.dll": {}
+          "lib/netstandard2.0/TiledCS.dll": {
+            "related": ".xml"
+          }
         }
       }
     }
   },
   "libraries": {
+    "Cyotek.Drawing.BitmapFont/2.0.1": {
+      "sha512": "8C8Vdvf8p6RIOBNFE99ZNPWFxwV/ZT1wk11cajuL3+6/e5DBGPHe+ZjxLu2efTWQ1YvfLh4KpP2epUZ9z/WcFQ==",
+      "type": "package",
+      "path": "cyotek.drawing.bitmapfont/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "cyotek.drawing.bitmapfont.2.0.1.nupkg.sha512",
+        "cyotek.drawing.bitmapfont.nuspec",
+        "icon.png",
+        "lib/net35/Cyotek.Drawing.BitmapFont.dll",
+        "lib/net35/Cyotek.Drawing.BitmapFont.xml",
+        "lib/net40/Cyotek.Drawing.BitmapFont.dll",
+        "lib/net40/Cyotek.Drawing.BitmapFont.xml",
+        "lib/net452/Cyotek.Drawing.BitmapFont.dll",
+        "lib/net452/Cyotek.Drawing.BitmapFont.xml",
+        "lib/net462/Cyotek.Drawing.BitmapFont.dll",
+        "lib/net462/Cyotek.Drawing.BitmapFont.xml",
+        "lib/net472/Cyotek.Drawing.BitmapFont.dll",
+        "lib/net472/Cyotek.Drawing.BitmapFont.xml",
+        "lib/net48/Cyotek.Drawing.BitmapFont.dll",
+        "lib/net48/Cyotek.Drawing.BitmapFont.xml",
+        "lib/netcoreapp2.1/Cyotek.Drawing.BitmapFont.dll",
+        "lib/netcoreapp2.1/Cyotek.Drawing.BitmapFont.xml",
+        "lib/netcoreapp2.2/Cyotek.Drawing.BitmapFont.dll",
+        "lib/netcoreapp2.2/Cyotek.Drawing.BitmapFont.xml",
+        "lib/netcoreapp3.1/Cyotek.Drawing.BitmapFont.dll",
+        "lib/netcoreapp3.1/Cyotek.Drawing.BitmapFont.xml",
+        "lib/netstandard1.3/Cyotek.Drawing.BitmapFont.dll",
+        "lib/netstandard1.3/Cyotek.Drawing.BitmapFont.xml",
+        "lib/netstandard2.0/Cyotek.Drawing.BitmapFont.dll",
+        "lib/netstandard2.0/Cyotek.Drawing.BitmapFont.xml",
+        "lib/netstandard2.1/Cyotek.Drawing.BitmapFont.dll",
+        "lib/netstandard2.1/Cyotek.Drawing.BitmapFont.xml"
+      ]
+    },
     "MonoGame.Content.Builder.Task/3.8.1.263": {
       "sha512": "4Fha/WOFtr1KMb/4AdN7dFmavjCQ1ouLXvWJTN9vxTkpkMQ6SkB/RkfJ4wbL7TC7ITybUTY2Rl+K9T+lwzPP9A==",
       "type": "package",
@@ -113,6 +198,45 @@
         "runtimes/win-x64/native/soft_oal.dll",
         "runtimes/win-x86/native/SDL2.dll",
         "runtimes/win-x86/native/soft_oal.dll"
+      ]
+    },
+    "SpriteFontPlus/0.9.2": {
+      "sha512": "k47yAu14Pd5tMP4Cs/c8HfBnjze0pqqoANwkyqlBT2EOJb2kVZUOeld9Gwus4v5kUDjPnxMoTnqD3tsHLPh/dA==",
+      "type": "package",
+      "path": "spritefontplus/0.9.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/SpriteFontPlus.dll",
+        "lib/netstandard2.0/SpriteFontPlus.dll",
+        "spritefontplus.0.9.2.nupkg.sha512",
+        "spritefontplus.nuspec"
+      ]
+    },
+    "StbImageSharp/2.22.4": {
+      "sha512": "0dOXIj3OM8oGxtfqZHZdLJRnV7FjP4VToeCprpyVXbWpct6DplgWq6YKVFA5hAYVs8hzvGekA97Qg8C3exeVYg==",
+      "type": "package",
+      "path": "stbimagesharp/2.22.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/StbImageSharp.dll",
+        "lib/netstandard2.0/StbImageSharp.dll",
+        "stbimagesharp.2.22.4.nupkg.sha512",
+        "stbimagesharp.nuspec"
+      ]
+    },
+    "StbTrueTypeSharp/1.24.7": {
+      "sha512": "4hmKw+Fq22Fs8GI8o1U7SUGw7iNTYVNc476o/rxmDVgIsQgQX0nNvlG1hUEhvC0ouNmoJq32yclQko+n67bc7A==",
+      "type": "package",
+      "path": "stbtruetypesharp/1.24.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/StbTrueTypeSharp.dll",
+        "lib/netstandard2.0/StbTrueTypeSharp.dll",
+        "stbtruetypesharp.1.24.7.nupkg.sha512",
+        "stbtruetypesharp.nuspec"
       ]
     },
     "System.Numerics.Vectors/4.5.0": {
@@ -180,28 +304,37 @@
     "net6.0": [
       "MonoGame.Content.Builder.Task >= 3.8.1.263",
       "MonoGame.Framework.DesktopGL >= 3.8.1.263",
+      "SpriteFontPlus >= 0.9.2",
       "TiledCS >= 3.3.3"
     ]
   },
   "packageFolders": {
-    "/home/m/.nuget/packages/": {}
+    "C:\\Users\\reali\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/m/Documents/GitHub/ECS-MonoGame/MonoGameExamples.csproj",
+      "projectUniqueName": "C:\\M\\GitHub\\ECS-MonoGame\\MonoGameExamples.csproj",
       "projectName": "MonoGameExamples",
-      "projectPath": "/home/m/Documents/GitHub/ECS-MonoGame/MonoGameExamples.csproj",
-      "packagesPath": "/home/m/.nuget/packages/",
-      "outputPath": "/home/m/Documents/GitHub/ECS-MonoGame/obj/",
+      "projectPath": "C:\\M\\GitHub\\ECS-MonoGame\\MonoGameExamples.csproj",
+      "packagesPath": "C:\\Users\\reali\\.nuget\\packages\\",
+      "outputPath": "C:\\M\\GitHub\\ECS-MonoGame\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/m/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\reali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -228,6 +361,10 @@
             "target": "Package",
             "version": "[3.8.1.263, )"
           },
+          "SpriteFontPlus": {
+            "target": "Package",
+            "version": "[0.9.2, )"
+          },
           "TiledCS": {
             "target": "Package",
             "version": "[3.3.3, )"
@@ -239,7 +376,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -248,7 +386,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.116/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

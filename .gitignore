@@ -1,0 +1,79 @@
+# --------------------------------
+# Visual Studio Code (VSCode)
+# --------------------------------
+.vscode/
+*.code-workspace
+
+# --------------------------------
+# MonoGame Generated Files
+# --------------------------------
+# All build output directories
+bin/
+obj/
+
+# User-specific files
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+# --------------------------------
+# macOS Generated Files
+# --------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# --------------------------------
+# Linux Generated Files
+# --------------------------------
+*~
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# --------------------------------
+# Windows Generated Files
+# --------------------------------
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk

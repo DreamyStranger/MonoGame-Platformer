@@ -1,13 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "fJzPQ0lrQh135edwVos9JFedoD7RUBc2iE5rsHrUFm79mC2RZI4K5DAHKLLd7unbTUBUASn45uq2FxqqtaRpNA==",
+  "dgSpecHash": "i7cA3qftTU7AZwizQViIv1jXHsK3ya4CaM86O9sslwXVEWXbVj++WWLaIv9Oy2xhLD/T7tH6lIz0GP0iu3t3QA==",
   "success": true,
-  "projectFilePath": "/home/m/Documents/GitHub/ECS-MonoGame/MonoGameExamples.csproj",
+  "projectFilePath": "C:\\M\\GitHub\\ECS-MonoGame\\MonoGameExamples.csproj",
   "expectedPackageFiles": [
-    "/home/m/.nuget/packages/monogame.content.builder.task/3.8.1.263/monogame.content.builder.task.3.8.1.263.nupkg.sha512",
-    "/home/m/.nuget/packages/monogame.framework.desktopgl/3.8.1.263/monogame.framework.desktopgl.3.8.1.263.nupkg.sha512",
-    "/home/m/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
-    "/home/m/.nuget/packages/tiledcs/3.3.3/tiledcs.3.3.3.nupkg.sha512"
+    "C:\\Users\\reali\\.nuget\\packages\\cyotek.drawing.bitmapfont\\2.0.1\\cyotek.drawing.bitmapfont.2.0.1.nupkg.sha512",
+    "C:\\Users\\reali\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.263\\monogame.content.builder.task.3.8.1.263.nupkg.sha512",
+    "C:\\Users\\reali\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.263\\monogame.framework.desktopgl.3.8.1.263.nupkg.sha512",
+    "C:\\Users\\reali\\.nuget\\packages\\spritefontplus\\0.9.2\\spritefontplus.0.9.2.nupkg.sha512",
+    "C:\\Users\\reali\\.nuget\\packages\\stbimagesharp\\2.22.4\\stbimagesharp.2.22.4.nupkg.sha512",
+    "C:\\Users\\reali\\.nuget\\packages\\stbtruetypesharp\\1.24.7\\stbtruetypesharp.1.24.7.nupkg.sha512",
+    "C:\\Users\\reali\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\reali\\.nuget\\packages\\tiledcs\\3.3.3\\tiledcs.3.3.3.nupkg.sha512"
   ],
   "logs": []
 }

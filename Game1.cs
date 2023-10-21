@@ -27,7 +27,6 @@ namespace MonogameExamples
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
             IsMouseVisible = false;
         }
 
@@ -70,7 +69,7 @@ namespace MonogameExamples
             _renderTarget = new RenderTarget2D(GraphicsDevice, GameConstants.SCREEN_WIDTH, GameConstants.SCREEN_HEIGHT);
 
             // Load resources
-            Loader.LoadContent(Content);
+            Loader.LoadContent(GraphicsDevice);
 
             // Initialize the world
             world = new World();

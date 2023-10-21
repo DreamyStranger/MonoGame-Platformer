@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['monogameexamples_0',['MonogameExamples',['../namespaceMonogameExamples.html',1,'']]]
+  ['monogameexamples_0',['MonogameExamples',['../namespace_monogame_examples.html',1,'']]]
 ];

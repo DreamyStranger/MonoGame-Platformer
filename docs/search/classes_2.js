@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['deathsystem_0',['DeathSystem',['../classMonogameExamples_1_1DeathSystem.html',1,'MonogameExamples']]],
-  ['destroyentitymessage_1',['DestroyEntityMessage',['../classMonogameExamples_1_1DestroyEntityMessage.html',1,'MonogameExamples']]]
+  ['deathsystem_0',['DeathSystem',['../class_monogame_examples_1_1_death_system.html',1,'MonogameExamples']]],
+  ['destroyentitymessage_1',['DestroyEntityMessage',['../class_monogame_examples_1_1_destroy_entity_message.html',1,'MonogameExamples']]]
 ];

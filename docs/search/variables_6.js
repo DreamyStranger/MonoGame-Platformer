@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['movement_0',['Movement',['../structMonogameExamples_1_1EntityData.html#a0d7d06e75aa3d6a0a082641ea431884a',1,'MonogameExamples::EntityData']]],
-  ['movements_1',['movements',['../classMonogameExamples_1_1RegularEnemyInputSystem.html#a36d26b7c4e331ba4266bf326163fc1c7',1,'MonogameExamples::RegularEnemyInputSystem']]]
+  ['jumpsperformed_0',['JumpsPerformed',['../class_monogame_examples_1_1_state_component.html#abd490712f18ae6027eace2bdc2c935a4',1,'MonogameExamples::StateComponent']]]
 ];

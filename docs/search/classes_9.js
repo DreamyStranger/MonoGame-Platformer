@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nextlevelmessage_0',['NextLevelMessage',['../classMonogameExamples_1_1NextLevelMessage.html',1,'MonogameExamples']]]
+  ['nextlevelmessage_0',['NextLevelMessage',['../class_monogame_examples_1_1_next_level_message.html',1,'MonogameExamples']]]
 ];

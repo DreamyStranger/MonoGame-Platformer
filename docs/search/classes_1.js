@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['coincomponent_0',['CoinComponent',['../classMonogameExamples_1_1CoinComponent.html',1,'MonogameExamples']]],
-  ['collisionboxcomponent_1',['CollisionBoxComponent',['../classMonogameExamples_1_1CollisionBoxComponent.html',1,'MonogameExamples']]],
-  ['component_2',['Component',['../classMonogameExamples_1_1Component.html',1,'MonogameExamples']]]
+  ['coincomponent_0',['CoinComponent',['../class_monogame_examples_1_1_coin_component.html',1,'MonogameExamples']]],
+  ['collisionboxcomponent_1',['CollisionBoxComponent',['../class_monogame_examples_1_1_collision_box_component.html',1,'MonogameExamples']]],
+  ['component_2',['Component',['../class_monogame_examples_1_1_component.html',1,'MonogameExamples']]]
 ];

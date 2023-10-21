@@ -1,6 +1,6 @@
 # MonoGame-Platformer
 
-Implementation of a mix of Entity-Component System (ECS) framework with object-oriented programming (OOP) using MonoGame.
+Implementation of a mix of Entity-Component framework approach with object-oriented programming (OOP) using MonoGame.
 
 Assets Used: [Pixel Adventure 1](https://pixelfrog-assets.itch.io/pixel-adventure-1)
 

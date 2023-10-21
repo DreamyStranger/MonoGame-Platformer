@@ -31,7 +31,7 @@ Follow the instructions below to run the code successfully:
      dotnet new --install MonoGame.Templates.CSharp
      ```
      
-### 6. **Install SpriteFontPlus (Optional)**
+### 6. **Install SpriteFontPlus**
    - For font loading, you might need to install `SpriteFontPlus`. Use the appropriate dotnet command to install it.
 
 ### 7. **Run the Code**

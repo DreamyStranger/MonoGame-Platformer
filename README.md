@@ -8,17 +8,36 @@ Documentation (Doxyfile): [ECS-MonoGame Documentation](https://dreamystranger.gi
 
 ## Running the Code
 
-To run the code, please follow the instructions below:
+Follow the instructions below to run the code successfully:
 
-1. Download the project as a ZIP file or clone it using GitHub Desktop.
-2. Open the project in Visual Studio Code (VS Code).
-3. Make sure you have C# installed in your VS Code environment.
-4. Install the MonoGame Templates by opening the terminal in VS Code (`View -> Terminal`) and entering the following command: `dotnet new --install MonoGame.Templates.CSharp`
-5. You can install C# in a similar manner by using the following command: `code --install-extension ms-dotnettools.csharp`
-6. Ensure that you have the .NET 6 SDK installed. If you are using Windows, it may already be installed by default. If you are using Linux or Mac, please install the .NET 6 SDK.
-7. Once the above prerequisites are met, you can now run the code successfully.
+### 1. **Download the Project**
+   - Download the project as a ZIP file or clone it using GitHub Desktop.
 
-Please note that these instructions assume you have the necessary software and tools set up on your machine.
+### 2. **Open the Project in VS Code**
+   - Open the project in Visual Studio Code (VS Code).
+
+### 3. **Install C#**
+   - Ensure that C# is installed in your VS Code environment.
+   - Install C# using the following command:
+     ```bash
+     code --install-extension ms-dotnettools.csharp
+     ```
+
+### 4. **Install MonoGame Templates**
+   - Install the MonoGame Templates by using the following command:
+     ```bash
+     dotnet new --install MonoGame.Templates.CSharp
+     ```
+
+### 5. **Install the .NET 6 SDK**
+   - Make sure the .NET 6 SDK is installed
+
+### 6. **Install SpriteFontPlus (Optional)**
+   - For font loading, you might need to install `SpriteFontPlus`. Use the appropriate dotnet command to install it.
+
+### 7. **Run the Code**
+   - Ensure all prerequisites are met to run the code successfully.
+
 
 ## Keyboard Controls
 

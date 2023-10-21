@@ -1,4 +1,4 @@
-# ECS-MonoGame
+# MonoGame-Platformer
 
 Implementation of a mix of Entity-Component System (ECS) framework with object-oriented programming (OOP) using MonoGame.
 

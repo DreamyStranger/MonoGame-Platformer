@@ -22,16 +22,15 @@ Follow the instructions below to run the code successfully:
      ```bash
      code --install-extension ms-dotnettools.csharp
      ```
+### 4. **Install the .NET 6 SDK**
+   - Make sure the .NET 6 SDK is installed
 
-### 4. **Install MonoGame Templates**
+### 5. **Install MonoGame Templates**
    - Install the MonoGame Templates by using the following command:
      ```bash
      dotnet new --install MonoGame.Templates.CSharp
      ```
-
-### 5. **Install the .NET 6 SDK**
-   - Make sure the .NET 6 SDK is installed
-
+     
 ### 6. **Install SpriteFontPlus (Optional)**
    - For font loading, you might need to install `SpriteFontPlus`. Use the appropriate dotnet command to install it.
 
